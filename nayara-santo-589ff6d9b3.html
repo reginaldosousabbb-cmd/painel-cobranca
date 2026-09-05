@@ -124,6 +124,58 @@ input[type=range]::-moz-range-thumb{width:19px;height:19px;background:var(--ambe
 
 .ft{margin-top:26px;padding:15px 18px;border:1px dashed var(--line2);
   font-family:var(--sans);font-size:11px;line-height:1.7;color:var(--faint)}
+
+/* ---- abas ---- */
+.abas{display:flex;gap:0;border-bottom:1px solid var(--line);margin:20px 0 0}
+.abas button{padding:11px 18px;font-family:var(--mono);font-size:10px;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--faint);background:none;border:none;
+  border-bottom:2px solid transparent;cursor:pointer;transition:.15s}
+.abas button:hover{color:var(--dim)}
+.abas button.on{color:var(--amber);border-bottom-color:var(--amber)}
+.abas .cnt{margin-left:7px;background:var(--amber);color:#0A0703;font-size:8.5px;padding:1px 5px;font-weight:800}
+.vista{display:none}.vista.on{display:block;animation:rise .25s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+
+/* ---- cadeado dos acordos ---- */
+.cad{border:1px solid var(--line);background:var(--panel);border-top:2px solid var(--amber);
+  padding:30px;max-width:430px;margin:20px auto;text-align:center}
+.cad h3{font-size:12px;font-weight:700;letter-spacing:.05em;margin-bottom:8px}
+.cad p{font-family:var(--sans);font-size:12px;line-height:1.6;color:var(--dim);margin-bottom:18px}
+.cad input{width:100%;background:#070B12;border:1px solid var(--line2);color:var(--txt);
+  font-family:var(--mono);font-size:14px;letter-spacing:.2em;padding:12px;text-align:center}
+.cad input:focus{outline:none;border-color:var(--amber)}
+.cad button{width:100%;margin-top:12px;background:var(--amber);color:#0A0703;padding:12px;
+  border:none;font-family:var(--mono);font-size:10px;font-weight:800;letter-spacing:.16em;
+  text-transform:uppercase;cursor:pointer}
+.cad .msg{min-height:15px;margin-top:11px;font-family:var(--mono);font-size:9.5px;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+.cad .msg.err{color:var(--red)}
+
+/* ---- tabela de acordos ---- */
+.acd{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:11.5px}
+.acd th{font-size:9px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--faint);
+  text-align:right;padding:0 9px 9px;border-bottom:1px solid var(--line);white-space:nowrap}
+.acd th:first-child,.acd th.l{text-align:left}
+.acd td{padding:9px;border-bottom:1px solid rgba(26,36,51,.6);text-align:right;white-space:nowrap}
+.acd td:first-child,.acd td.l{text-align:left}
+.acd tbody tr:hover td{background:rgba(255,176,32,.04)}
+.urg{font-size:8.5px;font-weight:700;letter-spacing:.08em;padding:2px 7px;text-transform:uppercase}
+.urg.hoje{background:rgba(244,63,94,.14);color:var(--red)}
+.urg.venc{background:rgba(167,139,250,.14);color:var(--violet)}
+.urg.prox{background:rgba(255,176,32,.13);color:var(--amber)}
+.urg.ok{background:rgba(52,211,153,.13);color:var(--green)}
+
+/* ---- contatos ---- */
+.fones{display:flex;flex-direction:column;gap:5px}
+.fone{display:flex;align-items:center;gap:5px}
+.fone .nb{font-size:11px;color:var(--txt);min-width:104px}
+.fone a{display:inline-flex;align-items:center;justify-content:center;width:23px;height:23px;
+  border:1px solid var(--line2);text-decoration:none;font-size:11px;transition:.15s}
+.fone a.wa{color:#25D366}
+.fone a.wa:hover{background:rgba(37,211,102,.14);border-color:#25D366}
+.fone a.tel{color:var(--cyan)}
+.fone a.tel:hover{background:rgba(34,211,238,.14);border-color:var(--cyan)}
+
 svg text{font-family:var(--mono)}
 @media(max-width:900px){.kpis{grid-template-columns:repeat(3,1fr)}.g2,.g21{grid-template-columns:1fr}}
 @media(max-width:560px){.kpis{grid-template-columns:repeat(2,1fr)}.pf-s{margin-left:0}}
@@ -131,7 +183,7 @@ svg text{font-family:var(--mono)}
 </head>
 <body>
 <div class="wrap" id="r"></div>
-<script id="dd" type="application/json">{"pessoa":{"nome":"Nayara Santo","turno":"Tarde","supervisor":"Reginaldo Sousa Barbosa","negociado":5129.18,"recebido":4047.47,"conversao":0.7891,"clientes_negociados":25,"clientes_recebidos":19,"faturas_negociadas":40,"ticket_medio":213.02,"chamadas":37,"tma_seg":262.297,"pausa_pct":11.8,"daily_negociado":[2604.43,2524.75],"daily_recebido":[2798.54,1248.93],"score":61,"partes":{"resultado":54.9,"conversao":78.9,"produtividade":77.1,"evolucao":3.9,"eficiencia":69.5},"tendencia":-0.5537,"cv":0.383,"media_dia":2023.74,"melhor_valor":2798.54,"melhor_dia":"01/08","rank":5,"total":20,"observacao":null},"equipe":{"conversao":0.5432,"ticket_medio":183.61,"tma_seg":307.5,"pausa_pct":12.8,"negociado_pessoa":5492.88,"recebido_pessoa":2983.62,"chamadas_pessoa":28},"datas":["01/08","02/08"],"periodo":"01 a 02/08/2026 (parcial do mês)","mostrar_rank":false}</script>
+<script id="dd" type="application/json">{"acordos":{"salt":"9bgsdumqFFL+hHk4tAJUIQ==","iv":"DL9FAy82oEBMaAan","ct":"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","it":310000},"acordos_qtd":13,"pessoa":{"nome":"Nayara Santo","turno":"Tarde","supervisor":"Reginaldo Sousa Barbosa","negociado":7601.33,"recebido":5748.7,"conversao":0.7563,"clientes_negociados":34,"clientes_recebidos":28,"faturas_negociadas":59,"ticket_medio":205.31,"chamadas":54,"tma_seg":299.407,"pausa_pct":12.8,"daily_negociado":[2604.43,2524.75,2472.15],"daily_recebido":[2798.54,1535.29,1414.87],"score":60,"partes":{"resultado":63.9,"conversao":75.6,"produtividade":63.9,"evolucao":10.6,"eficiencia":67.0},"tendencia":-0.4729,"cv":0.327,"media_dia":1916.23,"melhor_valor":2798.54,"melhor_dia":"01/08","rank":5,"total":19,"observacao":null},"equipe":{"conversao":0.5908,"ticket_medio":183.94,"tma_seg":311.9,"pausa_pct":16.6,"negociado_pessoa":7619.86,"recebido_pessoa":4501.62,"chamadas_pessoa":42},"datas":["01/08","02/08","03/08"],"periodo":"01 a 03/08/2026 (parcial do mês)","mostrar_rank":false}</script>
 <script>
 (function(){
 'use strict';
@@ -330,6 +382,12 @@ document.getElementById('r').innerHTML=`
     <div class="c">SCORE 0–100</div></div>
 </div>
 
+<div class="abas" id="abas">
+  <button data-v="perf" class="on">Meu desempenho</button>
+  ${D.acordos_qtd ? `<button data-v="acd">Meus acordos<span class="cnt">${D.acordos_qtd}</span></button>` : ''}
+</div>
+
+<div class="vista on" id="v-perf">
 <div class="kpis">
   ${kpi('Negociado',brl(P.negociado),vs(P.negociado,T.negociado_pessoa),P.daily_negociado,'#A78BFA')}
   ${kpi('Recebido',brl(P.recebido),vs(P.recebido,T.recebido_pessoa),P.daily_recebido,'#34D399')}
@@ -391,12 +449,131 @@ document.getElementById('r').innerHTML=`
   <div class="pn-b">${dg.map(d=>`<div class="dg" style="--c:${d.c}">
     <span class="i">${d.tag}</span><p>${d.html}</p></div>`).join('')}</div></div>
 
+</div>
+
+<div class="vista" id="v-acd">${D.acordos_qtd ? `
+  <div id="acd-cad" class="cad">
+    <h3>ACESSO PROTEGIDO</h3>
+    <p>Esta lista tem <b>nome de cliente</b>. Digite a senha da equipe para abrir.
+       Ela não fica gravada: some quando você fechar a aba.</p>
+    <input id="acd-pw" type="password" placeholder="••••••••" autocomplete="off">
+    <button id="acd-go">Abrir meus acordos</button>
+    <div class="msg" id="acd-msg"></div>
+  </div>
+  <div id="acd-lista"></div>` : ''}</div>
+
 <div class="ft"><b>Sobre estes números:</b> vêm das planilhas de Resultado Parcial e de Chamadas/TMA do período
 ${D.periodo}. Comparações são com a <b>média da operação</b>, não com pessoas específicas.
 O score é uma leitura combinada de resultado, conversão, produtividade, evolução e eficiência —
 não substitui a avaliação do seu supervisor. Meta mensal não consta na base, por isso não há
 percentual de atingimento de meta. Dúvida em algum número? Fale com ${esc(P.supervisor)}.</div>
 `;
+
+/* ---------- abas ---------- */
+document.querySelectorAll('#abas button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('#abas button').forEach(x=>x.classList.toggle('on',x===b));
+  document.querySelectorAll('.vista').forEach(v=>v.classList.toggle('on', v.id==='v-'+b.dataset.v));
+  window.scrollTo({top:0,behavior:'instant'});
+});
+
+/* ---------- acordos (bloco criptografado) ---------- */
+if(D.acordos_qtd){
+  const cad=document.getElementById('acd-cad'), inp=document.getElementById('acd-pw'),
+        bt=document.getElementById('acd-go'), msg=document.getElementById('acd-msg'),
+        alvo=document.getElementById('acd-lista');
+  const b64=x=>Uint8Array.from(atob(x),c=>c.charCodeAt(0));
+
+  function hojeISO(){const d=new Date();return [d.getFullYear(),d.getMonth()+1,d.getDate()];}
+  function partes(br){ if(!br) return null; const[d,m,y]=br.split('/').map(Number); return [y,m,d]; }
+  function diasAte(br){
+    const p=partes(br); if(!p) return null;
+    const a=new Date(p[0],p[1]-1,p[2]), h=hojeISO();
+    return Math.round((a-new Date(h[0],h[1]-1,h[2]))/86400000);
+  }
+  function selo(br){
+    const d=diasAte(br);
+    if(d===null) return ['—','ok'];
+    if(d<0)  return ['vencido há '+Math.abs(d)+'d','venc'];
+    if(d===0) return ['vence hoje','hoje'];
+    if(d<=3) return ['em '+d+'d','prox'];
+    return ['em '+d+'d','ok'];
+  }
+
+  async function abrir(){
+    const senha=inp.value;
+    if(!senha){ msg.textContent='Digite a senha'; msg.className='msg err'; return; }
+    bt.disabled=true; inp.disabled=true;
+    msg.textContent='Abrindo…'; msg.className='msg';
+    await new Promise(r=>setTimeout(r,40));
+    let lista;
+    try{
+      const km=await crypto.subtle.importKey('raw',new TextEncoder().encode(senha),'PBKDF2',false,['deriveKey']);
+      const key=await crypto.subtle.deriveKey(
+        {name:'PBKDF2',salt:b64(D.acordos.salt),iterations:D.acordos.it,hash:'SHA-256'},
+        km,{name:'AES-GCM',length:256},false,['decrypt']);
+      const plano=await crypto.subtle.decrypt({name:'AES-GCM',iv:b64(D.acordos.iv)},key,b64(D.acordos.ct));
+      lista=JSON.parse(new TextDecoder().decode(plano));
+    }catch(e){
+      bt.disabled=false; inp.disabled=false; inp.value='';
+      msg.textContent='Senha incorreta'; msg.className='msg err'; inp.focus(); return;
+    }
+    cad.remove(); render(lista);
+  }
+
+  function fones(a){
+    const L=a.telefones||[];
+    if(!L.length) return '<span style="color:var(--faint);font-size:10.5px">sem telefone</span>';
+    const msg = encodeURIComponent('Olá ' + (a.cliente||'').split(' ')[0]
+      + ', tudo bem? Sou da cobrança da HUBMAIS e estou entrando em contato sobre o seu acordo.');
+    return '<div class="fones">' + L.map(f=>`<div class="fone">
+      <span class="nb n">${f.exibir}</span>
+      <a class="wa" href="https://wa.me/${f.link}?text=${msg}" target="_blank" rel="noopener"
+         title="Abrir conversa no WhatsApp">✆</a>
+      <a class="tel" href="tel:+${f.link}" title="Ligar">☏</a>
+    </div>`).join('') + '</div>';
+  }
+
+  function render(L){
+    const total=L.reduce((a,b)=>a+(b.valor||0),0);
+    const vencidos=L.filter(a=>{const d=diasAte(a.vence_em); return d!==null&&d<0;}).length;
+    const hoje=L.filter(a=>diasAte(a.vence_em)===0).length;
+    alvo.innerHTML=`
+      <div class="kpis" style="grid-template-columns:repeat(4,1fr);margin-top:0">
+        ${kpi('Acordos na sua carteira',nf(L.length))}
+        ${kpi('Valor negociado',brl(total))}
+        ${kpi('Vencem hoje',nf(hoje))}
+        ${kpi('Já vencidos',nf(vencidos))}
+      </div>
+      <div class="pn"><div class="pn-h"><h3>Seus acordos</h3>
+        <span class="nt">ordenados por vencimento</span></div>
+        <div class="pn-b" style="overflow-x:auto">
+        <table class="acd"><thead><tr>
+          <th class="l">Vencimento</th><th class="l">Cliente</th>
+          <th class="l">Contato</th><th>Valor</th><th>Parc.</th>
+          <th class="l">SAN</th><th class="l">Negociado em</th>
+        </tr></thead><tbody>
+        ${L.map(a=>{const[t,c]=selo(a.vence_em);return `<tr>
+          <td class="l"><span class="urg ${c}">${t}</span>
+            <div style="font-size:10px;color:var(--faint);margin-top:3px">${a.vence_em||'—'}</div></td>
+          <td class="l" style="font-weight:600">${esc(a.cliente||'—')}</td>
+          <td class="l">${fones(a)}</td>
+          <td class="n" style="font-weight:700">${brl2(a.valor||0)}</td>
+          <td class="n">${a.parcelas??'—'}${a.desconto!=null?`<div style="font-size:9.5px;color:var(--faint);margin-top:2px">${pc(a.desconto,0)} desc.</div>`:''}</td>
+          <td class="l" style="font-size:10px;color:var(--dim)">${esc(a.san||'—')}</td>
+          <td class="l" style="color:var(--dim)">${a.negociado_em||'—'}</td>
+        </tr>`;}).join('')}
+        </tbody></table></div></div>
+      <div class="ft" style="margin-top:16px"><b>Como usar:</b> comece pelos que estão em
+        vermelho e laranja — vencidos e vencendo hoje. Confirme se o cliente recebeu o boleto,
+        combine a forma de pagamento e registre o contato. Um acordo que vence sem pagamento
+        vira quebra e não conta como recebimento.
+        <br><br><b>Dados de cliente:</b> use somente para o trabalho de cobrança. Não
+        encaminhe esta tela nem tire print.</div>`;
+  }
+
+  bt.addEventListener('click',abrir);
+  inp.addEventListener('keydown',e=>{ if(e.key==='Enter') abrir(); });
+}
 
 /* simulador */
 const sl=document.getElementById('sl'), sv=document.getElementById('sv'), so=document.getElementById('so');
