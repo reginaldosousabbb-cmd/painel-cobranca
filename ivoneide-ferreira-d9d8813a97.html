@@ -124,73 +124,6 @@ input[type=range]::-moz-range-thumb{width:19px;height:19px;background:var(--ambe
 
 .ft{margin-top:26px;padding:15px 18px;border:1px dashed var(--line2);
   font-family:var(--sans);font-size:11px;line-height:1.7;color:var(--faint)}
-
-/* ---- abas ---- */
-.abas{display:flex;gap:0;border-bottom:1px solid var(--line);margin:20px 0 0}
-.abas button{padding:11px 18px;font-family:var(--mono);font-size:10px;font-weight:700;
-  letter-spacing:.14em;text-transform:uppercase;color:var(--faint);background:none;border:none;
-  border-bottom:2px solid transparent;cursor:pointer;transition:.15s}
-.abas button:hover{color:var(--dim)}
-.abas button.on{color:var(--amber);border-bottom-color:var(--amber)}
-.abas .cnt{margin-left:7px;background:var(--amber);color:#0A0703;font-size:8.5px;padding:1px 5px;font-weight:800}
-.vista{display:none}.vista.on{display:block;animation:rise .25s ease both}
-@keyframes rise{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
-
-/* ---- cadeado dos acordos ---- */
-.cad{border:1px solid var(--line);background:var(--panel);border-top:2px solid var(--amber);
-  padding:30px;max-width:430px;margin:20px auto;text-align:center}
-.cad h3{font-size:12px;font-weight:700;letter-spacing:.05em;margin-bottom:8px}
-.cad p{font-family:var(--sans);font-size:12px;line-height:1.6;color:var(--dim);margin-bottom:18px}
-.cad input{width:100%;background:#070B12;border:1px solid var(--line2);color:var(--txt);
-  font-family:var(--mono);font-size:14px;letter-spacing:.2em;padding:12px;text-align:center}
-.cad input:focus{outline:none;border-color:var(--amber)}
-.cad button{width:100%;margin-top:12px;background:var(--amber);color:#0A0703;padding:12px;
-  border:none;font-family:var(--mono);font-size:10px;font-weight:800;letter-spacing:.16em;
-  text-transform:uppercase;cursor:pointer}
-.cad .msg{min-height:15px;margin-top:11px;font-family:var(--mono);font-size:9.5px;
-  letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
-.cad .msg.err{color:var(--red)}
-
-/* ---- tabela de acordos ---- */
-.acd{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:11.5px}
-.acd th{font-size:9px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--faint);
-  text-align:right;padding:0 9px 9px;border-bottom:1px solid var(--line);white-space:nowrap}
-.acd th:first-child,.acd th.l{text-align:left}
-.acd td{padding:9px;border-bottom:1px solid rgba(26,36,51,.6);text-align:right;white-space:nowrap}
-.acd td:first-child,.acd td.l{text-align:left}
-.acd tbody tr:hover td{background:rgba(255,176,32,.04)}
-.urg{font-size:8.5px;font-weight:700;letter-spacing:.08em;padding:2px 7px;text-transform:uppercase}
-.urg.hoje{background:rgba(244,63,94,.14);color:var(--red)}
-.urg.venc{background:rgba(167,139,250,.14);color:var(--violet)}
-.urg.prox{background:rgba(255,176,32,.13);color:var(--amber)}
-.urg.ok{background:rgba(52,211,153,.13);color:var(--green)}
-
-/* ---- contatos ---- */
-.fones{display:flex;flex-direction:column;gap:5px}
-.fone{display:flex;align-items:center;gap:5px}
-.fone .nb{font-size:11px;color:var(--txt);min-width:104px}
-.fone a{display:inline-flex;align-items:center;justify-content:center;width:23px;height:23px;
-  border:1px solid var(--line2);text-decoration:none;font-size:11px;transition:.15s}
-.fone a.wa{color:#25D366}
-.fone a.wa:hover{background:rgba(37,211,102,.14);border-color:#25D366}
-.fone a.tel{color:var(--cyan)}
-.fone a.tel:hover{background:rgba(34,211,238,.14);border-color:var(--cyan)}
-
-
-/* ---- detalhamento diario ---- */
-.dias{display:flex;flex-direction:column;gap:0}
-.dia-row{display:grid;grid-template-columns:128px 1fr 100px 62px;gap:12px;align-items:center;
-  padding:10px 0;border-bottom:1px solid rgba(26,36,51,.6)}
-.dia-row:last-child{border-bottom:none}
-.dia-row.media{border-top:1px solid var(--line2);margin-top:4px;padding-top:14px;border-bottom:none}
-.dia-data{font-size:11px;color:var(--dim)}
-.dia-data b{color:var(--txt);font-weight:600}
-.dia-t{height:9px;background:var(--panel3);position:relative}
-.dia-t i{display:block;height:100%;animation:gw .7s cubic-bezier(.2,.8,.3,1) both}
-.dia-v{font-size:13px;font-weight:700;text-align:right}
-.dia-d{font-size:10px;font-weight:700;text-align:right}
-.dia-d.up{color:var(--green)}.dia-d.dn{color:var(--red)}.dia-d.eq{color:var(--faint)}
-
 svg text{font-family:var(--mono)}
 @media(max-width:900px){.kpis{grid-template-columns:repeat(3,1fr)}.g2,.g21{grid-template-columns:1fr}}
 @media(max-width:560px){.kpis{grid-template-columns:repeat(2,1fr)}.pf-s{margin-left:0}}
@@ -198,7 +131,7 @@ svg text{font-family:var(--mono)}
 </head>
 <body>
 <div class="wrap" id="r"></div>
-<script id="dd" type="application/json">{"acordos":{"salt":"c/kIsr28okBlkO9bY3QWug==","iv":"ZUgYviwJOJ71Sj2V","ct":"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","it":310000},"acordos_qtd":22,"pessoa":{"nome":"Ivoneide Ferreira","turno":"Tarde","supervisor":"Reginaldo Sousa Barbosa","negociado":41698.47,"recebido":29007.91,"conversao":0.6957,"clientes_negociados":169,"clientes_recebidos":140,"faturas_negociadas":366,"ticket_medio":207.2,"chamadas":253,"tma_seg":408.19,"pausa_pct":15.0,"daily_negociado":[4062.0,4460.04,3848.83,2565.35,0.0,0.0,1863.47,1774.13,2096.83,2319.92,1080.06,1699.75,0,2977.86,4060.16,1093.94,2612.97,1308.66,993.25,0,2881.25],"daily_recebido":[2209.16,4044.19,1700.55,2846.87,373.93,604.13,792.41,2401.96,1024.54,1704.08,1892.92,0.0,0.0,1546.98,3254.02,1395.3,1262.95,449.97,795.08,93.12,615.75],"score":60,"partes":{"resultado":69.8,"conversao":69.6,"produtividade":58.1,"evolucao":15.1,"eficiencia":61.5},"tendencia":-0.4194,"cv":0.674,"media_dia":1526.73,"melhor_valor":4044.19,"melhor_dia":"02/09","rank":4,"total":19,"observacao":null},"equipe":{"conversao":0.6561,"ticket_medio":190.58,"tma_seg":353.2,"pausa_pct":17.9,"negociado_pessoa":31661.94,"recebido_pessoa":20773.45,"chamadas_pessoa":218},"datas":["01/09","02/09","03/09","04/09","05/09","06/09","07/09","08/09","09/09","10/09","11/09","12/09","13/09","14/09","15/09","16/09","17/09","18/09","19/09","20/09","21/09"],"periodo":"01 a 21/09/2026 (parcial do mês)","mostrar_rank":false}</script>
+<script id="dd" type="application/json">{"pessoa":{"nome":"Ivoneide Ferreira","turno":"Tarde","supervisor":"Reginaldo Sousa Barbosa","negociado":43948.68,"recebido":31508.69,"conversao":0.7169,"clientes_negociados":178,"clientes_recebidos":150,"faturas_negociadas":384,"ticket_medio":210.06,"chamadas":264,"tma_seg":409.432,"pausa_pct":14.8,"daily_negociado":[4062.0,4460.04,3848.83,2565.35,0.0,0.0,1863.47,1774.13,2096.83,2319.92,1080.06,1699.75,0,2977.86,4060.16,1093.94,2612.97,1308.66,993.25,0,2881.25,2250.21],"daily_recebido":[2209.16,4044.19,1700.55,2846.87,373.93,604.13,792.41,2401.96,1024.54,1704.08,1892.92,0.0,0.0,1546.98,3254.02,1395.3,1262.95,619.62,795.08,93.12,1834.5,1112.38],"score":72,"partes":{"resultado":81.5,"conversao":71.7,"produtividade":88.9,"evolucao":17.3,"eficiencia":51.5},"tendencia":-0.392,"cv":0.622,"media_dia":1575.43,"melhor_valor":4044.19,"melhor_dia":"02/08","rank":3,"total":20,"observacao":null},"equipe":{"conversao":0.6611,"ticket_medio":190.17,"tma_seg":362.7,"pausa_pct":17.8,"negociado_pessoa":31385.37,"recebido_pessoa":20747.81,"chamadas_pessoa":215},"datas":["01/08","02/08","03/08","04/08","05/08","06/08","07/08","08/08","09/08","10/08","11/08","12/08","13/08","14/08","15/08","16/08","17/08","18/08","19/08","20/08","21/08","22/08"],"periodo":"01 a 22/08/2026 (parcial do mês)","mostrar_rank":false}</script>
 <script>
 (function(){
 'use strict';
@@ -239,48 +172,32 @@ function spark(d,c,w=250,h=32){
    <polygon points="0,${h} ${p} ${w},${h}" fill="url(#${g})"/>
    <polyline points="${p}" fill="none" stroke="${c}" stroke-width="1.4"/></svg>`;
 }
-function barras({labels,series,w=760,h=290}){
-  const pad={t:34,r:14,b:34,l:12}, iw=w-pad.l-pad.r, ih=h-pad.t-pad.b;
-  const n=labels.length;
-  // com poucos dias (inicio do mes) da pra escrever o valor em cima de cada
-  // barra; com muitos dias isso vira poluicao — nesse caso some com os
-  // rotulos individuais e deixa so a barra + tooltip ao passar o mouse.
-  const denso = n>12;
-  const hi=(Math.max(...series.flatMap(s=>s.data))||1)*(denso?1.14:1.28);
-  const grupo=iw/n, largBarra=denso?Math.max(2,Math.min(9,grupo/(series.length+1)))
-                                  :Math.min(22,grupo/(series.length+1.6));
-  const Y=v=>pad.t+ih-(v/hi)*ih;
+function area({labels,series,w=760,h=270}){
+  const pad={t:30,r:14,b:30,l:52}, iw=w-pad.l-pad.r, ih=h-pad.t-pad.b;
+  const hi=(Math.max(...series.flatMap(s=>s.data))||1)*1.12;
+  const X=i=>pad.l+(labels.length<2?iw/2:i*iw/(labels.length-1)), Y=v=>pad.t+ih-(v/hi)*ih;
   let s='';
-  for(let i=0;i<=3;i++){const v=hi*i/3,y=Y(v);
+  for(let i=0;i<=4;i++){const v=hi*i/4,y=Y(v);
     s+=`<line x1="${pad.l}" y1="${y.toFixed(1)}" x2="${w-pad.r}" y2="${y.toFixed(1)}" stroke="#1A2433"/>`;
-    if(denso) s+=`<text x="${pad.l}" y="${(y-3).toFixed(1)}" fill="#48596E" font-size="8">${kb(v)}</text>`;}
-  const passoRotulo = denso ? Math.ceil(n/9) : 1;
-  labels.forEach((l,i)=>{
-    const cx=pad.l+grupo*i+grupo/2;
-    if(i%passoRotulo===0 || i===n-1)
-      s+=`<text x="${cx.toFixed(1)}" y="${h-9}" fill="#7C8FA6" font-size="${denso?9:10}" font-weight="700" text-anchor="middle">${l}</text>`;
-    series.forEach((se,si)=>{
-      const v=se.data[i]||0;
-      const bh=Math.max(1,(v/hi)*ih);
-      const bx=cx - (series.length*largBarra)/2 + si*largBarra + (denso?0.6:1.5);
-      const by=pad.t+ih-bh;
-      s+=`<rect x="${bx.toFixed(1)}" y="${by.toFixed(1)}" width="${(largBarra-(denso?1.2:3)).toFixed(1)}" height="${bh.toFixed(1)}"
-        fill="${se.color}" rx="${denso?1:2.5}"><title>${l} · ${se.name}: ${brl(v)}</title></rect>`;
-      if(v>0 && !denso){
-        const rotulo = v>=1000 ? (v/1000).toFixed(1).replace('.0','')+'k' : String(Math.round(v));
-        s+=`<text x="${(bx+(largBarra-3)/2).toFixed(1)}" y="${(by-5).toFixed(1)}" fill="${se.color}"
-          font-size="9.5" font-weight="700" text-anchor="middle">${rotulo}</text>`;
-      }
-    });
+    s+=`<text x="${pad.l-9}" y="${(y+3.5).toFixed(1)}" fill="#48596E" font-size="9" text-anchor="end">${kb(v)}</text>`;}
+  labels.forEach((l,i)=>{if(i%3!==0&&i!==labels.length-1)return;
+    s+=`<text x="${X(i).toFixed(1)}" y="${h-11}" fill="#48596E" font-size="8.5" text-anchor="middle">${l}</text>`;});
+  series.forEach(se=>{
+    const p=se.data.map((v,i)=>`${X(i).toFixed(1)},${Y(v).toFixed(1)}`).join(' '), g=nid();
+    s+=`<defs><linearGradient id="${g}" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="${se.color}" stop-opacity=".26"/><stop offset="1" stop-color="${se.color}" stop-opacity="0"/></linearGradient></defs>`;
+    s+=`<polygon points="${pad.l},${pad.t+ih} ${p} ${w-pad.r},${pad.t+ih}" fill="url(#${g})"/>`;
+    s+=`<polyline points="${p}" fill="none" stroke="${se.color}" stroke-width="1.9" stroke-linejoin="round"/>`;
+    se.data.forEach((v,i)=>{s+=`<circle cx="${X(i).toFixed(1)}" cy="${Y(v).toFixed(1)}" r="6" fill="transparent"><title>${labels[i]}: ${brl(v)}</title></circle>`;});
   });
   let lx=pad.l;
   series.forEach(se=>{s+=`<rect x="${lx}" y="8" width="9" height="2.5" fill="${se.color}"/>
     <text x="${lx+14}" y="13" fill="#7C8FA6" font-size="9" letter-spacing=".13em">${se.name.toUpperCase()}</text>`;
     lx+=26+se.name.length*6.6;});
-  if(denso) s+=`<text x="${w-pad.r}" y="20" fill="#48596E" font-size="8.5" text-anchor="end">passe o mouse p/ ver o valor</text>`;
   return`<svg viewBox="0 0 ${w} ${h}" style="width:100%;height:auto;display:block">${s}</svg>`;
 }
 
+/* ---------- comparação com a média do time ---------- */
 function vs(meu,ref,maiorMelhor=true){
   if(!ref) return{cls:'eq',txt:'—'};
   const d=(meu-ref)/ref, bom=maiorMelhor?d>0:d<0;
@@ -388,46 +305,6 @@ function proximoPasso(){
        <b>registrar sua abordagem</b> para que ela vire referência para o time.`};
 }
 
-function detalheDias(){
-  const dr=P.daily_recebido, dt=D.datas;
-  // ultimos dias com QUALQUER negociacao aberta no periodo (nao conta os
-  // que ficaram zerados por fim de semana/feriado sem expediente)
-  const idx=[];
-  for(let i=dr.length-1;i>=0 && idx.length<5;i--){
-    if((P.daily_negociado[i]||0)>0 || (dr[i]||0)>0) idx.push(i);
-  }
-  idx.reverse();
-  if(!idx.length) return '<p class="prose" style="color:var(--dim);font-size:12.5px">Sem dias com movimento neste período.</p>';
-
-  const media=P.media_dia||0;
-  const maxV=Math.max(media, ...idx.map(i=>dr[i]||0), 1);
-  const linha=(rotulo,valor,destaque)=>{
-    const v=valor||0;
-    const diff = media>0 ? (v-media)/media : 0;
-    const cls = Math.abs(diff)<0.05?'eq':diff>0?'up':'dn';
-    const seta = cls==='up'?'▲':cls==='dn'?'▼':'▬';
-    const cor = destaque ? '#FFB020' : (v>=media ? '#34D399' : '#7C8FA6');
-    return `<div class="dia-row${destaque?' media':''}">
-      <span class="dia-data">${rotulo}</span>
-      <span class="dia-t"><i style="width:${Math.min(100,v/maxV*100)}%;background:${cor}"></i></span>
-      <span class="dia-v n" style="color:${destaque?'#FFB020':'inherit'}">${brl(v)}</span>
-      <span class="dia-d n ${cls}">${destaque?'':seta+' '+pc(Math.abs(diff),0)}</span>
-    </div>`;
-  };
-
-  let html='<div class="dias">';
-  idx.forEach((i,k)=>{
-    const rot = k===idx.length-1 ? `<b>${dt[i]} · hoje</b>` : dt[i];
-    html+=linha(rot, dr[i]);
-  });
-  html+=linha('MÉDIA DO PERÍODO', media, true);
-  html+='</div>';
-  html+=`<p class="prose" style="font-size:11.5px;line-height:1.6;color:var(--faint);margin-top:14px">
-    A seta compara cada dia com a sua própria média — não com colegas. Dias sem negociação
-    aberta (fim de semana ou folga) não entram nesta lista.</p>`;
-  return html;
-}
-
 /* ---------- render ---------- */
 const convCli=P.clientes_recebidos/P.clientes_negociados;
 const dez=Math.round(convCli*10);
@@ -453,12 +330,6 @@ document.getElementById('r').innerHTML=`
     <div class="c">SCORE 0–100</div></div>
 </div>
 
-<div class="abas" id="abas">
-  <button data-v="perf" class="on">Meu desempenho</button>
-  ${D.acordos_qtd ? `<button data-v="acd">Meus acordos<span class="cnt">${D.acordos_qtd}</span></button>` : ''}
-</div>
-
-<div class="vista on" id="v-perf">
 <div class="kpis">
   ${kpi('Negociado',brl(P.negociado),vs(P.negociado,T.negociado_pessoa),P.daily_negociado,'#A78BFA')}
   ${kpi('Recebido',brl(P.recebido),vs(P.recebido,T.recebido_pessoa),P.daily_recebido,'#34D399')}
@@ -479,7 +350,7 @@ document.getElementById('r').innerHTML=`
 
 <div class="g21">
   <div class="pn"><div class="pn-h"><h3>Sua evolução diária</h3><span class="nt">R$ por dia</span></div>
-    <div class="pn-b">${barras({labels:D.datas,series:[
+    <div class="pn-b">${area({labels:D.datas,series:[
       {name:'Negociado',data:P.daily_negociado,color:'#A78BFA'},
       {name:'Recebido',data:P.daily_recebido,color:'#34D399'}]})}</div></div>
   <div class="pn"><div class="pn-h"><h3>Composição do seu score</h3><span class="nt">peso</span></div>
@@ -493,11 +364,6 @@ document.getElementById('r').innerHTML=`
         <div class="lbl" style="margin-top:5px;color:var(--dim)">${P.melhor_dia} · média diária ${brl(P.media_dia)}</div>
       </div>
     </div></div>
-</div>
-
-<div class="pn">
-  <div class="pn-h"><h3>Recebido dia a dia</h3><span class="nt">últimos dias · comparado à sua média</span></div>
-  <div class="pn-b">${detalheDias()}</div>
 </div>
 
 <div class="pn"><div class="pn-h"><h3>Simulador de impacto</h3>
@@ -525,131 +391,12 @@ document.getElementById('r').innerHTML=`
   <div class="pn-b">${dg.map(d=>`<div class="dg" style="--c:${d.c}">
     <span class="i">${d.tag}</span><p>${d.html}</p></div>`).join('')}</div></div>
 
-</div>
-
-<div class="vista" id="v-acd">${D.acordos_qtd ? `
-  <div id="acd-cad" class="cad">
-    <h3>ACESSO PROTEGIDO</h3>
-    <p>Esta lista tem <b>nome de cliente</b>. Digite a senha da equipe para abrir.
-       Ela não fica gravada: some quando você fechar a aba.</p>
-    <input id="acd-pw" type="password" placeholder="••••••••" autocomplete="off">
-    <button id="acd-go">Abrir meus acordos</button>
-    <div class="msg" id="acd-msg"></div>
-  </div>
-  <div id="acd-lista"></div>` : ''}</div>
-
 <div class="ft"><b>Sobre estes números:</b> vêm das planilhas de Resultado Parcial e de Chamadas/TMA do período
 ${D.periodo}. Comparações são com a <b>média da operação</b>, não com pessoas específicas.
 O score é uma leitura combinada de resultado, conversão, produtividade, evolução e eficiência —
 não substitui a avaliação do seu supervisor. Meta mensal não consta na base, por isso não há
 percentual de atingimento de meta. Dúvida em algum número? Fale com ${esc(P.supervisor)}.</div>
 `;
-
-/* ---------- abas ---------- */
-document.querySelectorAll('#abas button').forEach(b=>b.onclick=()=>{
-  document.querySelectorAll('#abas button').forEach(x=>x.classList.toggle('on',x===b));
-  document.querySelectorAll('.vista').forEach(v=>v.classList.toggle('on', v.id==='v-'+b.dataset.v));
-  window.scrollTo({top:0,behavior:'instant'});
-});
-
-/* ---------- acordos (bloco criptografado) ---------- */
-if(D.acordos_qtd){
-  const cad=document.getElementById('acd-cad'), inp=document.getElementById('acd-pw'),
-        bt=document.getElementById('acd-go'), msg=document.getElementById('acd-msg'),
-        alvo=document.getElementById('acd-lista');
-  const b64=x=>Uint8Array.from(atob(x),c=>c.charCodeAt(0));
-
-  function hojeISO(){const d=new Date();return [d.getFullYear(),d.getMonth()+1,d.getDate()];}
-  function partes(br){ if(!br) return null; const[d,m,y]=br.split('/').map(Number); return [y,m,d]; }
-  function diasAte(br){
-    const p=partes(br); if(!p) return null;
-    const a=new Date(p[0],p[1]-1,p[2]), h=hojeISO();
-    return Math.round((a-new Date(h[0],h[1]-1,h[2]))/86400000);
-  }
-  function selo(br){
-    const d=diasAte(br);
-    if(d===null) return ['—','ok'];
-    if(d<0)  return ['vencido há '+Math.abs(d)+'d','venc'];
-    if(d===0) return ['vence hoje','hoje'];
-    if(d<=3) return ['em '+d+'d','prox'];
-    return ['em '+d+'d','ok'];
-  }
-
-  async function abrir(){
-    const senha=inp.value;
-    if(!senha){ msg.textContent='Digite a senha'; msg.className='msg err'; return; }
-    bt.disabled=true; inp.disabled=true;
-    msg.textContent='Abrindo…'; msg.className='msg';
-    await new Promise(r=>setTimeout(r,40));
-    let lista;
-    try{
-      const km=await crypto.subtle.importKey('raw',new TextEncoder().encode(senha),'PBKDF2',false,['deriveKey']);
-      const key=await crypto.subtle.deriveKey(
-        {name:'PBKDF2',salt:b64(D.acordos.salt),iterations:D.acordos.it,hash:'SHA-256'},
-        km,{name:'AES-GCM',length:256},false,['decrypt']);
-      const plano=await crypto.subtle.decrypt({name:'AES-GCM',iv:b64(D.acordos.iv)},key,b64(D.acordos.ct));
-      lista=JSON.parse(new TextDecoder().decode(plano));
-    }catch(e){
-      bt.disabled=false; inp.disabled=false; inp.value='';
-      msg.textContent='Senha incorreta'; msg.className='msg err'; inp.focus(); return;
-    }
-    cad.remove(); render(lista);
-  }
-
-  function fones(a){
-    const L=a.telefones||[];
-    if(!L.length) return '<span style="color:var(--faint);font-size:10.5px">sem telefone</span>';
-    const msg = encodeURIComponent('Olá ' + (a.cliente||'').split(' ')[0]
-      + ', tudo bem? Sou da cobrança da HUBMAIS e estou entrando em contato sobre o seu acordo.');
-    return '<div class="fones">' + L.map(f=>`<div class="fone">
-      <span class="nb n">${f.exibir}</span>
-      <a class="wa" href="https://wa.me/${f.link}?text=${msg}" target="_blank" rel="noopener"
-         title="Abrir conversa no WhatsApp">✆</a>
-      <a class="tel" href="tel:+${f.link}" title="Ligar">☏</a>
-    </div>`).join('') + '</div>';
-  }
-
-  function render(L){
-    const total=L.reduce((a,b)=>a+(b.valor||0),0);
-    const vencidos=L.filter(a=>{const d=diasAte(a.vence_em); return d!==null&&d<0;}).length;
-    const hoje=L.filter(a=>diasAte(a.vence_em)===0).length;
-    alvo.innerHTML=`
-      <div class="kpis" style="grid-template-columns:repeat(4,1fr);margin-top:0">
-        ${kpi('Acordos na sua carteira',nf(L.length))}
-        ${kpi('Valor negociado',brl(total))}
-        ${kpi('Vencem hoje',nf(hoje))}
-        ${kpi('Já vencidos',nf(vencidos))}
-      </div>
-      <div class="pn"><div class="pn-h"><h3>Seus acordos</h3>
-        <span class="nt">ordenados por vencimento</span></div>
-        <div class="pn-b" style="overflow-x:auto">
-        <table class="acd"><thead><tr>
-          <th class="l">Vencimento</th><th class="l">Cliente</th>
-          <th class="l">Contato</th><th>Valor</th><th>Parc.</th>
-          <th class="l">SAN</th><th class="l">Negociado em</th>
-        </tr></thead><tbody>
-        ${L.map(a=>{const[t,c]=selo(a.vence_em);return `<tr>
-          <td class="l"><span class="urg ${c}">${t}</span>
-            <div style="font-size:10px;color:var(--faint);margin-top:3px">${a.vence_em||'—'}</div></td>
-          <td class="l" style="font-weight:600">${esc(a.cliente||'—')}</td>
-          <td class="l">${fones(a)}</td>
-          <td class="n" style="font-weight:700">${brl2(a.valor||0)}</td>
-          <td class="n">${a.parcelas??'—'}${a.desconto!=null?`<div style="font-size:9.5px;color:var(--faint);margin-top:2px">${pc(a.desconto,0)} desc.</div>`:''}</td>
-          <td class="l" style="font-size:10px;color:var(--dim)">${esc(a.san||'—')}</td>
-          <td class="l" style="color:var(--dim)">${a.negociado_em||'—'}</td>
-        </tr>`;}).join('')}
-        </tbody></table></div></div>
-      <div class="ft" style="margin-top:16px"><b>Como usar:</b> comece pelos que estão em
-        vermelho e laranja — vencidos e vencendo hoje. Confirme se o cliente recebeu o boleto,
-        combine a forma de pagamento e registre o contato. Um acordo que vence sem pagamento
-        vira quebra e não conta como recebimento.
-        <br><br><b>Dados de cliente:</b> use somente para o trabalho de cobrança. Não
-        encaminhe esta tela nem tire print.</div>`;
-  }
-
-  bt.addEventListener('click',abrir);
-  inp.addEventListener('keydown',e=>{ if(e.key==='Enter') abrir(); });
-}
 
 /* simulador */
 const sl=document.getElementById('sl'), sv=document.getElementById('sv'), so=document.getElementById('so');
