@@ -257,6 +257,28 @@ input[type=range]::-moz-range-thumb{width:19px;height:19px;background:var(--ambe
 .mon-f{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
 @media(max-width:900px){.qk{grid-template-columns:repeat(2,1fr)!important}}
 
+/* ---- exceções ---- */
+.exf{display:grid;grid-template-columns:150px 190px 1fr 1fr 170px;gap:10px;align-items:end}
+.exf label{display:block;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:6px}
+.exf input,.exf select,.exo input{width:100%;background:#070B12;border:1px solid var(--line2);color:var(--txt);
+  font-family:var(--sans);font-size:12.5px;padding:9px 10px}
+.exf input:focus,.exf select:focus,.exo input:focus{outline:none;border-color:var(--amber)}
+.exf input.err,.exf select.err{border-color:var(--red)}
+.exo{display:flex;gap:10px;align-items:end;margin-top:10px}
+.exo>div{flex:1}
+.exo label{display:block;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:6px}
+.bt{background:var(--amber);color:#0A0703;border:none;font-family:var(--mono);font-size:10px;font-weight:800;
+  letter-spacing:.14em;text-transform:uppercase;padding:11px 16px;cursor:pointer;white-space:nowrap}
+.bt.sec{background:none;border:1px solid var(--line2);color:var(--dim)}
+.bt:disabled{opacity:.45;cursor:default}
+.exmsg{font-size:10px;letter-spacing:.1em;text-transform:uppercase;margin-top:10px;min-height:14px;color:var(--faint)}
+.exmsg.ok{color:var(--green)}.exmsg.err{color:var(--red)}
+.acd td .rm{background:none;border:none;color:var(--faint);cursor:pointer;font-size:14px}
+.acd td .rm:hover{color:var(--red)}
+.dv{font-size:8.5px;font-weight:700;letter-spacing:.08em;padding:2px 7px;text-transform:uppercase}
+.dv.a{background:rgba(52,211,153,.13);color:var(--green)}.dv.n{background:rgba(244,63,94,.14);color:var(--red)}.dv.g{background:rgba(255,176,32,.13);color:var(--amber)}
+@media(max-width:900px){.exf{grid-template-columns:1fr 1fr}.exo{flex-wrap:wrap}}
+
 svg text{font-family:var(--mono)}
 @media(max-width:900px){.kpis{grid-template-columns:repeat(3,1fr)}.g2,.g21{grid-template-columns:1fr}}
 @media(max-width:560px){.kpis{grid-template-columns:repeat(2,1fr)}.pf-s{margin-left:0}}
@@ -264,7 +286,7 @@ svg text{font-family:var(--mono)}
 </head>
 <body>
 <div class="wrap" id="r"></div>
-<script id="dd" type="application/json">{"acordos":{"salt":"2a6ULgdUo+0Ar+PZmIACqQ==","iv":"im9LoTiE66tsGLmw","ct":"Mi8Z8saAXnJyzO0s0JgdOaWRfM1tGuid+M07ixk4hO2gRMZWVyk+wto7Jb5GyKj+P/8xmqqqurgKiUP5PaPDiDLyhwl7cAktfesFDyn7mqTVOXghAcLlcgeS2p2vzosYaHt5ld195H012nk2OlPKBUPQo2J4S8Y3FS1Obi8ltvgXC3sa/+U5OIfgr++jwTtW+lZs5Qtz/kRFNjMU3/gcb9h0EM7BceqWneIBW2Z2ZMBdJmCZ83XBTNRM2sviw9Pr+hFIG3XONVOD6h6MbI590PzqelISS3omU160vwsA/IKFwDk0l8Jv2JESPakaGBR4vomPpe2v8MGQp54otIMq8dR+KllRXPF3lPl2WPPltXr5kI13r+UuYHSuAkARNfvcu9O/vDEQH78h5kMx3+6JaJ0X9urg8DmFu0HETXMOWaxnlyMb+CxW33JBypGEk22f95FC747hww+nZEmp82F0mFnoCnia2G6QJmaSDKOSeN/vF2IRAMlLxgocOjIkFx18rd8KDX3peqSQEL924rZqrPcazhoXFWr/gt4iKbQjiYs4k/PuA8eLtGHdlnaPruyAlvANXCA7pQEnRVg75Y7xA4fHc96J+yVeAsUGEjHgl2PMRN29crUmchKGDbSRcur2LLd2nv/aO0jU7hpuMyhuDs1ocdKlMdSDUgNyvMX2o+dfn0ShYUpT14qPQZdYLtrEjuUTQ+0Y4QsujlXYofUXn01X59R+Yk9Trkl0JfVqelXNkV0LM96hc6th6an96GsUuwmFbl2APyvbDjUEzTHjc5zwmYud4aV+CDa9OMPf8/1Gql4P+2AqA+4dOrgf4uDuab/j+Fxee0eDRjs0IJrV9UmZWWukY6qkNAlais+vF4jBY4hCz/70jx7OkwXBoenchdnOXBN7yWyvw1O21vJHeiZEMcVe0g5XSqd34shL8mnlOZ5Vve22wwkQcQQUkqWNKYGeyTy0G3akmHWxeBEwjQrFiL50+TjkbYg3bIpAVDhfaJ817CaDBFf8NFow0xSq0zIJUyLvF1mRxmVLijbmNEEtX/vxVd6B3+Ixdu6EzRU0qVgVxjAdL3h5cWMudedZ2B8Z0eIdLOO//HsDt5tvIbcLH0KUSSdMmjTzeH8JW1uns/DopvQHaW67IpGH160Y7v8tmCJIoXNT2zy9kADAKedpaMb2iarTPxICkM4tnnFXUUtBlObRerHPTmggAGUgoGwgGJz13rnwyUoAOSgp4BPVyrE7h/6w+4uRv8FBPeOx1b/ka14IDhPtF3Dqapa3hWBj/pgiH3Nid3dyK+Q7kHhv3xrrZxSX/6Ov6z5bctFA+bWH8zj2yActFrDkmK/ljiJhCRq5yihIKLK7tpydEw//5I7vVEsTg6xJoVdAGrdUZkp5dTRwO1ovobOS+Xg8MKCYcTyguwIGF1+RFX++1qc+CRV6dv+NMxZt8oYm0qADHq7X9GbVA4lIIeX/vAAtYiO1IRcHRrNg/1QpSClPvldwxwlZh8DoL/r/hMEbuolYRH/RVcW5yl17pLbqC8hL+gz9WW4ZNpkp7RwQEPaTwsrhAlLyk/n1hJudWh1nQwz4aHqpTO0w6ahqa0L9jTKnYfvtiB79tOeK+9CE971IPAxWPMBTh/AgQalNcvt/syrOUHmnOe5v0JBK7/jp1c4YnpoN9Q5l3yWfbFrch8e5GLa7hEA2RHqHSwXQY5abvICs+id2tIT5514RwP8+kToa6QpsfXvKW6npCAELEQXk8Z/WF2Aqe9yJk7B5PmfmZoW7fTALSZmC0mESdCiJKd7GOW8L+HFoblQ89j3mg3EjiLbVAFem/BOoIVLMtBLuKQtU+n7jAh4fi4jhaKrEienpNikCrL24iB/8PyzL7SvFANRxxPSzZ1aorUGPI9JVnVLIAyef7nTX0oBDrUYcL82Ck5PUgOaewL+hO9YCD+H+TEaLWc6y7OGSmk5ulqkaGTbPe1EPZ7U8LuaFuL7Pv9S/0RaPn8gxi1oHWbRhJZjgVu89APt2Umb/wvOwNynozhg8hz6IAOzsE81kQAJGf/lSh17iETOufIxarI2SrmA5sJimH6qPDLAZngxp9BlTpVS7k4xHeLCc/AeQq8KWqAxNrSbXcCz13eiRJQXFKZKKggo5gAW9H1kqlS4+MVesOjV0JsjhMa2CJT8vQNRpnYFAUnd9xFi1DBNkry0hUTL2kqWOrWqn8M3bFE1SNOx9D+4LcT+/+mhxAps+WDaiPpkSBWIbxrvaTw9JSSAybC0fkQ7Lh+M4FRmye8Pp9X4KHZX3iRhjLwZmWSKOeOtlbT0JCDFiq5rSTlcNqjfEfwDDR2GVekXkVJW24EbGs93X22Ql9dlxYmD/ATfTU8631y98lwusPPRCIfnxR064/dNgifwSLzrGBWONg513vkgriSxKEqFRGg9Y+YeM/oOJRGKyr0+f2mIkJaCEhHkSSN6OHmbh1ZhP6a/ZkbJFiPSeK24ARtNCaufUvkQoATJYk+MOMud33Q8NkpIotrbZ5zSQp8ZaxZWZ3wU4pglxkPfypxyMBsK/dsOV4JbIImngmNX56bbj2VwBO9o0+k8OU/Dy2pcEo8S+fqf+5qXK0yQOd1lJ8z7BKNR09U/daJx2k35UbDVdvpr5mTRLqBdVmfOSsyeCfMWnCD9U/IMuTokKV2/KcZJeqqpSbs1AfBic8uTRzkXg1Th3/BTPst+mG0YKog3xqiwrpT1QUx7aXGoiwMLxnXZBI9kO9bqvo7/XbJVTEwoYegZqnH3LNYHOISzz7mtKDg1N4/vn0Tc8ZaXU4qja+pSp0rQbD2kT9PoaNQdQ9N99etJzTuPgNGXGpZyT0esD/uA37VLuhjCNSLLdQH0tEqW99EBVZ4fMc+kI/VvQO2u1EHB1wdL1a8pc+LHfHRq3synqUzGz5K2OXf0HLA9b/IOcHlgN3iWrfRnXvXOVW1PDwLNBuKtIizY/T8GyfBm83Q+6TBIC3Ef8AmHsFRBFf6ATG/w5Fmmg9+iP9I5Z8unT/j3Jb5YPxKJCWhuJEO482/OhNkPLfpI94XmbE+ByEw47ldEVe+mmFmdavfetII/8IKHJV/4DmSToD5Vmw2r/Fz7+jw20qmDQBE55K/aSlmzDpzynDyykEJVTCy8oc8jKCr34IklQs429xsp1/+nlrbziQqnouxYwIxAm2n1IgNKWpwkRb4EFJzxvHCNcl4b0+SMY5PSyH1QPT5fB6SvkRTcuv5IGFtxp8qT8J//rJ2ZTw0A4Hh9TOm2GbcaP8tTLJrq89YD3AtPc+BKjzfebZ2KmHLHHi8AFvQZHaZYPZI+73Kd3f+fXkfvzyg/02A7uvWMy2lv59mHT2wYdXCkUR5axnCvb8q9Tduw1Vg//skGQ2O82ufN+z6Tqyw9V42zSWAX4um5OIqAdI4+M5G0w8lWC1cxBqtW93fJ5doIrsVQjZ2/YO/clJqUN/87vMDNR0Q6wi2MpGSwaw0vlVpa/URAcJqp3eAxkApxx3B66hUFx6ciVcwKRVdmY2GOV7DIp8sBdElJljrtVdCcVs4csyVhoZa169vHyH+voGJJEv3SwQHHmKpnb5w3X0t3j3u30gM/RdQUnltHZdisqbZwKroCzyHDISMm1QVB7tAfhlHSX9ydYJVtLlUmfhnl8JCsYeTSBNl4ef7Xoj2RFoF9EW78OA79jVNFJTwgcrLiwqUWGgUzLxQIjgBhrgyGxsg2hJLij4bvkFmILCS5XYllK54KiLESsB69zWxl4qYcz28E=","it":310000},"acordos_qtd":9,"qualidade":{"psat":{"periodo":"01/10 a 13/10/2026","equipe":{"pesquisas":560,"validas_atendente":300,"validas_solucao":302,"invalidas":57,"sem_resposta":203,"csat_atendente":0.8333,"media_atendente":4.35,"csat_solucao":0.7781,"media_solucao":4.17,"rechamada":0.3937,"base_rechamada":287,"dist_atendente":[33,12,5,17,233],"detratores":45},"meu":null,"lista":[]},"monit":{"competencia":"2026-10","equipe":{"media_nota":71.4,"monitorias":34,"pessoas":10,"por_pessoa":3.4},"meta":null,"mes":null,"recorrentes":[],"lista":[],"relatos":null}},"gerado_em":"13/10 às 11:54","pessoa":{"nome":"Carla Costa","turno":"Manhã","supervisor":"Paula Fernanda Alves","negociado":32949.0,"recebido":23912.07,"conversao":0.7257,"clientes_negociados":161,"clientes_recebidos":128,"faturas_negociadas":339,"ticket_medio":186.81,"chamadas":150,"tma_seg":268.027,"pausa_pct":27.1,"daily_negociado":[5331.73,1816.22,1438.1,0.0,4426.18,3262.68,7460.05,5725.09,1132.83,0.0,0.0,2356.12],"daily_recebido":[3664.05,2046.74,762.13,174.4,3506.18,4679.84,4611.28,3037.97,1055.59,373.89,0,0],"score":75,"partes":{"resultado":100.0,"conversao":72.6,"produtividade":75.0,"evolucao":17.7,"eficiencia":47.8},"tendencia":-0.388,"cv":0.687,"media_dia":2391.21,"melhor_valor":4679.84,"melhor_dia":"06/10","rank":1,"total":19,"observacao":null,"projecao":{"negociado_atual":32949.0,"ritmo_diario":2745.75,"projetado_fim_mes":85118.25,"dias_corridos":12,"dias_do_mes":31,"dias_restantes":19,"premio_atual":100.0,"premio_projetado":300.0,"proxima_faixa":{"alvo":37500.0,"premio":200.0,"falta":4551.0},"ritmo_necessario_prox_faixa":239.53,"no_topo":false}},"equipe":{"conversao":0.6073,"ticket_medio":181.06,"tma_seg":449.2,"pausa_pct":28.0,"negociado_pessoa":18013.73,"recebido_pessoa":10939.68,"chamadas_pessoa":100,"meta_topo":50000.0,"conversao_minima":0.65},"datas":["01/10","02/10","03/10","04/10","05/10","06/10","07/10","08/10","09/10","10/10","11/10","12/10"],"periodo":"01 a 12/10/2026 (parcial do mês)","mostrar_rank":false}</script>
+<script id="dd" type="application/json">{"acordos":{"salt":"2wzrSN6qHEgZsG3VS3dZZA==","iv":"3yzQ6LMqyqgEVzKT","ct":"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","it":310000},"acordos_qtd":9,"qualidade":{"psat":{"periodo":"01/10 a 13/10/2026","equipe":{"pesquisas":610,"validas_atendente":327,"validas_solucao":328,"invalidas":61,"sem_resposta":222,"csat_atendente":0.8287,"media_atendente":4.33,"csat_solucao":0.7652,"media_solucao":4.13,"rechamada":0.3948,"base_rechamada":309,"dist_atendente":[39,12,5,17,254],"detratores":51},"meu":null,"lista":[]},"monit":{"competencia":"2026-10","equipe":{"media_nota":72.5,"monitorias":32,"pessoas":10,"por_pessoa":3.2},"meta":null,"mes":null,"recorrentes":[],"lista":[],"relatos":null}},"gerado_em":"13/10 às 18:45","excecoes":null,"pessoa":{"nome":"Carla Costa","turno":"Manhã","supervisor":"Paula Fernanda Alves","negociado":34181.97,"recebido":21025.2,"conversao":0.6151,"clientes_negociados":148,"clientes_recebidos":119,"faturas_negociadas":452,"ticket_medio":176.68,"chamadas":150,"tma_seg":268.027,"pausa_pct":27.1,"daily_negociado":[6500.3,5479.57,3832.11,3530.61,2051.11,0.0,0.0,3285.75,3386.81,2134.04,3981.67,0.0,0],"daily_recebido":[3105.91,3309.12,1735.2,3011.72,1581.94,295.73,208.59,2956.65,2410.83,1642.28,767.23,0.0,0.0],"score":65,"partes":{"resultado":80.9,"conversao":61.5,"produtividade":75.0,"evolucao":10.4,"eficiencia":47.8},"tendencia":-0.4751,"cv":0.568,"media_dia":1911.38,"melhor_valor":3309.12,"melhor_dia":"02/09","rank":2,"total":19,"observacao":null,"projecao":{"negociado_atual":34181.97,"ritmo_diario":2629.38,"projetado_fim_mes":78881.47,"dias_corridos":13,"dias_do_mes":30,"dias_restantes":17,"premio_atual":100.0,"premio_projetado":300.0,"proxima_faixa":{"alvo":37500.0,"premio":200.0,"falta":3318.03},"ritmo_necessario_prox_faixa":195.18,"no_topo":false}},"equipe":{"conversao":0.6817,"ticket_medio":191.33,"tma_seg":449.2,"pausa_pct":28.0,"negociado_pessoa":19071.25,"recebido_pessoa":13000.55,"chamadas_pessoa":100,"meta_topo":50000.0,"conversao_minima":0.65},"datas":["01/09","02/09","03/09","04/09","05/09","06/09","07/09","08/09","09/09","10/09","11/09","12/09","13/09"],"periodo":"01 a 13/09/2026 (parcial do mês)","mostrar_rank":false}</script>
 <script>
 (function(){
 'use strict';
@@ -698,6 +720,99 @@ function abaMonit(){
     identificar ninguém. Dúvida sobre uma nota? Fale com ${esc(P.supervisor)}.</div>`;
 }
 
+/* ---------- exceções: formulário + envio para a planilha do supervisor ---------- */
+const EX=D.excecoes||null;
+const EXK='exc_'+(EX?EX.login:''), CANAIS=['Receptivo','Ativo','Chat','WhatsApp','E-mail'], DEVS=['Autorizado','Não autorizado','Aguardando'];
+const exGet=(k,d)=>{try{const v=localStorage.getItem(EXK+k);return v?JSON.parse(v):d;}catch(e){return d;}};
+const exSet=(k,v)=>{try{localStorage.setItem(EXK+k,JSON.stringify(v));}catch(e){}};
+const hojeBR=()=>{const d=new Date();return String(d.getDate()).padStart(2,'0')+'/'+String(d.getMonth()+1).padStart(2,'0')+'/'+d.getFullYear();};
+const dvCls=v=>v==='Autorizado'?'a':v==='Não autorizado'?'n':'g';
+function abaExc(){
+  return `<div class="hi"><div class="ic">EXCEÇÕES</div><div style="flex:1">
+    <h4>REGISTRE AQUI TODA NEGOCIAÇÃO FORA DA RÉGUA</h4>
+    <p>Preencha uma linha para cada exceção, junte quantas quiser na lista e clique em <b>Enviar</b>.
+    Tudo vai para uma planilha única do seu supervisor, que recebe o resumo do dia às <b>20h</b>.
+    Se a internet cair, a lista fica guardada neste navegador até você enviar.</p></div></div>
+  <div class="pn"><div class="pn-h"><h3>Nova exceção</h3><span class="nt">${esc(EX.nome)} · ${hojeBR()}</span></div>
+    <div class="pn-b">
+      <div class="exf">
+        <div><label>Canal de contato</label><select id="ex-canal"><option value="">escolha</option>${CANAIS.map(c=>`<option>${c}</option>`).join('')}</select></div>
+        <div><label>SAN</label><input id="ex-san" placeholder="HTB000000000000" autocomplete="off"></div>
+        <div><label>Proposta ofertada</label><input id="ex-prop" placeholder="ex.: 10% de desconto à vista" autocomplete="off"></div>
+        <div><label>Contra proposta</label><input id="ex-contra" placeholder="ex.: 15% no PIX" autocomplete="off"></div>
+        <div><label>Devolutiva</label><select id="ex-dev"><option value="">escolha</option>${DEVS.map(c=>`<option>${c}</option>`).join('')}</select></div>
+      </div>
+      <div class="exo"><div><label>Observação (opcional)</label><input id="ex-obs" placeholder="quem autorizou, motivo, prazo…" autocomplete="off"></div>
+        <button class="bt sec" id="ex-add">+ Adicionar à lista</button></div>
+      <div class="exmsg" id="ex-msg1"></div>
+    </div></div>
+  <div class="pn"><div class="pn-h"><h3>Lista para enviar</h3><span class="nt" id="ex-cont"></span></div>
+    <div class="pn-b" id="ex-pend"></div></div>
+  <div class="pn"><div class="pn-h"><h3>Enviadas hoje</h3><span class="nt">ficam registradas na planilha do supervisor</span></div>
+    <div class="pn-b" id="ex-env"></div></div>`;
+}
+function exTabela(L,rem){
+  if(!L.length) return '';
+  return `<div style="overflow-x:auto"><table class="acd"><thead><tr><th class="l">${rem?'Incluída':'Enviada'}</th><th class="l">Canal</th>
+    <th class="l">SAN</th><th class="l">Proposta ofertada</th><th class="l">Contra proposta</th><th class="l">Devolutiva</th>${rem?'<th></th>':''}</tr></thead><tbody>
+    ${L.map((x,i)=>`<tr><td class="l" style="color:var(--dim)">${esc(x.hora||'')}</td><td class="l">${esc(x.canal)}</td><td class="l">${esc(x.san)}</td>
+      <td class="l" style="white-space:normal;font-family:var(--sans)">${esc(x.proposta)}</td><td class="l" style="white-space:normal;font-family:var(--sans)">${esc(x.contra)}</td>
+      <td class="l"><span class="dv ${dvCls(x.devolutiva)}">${esc(x.devolutiva)}</span></td>
+      ${rem?`<td><button class="rm" data-rm="${i}" title="tirar da lista">✕</button></td>`:''}</tr>`).join('')}</tbody></table></div>`;
+}
+function exRender(){
+  const P_=exGet('pend',[]), E_=exGet('env',{});
+  const hj=E_[hojeBR()]||[];
+  document.getElementById('ex-cont').textContent=P_.length?P_.length+' a enviar':'';
+  document.getElementById('ex-pend').innerHTML=P_.length?exTabela(P_,true)+
+    `<div style="display:flex;gap:12px;align-items:center;margin-top:14px;flex-wrap:wrap">
+      <button class="bt" id="ex-send">Enviar ${P_.length} exceç${P_.length>1?'ões':'ão'}</button>
+      <span class="exmsg" id="ex-msg2" style="margin:0"></span></div>`
+    :`<p class="prose" style="font-size:12.5px;color:var(--dim)">Nada pendente. Adicione uma exceção acima.</p><div class="exmsg" id="ex-msg2"></div>`;
+  document.getElementById('ex-env').innerHTML=hj.length?exTabela(hj,false)
+    :'<p class="prose" style="font-size:12.5px;color:var(--dim)">Nenhuma exceção enviada hoje.</p>';
+  document.querySelectorAll('[data-rm]').forEach(b=>b.onclick=()=>{const L=exGet('pend',[]);L.splice(+b.dataset.rm,1);exSet('pend',L);exRender();});
+  const sb=document.getElementById('ex-send'); if(sb) sb.onclick=exEnviar;
+  const btn=document.querySelector('[data-v="exc"]');
+  if(btn){const c=btn.querySelector('.cnt'); if(P_.length){if(c)c.textContent=P_.length;else btn.insertAdjacentHTML('beforeend',`<span class="cnt">${P_.length}</span>`);} else if(c) c.remove();}
+}
+function exAdd(){
+  const f={canal:'ex-canal',san:'ex-san',proposta:'ex-prop',contra:'ex-contra',devolutiva:'ex-dev'}, v={}, m=document.getElementById('ex-msg1');
+  let falta=[];
+  Object.entries(f).forEach(([k,id])=>{const el=document.getElementById(id);v[k]=el.value.trim();el.classList.toggle('err',!v[k]);if(!v[k])falta.push(k);});
+  if(falta.length){m.textContent='Preencha os campos em vermelho';m.className='exmsg err';return;}
+  v.san=v.san.toUpperCase().replace(/\s+/g,'');
+  v.obs=document.getElementById('ex-obs').value.trim();
+  v.id=EX.login+'-'+Date.now()+'-'+Math.random().toString(36).slice(2,7);
+  v.hora=new Date().toTimeString().slice(0,5);
+  const L=exGet('pend',[]); L.push(v); exSet('pend',L);
+  ['ex-san','ex-prop','ex-contra','ex-obs'].forEach(id=>document.getElementById(id).value='');
+  ['ex-canal','ex-dev'].forEach(id=>document.getElementById(id).value='');
+  m.textContent=v.san.startsWith('HTB')?'Adicionada à lista — falta enviar':'Adicionada. Confira o SAN: normalmente começa com HTB';
+  m.className=v.san.startsWith('HTB')?'exmsg ok':'exmsg err';
+  exRender();
+}
+async function exEnviar(){
+  const L=exGet('pend',[]); if(!L.length) return;
+  const b=document.getElementById('ex-send'), m=document.getElementById('ex-msg2');
+  b.disabled=true; m.textContent='Enviando…'; m.className='exmsg';
+  const corpo=JSON.stringify({chave:EX.chave,login:EX.login,nome:EX.nome,turno:EX.turno,itens:L});
+  let r=null;
+  try{
+    const resp=await fetch(EX.url,{method:'POST',body:corpo});   // text/plain: sem pré-verificação de CORS
+    r=await resp.json();
+  }catch(e){ r={ok:false,erro:'sem conexão com a planilha'}; }
+  if(r&&r.ok){
+    const E_=exGet('env',{}), hj=E_[hojeBR()]=E_[hojeBR()]||[];
+    L.forEach(x=>hj.push(Object.assign({},x,{hora:r.hora||x.hora})));
+    Object.keys(E_).sort().slice(0,-7).forEach(k=>delete E_[k]);   // guarda só os últimos dias
+    exSet('env',E_); exSet('pend',[]); exRender();
+    const m2=document.getElementById('ex-msg2'); m2.textContent='Enviado ✓ '+(r.gravados||0)+' registrada'+((r.gravados||0)===1?'':'s')+(r.repetidos?' ('+r.repetidos+' já estava'+(r.repetidos>1?'m':'')+' na planilha)':'');
+    m2.className='exmsg ok';
+  }else{
+    b.disabled=false; m.textContent='Não enviado ('+((r&&r.erro)||'erro')+'). A lista continua guardada — tente de novo.'; m.className='exmsg err';
+  }
+}
 /* ---------- render ---------- */
 const convCli=P.clientes_recebidos/P.clientes_negociados;
 const dez=Math.round(convCli*10);
@@ -728,6 +843,7 @@ document.getElementById('r').innerHTML=`
   ${D.acordos_qtd ? `<button data-v="acd">Meus acordos<span class="cnt">${D.acordos_qtd}</span></button>` : ''}
   ${QS ? `<button data-v="psat">Satisfação (PSAT)</button>` : ''}
   ${QMx ? `<button data-v="mon">Minhas monitorias${QMx.mes&&QMx.mes.qtd?`<span class="cnt">${QMx.mes.qtd}</span>`:''}</button>` : ''}
+  ${D.excecoes ? `<button data-v="exc">Exceções</button>` : ''}
 </div>
 
 <div class="vista on" id="v-perf">
@@ -841,6 +957,7 @@ ${(()=>{
 
 ${QS?`<div class="vista" id="v-psat">${abaPSAT()}</div>`:''}
 ${QMx?`<div class="vista" id="v-mon">${abaMonit()}</div>`:''}
+${D.excecoes?`<div class="vista" id="v-exc">${abaExc()}</div>`:''}
 
 <div class="ft"><b>Sobre estes números:</b> vêm das planilhas de Resultado Parcial e de Chamadas/TMA do período
 ${D.periodo}. Comparações são com a <b>média da operação</b>, não com pessoas específicas.
@@ -977,6 +1094,12 @@ if(QMx && QMx.relatos && document.getElementById('q-go')){
   }
   bt.addEventListener('click',abrirRel);
   inp.addEventListener('keydown',e=>{if(e.key==='Enter')abrirRel();});
+}
+
+if(EX && document.getElementById('ex-add')){
+  document.getElementById('ex-add').onclick=exAdd;
+  document.getElementById('ex-san').addEventListener('input',e=>{e.target.value=e.target.value.toUpperCase();});
+  exRender();
 }
 
 /* simulador */

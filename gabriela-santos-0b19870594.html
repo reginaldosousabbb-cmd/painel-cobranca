@@ -257,6 +257,28 @@ input[type=range]::-moz-range-thumb{width:19px;height:19px;background:var(--ambe
 .mon-f{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
 @media(max-width:900px){.qk{grid-template-columns:repeat(2,1fr)!important}}
 
+/* ---- exceções ---- */
+.exf{display:grid;grid-template-columns:150px 190px 1fr 1fr 170px;gap:10px;align-items:end}
+.exf label{display:block;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:6px}
+.exf input,.exf select,.exo input{width:100%;background:#070B12;border:1px solid var(--line2);color:var(--txt);
+  font-family:var(--sans);font-size:12.5px;padding:9px 10px}
+.exf input:focus,.exf select:focus,.exo input:focus{outline:none;border-color:var(--amber)}
+.exf input.err,.exf select.err{border-color:var(--red)}
+.exo{display:flex;gap:10px;align-items:end;margin-top:10px}
+.exo>div{flex:1}
+.exo label{display:block;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:6px}
+.bt{background:var(--amber);color:#0A0703;border:none;font-family:var(--mono);font-size:10px;font-weight:800;
+  letter-spacing:.14em;text-transform:uppercase;padding:11px 16px;cursor:pointer;white-space:nowrap}
+.bt.sec{background:none;border:1px solid var(--line2);color:var(--dim)}
+.bt:disabled{opacity:.45;cursor:default}
+.exmsg{font-size:10px;letter-spacing:.1em;text-transform:uppercase;margin-top:10px;min-height:14px;color:var(--faint)}
+.exmsg.ok{color:var(--green)}.exmsg.err{color:var(--red)}
+.acd td .rm{background:none;border:none;color:var(--faint);cursor:pointer;font-size:14px}
+.acd td .rm:hover{color:var(--red)}
+.dv{font-size:8.5px;font-weight:700;letter-spacing:.08em;padding:2px 7px;text-transform:uppercase}
+.dv.a{background:rgba(52,211,153,.13);color:var(--green)}.dv.n{background:rgba(244,63,94,.14);color:var(--red)}.dv.g{background:rgba(255,176,32,.13);color:var(--amber)}
+@media(max-width:900px){.exf{grid-template-columns:1fr 1fr}.exo{flex-wrap:wrap}}
+
 svg text{font-family:var(--mono)}
 @media(max-width:900px){.kpis{grid-template-columns:repeat(3,1fr)}.g2,.g21{grid-template-columns:1fr}}
 @media(max-width:560px){.kpis{grid-template-columns:repeat(2,1fr)}.pf-s{margin-left:0}}
@@ -264,7 +286,7 @@ svg text{font-family:var(--mono)}
 </head>
 <body>
 <div class="wrap" id="r"></div>
-<script id="dd" type="application/json">{"acordos":null,"acordos_qtd":0,"qualidade":{"psat":{"periodo":"01/10 a 13/10/2026","equipe":{"pesquisas":560,"validas_atendente":300,"validas_solucao":302,"invalidas":57,"sem_resposta":203,"csat_atendente":0.8333,"media_atendente":4.35,"csat_solucao":0.7781,"media_solucao":4.17,"rechamada":0.3937,"base_rechamada":287,"dist_atendente":[33,12,5,17,233],"detratores":45},"meu":null,"lista":[]},"monit":{"competencia":"2026-10","equipe":{"media_nota":71.4,"monitorias":34,"pessoas":10,"por_pessoa":3.4},"meta":null,"mes":null,"recorrentes":[],"lista":[],"relatos":null}},"gerado_em":"13/10 às 11:54","pessoa":{"nome":"Gabriela Santos","turno":"Manhã","supervisor":"Paula Fernanda Alves","negociado":0.0,"recebido":3.88,"conversao":0,"clientes_negociados":0,"clientes_recebidos":1,"faturas_negociadas":0,"ticket_medio":3.88,"chamadas":0,"tma_seg":0.0,"pausa_pct":0.0,"daily_negociado":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"daily_recebido":[3.88,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0],"score":5,"partes":{"resultado":0.0,"conversao":0,"produtividade":0.0,"evolucao":0.0,"eficiencia":100.0},"tendencia":-0.6,"cv":0,"media_dia":3.88,"melhor_valor":3.88,"melhor_dia":"01/10","rank":19,"total":19,"observacao":null,"projecao":{"negociado_atual":0.0,"ritmo_diario":0.0,"projetado_fim_mes":0.0,"dias_corridos":12,"dias_do_mes":31,"dias_restantes":19,"premio_atual":0,"premio_projetado":0,"proxima_faixa":{"alvo":30000.0,"premio":100.0,"falta":30000.0},"ritmo_necessario_prox_faixa":1578.95,"no_topo":false}},"equipe":{"conversao":0.6073,"ticket_medio":181.06,"tma_seg":449.2,"pausa_pct":28.0,"negociado_pessoa":18013.73,"recebido_pessoa":10939.68,"chamadas_pessoa":100,"meta_topo":50000.0,"conversao_minima":0.65},"datas":["01/10","02/10","03/10","04/10","05/10","06/10","07/10","08/10","09/10","10/10","11/10","12/10"],"periodo":"01 a 12/10/2026 (parcial do mês)","mostrar_rank":false}</script>
+<script id="dd" type="application/json">{"acordos":null,"acordos_qtd":0,"qualidade":{"psat":{"periodo":"01/10 a 13/10/2026","equipe":{"pesquisas":610,"validas_atendente":327,"validas_solucao":328,"invalidas":61,"sem_resposta":222,"csat_atendente":0.8287,"media_atendente":4.33,"csat_solucao":0.7652,"media_solucao":4.13,"rechamada":0.3948,"base_rechamada":309,"dist_atendente":[39,12,5,17,254],"detratores":51},"meu":null,"lista":[]},"monit":{"competencia":"2026-10","equipe":{"media_nota":72.5,"monitorias":32,"pessoas":10,"por_pessoa":3.2},"meta":null,"mes":null,"recorrentes":[],"lista":[],"relatos":null}},"gerado_em":"13/10 às 18:45","excecoes":null,"pessoa":{"nome":"Gabriela Santos","turno":"Manhã","supervisor":"Paula Fernanda Alves","negociado":7169.52,"recebido":5166.87,"conversao":0.7207,"clientes_negociados":36,"clientes_recebidos":18,"faturas_negociadas":105,"ticket_medio":287.05,"chamadas":0,"tma_seg":0.0,"pausa_pct":0.0,"daily_negociado":[0.0,0.0,0.0,0.0,0.0,0.0,1384.01,1123.57,1509.76,1198.13,490.36,1463.69,0],"daily_recebido":[0.0,306.48,0.0,0.0,0.0,0.0,1375.17,823.42,1368.93,183.53,450.17,659.17,0.0],"score":41,"partes":{"resultado":19.9,"conversao":72.1,"produtividade":0.0,"evolucao":100.0,"eficiencia":100.0},"tendencia":0.6,"cv":0.605,"media_dia":738.12,"melhor_valor":1375.17,"melhor_dia":"07/09","rank":19,"total":19,"observacao":null,"projecao":{"negociado_atual":7169.52,"ritmo_diario":551.5,"projetado_fim_mes":16545.05,"dias_corridos":13,"dias_do_mes":30,"dias_restantes":17,"premio_atual":0,"premio_projetado":0,"proxima_faixa":{"alvo":30000.0,"premio":100.0,"falta":22830.48},"ritmo_necessario_prox_faixa":1342.97,"no_topo":false}},"equipe":{"conversao":0.6817,"ticket_medio":191.33,"tma_seg":449.2,"pausa_pct":28.0,"negociado_pessoa":19071.25,"recebido_pessoa":13000.55,"chamadas_pessoa":100,"meta_topo":50000.0,"conversao_minima":0.65},"datas":["01/09","02/09","03/09","04/09","05/09","06/09","07/09","08/09","09/09","10/09","11/09","12/09","13/09"],"periodo":"01 a 13/09/2026 (parcial do mês)","mostrar_rank":false}</script>
 <script>
 (function(){
 'use strict';
@@ -698,6 +720,99 @@ function abaMonit(){
     identificar ninguém. Dúvida sobre uma nota? Fale com ${esc(P.supervisor)}.</div>`;
 }
 
+/* ---------- exceções: formulário + envio para a planilha do supervisor ---------- */
+const EX=D.excecoes||null;
+const EXK='exc_'+(EX?EX.login:''), CANAIS=['Receptivo','Ativo','Chat','WhatsApp','E-mail'], DEVS=['Autorizado','Não autorizado','Aguardando'];
+const exGet=(k,d)=>{try{const v=localStorage.getItem(EXK+k);return v?JSON.parse(v):d;}catch(e){return d;}};
+const exSet=(k,v)=>{try{localStorage.setItem(EXK+k,JSON.stringify(v));}catch(e){}};
+const hojeBR=()=>{const d=new Date();return String(d.getDate()).padStart(2,'0')+'/'+String(d.getMonth()+1).padStart(2,'0')+'/'+d.getFullYear();};
+const dvCls=v=>v==='Autorizado'?'a':v==='Não autorizado'?'n':'g';
+function abaExc(){
+  return `<div class="hi"><div class="ic">EXCEÇÕES</div><div style="flex:1">
+    <h4>REGISTRE AQUI TODA NEGOCIAÇÃO FORA DA RÉGUA</h4>
+    <p>Preencha uma linha para cada exceção, junte quantas quiser na lista e clique em <b>Enviar</b>.
+    Tudo vai para uma planilha única do seu supervisor, que recebe o resumo do dia às <b>20h</b>.
+    Se a internet cair, a lista fica guardada neste navegador até você enviar.</p></div></div>
+  <div class="pn"><div class="pn-h"><h3>Nova exceção</h3><span class="nt">${esc(EX.nome)} · ${hojeBR()}</span></div>
+    <div class="pn-b">
+      <div class="exf">
+        <div><label>Canal de contato</label><select id="ex-canal"><option value="">escolha</option>${CANAIS.map(c=>`<option>${c}</option>`).join('')}</select></div>
+        <div><label>SAN</label><input id="ex-san" placeholder="HTB000000000000" autocomplete="off"></div>
+        <div><label>Proposta ofertada</label><input id="ex-prop" placeholder="ex.: 10% de desconto à vista" autocomplete="off"></div>
+        <div><label>Contra proposta</label><input id="ex-contra" placeholder="ex.: 15% no PIX" autocomplete="off"></div>
+        <div><label>Devolutiva</label><select id="ex-dev"><option value="">escolha</option>${DEVS.map(c=>`<option>${c}</option>`).join('')}</select></div>
+      </div>
+      <div class="exo"><div><label>Observação (opcional)</label><input id="ex-obs" placeholder="quem autorizou, motivo, prazo…" autocomplete="off"></div>
+        <button class="bt sec" id="ex-add">+ Adicionar à lista</button></div>
+      <div class="exmsg" id="ex-msg1"></div>
+    </div></div>
+  <div class="pn"><div class="pn-h"><h3>Lista para enviar</h3><span class="nt" id="ex-cont"></span></div>
+    <div class="pn-b" id="ex-pend"></div></div>
+  <div class="pn"><div class="pn-h"><h3>Enviadas hoje</h3><span class="nt">ficam registradas na planilha do supervisor</span></div>
+    <div class="pn-b" id="ex-env"></div></div>`;
+}
+function exTabela(L,rem){
+  if(!L.length) return '';
+  return `<div style="overflow-x:auto"><table class="acd"><thead><tr><th class="l">${rem?'Incluída':'Enviada'}</th><th class="l">Canal</th>
+    <th class="l">SAN</th><th class="l">Proposta ofertada</th><th class="l">Contra proposta</th><th class="l">Devolutiva</th>${rem?'<th></th>':''}</tr></thead><tbody>
+    ${L.map((x,i)=>`<tr><td class="l" style="color:var(--dim)">${esc(x.hora||'')}</td><td class="l">${esc(x.canal)}</td><td class="l">${esc(x.san)}</td>
+      <td class="l" style="white-space:normal;font-family:var(--sans)">${esc(x.proposta)}</td><td class="l" style="white-space:normal;font-family:var(--sans)">${esc(x.contra)}</td>
+      <td class="l"><span class="dv ${dvCls(x.devolutiva)}">${esc(x.devolutiva)}</span></td>
+      ${rem?`<td><button class="rm" data-rm="${i}" title="tirar da lista">✕</button></td>`:''}</tr>`).join('')}</tbody></table></div>`;
+}
+function exRender(){
+  const P_=exGet('pend',[]), E_=exGet('env',{});
+  const hj=E_[hojeBR()]||[];
+  document.getElementById('ex-cont').textContent=P_.length?P_.length+' a enviar':'';
+  document.getElementById('ex-pend').innerHTML=P_.length?exTabela(P_,true)+
+    `<div style="display:flex;gap:12px;align-items:center;margin-top:14px;flex-wrap:wrap">
+      <button class="bt" id="ex-send">Enviar ${P_.length} exceç${P_.length>1?'ões':'ão'}</button>
+      <span class="exmsg" id="ex-msg2" style="margin:0"></span></div>`
+    :`<p class="prose" style="font-size:12.5px;color:var(--dim)">Nada pendente. Adicione uma exceção acima.</p><div class="exmsg" id="ex-msg2"></div>`;
+  document.getElementById('ex-env').innerHTML=hj.length?exTabela(hj,false)
+    :'<p class="prose" style="font-size:12.5px;color:var(--dim)">Nenhuma exceção enviada hoje.</p>';
+  document.querySelectorAll('[data-rm]').forEach(b=>b.onclick=()=>{const L=exGet('pend',[]);L.splice(+b.dataset.rm,1);exSet('pend',L);exRender();});
+  const sb=document.getElementById('ex-send'); if(sb) sb.onclick=exEnviar;
+  const btn=document.querySelector('[data-v="exc"]');
+  if(btn){const c=btn.querySelector('.cnt'); if(P_.length){if(c)c.textContent=P_.length;else btn.insertAdjacentHTML('beforeend',`<span class="cnt">${P_.length}</span>`);} else if(c) c.remove();}
+}
+function exAdd(){
+  const f={canal:'ex-canal',san:'ex-san',proposta:'ex-prop',contra:'ex-contra',devolutiva:'ex-dev'}, v={}, m=document.getElementById('ex-msg1');
+  let falta=[];
+  Object.entries(f).forEach(([k,id])=>{const el=document.getElementById(id);v[k]=el.value.trim();el.classList.toggle('err',!v[k]);if(!v[k])falta.push(k);});
+  if(falta.length){m.textContent='Preencha os campos em vermelho';m.className='exmsg err';return;}
+  v.san=v.san.toUpperCase().replace(/\s+/g,'');
+  v.obs=document.getElementById('ex-obs').value.trim();
+  v.id=EX.login+'-'+Date.now()+'-'+Math.random().toString(36).slice(2,7);
+  v.hora=new Date().toTimeString().slice(0,5);
+  const L=exGet('pend',[]); L.push(v); exSet('pend',L);
+  ['ex-san','ex-prop','ex-contra','ex-obs'].forEach(id=>document.getElementById(id).value='');
+  ['ex-canal','ex-dev'].forEach(id=>document.getElementById(id).value='');
+  m.textContent=v.san.startsWith('HTB')?'Adicionada à lista — falta enviar':'Adicionada. Confira o SAN: normalmente começa com HTB';
+  m.className=v.san.startsWith('HTB')?'exmsg ok':'exmsg err';
+  exRender();
+}
+async function exEnviar(){
+  const L=exGet('pend',[]); if(!L.length) return;
+  const b=document.getElementById('ex-send'), m=document.getElementById('ex-msg2');
+  b.disabled=true; m.textContent='Enviando…'; m.className='exmsg';
+  const corpo=JSON.stringify({chave:EX.chave,login:EX.login,nome:EX.nome,turno:EX.turno,itens:L});
+  let r=null;
+  try{
+    const resp=await fetch(EX.url,{method:'POST',body:corpo});   // text/plain: sem pré-verificação de CORS
+    r=await resp.json();
+  }catch(e){ r={ok:false,erro:'sem conexão com a planilha'}; }
+  if(r&&r.ok){
+    const E_=exGet('env',{}), hj=E_[hojeBR()]=E_[hojeBR()]||[];
+    L.forEach(x=>hj.push(Object.assign({},x,{hora:r.hora||x.hora})));
+    Object.keys(E_).sort().slice(0,-7).forEach(k=>delete E_[k]);   // guarda só os últimos dias
+    exSet('env',E_); exSet('pend',[]); exRender();
+    const m2=document.getElementById('ex-msg2'); m2.textContent='Enviado ✓ '+(r.gravados||0)+' registrada'+((r.gravados||0)===1?'':'s')+(r.repetidos?' ('+r.repetidos+' já estava'+(r.repetidos>1?'m':'')+' na planilha)':'');
+    m2.className='exmsg ok';
+  }else{
+    b.disabled=false; m.textContent='Não enviado ('+((r&&r.erro)||'erro')+'). A lista continua guardada — tente de novo.'; m.className='exmsg err';
+  }
+}
 /* ---------- render ---------- */
 const convCli=P.clientes_recebidos/P.clientes_negociados;
 const dez=Math.round(convCli*10);
@@ -728,6 +843,7 @@ document.getElementById('r').innerHTML=`
   ${D.acordos_qtd ? `<button data-v="acd">Meus acordos<span class="cnt">${D.acordos_qtd}</span></button>` : ''}
   ${QS ? `<button data-v="psat">Satisfação (PSAT)</button>` : ''}
   ${QMx ? `<button data-v="mon">Minhas monitorias${QMx.mes&&QMx.mes.qtd?`<span class="cnt">${QMx.mes.qtd}</span>`:''}</button>` : ''}
+  ${D.excecoes ? `<button data-v="exc">Exceções</button>` : ''}
 </div>
 
 <div class="vista on" id="v-perf">
@@ -841,6 +957,7 @@ ${(()=>{
 
 ${QS?`<div class="vista" id="v-psat">${abaPSAT()}</div>`:''}
 ${QMx?`<div class="vista" id="v-mon">${abaMonit()}</div>`:''}
+${D.excecoes?`<div class="vista" id="v-exc">${abaExc()}</div>`:''}
 
 <div class="ft"><b>Sobre estes números:</b> vêm das planilhas de Resultado Parcial e de Chamadas/TMA do período
 ${D.periodo}. Comparações são com a <b>média da operação</b>, não com pessoas específicas.
@@ -977,6 +1094,12 @@ if(QMx && QMx.relatos && document.getElementById('q-go')){
   }
   bt.addEventListener('click',abrirRel);
   inp.addEventListener('keydown',e=>{if(e.key==='Enter')abrirRel();});
+}
+
+if(EX && document.getElementById('ex-add')){
+  document.getElementById('ex-add').onclick=exAdd;
+  document.getElementById('ex-san').addEventListener('input',e=>{e.target.value=e.target.value.toUpperCase();});
+  exRender();
 }
 
 /* simulador */

@@ -257,6 +257,28 @@ input[type=range]::-moz-range-thumb{width:19px;height:19px;background:var(--ambe
 .mon-f{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
 @media(max-width:900px){.qk{grid-template-columns:repeat(2,1fr)!important}}
 
+/* ---- exceções ---- */
+.exf{display:grid;grid-template-columns:150px 190px 1fr 1fr 170px;gap:10px;align-items:end}
+.exf label{display:block;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:6px}
+.exf input,.exf select,.exo input{width:100%;background:#070B12;border:1px solid var(--line2);color:var(--txt);
+  font-family:var(--sans);font-size:12.5px;padding:9px 10px}
+.exf input:focus,.exf select:focus,.exo input:focus{outline:none;border-color:var(--amber)}
+.exf input.err,.exf select.err{border-color:var(--red)}
+.exo{display:flex;gap:10px;align-items:end;margin-top:10px}
+.exo>div{flex:1}
+.exo label{display:block;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:6px}
+.bt{background:var(--amber);color:#0A0703;border:none;font-family:var(--mono);font-size:10px;font-weight:800;
+  letter-spacing:.14em;text-transform:uppercase;padding:11px 16px;cursor:pointer;white-space:nowrap}
+.bt.sec{background:none;border:1px solid var(--line2);color:var(--dim)}
+.bt:disabled{opacity:.45;cursor:default}
+.exmsg{font-size:10px;letter-spacing:.1em;text-transform:uppercase;margin-top:10px;min-height:14px;color:var(--faint)}
+.exmsg.ok{color:var(--green)}.exmsg.err{color:var(--red)}
+.acd td .rm{background:none;border:none;color:var(--faint);cursor:pointer;font-size:14px}
+.acd td .rm:hover{color:var(--red)}
+.dv{font-size:8.5px;font-weight:700;letter-spacing:.08em;padding:2px 7px;text-transform:uppercase}
+.dv.a{background:rgba(52,211,153,.13);color:var(--green)}.dv.n{background:rgba(244,63,94,.14);color:var(--red)}.dv.g{background:rgba(255,176,32,.13);color:var(--amber)}
+@media(max-width:900px){.exf{grid-template-columns:1fr 1fr}.exo{flex-wrap:wrap}}
+
 svg text{font-family:var(--mono)}
 @media(max-width:900px){.kpis{grid-template-columns:repeat(3,1fr)}.g2,.g21{grid-template-columns:1fr}}
 @media(max-width:560px){.kpis{grid-template-columns:repeat(2,1fr)}.pf-s{margin-left:0}}
@@ -264,7 +286,7 @@ svg text{font-family:var(--mono)}
 </head>
 <body>
 <div class="wrap" id="r"></div>
-<script id="dd" type="application/json">{"acordos":{"salt":"EBMO5AC6oYb6xled13uUCQ==","iv":"2Jr85ENDxNtyU6+w","ct":"zt+/XNPuO39ZTB5cSEy4P+BpSbPSbSi6/+UGGRDtLjOZ0rgvE2yNdoQl+Z3OKY9swqRWIZyq/T/1xEJ5EjNO1v9zl+IOFcazv92ViwsFqbwPjoHCWCz1+YO1jWIzF0mjpNK1WZRKID/6WV/7gqpmOl7HP72UsDbuZNzYSYLX662AGCfeeISaHS1I4J1UYYpyr3lNVflrIPiaTRbgTnV/EsiL+RlNrn6B5GLVqqczsHCD0AzaHmZHBSXIQ8LibHexTAtDKoPR0qo86Fg+Pk1i4wiYARdMbfawt9OsMiyjcaWPdxUeKVHjDFkBGjRTidqgLk5NPRD4l35jeWCEPDgedZ1W4E2Urs5A0RK7nEm+z0wESqGETbWKVfmQV3IO2peF0GWPt51nPMHtPtbFCBDR4EfqvwW4gC912al+Dp8oEthsrzWQmel+MsqEf6bg0p62CXzTegNWJmI1alu+ClDwqyeU1hwVDGip/lsmPscQzt9eMHewyF1n6lSBamSEBf1yVFn7NaJn50AF4doW33DwfbMzUSMJq396r29cW+IZphuRSocdQKuTl1nK1VIPZXNSaJSVondBsrh3MyveVGdddNPFYS5veeW4F3Gb2pZVgobll/2W3TxW4m0xkWJqk/7o9O3ICp9eZjh4fz3prCB22x4HmHOKZA38DVTJIUCSqbCb5a+UzFuzf36b5QQ8LcafF3N5Uzxf1b4fZ3Je+zGxK7fF+hr0Wj5K6HPapjLp7hbsYrPc/jDA6SGOr8m1jwCzmGAVciQW4RkjLY4X38Ro45i/MSq8qfOmA/cFN5vavZNjoVoF+14J+LWJP18MblU0fEn8puxky7/o9nXY15VHPZlkBV+KgnQ25w1HKojXdHVu687KgIUiQ4p4tCved8nWeaQy/gYps65Mz4nPRj7iCpjoPwhJQCxs8WkhhnWu99VPOnvphlaR/8/l4ybkkbAH4dYetkIw6y05cLc8CBIf7ZUd1Y+jSOA8V7zySTeLvrOU7lQabUIAKOr0+WQE2Z6eL/PHsoTL/u2edjZ1clvM98XhPAarogQow2eAh40fXNhYHIj223VsZgMhU8QN+xBWRmmvoc72vBBqb/r0+K2p6PZuVUud+IzpQ+VFCxSgbmSIa3QyzQAgS2UM3kjDoM+A0WwWZ0j6XiPI4PhcHL1D4XlOHutI8WE8RVhpUZA5KOlvKQpAc+YPN9tkqI5pMTVZkVEAz8aiGSjYH6yUlkGfSzYz6KRBBI5MWi9bBVQGywTNfdEQnCr1O2OwBxjNwm0S3/L3AowKpY43","it":310000},"acordos_qtd":3,"qualidade":{"psat":{"periodo":"01/10 a 13/10/2026","equipe":{"pesquisas":560,"validas_atendente":300,"validas_solucao":302,"invalidas":57,"sem_resposta":203,"csat_atendente":0.8333,"media_atendente":4.35,"csat_solucao":0.7781,"media_solucao":4.17,"rechamada":0.3937,"base_rechamada":287,"dist_atendente":[33,12,5,17,233],"detratores":45},"meu":null,"lista":[]},"monit":{"competencia":"2026-10","equipe":{"media_nota":71.4,"monitorias":34,"pessoas":10,"por_pessoa":3.4},"meta":null,"mes":null,"recorrentes":[],"lista":[],"relatos":null}},"gerado_em":"13/10 às 11:54","pessoa":{"nome":"Laís Silva","turno":"Manhã","supervisor":"Paula Fernanda Alves","negociado":20788.68,"recebido":14018.56,"conversao":0.6743,"clientes_negociados":131,"clientes_recebidos":97,"faturas_negociadas":259,"ticket_medio":144.52,"chamadas":70,"tma_seg":633.186,"pausa_pct":38.8,"daily_negociado":[3775.44,3240.99,2027.77,0.0,0.0,2221.09,3064.26,2711.5,2113.8,0.0,0.0,1633.83],"daily_recebido":[2204.5,3344.21,1368.38,0.0,758.8,978.48,2815.82,1490.13,1058.24,0.0,0,0],"score":51,"partes":{"resultado":64.1,"conversao":67.4,"produtividade":35.0,"evolucao":18.3,"eficiencia":33.4},"tendencia":-0.3802,"cv":0.5,"media_dia":1752.32,"melhor_valor":3344.21,"melhor_dia":"02/10","rank":5,"total":19,"observacao":null,"projecao":{"negociado_atual":20788.68,"ritmo_diario":1732.39,"projetado_fim_mes":53704.09,"dias_corridos":12,"dias_do_mes":31,"dias_restantes":19,"premio_atual":0,"premio_projetado":300.0,"proxima_faixa":{"alvo":30000.0,"premio":100.0,"falta":9211.32},"ritmo_necessario_prox_faixa":484.81,"no_topo":false}},"equipe":{"conversao":0.6073,"ticket_medio":181.06,"tma_seg":449.2,"pausa_pct":28.0,"negociado_pessoa":18013.73,"recebido_pessoa":10939.68,"chamadas_pessoa":100,"meta_topo":50000.0,"conversao_minima":0.65},"datas":["01/10","02/10","03/10","04/10","05/10","06/10","07/10","08/10","09/10","10/10","11/10","12/10"],"periodo":"01 a 12/10/2026 (parcial do mês)","mostrar_rank":false}</script>
+<script id="dd" type="application/json">{"acordos":{"salt":"9Sfk1p9dwl8OZ8FjgkUJkw==","iv":"h6KRrFFZjyL35SNh","ct":"CvkGzAxJhZaQSG0uGPNI1HDOwH5bxx727YcpUVzK8Quo9DG/pmqQJuDzkD2T3oWb0EKyfyPtRa8IluvdMGoURUATTNV+5G+Hn8ajxiJ6gSP7rwL9y9Wcpc9bB1/JGWAxqSi5weBnlRTsA3/9cIjvRVnrSyCPuOe4yq2V327kirVSWcgckY2dm5wT8k7W6BKN0C3j2jOwxlNbU21DyoWYzq2cdRL45wU9Y+DbvPFrYl3CJdRK2b2vWyANOy7UhyelXSmZ/unXB907oKxQG0yqRP4gSCBznd3pdCpxAsxQ7MbA84Exd+eD66+NarqJcd2EwLjSHgvtwBZdPpdoDEN6pyQsoiKBwCUvaOL7FTAK9Gjr1q2wbafCUhV/tON1IjIWEYQXPTc1QqdM5UcTgBPZiteHfC6MVyjUSJA+Qvzl6NNPjtv+bc33Py9M9JEuy1/PzMpISlshCxDL1CNdk4WE87BYT8RmTkKs8bKlg3qjZL6yxpvRQECPkYuJX5XKMWDMA0A8oeUJaixw2yJ1Y+3e4OKms8L/j3E8Q/3XiTDmGVDpBULQV51uCRqQ33SHzkifbwz2NBrWK5Fl01/5/m6QvRQ8GDoENUpWuDs+uy+kpXdH0pFxkpdR/EXP3hHVnuvzSnIVb6gD9yHwzfwhdkjQE2gu+UN+hxlvtM1/EgbRBOJNINvuuF2zWMTENuDTU+7KwO4GDLSlaZUeiivaFspgkTB0YuLSHex4XRQK9B7h0GdEC8xbsiFc2iaYnyhJ8roVAxT7lrwSHUlSYhLv4+RR4HgNoix8abInjSQufXCHOMlPIV716+CmM75qSoGH1Ot6xmEXax+GWkK23GWhjCULWeR7QaMMmlnyH8izja/v/tjQcJfpBt1ZzsPuKs1Re6Gyhw0mnj3i7OQaTg9QQdjEM2D6smbEhpZ0X9YTemo9UFJKHli1tT5Ycmcn2gZLczhfQnmikn8wABfAl7S+ERSpSdQHWLMDmIzS6lTYwzkn2adXbG6kwLFJ6eGU2LpM2Hq6UdcE+0DBAefu2GRqbAtynERILket/BC7/0EbG1XZupdioawjAXAWPsb1wjLdVXaRtNKoClGu1del5ux5JGwOUkkxAHuC8ZUXLox/Osx6moZAQYyjm5B8Bzw/5rcSJ4G1fqfpErPeQiCreCPv3JzgDTD1HKD6u5OTz/5hjujTfwtarVyr8zx6+5Sxgyk4feHLYZMrtRtgJLLy1mMlRRywklsy0qbAqsdx/76LINnlUJfGBGzGsxZtNfO5SNFgtVp6FEZJchKhfINF","it":310000},"acordos_qtd":3,"qualidade":{"psat":{"periodo":"01/10 a 13/10/2026","equipe":{"pesquisas":610,"validas_atendente":327,"validas_solucao":328,"invalidas":61,"sem_resposta":222,"csat_atendente":0.8287,"media_atendente":4.33,"csat_solucao":0.7652,"media_solucao":4.13,"rechamada":0.3948,"base_rechamada":309,"dist_atendente":[39,12,5,17,254],"detratores":51},"meu":null,"lista":[]},"monit":{"competencia":"2026-10","equipe":{"media_nota":72.5,"monitorias":32,"pessoas":10,"por_pessoa":3.2},"meta":null,"mes":null,"recorrentes":[],"lista":[],"relatos":null}},"gerado_em":"13/10 às 18:45","excecoes":null,"pessoa":{"nome":"Laís Silva","turno":"Manhã","supervisor":"Paula Fernanda Alves","negociado":19519.22,"recebido":12481.68,"conversao":0.6395,"clientes_negociados":99,"clientes_recebidos":81,"faturas_negociadas":199,"ticket_medio":154.09,"chamadas":70,"tma_seg":633.186,"pausa_pct":38.8,"daily_negociado":[3317.94,1781.42,1868.62,805.91,0.0,0.0,3776.23,1193.64,2572.08,2163.8,1589.31,450.27,0],"daily_recebido":[1777.23,1147.2,1015.55,865.91,0.0,0.0,2845.36,978.22,1438.36,1078.39,1022.4,313.06,0.0],"score":52,"partes":{"resultado":48.0,"conversao":63.9,"produtividade":35.0,"evolucao":80.7,"eficiencia":33.4},"tendencia":0.369,"cv":0.513,"media_dia":1248.17,"melhor_valor":2845.36,"melhor_dia":"07/09","rank":9,"total":19,"observacao":null,"projecao":{"negociado_atual":19519.22,"ritmo_diario":1501.48,"projetado_fim_mes":45044.35,"dias_corridos":13,"dias_do_mes":30,"dias_restantes":17,"premio_atual":0,"premio_projetado":200.0,"proxima_faixa":{"alvo":30000.0,"premio":100.0,"falta":10480.78},"ritmo_necessario_prox_faixa":616.52,"no_topo":false}},"equipe":{"conversao":0.6817,"ticket_medio":191.33,"tma_seg":449.2,"pausa_pct":28.0,"negociado_pessoa":19071.25,"recebido_pessoa":13000.55,"chamadas_pessoa":100,"meta_topo":50000.0,"conversao_minima":0.65},"datas":["01/09","02/09","03/09","04/09","05/09","06/09","07/09","08/09","09/09","10/09","11/09","12/09","13/09"],"periodo":"01 a 13/09/2026 (parcial do mês)","mostrar_rank":false}</script>
 <script>
 (function(){
 'use strict';
@@ -698,6 +720,99 @@ function abaMonit(){
     identificar ninguém. Dúvida sobre uma nota? Fale com ${esc(P.supervisor)}.</div>`;
 }
 
+/* ---------- exceções: formulário + envio para a planilha do supervisor ---------- */
+const EX=D.excecoes||null;
+const EXK='exc_'+(EX?EX.login:''), CANAIS=['Receptivo','Ativo','Chat','WhatsApp','E-mail'], DEVS=['Autorizado','Não autorizado','Aguardando'];
+const exGet=(k,d)=>{try{const v=localStorage.getItem(EXK+k);return v?JSON.parse(v):d;}catch(e){return d;}};
+const exSet=(k,v)=>{try{localStorage.setItem(EXK+k,JSON.stringify(v));}catch(e){}};
+const hojeBR=()=>{const d=new Date();return String(d.getDate()).padStart(2,'0')+'/'+String(d.getMonth()+1).padStart(2,'0')+'/'+d.getFullYear();};
+const dvCls=v=>v==='Autorizado'?'a':v==='Não autorizado'?'n':'g';
+function abaExc(){
+  return `<div class="hi"><div class="ic">EXCEÇÕES</div><div style="flex:1">
+    <h4>REGISTRE AQUI TODA NEGOCIAÇÃO FORA DA RÉGUA</h4>
+    <p>Preencha uma linha para cada exceção, junte quantas quiser na lista e clique em <b>Enviar</b>.
+    Tudo vai para uma planilha única do seu supervisor, que recebe o resumo do dia às <b>20h</b>.
+    Se a internet cair, a lista fica guardada neste navegador até você enviar.</p></div></div>
+  <div class="pn"><div class="pn-h"><h3>Nova exceção</h3><span class="nt">${esc(EX.nome)} · ${hojeBR()}</span></div>
+    <div class="pn-b">
+      <div class="exf">
+        <div><label>Canal de contato</label><select id="ex-canal"><option value="">escolha</option>${CANAIS.map(c=>`<option>${c}</option>`).join('')}</select></div>
+        <div><label>SAN</label><input id="ex-san" placeholder="HTB000000000000" autocomplete="off"></div>
+        <div><label>Proposta ofertada</label><input id="ex-prop" placeholder="ex.: 10% de desconto à vista" autocomplete="off"></div>
+        <div><label>Contra proposta</label><input id="ex-contra" placeholder="ex.: 15% no PIX" autocomplete="off"></div>
+        <div><label>Devolutiva</label><select id="ex-dev"><option value="">escolha</option>${DEVS.map(c=>`<option>${c}</option>`).join('')}</select></div>
+      </div>
+      <div class="exo"><div><label>Observação (opcional)</label><input id="ex-obs" placeholder="quem autorizou, motivo, prazo…" autocomplete="off"></div>
+        <button class="bt sec" id="ex-add">+ Adicionar à lista</button></div>
+      <div class="exmsg" id="ex-msg1"></div>
+    </div></div>
+  <div class="pn"><div class="pn-h"><h3>Lista para enviar</h3><span class="nt" id="ex-cont"></span></div>
+    <div class="pn-b" id="ex-pend"></div></div>
+  <div class="pn"><div class="pn-h"><h3>Enviadas hoje</h3><span class="nt">ficam registradas na planilha do supervisor</span></div>
+    <div class="pn-b" id="ex-env"></div></div>`;
+}
+function exTabela(L,rem){
+  if(!L.length) return '';
+  return `<div style="overflow-x:auto"><table class="acd"><thead><tr><th class="l">${rem?'Incluída':'Enviada'}</th><th class="l">Canal</th>
+    <th class="l">SAN</th><th class="l">Proposta ofertada</th><th class="l">Contra proposta</th><th class="l">Devolutiva</th>${rem?'<th></th>':''}</tr></thead><tbody>
+    ${L.map((x,i)=>`<tr><td class="l" style="color:var(--dim)">${esc(x.hora||'')}</td><td class="l">${esc(x.canal)}</td><td class="l">${esc(x.san)}</td>
+      <td class="l" style="white-space:normal;font-family:var(--sans)">${esc(x.proposta)}</td><td class="l" style="white-space:normal;font-family:var(--sans)">${esc(x.contra)}</td>
+      <td class="l"><span class="dv ${dvCls(x.devolutiva)}">${esc(x.devolutiva)}</span></td>
+      ${rem?`<td><button class="rm" data-rm="${i}" title="tirar da lista">✕</button></td>`:''}</tr>`).join('')}</tbody></table></div>`;
+}
+function exRender(){
+  const P_=exGet('pend',[]), E_=exGet('env',{});
+  const hj=E_[hojeBR()]||[];
+  document.getElementById('ex-cont').textContent=P_.length?P_.length+' a enviar':'';
+  document.getElementById('ex-pend').innerHTML=P_.length?exTabela(P_,true)+
+    `<div style="display:flex;gap:12px;align-items:center;margin-top:14px;flex-wrap:wrap">
+      <button class="bt" id="ex-send">Enviar ${P_.length} exceç${P_.length>1?'ões':'ão'}</button>
+      <span class="exmsg" id="ex-msg2" style="margin:0"></span></div>`
+    :`<p class="prose" style="font-size:12.5px;color:var(--dim)">Nada pendente. Adicione uma exceção acima.</p><div class="exmsg" id="ex-msg2"></div>`;
+  document.getElementById('ex-env').innerHTML=hj.length?exTabela(hj,false)
+    :'<p class="prose" style="font-size:12.5px;color:var(--dim)">Nenhuma exceção enviada hoje.</p>';
+  document.querySelectorAll('[data-rm]').forEach(b=>b.onclick=()=>{const L=exGet('pend',[]);L.splice(+b.dataset.rm,1);exSet('pend',L);exRender();});
+  const sb=document.getElementById('ex-send'); if(sb) sb.onclick=exEnviar;
+  const btn=document.querySelector('[data-v="exc"]');
+  if(btn){const c=btn.querySelector('.cnt'); if(P_.length){if(c)c.textContent=P_.length;else btn.insertAdjacentHTML('beforeend',`<span class="cnt">${P_.length}</span>`);} else if(c) c.remove();}
+}
+function exAdd(){
+  const f={canal:'ex-canal',san:'ex-san',proposta:'ex-prop',contra:'ex-contra',devolutiva:'ex-dev'}, v={}, m=document.getElementById('ex-msg1');
+  let falta=[];
+  Object.entries(f).forEach(([k,id])=>{const el=document.getElementById(id);v[k]=el.value.trim();el.classList.toggle('err',!v[k]);if(!v[k])falta.push(k);});
+  if(falta.length){m.textContent='Preencha os campos em vermelho';m.className='exmsg err';return;}
+  v.san=v.san.toUpperCase().replace(/\s+/g,'');
+  v.obs=document.getElementById('ex-obs').value.trim();
+  v.id=EX.login+'-'+Date.now()+'-'+Math.random().toString(36).slice(2,7);
+  v.hora=new Date().toTimeString().slice(0,5);
+  const L=exGet('pend',[]); L.push(v); exSet('pend',L);
+  ['ex-san','ex-prop','ex-contra','ex-obs'].forEach(id=>document.getElementById(id).value='');
+  ['ex-canal','ex-dev'].forEach(id=>document.getElementById(id).value='');
+  m.textContent=v.san.startsWith('HTB')?'Adicionada à lista — falta enviar':'Adicionada. Confira o SAN: normalmente começa com HTB';
+  m.className=v.san.startsWith('HTB')?'exmsg ok':'exmsg err';
+  exRender();
+}
+async function exEnviar(){
+  const L=exGet('pend',[]); if(!L.length) return;
+  const b=document.getElementById('ex-send'), m=document.getElementById('ex-msg2');
+  b.disabled=true; m.textContent='Enviando…'; m.className='exmsg';
+  const corpo=JSON.stringify({chave:EX.chave,login:EX.login,nome:EX.nome,turno:EX.turno,itens:L});
+  let r=null;
+  try{
+    const resp=await fetch(EX.url,{method:'POST',body:corpo});   // text/plain: sem pré-verificação de CORS
+    r=await resp.json();
+  }catch(e){ r={ok:false,erro:'sem conexão com a planilha'}; }
+  if(r&&r.ok){
+    const E_=exGet('env',{}), hj=E_[hojeBR()]=E_[hojeBR()]||[];
+    L.forEach(x=>hj.push(Object.assign({},x,{hora:r.hora||x.hora})));
+    Object.keys(E_).sort().slice(0,-7).forEach(k=>delete E_[k]);   // guarda só os últimos dias
+    exSet('env',E_); exSet('pend',[]); exRender();
+    const m2=document.getElementById('ex-msg2'); m2.textContent='Enviado ✓ '+(r.gravados||0)+' registrada'+((r.gravados||0)===1?'':'s')+(r.repetidos?' ('+r.repetidos+' já estava'+(r.repetidos>1?'m':'')+' na planilha)':'');
+    m2.className='exmsg ok';
+  }else{
+    b.disabled=false; m.textContent='Não enviado ('+((r&&r.erro)||'erro')+'). A lista continua guardada — tente de novo.'; m.className='exmsg err';
+  }
+}
 /* ---------- render ---------- */
 const convCli=P.clientes_recebidos/P.clientes_negociados;
 const dez=Math.round(convCli*10);
@@ -728,6 +843,7 @@ document.getElementById('r').innerHTML=`
   ${D.acordos_qtd ? `<button data-v="acd">Meus acordos<span class="cnt">${D.acordos_qtd}</span></button>` : ''}
   ${QS ? `<button data-v="psat">Satisfação (PSAT)</button>` : ''}
   ${QMx ? `<button data-v="mon">Minhas monitorias${QMx.mes&&QMx.mes.qtd?`<span class="cnt">${QMx.mes.qtd}</span>`:''}</button>` : ''}
+  ${D.excecoes ? `<button data-v="exc">Exceções</button>` : ''}
 </div>
 
 <div class="vista on" id="v-perf">
@@ -841,6 +957,7 @@ ${(()=>{
 
 ${QS?`<div class="vista" id="v-psat">${abaPSAT()}</div>`:''}
 ${QMx?`<div class="vista" id="v-mon">${abaMonit()}</div>`:''}
+${D.excecoes?`<div class="vista" id="v-exc">${abaExc()}</div>`:''}
 
 <div class="ft"><b>Sobre estes números:</b> vêm das planilhas de Resultado Parcial e de Chamadas/TMA do período
 ${D.periodo}. Comparações são com a <b>média da operação</b>, não com pessoas específicas.
@@ -977,6 +1094,12 @@ if(QMx && QMx.relatos && document.getElementById('q-go')){
   }
   bt.addEventListener('click',abrirRel);
   inp.addEventListener('keydown',e=>{if(e.key==='Enter')abrirRel();});
+}
+
+if(EX && document.getElementById('ex-add')){
+  document.getElementById('ex-add').onclick=exAdd;
+  document.getElementById('ex-san').addEventListener('input',e=>{e.target.value=e.target.value.toUpperCase();});
+  exRender();
 }
 
 /* simulador */
