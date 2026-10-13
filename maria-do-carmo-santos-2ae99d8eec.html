@@ -126,7 +126,9 @@ input[type=range]::-moz-range-thumb{width:19px;height:19px;background:var(--ambe
   font-family:var(--sans);font-size:11px;line-height:1.7;color:var(--faint)}
 
 /* ---- abas ---- */
-.abas{display:flex;gap:0;border-bottom:1px solid var(--line);margin:20px 0 0}
+.abas{display:flex;gap:0;border-bottom:1px solid var(--line);margin:20px 0 0;overflow-x:auto;scrollbar-width:none}
+.abas::-webkit-scrollbar{display:none}
+.abas button{flex:none;white-space:nowrap}
 .abas button{padding:11px 18px;font-family:var(--mono);font-size:10px;font-weight:700;
   letter-spacing:.14em;text-transform:uppercase;color:var(--faint);background:none;border:none;
   border-bottom:2px solid transparent;cursor:pointer;transition:.15s}
@@ -191,6 +193,70 @@ input[type=range]::-moz-range-thumb{width:19px;height:19px;background:var(--ambe
 .dia-d{font-size:10px;font-weight:700;text-align:right}
 .dia-d.up{color:var(--green)}.dia-d.dn{color:var(--red)}.dia-d.eq{color:var(--faint)}
 
+/* ---- qualidade (PSAT + monitoria) ---- */
+.qk .k{min-height:92px}
+.nt5{display:flex;flex-direction:column;gap:2px}
+.nt5-r{display:grid;grid-template-columns:62px 1fr 74px;gap:12px;align-items:center;padding:6px 0}
+.nt5-r .l{font-size:10px;letter-spacing:.1em;color:var(--dim);font-weight:700}
+.nt5-r .t{height:12px;background:var(--panel3);position:relative}
+.nt5-r .t i{display:block;height:100%;animation:gw .7s cubic-bezier(.2,.8,.3,1) both;transform-origin:left}
+.nt5-r .t b{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--txt);opacity:.55}
+.nt5-r .v{font-size:11px;font-weight:700;text-align:right}
+.nt5-r .v span{color:var(--faint);font-weight:500}
+.chip{display:inline-flex;align-items:center;justify-content:center;min-width:24px;height:22px;padding:0 6px;
+  font-size:11px;font-weight:800;border:1px solid}
+.chip.c5,.chip.c4{color:var(--green);border-color:rgba(52,211,153,.4);background:rgba(52,211,153,.1)}
+.chip.c3{color:var(--amber);border-color:rgba(255,176,32,.4);background:rgba(255,176,32,.1)}
+.chip.c2,.chip.c1{color:var(--red);border-color:rgba(244,63,94,.45);background:rgba(244,63,94,.12)}
+.chip.cx{color:var(--faint);border-color:var(--line2);font-weight:600;font-size:9.5px;letter-spacing:.06em}
+.acd tr.det td{background:rgba(244,63,94,.05)}
+.mon{border:1px solid var(--line);background:var(--panel2);border-left:2px solid var(--c);padding:16px 18px;margin-bottom:12px}
+.mon-h{display:flex;align-items:flex-start;gap:16px;flex-wrap:wrap}
+.mon-h .nota{font-size:34px;font-weight:800;line-height:1;color:var(--c);letter-spacing:-.03em}
+.mon-h .nota small{font-size:11px;color:var(--faint);font-weight:600;letter-spacing:0}
+.mon-h .q{font-size:9px;letter-spacing:.14em;color:var(--c);font-weight:700;margin-top:6px}
+.mon-h .meta{margin-left:auto;text-align:right;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);line-height:1.8}
+.mon-h .meta b{color:var(--txt);font-weight:700}
+.mon h5{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--faint);margin:16px 0 8px}
+.mon ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+.mon li{font-family:var(--sans);font-size:12.5px;line-height:1.55;color:var(--dim);padding-left:16px;position:relative}
+.mon li:before{content:'▸';position:absolute;left:0;color:var(--amber);font-family:var(--mono)}
+.mon li.gr:before{color:var(--red)}
+.mon li b{color:var(--txt);font-weight:600}
+.mon .rel{margin-top:14px;border-top:1px dashed var(--line2);padding-top:12px}
+.mon .rel button{background:none;border:1px solid var(--line2);color:var(--dim);font-family:var(--mono);font-size:9.5px;
+  font-weight:700;letter-spacing:.13em;text-transform:uppercase;padding:7px 12px;cursor:pointer}
+.mon .rel button:hover{border-color:var(--amber);color:var(--amber)}
+.mon .rel p{font-family:var(--sans);font-size:12.5px;line-height:1.65;color:var(--dim);margin-top:4px}
+.evo{display:flex;align-items:flex-end;gap:6px;height:74px;margin:6px 0 4px}
+.evo div{flex:1;max-width:38px;display:flex;flex-direction:column;align-items:center;gap:4px;height:100%;justify-content:flex-end}
+.evo i{display:block;width:100%;animation:gw2 .6s ease both;transform-origin:bottom}
+.evo span{font-size:8.5px;color:var(--faint);letter-spacing:.04em}
+.evo em{font-style:normal;font-size:9.5px;font-weight:700}
+@keyframes gw2{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+.vazio{padding:26px 18px;text-align:center;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+.vazio p{font-family:var(--sans);text-transform:none;letter-spacing:0;font-size:12px;color:var(--dim);margin-top:8px;line-height:1.6}
+.cad.mini{max-width:none;margin:0 0 16px;padding:18px 20px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;text-align:left}
+.cad.mini p{margin:0;flex:1;min-width:200px}
+.cad.mini input{width:180px;padding:9px;font-size:12px}
+.cad.mini button{width:auto;margin:0;padding:10px 16px}
+.cad.mini .msg{width:100%;margin-top:0}
+.rc{padding:9px 0;border-bottom:1px solid rgba(26,36,51,.6)}
+.rc:last-child{border-bottom:none}
+.rc-t{display:flex;gap:8px;align-items:center}
+.rc-g{font-size:9px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--faint)}
+.rc-i{font-family:var(--sans);font-size:12.5px;line-height:1.5;color:var(--txt);margin:4px 0 6px}
+.rc-b{display:flex;align-items:center;gap:8px}
+.rc-b i{display:block;height:5px;animation:gw .7s cubic-bezier(.2,.8,.3,1) both;transform-origin:left}
+.rc-b span{font-size:10px;font-weight:700;color:var(--dim)}
+.fg{margin-top:14px;border:1px solid rgba(244,63,94,.45);background:rgba(244,63,94,.08);padding:11px 13px;
+  font-family:var(--sans);font-size:12.5px;line-height:1.6;color:var(--txt)}
+.fg b{font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--red);display:block;margin-bottom:4px}
+.fb{font-family:var(--sans);font-size:12.5px;line-height:1.65;color:var(--dim);white-space:pre-line;
+  border-left:2px solid var(--line2);padding:2px 0 2px 12px}
+.mon-f{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+@media(max-width:900px){.qk{grid-template-columns:repeat(2,1fr)!important}}
+
 svg text{font-family:var(--mono)}
 @media(max-width:900px){.kpis{grid-template-columns:repeat(3,1fr)}.g2,.g21{grid-template-columns:1fr}}
 @media(max-width:560px){.kpis{grid-template-columns:repeat(2,1fr)}.pf-s{margin-left:0}}
@@ -198,7 +264,7 @@ svg text{font-family:var(--mono)}
 </head>
 <body>
 <div class="wrap" id="r"></div>
-<script id="dd" type="application/json">{"acordos":{"salt":"cQOmJyIRzSStqyg3mscUNg==","iv":"A2MKjtB9sRH0EUaz","ct":"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","it":310000},"acordos_qtd":14,"pessoa":{"nome":"Maria do Carmo Santos","turno":"Tarde","supervisor":"Reginaldo Sousa Barbosa","negociado":23694.47,"recebido":15717.39,"conversao":0.6633,"clientes_negociados":120,"clientes_recebidos":88,"faturas_negociadas":276,"ticket_medio":178.61,"chamadas":69,"tma_seg":464.29,"pausa_pct":39.2,"daily_negociado":[3703.2,3302.3,2515.84,0.0,5347.12,3952.58,1651.39,3222.04],"daily_recebido":[2114.5,2272.97,1026.37,0.0,4057.66,3335.34,1572.87,1337.68],"score":71,"partes":{"resultado":83.3,"conversao":66.3,"produtividade":50.9,"evolucao":100.0,"eficiencia":35.5},"tendencia":0.6,"cv":0.453,"media_dia":2245.34,"melhor_valor":4057.66,"melhor_dia":"05/10","rank":2,"total":19,"observacao":null},"equipe":{"conversao":0.6441,"ticket_medio":181.09,"tma_seg":470.5,"pausa_pct":30.1,"negociado_pessoa":14649.93,"recebido_pessoa":9435.87,"chamadas_pessoa":68},"datas":["01/10","02/10","03/10","04/10","05/10","06/10","07/10","08/10"],"periodo":"01 a 08/10/2026 (parcial do mês)","mostrar_rank":false}</script>
+<script id="dd" type="application/json">{"acordos":{"salt":"7SSplp+KZFDOYzKw+6/+9w==","iv":"m3JNJn22YL26eMmT","ct":"sWcEyXiiEJtdvEnRIpHqc/1L2zr8VSkAg7IXBgnaq/o94M9ZizW618wKR1W3qA3FAQC+EqFRzk4w3K+F1WuAIS+BeLAhT8qdY6dNqJohRqehb5PXDqVQWPtiTEx+FNAYJecL+Hlh2k44mCW2PfaHCUUF1akNXzAi5SZoYZEnUFGP/GD/XTk+9Fq41RX1OOeAiWmrVSqoCDvQM7LcJ4195nS/MmxJt5FVqZGC0TdZvCOS846DD0Du5M0Niu21EbHvp2UHyObf6VQtsr4SmauVeyZbszZpEOZvQy1yR5YBJRnkDd0JM2TaxAk5/FFAzD+nURD0Gy7z0b5Ei+n4YnvH3lF6dvnxMkegoxnHxkBpk8r5xgcqs0y81rw6JNceUc32KB4f+T5OpA1TGZIljvhDFiAslHrH4EOEpUJIlzmJq+4x9un0L4wewDqyanTgNa0TEZpvV3d2JXxyc88LBQ==","it":310000},"acordos_qtd":1,"qualidade":{"psat":{"periodo":"01/10 a 13/10/2026","equipe":{"pesquisas":560,"validas_atendente":300,"validas_solucao":302,"invalidas":57,"sem_resposta":203,"csat_atendente":0.8333,"media_atendente":4.35,"csat_solucao":0.7781,"media_solucao":4.17,"rechamada":0.3937,"base_rechamada":287,"dist_atendente":[33,12,5,17,233],"detratores":45},"meu":{"pesquisas":56,"validas_atendente":31,"validas_solucao":30,"invalidas":3,"sem_resposta":22,"csat_atendente":0.8065,"media_atendente":4.42,"csat_solucao":0.8,"media_solucao":4.27,"rechamada":0.4231,"base_rechamada":26,"dist_atendente":[2,2,2,0,25],"detratores":4},"lista":[{"data":"12/10","hora":"20:12","fila":"faturas","atendente":2,"solucao":1,"rechamada":true,"htb":"HTB…4450","inv":false},{"data":"12/10","hora":"18:46","fila":"negociacao","atendente":5,"solucao":5,"rechamada":false,"htb":"HTB…7899","inv":false},{"data":"12/10","hora":"16:26","fila":"negociacao","atendente":5,"solucao":5,"rechamada":true,"htb":"HTB…2640","inv":false},{"data":"12/10","hora":"14:43","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"09/10","hora":"18:40","fila":"faturas","atendente":2,"solucao":1,"rechamada":true,"htb":null,"inv":false},{"data":"09/10","hora":"18:14","fila":"negociacao","atendente":5,"solucao":5,"rechamada":true,"htb":"HTB…8370","inv":false},{"data":"09/10","hora":"17:49","fila":"faturas","atendente":5,"solucao":5,"rechamada":true,"htb":"HTB…5179","inv":false},{"data":"09/10","hora":"16:50","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…5648","inv":false},{"data":"09/10","hora":"16:30","fila":"negociacao","atendente":5,"solucao":5,"rechamada":false,"htb":"HTB…0657","inv":false},{"data":"09/10","hora":"16:07","fila":"negociacao","atendente":5,"solucao":5,"rechamada":false,"htb":"HTB…0944","inv":false},{"data":"09/10","hora":"14:34","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"09/10","hora":"14:21","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…3908","inv":true},{"data":"09/10","hora":"14:07","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…1373","inv":false},{"data":"08/10","hora":"18:35","fila":"faturas","atendente":5,"solucao":5,"rechamada":null,"htb":"HTB…3784","inv":false},{"data":"08/10","hora":"17:42","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…0793","inv":false},{"data":"08/10","hora":"17:35","fila":"faturas","atendente":5,"solucao":5,"rechamada":false,"htb":null,"inv":false},{"data":"08/10","hora":"15:46","fila":"faturas","atendente":5,"solucao":5,"rechamada":false,"htb":null,"inv":false},{"data":"08/10","hora":"14:37","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…4871","inv":false},{"data":"07/10","hora":"16:44","fila":"negociacao","atendente":3,"solucao":2,"rechamada":false,"htb":"HTB…6893","inv":false},{"data":"07/10","hora":"14:17","fila":"faturas","atendente":5,"solucao":5,"rechamada":true,"htb":null,"inv":false},{"data":"06/10","hora":"19:28","fila":"negociacao","atendente":5,"solucao":5,"rechamada":false,"htb":"HTB…5303","inv":false},{"data":"06/10","hora":"18:19","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…3729","inv":false},{"data":"06/10","hora":"17:31","fila":"negociacao","atendente":5,"solucao":5,"rechamada":true,"htb":"HTB…7463","inv":false},{"data":"06/10","hora":"17:15","fila":"faturas","atendente":5,"solucao":5,"rechamada":true,"htb":null,"inv":false},{"data":"06/10","hora":"16:43","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…3101","inv":false},{"data":"06/10","hora":"14:39","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":true},{"data":"06/10","hora":"14:08","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…7694","inv":false},{"data":"05/10","hora":"19:06","fila":"negociacao","atendente":5,"solucao":5,"rechamada":false,"htb":"HTB…8940","inv":false},{"data":"05/10","hora":"18:43","fila":"faturas","atendente":1,"solucao":1,"rechamada":true,"htb":"HTB…8244","inv":false},{"data":"05/10","hora":"17:33","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…4534","inv":false},{"data":"05/10","hora":"17:19","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"05/10","hora":"17:09","fila":"faturas","atendente":5,"solucao":5,"rechamada":false,"htb":null,"inv":false},{"data":"05/10","hora":"16:48","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…1834","inv":false},{"data":"05/10","hora":"16:29","fila":"negociacao","atendente":3,"solucao":3,"rechamada":false,"htb":"HTB…7212","inv":false},{"data":"05/10","hora":"16:17","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…7981","inv":false},{"data":"05/10","hora":"16:13","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…6143","inv":false},{"data":"05/10","hora":"15:45","fila":"negociacao","atendente":1,"solucao":1,"rechamada":null,"htb":"HTB…9533","inv":false},{"data":"05/10","hora":"15:25","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…7099","inv":false},{"data":"05/10","hora":"14:52","fila":"negociacao","atendente":5,"solucao":5,"rechamada":true,"htb":"HTB…6739","inv":false},{"data":"05/10","hora":"14:42","fila":"faturas","atendente":5,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"03/10","hora":"16:57","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…2772","inv":false},{"data":"03/10","hora":"15:41","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…9491","inv":false},{"data":"03/10","hora":"14:38","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"01/10","hora":"19:27","fila":"negociacao","atendente":5,"solucao":5,"rechamada":false,"htb":"HTB…9247","inv":false},{"data":"01/10","hora":"19:18","fila":"negociacao","atendente":5,"solucao":5,"rechamada":false,"htb":"HTB…9666","inv":false},{"data":"01/10","hora":"17:52","fila":"negociacao","atendente":5,"solucao":5,"rechamada":false,"htb":"HTB…9134","inv":false},{"data":"01/10","hora":"17:25","fila":"faturas","atendente":5,"solucao":5,"rechamada":null,"htb":null,"inv":false},{"data":"01/10","hora":"17:15","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…8572","inv":false},{"data":"01/10","hora":"16:56","fila":"faturas","atendente":5,"solucao":5,"rechamada":null,"htb":null,"inv":false},{"data":"01/10","hora":"16:27","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…0653","inv":true},{"data":"01/10","hora":"16:06","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…3829","inv":false},{"data":"01/10","hora":"15:55","fila":"negociacao","atendente":5,"solucao":5,"rechamada":true,"htb":"HTB…4916","inv":false},{"data":"01/10","hora":"15:32","fila":"faturas","atendente":5,"solucao":4,"rechamada":false,"htb":"HTB…0886","inv":false},{"data":"01/10","hora":"15:16","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…1163","inv":false},{"data":"01/10","hora":"15:13","fila":"faturas","atendente":5,"solucao":5,"rechamada":false,"htb":"HTB…5362","inv":false},{"data":"01/10","hora":"14:02","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…9564","inv":false}]},"monit":{"competencia":"2026-10","equipe":{"media_nota":71.4,"monitorias":34,"pessoas":10,"por_pessoa":3.4},"meta":null,"mes":{"qtd":6,"media":62.7,"falhas_graves":2,"aderencia":0.8746,"perdeu_por_falha":147.0},"recorrentes":[{"grupo":"Registro","item":"Criou um documento issue quando mais de um assunto foi tratado no mesmo contato","vezes":3},{"grupo":"Encerramento","item":"Se colocou a disposição para esclarecimentos de dúvidas","vezes":3},{"grupo":"Acolhimento","item":"Permitiu que o cliente se expressasse sem interrupções durante o contato","vezes":2},{"grupo":"Registro","item":"Classificou o contato de forma correta - Salesforce","vezes":2},{"grupo":"Acolhimento","item":"Demonstrou compreensão e tolerância frente a clientes exaltados, mantendo tom de voz calmo e assertivo","vezes":1},{"grupo":"Acolhimento","item":"Demonstrou sorriso/energia na voz durante o atendimento.","vezes":1},{"grupo":"Acolhimento","item":"Teve empatia e estabeleceu conexão emocional com o assinante valorizando a sua satisfação, oferecendo um atendimento diferenciado","vezes":1},{"grupo":"Comunicação","item":"Conduziu o atendimento de forma clara e objetiva","vezes":1}],"lista":[{"id":"594","data":"09/10/2026","criado_em":"12/10/2026","nota":0.0,"nota_bruta":55.0,"falha_grave":true,"monitor":"Reginaldo Sousa Barbosa","tipo":"Supervisor · Não venda","status":"Finalizada","ciencia":null,"itens":[{"grupo":"Acolhimento","item":"Demonstrou compreensão e tolerância frente a clientes exaltados, mantendo tom de voz calmo e assertivo"},{"grupo":"Acolhimento","item":"Permitiu que o cliente se expressasse sem interrupções durante o contato"},{"grupo":"Acolhimento","item":"Demonstrou sorriso/energia na voz durante o atendimento."},{"grupo":"Acolhimento","item":"Teve empatia e estabeleceu conexão emocional com o assinante valorizando a sua satisfação, oferecendo um atendimento diferenciado"},{"grupo":"Comunicação","item":"Conduziu o atendimento de forma clara e objetiva"},{"grupo":"Comunicação","item":"Demonstrou confiança e segurança durante o atendimento"},{"grupo":"Comunicação","item":"Adequou todas as explicações para garantir o entendimento do cliente, facilitando sua compreensão"},{"grupo":"Comunicação","item":"Utilizou uma linguagem de fácil entendimento, evitando termos técnicos que pudessem dificultar a compreensão do tema tratado"},{"grupo":"Comunicação","item":"Utilizou comunicação assertiva."},{"grupo":"Comunicação","item":"Utilizou linguagem positiva e focando as soluções, ao invés de linguagem negativa e duvidosa ressaltando os erros e problemas"},{"grupo":"Sondagem","item":"Realizou sondagem necessária durante o atendimento"},{"grupo":"Sondagem","item":"Fez perguntas suficientes e por isso conseguiu detectar a melhor forma de condução da ligação"},{"grupo":"Sondagem","item":"Utilizou perguntas assertivas para detectar a necessidade do cliente e oferecer a proposta de negociação mais adequada"},{"grupo":"Instrução","item":"Passou para o assinante as informações corretas/completas - Serviços"},{"grupo":"Instrução","item":"Passou para o assinante as informações corretas/completas - Processos"},{"grupo":"Registro","item":"Criou um documento issue quando mais de um assunto foi tratado no mesmo contato"},{"grupo":"Registro","item":"Classificou o contato de forma correta - Salesforce"},{"grupo":"Encerramento","item":"Se colocou a disposição para esclarecimentos de dúvidas"}],"falhas_graves":[{"grupo":"Falha grave","item":"Se omitiu de responsabilidade transferindo o atendimento"}],"aderencia":0.5,"itens_avaliados":36,"feedback":"Maria do Carmo iniciou o atendimento de forma adequada, realizando a abertura dentro do prazo de 5 segundos, com a apresentação do seu nome e da empresa. Atualizou os dados de contato da cliente (telefone e e-mail), orientou sobre o procedimento de callback em caso de queda da ligação, informou o protocolo gerado e realizou os registros no Salesforce e na retaguarda.\n\nPonto de melhoria – FALHA GRAVE\n\nDurante o atendimento, houve uma falha grave na condução do caso, pois a responsabilidade pela resolução foi transferida para a área de saque, embora a atendente pudesse realizar os procedimentos necessários para solucionar a solicitação da cliente. Essa conduta resultou na zeragem da nota da monitoria, devido à gravidade da falha identificada.\n\nÉ fundamental compreender que o atendimento não deve ser encerrado ou transferido sem que sejam avaliadas as possibilidades de resolução dentro das atribuições da própria operação. Transferir a responsabilidade para outro setor quando é possível conduzir a solução representa uma falha grave de procedimento, podendo gerar retrabalho, insatisfação e uma experiência negativa para o cliente.","prazo_feedback":null,"htb":"HTB…5688","pontos":[],"tem_relato":false},{"id":"515","data":"06/10/2026","criado_em":"08/10/2026","nota":100.0,"nota_bruta":100.0,"falha_grave":false,"monitor":"Reginaldo Sousa Barbosa","tipo":"Supervisor · Não venda","status":"Finalizada","ciencia":null,"itens":[],"falhas_graves":[],"aderencia":1.0,"itens_avaliados":51,"feedback":null,"prazo_feedback":null,"htb":"HTB…5303","pontos":[],"tem_relato":false},{"id":"492","data":"06/10/2026","criado_em":"07/10/2026","nota":0.0,"nota_bruta":92.0,"falha_grave":true,"monitor":"Reginaldo Sousa Barbosa","tipo":"Supervisor · Não venda","status":"Finalizada","ciencia":null,"itens":[{"grupo":"Registro","item":"Reclassificou o registro conforme Base de Conhecimento"},{"grupo":"Registro","item":"Criou um documento issue quando mais de um assunto foi tratado no mesmo contato"},{"grupo":"Registro","item":"Classificou o contato de forma correta - Salesforce"},{"grupo":"Registro","item":"Realizou o registro durante o contato com o cliente (realizou em outro momento ou em outro contato)"}],"falhas_graves":[{"grupo":"Falha grave","item":"Não realizou o registro no Salesforce"}],"aderencia":0.907,"itens_avaliados":43,"feedback":"Realizou o atendimento inicial dentro do prazo de 5 segundos, informando seu nome e apresentando a empresa de forma adequada.\n\nPONTO DE MELHORIA – ESCUTA ATIVA: Durante o início da interação, acabou interrompendo o cliente enquanto ele ainda estava iniciando sua fala. É importante aguardar o cliente concluir sua manifestação antes de intervir, demonstrando escuta ativa e evitando possíveis interrupções que possam prejudicar a experiência durante o atendimento.\n\nRealizou a atualização dos dados de telefone e e-mail, uma ação de grande importância para manter as informações do cliente atualizadas em nossa base.\n\nDiante da informação apresentada pelo cliente sobre a duplicidade de pagamento, prontamente identificou a situação e esclareceu que os créditos gerados em sua fatura foram devidamente considerados, sendo o valor abatido na fatura do mês 10, com vencimento em 05/10/2026. Demonstrou domínio da situação e conseguiu esclarecer as dúvidas apresentadas pelo cliente.\n\nDe modo geral, realizou um bom atendimento, esclarecendo os questionamentos, contornando as objeções e conduzindo a interação de maneira objetiva e proativa. Ao final, realizou a abordagem sobre a PSAT, fez uma ótima sondagem e estabeleceu uma boa conexão (rapport) com o cliente, contribuindo para uma experiência positiva.\n\nFALHA GRAVE – REGISTRO NO SALESFORCE\nApesar de todos os pontos positivos apresentados durante o atendimento, por uma falta de atenção, não realizou o devido registro do atendimento no Salesforce.\n\nEssa é uma etapa obrigatória e de extrema importância para garantir a rastreabilidade, o histórico e a continuidade do atendimento. A ausência do registro configura uma FALHA GRAVE e impactou diretamente a avaliação, zerando uma nota que, até aquele momento, estava sendo perfeita.\n\nPONTO DE MELHORIA – CONFERÊNCIA FINAL\nÉ fundamental desenvolver o hábito de realizar uma conferência ao final de cada atendimento, verificando se todas as etapas obrigatórias foram concluídas, principalmente o registro no Salesforce.\n\nO atendimento apresentou diversos pontos positivos, como boa sondagem, rapport, objetividade, proatividade, esclarecimento das dúvidas e atualização cadastral. Porém, o não cumprimento de uma etapa obrigatória pode comprometer todo o resultado do atendimento, mesmo quando a condução com o cliente foi excelente.\n\nPonto principal para os próximos atendimentos: antes de finalizar a interação, realizar um checklist mental dos procedimentos obrigatórios e confirmar se o registro no Salesforce foi realizado corretamente. \n\nRealizar feedback ate dia 08/10/2026","prazo_feedback":"08/10/2026","htb":"HTB…7463","pontos":[],"tem_relato":false},{"id":"445","data":"03/10/2026","criado_em":"05/10/2026","nota":79.0,"nota_bruta":79.0,"falha_grave":false,"monitor":"Reginaldo Sousa Barbosa","tipo":"Supervisor · Não venda","status":"Finalizada","ciencia":null,"itens":[{"grupo":"Acolhimento","item":"Permitiu que o cliente se expressasse sem interrupções durante o contato"},{"grupo":"Registro","item":"Descreveu o contato de forma correta/completa"},{"grupo":"Registro","item":"Criou um documento issue quando mais de um assunto foi tratado no mesmo contato"},{"grupo":"Registro","item":"Classificou o contato de forma correta - Retaguarda -> Cobrança"},{"grupo":"Encerramento","item":"Se colocou a disposição para esclarecimentos de dúvidas"},{"grupo":"Registro","item":"Atendente registrou o motivo de inadimplência no retaguarda?"}],"falhas_graves":[],"aderencia":0.8605,"itens_avaliados":43,"feedback":"O atendimento foi iniciado dentro do prazo esperado, com a apresentação do nome do operador e da empresa. Também realizou a orientação sobre o protocolo e o procedimento de callback em caso de queda da ligação.\n\nFoi realizado o processo de atualização dos dados cadastrais do cliente, como telefone e e-mail, uma prática importante para manter nossa base de informações atualizada. O operador também se posicionou corretamente durante as pausas e demonstrou iniciativa ao tentar reter o cliente quando ele sinalizou interesse em realizar o cancelamento.\n\nComo pontos de atenção, em alguns momentos houve interrupção da fala da cliente, o que pode comprometer a condução e a experiência durante o atendimento. Também não foi realizado o registro na retaguarda e, antes da transferência, não houve a confirmação de que a cliente não possuía outras dúvidas ou necessidades.\n\nFeedback a ser realizado ate o dia 10/10/2026.\n\n Esses pontos impactaram diretamente na redução da nota da monitoria. O feedback será aplicado com os alinhamentos necessários, reforçando a importância desses procedimentos para que sejam corrigidos e não voltem a ocorrer nos próximos atendimentos.","prazo_feedback":"10/10/2026","htb":"HTB…9491","pontos":[],"tem_relato":false},{"id":"430","data":"01/10/2026","criado_em":"03/10/2026","nota":100.0,"nota_bruta":100.0,"falha_grave":false,"monitor":"Reginaldo Sousa Barbosa","tipo":"Supervisor · Não venda","status":"Finalizada","ciencia":null,"itens":[],"falhas_graves":[],"aderencia":1.0,"itens_avaliados":38,"feedback":"A colaboradora realizou uma apresentação e abertura adequadas, apresentando-se de forma clara e informando corretamente o nome da empresa. Realizou a identificação positiva conforme orientado na base de conhecimento, além de informar corretamente sobre o callback e o protocolo.\n\nOutro ponto de destaque foi a atualização dos dados de contato, incluindo e-mail e telefone, uma prática que poucos colaboradores estão realizando e que demonstra atenção aos procedimentos.\n\nDurante a sondagem, conduziu o atendimento de forma adequada, esclarecendo todas as dúvidas do cliente sobre a negociação já existente. Também realizou o envio da negociação pelo ChatPro, garantindo que o cliente tivesse acesso às informações apresentadas.\n\nEm suma, trata-se de um atendimento realizado com excelência, contemplando todos os pontos avaliados. Parabéns pelo ótimo atendimento e pela condução completa da ligação! O desempenho foi reconhecido com a nota máxima.","prazo_feedback":null,"htb":"HTB…3829","pontos":[],"tem_relato":false},{"id":"401","data":"30/09/2026","criado_em":"01/10/2026","nota":97.0,"nota_bruta":97.0,"falha_grave":false,"monitor":"Reginaldo Sousa Barbosa","tipo":"Supervisor · Não venda","status":"Finalizada","ciencia":null,"itens":[{"grupo":"Encerramento","item":"Se colocou a disposição para esclarecimentos de dúvidas"}],"falhas_graves":[],"aderencia":0.98,"itens_avaliados":50,"feedback":"A colaboradora realizou uma abertura adequada, iniciando o atendimento dentro dos primeiros cinco segundos e realizando a apresentação da empresa de forma correta.\n\nInformou o cliente sobre o número do protocolo de atendimento e orientou quanto ao procedimento de callback em caso de queda da ligação. Durante o atendimento, realizou uma sondagem adequada, identificando os valores em aberto e apresentando as condições disponíveis para negociação.\n\nAlém disso, ofertou o desconto dentro de sua alçada, conduzindo a aplicação do benefício de forma gradativa e adequada ao longo da negociação. Porém não obteve nota maxima por um simples detalhe: Nao se dispôs para esclarecimentos de dúvidas o que afetou na sua nota. Aplicar feedback ate dia 02/10/2026","prazo_feedback":"02/10/2026","htb":"HTB…0641","pontos":[],"tem_relato":false}],"relatos":null}},"gerado_em":"13/10 às 11:54","pessoa":{"nome":"Maria do Carmo Santos","turno":"Tarde","supervisor":"Reginaldo Sousa Barbosa","negociado":28743.15,"recebido":16528.9,"conversao":0.5751,"clientes_negociados":147,"clientes_recebidos":95,"faturas_negociadas":367,"ticket_medio":173.99,"chamadas":87,"tma_seg":521.126,"pausa_pct":35.1,"daily_negociado":[3703.2,3302.3,2515.84,0.0,5347.12,3952.58,1651.39,3222.04,1862.49,0.0,0.0,3186.19],"daily_recebido":[2114.5,2272.97,1026.37,0.0,4057.66,3335.34,1572.87,1365.76,783.43,0.0,0,0],"score":53,"partes":{"resultado":75.5,"conversao":57.5,"produtividade":43.5,"evolucao":0.0,"eficiencia":36.9},"tendencia":-0.6,"cv":0.516,"media_dia":2066.11,"melhor_valor":4057.66,"melhor_dia":"05/10","rank":2,"total":19,"observacao":null,"projecao":{"negociado_atual":28743.15,"ritmo_diario":2395.26,"projetado_fim_mes":74253.14,"dias_corridos":12,"dias_do_mes":31,"dias_restantes":19,"premio_atual":0,"premio_projetado":300.0,"proxima_faixa":{"alvo":30000.0,"premio":100.0,"falta":1256.85},"ritmo_necessario_prox_faixa":66.15,"no_topo":false}},"equipe":{"conversao":0.6073,"ticket_medio":181.06,"tma_seg":449.2,"pausa_pct":28.0,"negociado_pessoa":18013.73,"recebido_pessoa":10939.68,"chamadas_pessoa":100,"meta_topo":50000.0,"conversao_minima":0.65},"datas":["01/10","02/10","03/10","04/10","05/10","06/10","07/10","08/10","09/10","10/10","11/10","12/10"],"periodo":"01 a 12/10/2026 (parcial do mês)","mostrar_rank":false}</script>
 <script>
 (function(){
 'use strict';
@@ -428,6 +494,210 @@ function detalheDias(){
   return html;
 }
 
+/* ---------- qualidade: PSAT (aba) + monitorias (aba) ---------- */
+const Q=D.qualidade||null;
+const QS=Q&&Q.psat, QMx=Q&&Q.monit, QM=(QMx&&QMx.lista)||[];
+const pcN=v=>v==null?'—':pc(v,0);
+const n1=v=>v==null?'—':v.toFixed(1).replace('.',',');
+const nMon=v=>v==null?'—':(Math.round(v*10)/10).toString().replace('.',',');
+const MESES=['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
+const nomeMes=c=>c?MESES[+c.slice(5,7)-1]:'';
+function vsPP(meu,ref,maiorMelhor=true){
+  if(meu==null||ref==null) return {cls:'eq',txt:'—'};
+  const d=(meu-ref)*100, bom=maiorMelhor?d>0:d<0;
+  if(Math.abs(d)<2) return {cls:'eq',txt:'na média do time'};
+  return {cls:bom?'up':'dn',txt:(d>0?'▲ ':'▼ ')+Math.abs(d).toFixed(0)+' p.p. vs. média'};
+}
+function vsPts(meu,ref){
+  if(meu==null||ref==null) return {cls:'eq',txt:'—'};
+  const d=meu-ref; if(Math.abs(d)<1.5) return {cls:'eq',txt:'na média do time'};
+  return {cls:d>0?'up':'dn',txt:(d>0?'▲ ':'▼ ')+nMon(Math.abs(d))+' pts vs. média'};
+}
+const corMon=n=>n==null?'#7C8FA6':n>=90?'#34D399':n>=80?'#22D3EE':n>=70?'#FFB020':'#F43F5E';
+const rotMon=n=>n==null?'SEM NOTA':n>=90?'EXCELENTE':n>=80?'BOM':n>=70?'EM EVOLUÇÃO':'PRECISA DE ATENÇÃO';
+const chip=(n,inv)=>inv?'<span class="chip cx">INVÁL.</span>':n==null?'<span class="chip cx">—</span>':`<span class="chip c${n}">${n}</span>`;
+function diasAteBR(br){ if(!br) return null; const p=br.split('/').map(Number); const y=p[2]||new Date().getFullYear();
+  const a=new Date(y,p[1]-1,p[0]), h=new Date(); h.setHours(0,0,0,0); return Math.round((a-h)/86400000); }
+
+/* ===== aba PSAT ===== */
+function pDestaque(){
+  const meu=QS&&QS.meu; if(!meu||!meu.validas_atendente) return '';
+  const f=[], dz=Math.round((meu.csat_atendente||0)*10);
+  f.push(`De cada <b>10 clientes</b> que deram nota para o seu atendimento, <span class="hl">${dz}</span> deram 4 ou 5.`);
+  f.push(meu.detratores?`<b>${meu.detratores} nota${meu.detratores>1?'s':''} baixa${meu.detratores>1?'s':''}</b> (1 ou 2) no período — destacadas em vermelho na lista abaixo.`
+                       :'<b>Nenhuma nota baixa</b> (1 ou 2) no período.');
+  if(meu.validas_atendente<5) f.push(`Amostra ainda pequena (${meu.validas_atendente} nota${meu.validas_atendente>1?'s':''}): o percentual muda bastante a cada pesquisa nova.`);
+  if(meu.rechamada!=null && QS.equipe.rechamada!=null && meu.rechamada>QS.equipe.rechamada+0.05)
+    f.push(`<b>${pc(meu.rechamada,0)}</b> dos seus clientes ligaram de novo em até 3 dias (equipe: ${pc(QS.equipe.rechamada,0)}). Fechar a ligação com tudo resolvido — boleto, data e próximo passo claros — evita a volta.`);
+  return `<div class="hi"><div class="ic">PSAT</div><div style="flex:1">
+    <h4>COMO O CLIENTE AVALIA O SEU ATENDIMENTO</h4><p>${f.join(' ')}</p></div></div>`;
+}
+function pKpis(){
+  if(!QS) return `<div class="pn"><div class="vazio">PSAT: dado não disponível
+    <p>A pesquisa de satisfação ainda não entrou nesta atualização do painel.</p></div></div>`;
+  const meu=QS.meu, E=QS.equipe;
+  if(!meu) return `<div class="pn"><div class="vazio">Nenhuma pesquisa PSAT sua em ${QS.periodo}
+    <p>Assim que clientes atendidos por você responderem a pesquisa, as notas aparecem aqui.</p></div></div>`;
+  return `<div class="kpis qk" style="grid-template-columns:repeat(5,1fr)">
+    ${kpi('Pesquisas recebidas',nf(meu.pesquisas),{cls:'eq',txt:nf(meu.validas_atendente)+' com nota válida'})}
+    ${kpi('Satisfação com você',pcN(meu.csat_atendente),vsPP(meu.csat_atendente,E.csat_atendente))}
+    ${kpi('Nota média',n1(meu.media_atendente),vs(meu.media_atendente,E.media_atendente))}
+    ${kpi('Solução aprovada',pcN(meu.csat_solucao),vsPP(meu.csat_solucao,E.csat_solucao))}
+    ${kpi('Ligou de novo em 3d',pcN(meu.rechamada),vsPP(meu.rechamada,E.rechamada,false))}
+  </div>`;
+}
+function pNotas(){
+  const meu=QS&&QS.meu;
+  if(!meu||!meu.validas_atendente) return '';
+  const tv=meu.validas_atendente, E=QS.equipe, ev=E.validas_atendente||1;
+  const cor={5:'#34D399',4:'#34D399',3:'#FFB020',2:'#F43F5E',1:'#F43F5E'};
+  let rows='';
+  for(let k=5;k>=1;k--){
+    const q=meu.dist_atendente[k-1], p=q/tv, pe=E.dist_atendente[k-1]/ev;
+    rows+=`<div class="nt5-r"><span class="l">NOTA ${k}</span>
+      <span class="t"><i style="width:${(p*100).toFixed(1)}%;background:${cor[k]}"></i>
+        <b style="left:calc(${(pe*100).toFixed(1)}% - 1px)" title="Média da equipe: ${pc(pe,0)}"></b></span>
+      <span class="v n">${q} <span>· ${pc(p,0)}</span></span></div>`;
+  }
+  return `<div class="pn"><div class="pn-h"><h3>Como os clientes avaliam você</h3><span class="nt">nota do atendimento · 1 a 5</span></div>
+    <div class="pn-b"><div class="nt5">${rows}</div>
+    <p class="prose" style="font-size:11.5px;line-height:1.6;color:var(--faint);margin-top:12px">
+    A barra é a sua distribuição de notas. O traço claro mostra a média da equipe na mesma nota.
+    ${meu.invalidas||meu.sem_resposta?`Fora da conta: ${meu.sem_resposta} sem resposta e ${meu.invalidas} inválida${meu.invalidas===1?'':'s'}.`:''}</p></div></div>`;
+}
+function pLista(){
+  if(!QS||!QS.meu||!QS.lista.length) return '';
+  const L=QS.lista.filter(r=>r.atendente!=null||r.solucao!=null||r.inv||r.rechamada!=null);
+  const fora=QS.lista.length-L.length;
+  if(!L.length) return '';
+  const sn=v=>v===true?'<span style="color:var(--amber)">Sim</span>':v===false?'<span style="color:var(--dim)">Não</span>':'<span style="color:var(--faint)">—</span>';
+  return `<div class="pn"><div class="pn-h"><h3>Suas pesquisas de satisfação</h3>
+    <span class="nt">${QS.periodo} · notas 1 e 2 em destaque</span></div>
+    <div class="pn-b" style="overflow-x:auto"><table class="acd"><thead><tr>
+      <th class="l">Data</th><th class="l">Hora</th><th class="l">Fila</th>
+      <th>Atendimento</th><th>Solução</th><th>Ligou de novo</th><th class="l">Cliente</th>
+    </tr></thead><tbody>
+    ${L.map(r=>`<tr class="${r.atendente!=null&&r.atendente<=2?'det':''}">
+      <td class="l">${r.data}</td><td class="l" style="color:var(--dim)">${r.hora}</td>
+      <td class="l" style="color:var(--dim);font-size:10.5px;text-transform:uppercase;letter-spacing:.06em">${esc(r.fila)}</td>
+      <td>${chip(r.atendente,r.inv)}</td><td>${chip(r.solucao,r.inv)}</td><td>${sn(r.rechamada)}</td>
+      <td class="l" style="color:var(--dim);font-size:10.5px">${r.htb||'—'}</td></tr>`).join('')}
+    </tbody></table>
+    ${fora?`<p class="prose" style="font-size:11.5px;color:var(--faint);margin-top:12px">${fora} pesquisa${fora>1?'s':''} em que o cliente não respondeu nada ${fora>1?'ficaram':'ficou'} fora da lista.</p>`:''}
+    </div></div>`;
+}
+const atualizado=()=>D.gerado_em?`<div class="lbl" style="text-align:right;margin-top:14px">Atualizado em ${D.gerado_em}</div>`:'';
+function abaPSAT(){
+  return atualizado()+pDestaque()+pKpis()+pNotas()+pLista()+
+  `<div class="ft" style="margin-top:16px"><b>Como ler:</b> o PSAT é a pesquisa que o cliente responde ao fim da ligação
+    ${QS?`(${QS.periodo})`:''}. <b>Satisfação com você</b> é o percentual de notas 4 e 5 para o atendimento. <b>Solução aprovada</b>
+    é o mesmo cálculo para a nota da solução. <b>Ligou de novo em 3d</b> mostra quantos clientes voltaram a ligar em até
+    3 dias (quanto menor, melhor). Respostas inválidas ou em branco não entram nas contas. A comparação é com a
+    <b>média da equipe de cobrança</b>, sem identificar ninguém. Dúvida? Fale com ${esc(P.supervisor)}.</div>`;
+}
+
+/* ===== aba MONITORIAS ===== */
+function mDestaque(){
+  const M=QMx.mes, E=QMx.equipe, mes=nomeMes(QMx.competencia), f=[];
+  if(!M||!M.qtd){
+    f.push(`Você ainda não teve monitoria em <b>${mes}</b>.`+(QM.length?` A mais recente foi em ${QM[0].data||'—'}, com nota <span class="hl">${nMon(QM[0].nota)}</span>.`:''));
+  }else{
+    f.push(`Em <b>${mes}</b> você teve <b>${M.qtd} monitoria${M.qtd>1?'s':''}</b>${QMx.meta?` de ${QMx.meta} previstas`:''}, com nota média
+      <span class="hl">${nMon(M.media)}</span>${E.media_nota!=null?` (equipe: ${nMon(E.media_nota)})`:''}.`);
+    if(M.falhas_graves){
+      const g=QM.find(m=>m.falha_grave&&m.falhas_graves.length);
+      f.push(`<b style="color:var(--red)">${M.falhas_graves} falha${M.falhas_graves>1?'s':''} grave${M.falhas_graves>1?'s':''}</b> zerou${M.falhas_graves>1?'ram':''} nota${M.falhas_graves>1?'s':''}
+        ${M.perdeu_por_falha?`— foram <b>${nMon(M.perdeu_por_falha)} pontos</b> perdidos que você já tinha conquistado na ligação`:''}${g?`. Motivo: <b>${esc(g.falhas_graves[0].item)}</b>`:''}.`);
+    }
+  }
+  const r=(QMx.recorrentes||[]).find(x=>x.vezes>=2);
+  if(r) f.push(`O ponto que mais se repete nas suas monitorias: <b>${esc(r.item)}</b> (${r.vezes} vezes). Corrigir este item é o caminho mais rápido para subir a nota.`);
+  else if(M&&M.qtd&&!M.falhas_graves&&(M.media||0)>=95) f.push('Nenhum ponto se repete — mantenha o padrão.');
+  return `<div class="hi"><div class="ic">MONITORIA</div><div style="flex:1">
+    <h4>COMO A MONITORIA VÊ O SEU ATENDIMENTO</h4><p>${f.join(' ')}</p></div></div>`;
+}
+function mKpis(){
+  const M=QMx.mes||{qtd:0}, E=QMx.equipe, ult=QM[0];
+  const qtdTxt=QMx.meta?{cls:M.qtd>=QMx.meta?'up':'eq',txt:`${M.qtd} de ${QMx.meta} previstas`}
+                       :(E.por_pessoa?{cls:'eq',txt:'equipe: '+nMon(E.por_pessoa)+' por pessoa'}:null);
+  return `<div class="kpis qk" style="grid-template-columns:repeat(5,1fr)">
+    ${kpi('Monitorias em '+nomeMes(QMx.competencia),nf(M.qtd),qtdTxt)}
+    ${kpi('Nota média do mês',nMon(M.media),vsPts(M.media,E.media_nota))}
+    ${kpi('Última nota',ult?nMon(ult.nota):'—',ult?{cls:'eq',txt:'ligação de '+(ult.data||'—').slice(0,5)}:null)}
+    ${kpi('Itens atendidos',M.aderencia!=null?pc(M.aderencia,0):'—',{cls:'eq',txt:'da ficha, no mês'})}
+    ${kpi('Falhas graves',nf(M.falhas_graves||0),{cls:(M.falhas_graves?'dn':'up'),txt:M.falhas_graves?'zeram a nota':'nenhuma no mês'})}
+  </div>`;
+}
+function mEvolucao(){
+  const cab=`<div class="pn-h"><h3>Evolução das suas notas</h3><span class="nt">últimas monitorias · 0 a 100</span></div>`;
+  if(!QM.length) return `<div class="pn">${cab}<div class="vazio">Nenhuma monitoria ainda
+    <p>Quando seu supervisor monitorar uma ligação sua, a nota aparece aqui.</p></div></div>`;
+  const s=QM.slice(0,10).reverse();
+  const H=110, bars=s.map(m=>{const c=corMon(m.nota), h=Math.max(3,(m.nota||0)/100*H), hb=m.falha_grave&&m.nota_bruta?m.nota_bruta/100*H:0;
+    return `<div title="${m.data||''} · nota ${nMon(m.nota)}${hb?' (seria '+nMon(m.nota_bruta)+')':''}">
+      <em style="color:${c}">${nMon(m.nota)}</em>
+      <span style="position:relative;width:100%;height:${H}px;display:flex;align-items:flex-end">
+        ${hb?`<i style="position:absolute;bottom:0;left:0;right:0;height:${hb}px;border:1px dashed #F43F5E;background:rgba(244,63,94,.06)"></i>`:''}
+        <i style="height:${h}px;background:${c};position:relative;width:100%"></i></span>
+      <span>${(m.data||'—').slice(0,5)}</span></div>`;}).join('');
+  return `<div class="pn">${cab}<div class="pn-b"><div class="evo" style="height:${H+44}px">${bars}</div>
+    ${s.some(m=>m.falha_grave)?`<p class="prose" style="font-size:11.5px;color:var(--faint);margin-top:10px">
+      Contorno tracejado em vermelho = nota que você teria sem a falha grave.</p>`:''}</div></div>`;
+}
+function mRecorrentes(){
+  const R=QMx.recorrentes||[];
+  const cab=`<div class="pn-h"><h3>Onde você mais perde ponto</h3><span class="nt">itens não cumpridos · todas as monitorias</span></div>`;
+  if(!QM.length) return `<div class="pn">${cab}<div class="vazio">Sem monitorias</div></div>`;
+  if(!R.length) return `<div class="pn">${cab}<div class="vazio" style="color:var(--green)">Nenhum item perdido
+    <p>Em todas as suas monitorias você cumpriu os itens da ficha.</p></div></div>`;
+  const mx=Math.max(...R.map(x=>x.vezes));
+  return `<div class="pn">${cab}<div class="pn-b">${R.map(x=>`<div class="rc">
+    <div class="rc-t"><span class="rc-g" style="${x.grupo==='Falha grave'?'color:var(--red)':''}">${esc(x.grupo)}</span>
+      ${x.vezes>=2?'<span class="urg venc">repetiu</span>':''}</div>
+    <div class="rc-i"><span style="color:${x.grupo==='Falha grave'?'var(--red)':'var(--amber)'};font-family:var(--mono);font-weight:700">✗ </span>${esc(x.item)}</div>
+    <div class="rc-b"><i style="width:${x.vezes/mx*100}%;background:${x.grupo==='Falha grave'?'#F43F5E':x.vezes>=2?'#FFB020':'#7C8FA6'}"></i><span>${x.vezes}×</span></div>
+  </div>`).join('')}</div></div>`;
+}
+function mDetalhe(){
+  if(!QM.length) return '';
+  const temRel=QMx.relatos && QM.some(m=>m.tem_relato);
+  const grupos=L=>{const g={}; L.forEach(x=>(g[x.grupo]=g[x.grupo]||[]).push(x.item)); return g;};
+  const cards=QM.map((m,i)=>{const c=corMon(m.nota), G=grupos(m.itens||[]);
+    const dp=diasAteBR(m.prazo_feedback);
+    return `<div class="mon" style="--c:${c}">
+    <div class="mon-h"><div><div class="nota n">${nMon(m.nota)}<small> /100</small></div><div class="q">${rotMon(m.nota)}</div></div>
+      <div class="meta">Ligação de <b>${m.data||'—'}</b>${m.criado_em?`<br>Monitorada em <b>${m.criado_em}</b>`:''}
+        ${m.monitor?`<br>Por <b>${esc(m.monitor)}</b>`:''}${m.htb?`<br>Cliente <b>${m.htb}</b>`:''}</div></div>
+    ${m.falha_grave?`<div class="fg"><b>FALHA GRAVE — nota zerada${m.nota_bruta?` (seria ${nMon(m.nota_bruta)})`:''}</b>
+      ${(m.falhas_graves||[]).map(x=>`<div>▸ ${esc(x.item)}</div>`).join('')}</div>`:''}
+    ${Object.keys(G).length?`<h5>Itens da ficha não atendidos</h5><ul>${Object.entries(G).map(([g,it])=>
+      it.map(t=>`<li><b>${esc(g)}</b> — ${esc(t)}</li>`).join('')).join('')}</ul>`
+      :(!m.falha_grave&&m.itens_avaliados?`<h5 style="color:var(--green)">Todos os ${m.itens_avaliados} itens avaliados foram atendidos</h5>`:'')}
+    ${m.pontos&&m.pontos.length?`<h5>Pontos de melhoria</h5><ul>${m.pontos.map(p=>`<li>${esc(p)}</li>`).join('')}</ul>`:''}
+    ${m.feedback?`<h5>Feedback do supervisor</h5><div class="fb">${esc(m.feedback)}</div>`:''}
+    ${m.prazo_feedback||m.ciencia?`<div class="mon-f">
+      ${m.prazo_feedback?`<span class="urg ${dp!=null&&dp<0?'ok':dp===0?'hoje':'prox'}">${dp!=null&&dp<0?'feedback marcado para':'feedback até'} ${m.prazo_feedback.slice(0,5)}</span>`:''}
+      ${m.ciencia?`<span class="urg ok">ciência: ${esc(m.ciencia)}</span>`:''}</div>`:''}
+    ${m.tem_relato&&QMx.relatos?`<div class="rel" id="rel-${i}"></div>`:''}
+  </div>`;}).join('');
+  return `<div class="pn"><div class="pn-h"><h3>Suas monitorias, uma a uma</h3><span class="nt">da mais recente para a mais antiga</span></div>
+    <div class="pn-b">
+    ${temRel?`<div class="cad mini" id="q-cad"><p class="prose">O <b>relato de algumas ligações</b> cita o cliente pelo nome.
+      Para ler, use a mesma senha da aba de acordos.</p>
+      <input id="q-pw" type="password" placeholder="senha" autocomplete="off"><button id="q-go">Ver relatos</button>
+      <div class="msg" id="q-msg"></div></div>`:''}
+    ${cards}</div></div>`;
+}
+function abaMonit(){
+  return atualizado()+mDestaque()+mKpis()+`<div class="g2">${mEvolucao()}${mRecorrentes()}</div>`+mDetalhe()+
+  `<div class="ft" style="margin-top:16px"><b>Como ler:</b> cada monitoria é a avaliação de uma ligação sua, feita
+    com a ficha de qualidade da cobrança. A nota vai de 0 a 100. Uma <b>falha grave</b> (por exemplo, não registrar
+    o atendimento no Salesforce) <b>zera a nota</b>, mesmo que o resto da ligação tenha sido bom — por isso mostramos
+    também quanto você teria tirado. <b>Itens atendidos</b> é o percentual de itens da ficha que você cumpriu, sem
+    contar os que não se aplicavam à ligação. A média da equipe considera todas as monitorias do mês, sem
+    identificar ninguém. Dúvida sobre uma nota? Fale com ${esc(P.supervisor)}.</div>`;
+}
+
 /* ---------- render ---------- */
 const convCli=P.clientes_recebidos/P.clientes_negociados;
 const dez=Math.round(convCli*10);
@@ -456,6 +726,8 @@ document.getElementById('r').innerHTML=`
 <div class="abas" id="abas">
   <button data-v="perf" class="on">Meu desempenho</button>
   ${D.acordos_qtd ? `<button data-v="acd">Meus acordos<span class="cnt">${D.acordos_qtd}</span></button>` : ''}
+  ${QS ? `<button data-v="psat">Satisfação (PSAT)</button>` : ''}
+  ${QMx ? `<button data-v="mon">Minhas monitorias${QMx.mes&&QMx.mes.qtd?`<span class="cnt">${QMx.mes.qtd}</span>`:''}</button>` : ''}
 </div>
 
 <div class="vista on" id="v-perf">
@@ -476,6 +748,35 @@ document.getElementById('r').innerHTML=`
     e <b>${nf(P.clientes_recebidos)}</b> efetivaram o pagamento — <span class="hl">${pc(convCli)}</span> de conversão por cliente,
     que em valor representa <span class="hl">${pc(P.conversao)}</span>.</p>
 </div></div>
+
+${(()=>{
+  const proj=P.projecao;
+  if(!proj) return '';
+  if(proj.no_topo){
+    return `<div class="hi" style="margin-top:16px">
+      <div class="ic">SUA COMISSÃO</div>
+      <div style="flex:1">
+        <h4>VOCÊ JÁ GARANTIU A MAIOR FAIXA</h4>
+        <p>Com <b>${brl(proj.negociado_atual)}</b> negociados, você já passou de <b>${brl(T.meta_topo)}</b> —
+        comissão de <span class="hl">${brl(proj.premio_atual)}</span> garantida (mantendo conversão de pelo
+        menos ${pc(T.conversao_minima,0)}). Agora é só manter o ritmo até o fim do mês.</p>
+      </div>
+    </div>`;
+  }
+  return `<div class="hi" style="margin-top:16px">
+    <div class="ic">SUA COMISSÃO</div>
+    <div style="flex:1">
+      <h4>SUA PROJEÇÃO DE COMISSÃO ESTE MÊS</h4>
+      <p>No ritmo atual de <b>${brl(proj.ritmo_diario)}/dia</b>, você fecha o mês perto de
+      <span class="hl">${brl(proj.projetado_fim_mes)}</span>${proj.premio_projetado?` — faixa de <b>${brl(proj.premio_projetado)}</b> de comissão`:''}.
+      ${proj.proxima_faixa && proj.dias_restantes>0
+        ? `Faltam <b>${brl(proj.proxima_faixa.falta)}</b> para a próxima faixa (comissão de <b>${brl(proj.proxima_faixa.premio)}</b>)
+           — nos <b>${proj.dias_restantes} dia${proj.dias_restantes===1?'':'s'}</b> que restam, isso dá
+           <b style="color:var(--acc)">${brl(proj.ritmo_necessario_prox_faixa)}/dia</b>.`
+        : (proj.proxima_faixa ? `O mês já fechou — sem tempo pra alcançar a faixa seguinte neste período.` : '')}</p>
+    </div>
+  </div>`;
+})()}
 
 <div class="g21">
   <div class="pn"><div class="pn-h"><h3>Sua evolução diária</h3><span class="nt">R$ por dia</span></div>
@@ -537,6 +838,9 @@ document.getElementById('r').innerHTML=`
     <div class="msg" id="acd-msg"></div>
   </div>
   <div id="acd-lista"></div>` : ''}</div>
+
+${QS?`<div class="vista" id="v-psat">${abaPSAT()}</div>`:''}
+${QMx?`<div class="vista" id="v-mon">${abaMonit()}</div>`:''}
 
 <div class="ft"><b>Sobre estes números:</b> vêm das planilhas de Resultado Parcial e de Chamadas/TMA do período
 ${D.periodo}. Comparações são com a <b>média da operação</b>, não com pessoas específicas.
@@ -649,6 +953,30 @@ if(D.acordos_qtd){
 
   bt.addEventListener('click',abrir);
   inp.addEventListener('keydown',e=>{ if(e.key==='Enter') abrir(); });
+}
+
+/* ---------- relatos das monitorias (bloco criptografado) ---------- */
+if(QMx && QMx.relatos && document.getElementById('q-go')){
+  const bt=document.getElementById('q-go'), inp=document.getElementById('q-pw'), msg=document.getElementById('q-msg');
+  const b64=x=>Uint8Array.from(atob(x),c=>c.charCodeAt(0));
+  async function abrirRel(){
+    const senha=inp.value;
+    if(!senha){msg.textContent='Digite a senha';msg.className='msg err';return;}
+    bt.disabled=true; inp.disabled=true; msg.textContent='Abrindo…'; msg.className='msg';
+    await new Promise(r=>setTimeout(r,40));
+    let R;
+    try{
+      const km=await crypto.subtle.importKey('raw',new TextEncoder().encode(senha),'PBKDF2',false,['deriveKey']);
+      const key=await crypto.subtle.deriveKey({name:'PBKDF2',salt:b64(QMx.relatos.salt),iterations:QMx.relatos.it,hash:'SHA-256'},
+        km,{name:'AES-GCM',length:256},false,['decrypt']);
+      R=JSON.parse(new TextDecoder().decode(await crypto.subtle.decrypt({name:'AES-GCM',iv:b64(QMx.relatos.iv)},key,b64(QMx.relatos.ct))));
+    }catch(e){bt.disabled=false;inp.disabled=false;inp.value='';msg.textContent='Senha incorreta';msg.className='msg err';inp.focus();return;}
+    document.getElementById('q-cad').remove();
+    Object.entries(R).forEach(([i,t])=>{const el=document.getElementById('rel-'+i);
+      if(el) el.innerHTML=`<h5 style="margin-top:0">Relato da ligação</h5><p>${esc(t)}</p>`;});
+  }
+  bt.addEventListener('click',abrirRel);
+  inp.addEventListener('keydown',e=>{if(e.key==='Enter')abrirRel();});
 }
 
 /* simulador */

@@ -126,7 +126,9 @@ input[type=range]::-moz-range-thumb{width:19px;height:19px;background:var(--ambe
   font-family:var(--sans);font-size:11px;line-height:1.7;color:var(--faint)}
 
 /* ---- abas ---- */
-.abas{display:flex;gap:0;border-bottom:1px solid var(--line);margin:20px 0 0}
+.abas{display:flex;gap:0;border-bottom:1px solid var(--line);margin:20px 0 0;overflow-x:auto;scrollbar-width:none}
+.abas::-webkit-scrollbar{display:none}
+.abas button{flex:none;white-space:nowrap}
 .abas button{padding:11px 18px;font-family:var(--mono);font-size:10px;font-weight:700;
   letter-spacing:.14em;text-transform:uppercase;color:var(--faint);background:none;border:none;
   border-bottom:2px solid transparent;cursor:pointer;transition:.15s}
@@ -191,6 +193,70 @@ input[type=range]::-moz-range-thumb{width:19px;height:19px;background:var(--ambe
 .dia-d{font-size:10px;font-weight:700;text-align:right}
 .dia-d.up{color:var(--green)}.dia-d.dn{color:var(--red)}.dia-d.eq{color:var(--faint)}
 
+/* ---- qualidade (PSAT + monitoria) ---- */
+.qk .k{min-height:92px}
+.nt5{display:flex;flex-direction:column;gap:2px}
+.nt5-r{display:grid;grid-template-columns:62px 1fr 74px;gap:12px;align-items:center;padding:6px 0}
+.nt5-r .l{font-size:10px;letter-spacing:.1em;color:var(--dim);font-weight:700}
+.nt5-r .t{height:12px;background:var(--panel3);position:relative}
+.nt5-r .t i{display:block;height:100%;animation:gw .7s cubic-bezier(.2,.8,.3,1) both;transform-origin:left}
+.nt5-r .t b{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--txt);opacity:.55}
+.nt5-r .v{font-size:11px;font-weight:700;text-align:right}
+.nt5-r .v span{color:var(--faint);font-weight:500}
+.chip{display:inline-flex;align-items:center;justify-content:center;min-width:24px;height:22px;padding:0 6px;
+  font-size:11px;font-weight:800;border:1px solid}
+.chip.c5,.chip.c4{color:var(--green);border-color:rgba(52,211,153,.4);background:rgba(52,211,153,.1)}
+.chip.c3{color:var(--amber);border-color:rgba(255,176,32,.4);background:rgba(255,176,32,.1)}
+.chip.c2,.chip.c1{color:var(--red);border-color:rgba(244,63,94,.45);background:rgba(244,63,94,.12)}
+.chip.cx{color:var(--faint);border-color:var(--line2);font-weight:600;font-size:9.5px;letter-spacing:.06em}
+.acd tr.det td{background:rgba(244,63,94,.05)}
+.mon{border:1px solid var(--line);background:var(--panel2);border-left:2px solid var(--c);padding:16px 18px;margin-bottom:12px}
+.mon-h{display:flex;align-items:flex-start;gap:16px;flex-wrap:wrap}
+.mon-h .nota{font-size:34px;font-weight:800;line-height:1;color:var(--c);letter-spacing:-.03em}
+.mon-h .nota small{font-size:11px;color:var(--faint);font-weight:600;letter-spacing:0}
+.mon-h .q{font-size:9px;letter-spacing:.14em;color:var(--c);font-weight:700;margin-top:6px}
+.mon-h .meta{margin-left:auto;text-align:right;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);line-height:1.8}
+.mon-h .meta b{color:var(--txt);font-weight:700}
+.mon h5{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--faint);margin:16px 0 8px}
+.mon ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+.mon li{font-family:var(--sans);font-size:12.5px;line-height:1.55;color:var(--dim);padding-left:16px;position:relative}
+.mon li:before{content:'▸';position:absolute;left:0;color:var(--amber);font-family:var(--mono)}
+.mon li.gr:before{color:var(--red)}
+.mon li b{color:var(--txt);font-weight:600}
+.mon .rel{margin-top:14px;border-top:1px dashed var(--line2);padding-top:12px}
+.mon .rel button{background:none;border:1px solid var(--line2);color:var(--dim);font-family:var(--mono);font-size:9.5px;
+  font-weight:700;letter-spacing:.13em;text-transform:uppercase;padding:7px 12px;cursor:pointer}
+.mon .rel button:hover{border-color:var(--amber);color:var(--amber)}
+.mon .rel p{font-family:var(--sans);font-size:12.5px;line-height:1.65;color:var(--dim);margin-top:4px}
+.evo{display:flex;align-items:flex-end;gap:6px;height:74px;margin:6px 0 4px}
+.evo div{flex:1;max-width:38px;display:flex;flex-direction:column;align-items:center;gap:4px;height:100%;justify-content:flex-end}
+.evo i{display:block;width:100%;animation:gw2 .6s ease both;transform-origin:bottom}
+.evo span{font-size:8.5px;color:var(--faint);letter-spacing:.04em}
+.evo em{font-style:normal;font-size:9.5px;font-weight:700}
+@keyframes gw2{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+.vazio{padding:26px 18px;text-align:center;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+.vazio p{font-family:var(--sans);text-transform:none;letter-spacing:0;font-size:12px;color:var(--dim);margin-top:8px;line-height:1.6}
+.cad.mini{max-width:none;margin:0 0 16px;padding:18px 20px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;text-align:left}
+.cad.mini p{margin:0;flex:1;min-width:200px}
+.cad.mini input{width:180px;padding:9px;font-size:12px}
+.cad.mini button{width:auto;margin:0;padding:10px 16px}
+.cad.mini .msg{width:100%;margin-top:0}
+.rc{padding:9px 0;border-bottom:1px solid rgba(26,36,51,.6)}
+.rc:last-child{border-bottom:none}
+.rc-t{display:flex;gap:8px;align-items:center}
+.rc-g{font-size:9px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--faint)}
+.rc-i{font-family:var(--sans);font-size:12.5px;line-height:1.5;color:var(--txt);margin:4px 0 6px}
+.rc-b{display:flex;align-items:center;gap:8px}
+.rc-b i{display:block;height:5px;animation:gw .7s cubic-bezier(.2,.8,.3,1) both;transform-origin:left}
+.rc-b span{font-size:10px;font-weight:700;color:var(--dim)}
+.fg{margin-top:14px;border:1px solid rgba(244,63,94,.45);background:rgba(244,63,94,.08);padding:11px 13px;
+  font-family:var(--sans);font-size:12.5px;line-height:1.6;color:var(--txt)}
+.fg b{font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--red);display:block;margin-bottom:4px}
+.fb{font-family:var(--sans);font-size:12.5px;line-height:1.65;color:var(--dim);white-space:pre-line;
+  border-left:2px solid var(--line2);padding:2px 0 2px 12px}
+.mon-f{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+@media(max-width:900px){.qk{grid-template-columns:repeat(2,1fr)!important}}
+
 svg text{font-family:var(--mono)}
 @media(max-width:900px){.kpis{grid-template-columns:repeat(3,1fr)}.g2,.g21{grid-template-columns:1fr}}
 @media(max-width:560px){.kpis{grid-template-columns:repeat(2,1fr)}.pf-s{margin-left:0}}
@@ -198,7 +264,7 @@ svg text{font-family:var(--mono)}
 </head>
 <body>
 <div class="wrap" id="r"></div>
-<script id="dd" type="application/json">{"acordos":{"salt":"oWXNc6X1PtKtKPQLwBqisQ==","iv":"TjhNidhIF1/kMcIV","ct":"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","it":310000},"acordos_qtd":18,"pessoa":{"nome":"João Pedro Souza","turno":"Tarde","supervisor":"Reginaldo Sousa Barbosa","negociado":14340.74,"recebido":8963.51,"conversao":0.625,"clientes_negociados":78,"clientes_recebidos":49,"faturas_negociadas":358,"ticket_medio":182.93,"chamadas":78,"tma_seg":592.333,"pausa_pct":30.7,"daily_negociado":[2802.02,1922.84,348.64,0.0,1779.7,2488.64,2171.57,2827.33],"daily_recebido":[1430.11,1588.21,734.91,170.5,2147.33,748.12,319.55,1824.78],"score":57,"partes":{"resultado":47.5,"conversao":62.5,"produtividade":57.6,"evolucao":73.7,"eficiencia":45.3},"tendencia":0.2844,"cv":0.607,"media_dia":1120.44,"melhor_valor":2147.33,"melhor_dia":"05/10","rank":11,"total":19,"observacao":null},"equipe":{"conversao":0.6441,"ticket_medio":181.09,"tma_seg":470.5,"pausa_pct":30.1,"negociado_pessoa":14649.93,"recebido_pessoa":9435.87,"chamadas_pessoa":68},"datas":["01/10","02/10","03/10","04/10","05/10","06/10","07/10","08/10"],"periodo":"01 a 08/10/2026 (parcial do mês)","mostrar_rank":false}</script>
+<script id="dd" type="application/json">{"acordos":null,"acordos_qtd":0,"qualidade":{"psat":{"periodo":"01/10 a 13/10/2026","equipe":{"pesquisas":560,"validas_atendente":300,"validas_solucao":302,"invalidas":57,"sem_resposta":203,"csat_atendente":0.8333,"media_atendente":4.35,"csat_solucao":0.7781,"media_solucao":4.17,"rechamada":0.3937,"base_rechamada":287,"dist_atendente":[33,12,5,17,233],"detratores":45},"meu":{"pesquisas":52,"validas_atendente":26,"validas_solucao":27,"invalidas":5,"sem_resposta":21,"csat_atendente":0.8077,"media_atendente":4.23,"csat_solucao":0.7407,"media_solucao":4.0,"rechamada":0.4815,"base_rechamada":27,"dist_atendente":[4,1,0,1,20],"detratores":5},"lista":[{"data":"12/10","hora":"19:01","fila":"faturas","atendente":5,"solucao":5,"rechamada":true,"htb":null,"inv":false},{"data":"12/10","hora":"14:17","fila":"negociacao","atendente":5,"solucao":4,"rechamada":false,"htb":"HTB…7837","inv":false},{"data":"08/10","hora":"18:52","fila":"faturas","atendente":1,"solucao":1,"rechamada":true,"htb":null,"inv":false},{"data":"08/10","hora":"17:55","fila":"negociacao","atendente":4,"solucao":2,"rechamada":false,"htb":"HTB…7740","inv":false},{"data":"08/10","hora":"17:41","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…0666","inv":false},{"data":"08/10","hora":"17:18","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…2764","inv":false},{"data":"08/10","hora":"16:45","fila":"negociacao","atendente":2,"solucao":2,"rechamada":false,"htb":"HTB…7082","inv":false},{"data":"08/10","hora":"16:12","fila":"faturas","atendente":5,"solucao":5,"rechamada":false,"htb":null,"inv":false},{"data":"08/10","hora":"15:53","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…6192","inv":false},{"data":"08/10","hora":"15:42","fila":"negociacao","atendente":5,"solucao":5,"rechamada":false,"htb":"HTB…0828","inv":false},{"data":"08/10","hora":"15:25","fila":"negociacao","atendente":1,"solucao":1,"rechamada":true,"htb":"HTB…0828","inv":false},{"data":"08/10","hora":"14:23","fila":"faturas","atendente":5,"solucao":5,"rechamada":false,"htb":null,"inv":false},{"data":"07/10","hora":"19:37","fila":"negociacao","atendente":1,"solucao":1,"rechamada":true,"htb":"HTB…4834","inv":false},{"data":"07/10","hora":"18:07","fila":"negociacao","atendente":5,"solucao":5,"rechamada":false,"htb":"HTB…1822","inv":false},{"data":"07/10","hora":"17:15","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…4168","inv":true},{"data":"07/10","hora":"16:19","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"07/10","hora":"14:46","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…7972","inv":true},{"data":"07/10","hora":"14:24","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…7972","inv":false},{"data":"07/10","hora":"14:10","fila":"negociacao","atendente":5,"solucao":5,"rechamada":true,"htb":"HTB…8015","inv":false},{"data":"05/10","hora":"18:57","fila":"negociacao","atendente":5,"solucao":5,"rechamada":true,"htb":"HTB…8732","inv":false},{"data":"05/10","hora":"18:03","fila":"negociacao","atendente":5,"solucao":5,"rechamada":false,"htb":"HTB…6059","inv":false},{"data":"05/10","hora":"17:50","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…4548","inv":false},{"data":"05/10","hora":"17:49","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…0293","inv":false},{"data":"05/10","hora":"17:37","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…6401","inv":false},{"data":"05/10","hora":"17:18","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"05/10","hora":"16:51","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"05/10","hora":"16:06","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…3862","inv":false},{"data":"05/10","hora":"14:30","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…0802","inv":false},{"data":"02/10","hora":"19:12","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"02/10","hora":"18:53","fila":"faturas","atendente":5,"solucao":5,"rechamada":true,"htb":null,"inv":false},{"data":"02/10","hora":"17:11","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…5936","inv":true},{"data":"02/10","hora":"16:46","fila":"negociacao","atendente":5,"solucao":5,"rechamada":false,"htb":"HTB…9084","inv":false},{"data":"02/10","hora":"14:58","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"02/10","hora":"14:36","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…6004","inv":false},{"data":"02/10","hora":"14:23","fila":"negociacao","atendente":null,"solucao":5,"rechamada":false,"htb":"HTB…5238","inv":true},{"data":"02/10","hora":"14:09","fila":"faturas","atendente":5,"solucao":1,"rechamada":true,"htb":null,"inv":false},{"data":"01/10","hora":"19:35","fila":"negociacao","atendente":5,"solucao":5,"rechamada":true,"htb":"HTB…0337","inv":false},{"data":"01/10","hora":"19:21","fila":"negociacao","atendente":5,"solucao":5,"rechamada":true,"htb":"HTB…5179","inv":false},{"data":"01/10","hora":"18:46","fila":"negociacao","atendente":1,"solucao":1,"rechamada":true,"htb":"HTB…7363","inv":false},{"data":"01/10","hora":"18:28","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…8644","inv":false},{"data":"01/10","hora":"17:43","fila":"faturas","atendente":5,"solucao":5,"rechamada":true,"htb":"HTB…0539","inv":false},{"data":"01/10","hora":"17:09","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"01/10","hora":"17:06","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"01/10","hora":"16:53","fila":"cobrança D80","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…9173","inv":true},{"data":"01/10","hora":"16:37","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…3135","inv":false},{"data":"01/10","hora":"16:14","fila":"faturas","atendente":5,"solucao":5,"rechamada":false,"htb":null,"inv":false},{"data":"01/10","hora":"15:59","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…6257","inv":false},{"data":"01/10","hora":"15:39","fila":"faturas","atendente":5,"solucao":5,"rechamada":false,"htb":null,"inv":false},{"data":"01/10","hora":"15:24","fila":"cobrança D80","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…5769","inv":false},{"data":"01/10","hora":"15:17","fila":"negociacao","atendente":5,"solucao":5,"rechamada":false,"htb":"HTB…7793","inv":false},{"data":"01/10","hora":"15:12","fila":"negociacao","atendente":5,"solucao":5,"rechamada":true,"htb":"HTB…0289","inv":false},{"data":"01/10","hora":"14:13","fila":"negociacao","atendente":5,"solucao":5,"rechamada":false,"htb":"HTB…8997","inv":false}]},"monit":{"competencia":"2026-10","equipe":{"media_nota":71.4,"monitorias":34,"pessoas":10,"por_pessoa":3.4},"meta":null,"mes":{"qtd":3,"media":62.0,"falhas_graves":1,"aderencia":0.9679,"perdeu_por_falha":92.0},"recorrentes":[{"grupo":"Cadastro","item":"Confirmou os meios de contato com o assinante, (telefone, e-mail) garantindo a atualização do cadastro ativamente.","vezes":2},{"grupo":"Registro","item":"Classificou o contato de forma correta - Salesforce","vezes":1},{"grupo":"Falha grave","item":"Fez inclusão de desconto indevidamente (fora das regras do negócio)","vezes":1},{"grupo":"Gestão de pausas","item":"Posicionou o assinante sobre pausas / ausências necessárias durante o atendimento","vezes":1}],"lista":[{"id":"578","data":"08/10/2026","criado_em":"12/10/2026","nota":0.0,"nota_bruta":92.0,"falha_grave":true,"monitor":"Reginaldo Sousa Barbosa","tipo":"Supervisor · Não venda","status":"Finalizada","ciencia":null,"itens":[{"grupo":"Registro","item":"Classificou o contato de forma correta - Salesforce"}],"falhas_graves":[{"grupo":"Falha grave","item":"Fez inclusão de desconto indevidamente (fora das regras do negócio)"}],"aderencia":0.9792,"itens_avaliados":48,"feedback":"O atendimento foi iniciado dentro do prazo de 5 segundos, com a apresentação da operadora e o nome da empresa. Realizou uma sondagem eficaz, estabelecendo conexão (rapport) com a cliente e fornecendo as informações necessárias para a solução do caso.\nPontos de melhoria:\n- Informação incorreta sobre o cancelamento: informou à cliente que o plano havia sido cancelado em março, porém consta no sistema que o cancelamento ocorreu em 17/12/2025. É importante consultar os registros antes de transmitir informações, garantindo a precisão das orientações.\n- Orientação sobre a retirada do SPC: deveria informar que, após a confirmação do pagamento, o processo de retirada do registro no SPC ocorrerá em até 72 horas, conforme o procedimento estabelecido.\n- Divergência no registro do desconto: concedeu 70% de desconto à cliente, porém, na descrição do caso no Salesforce, registrou a concessão de apenas 20%. É necessário garantir que as informações registradas estejam de acordo com a negociação realizada.\n- Abertura de novo atendimento para outro HTB: iniciou um atendimento utilizando o CPF da filha da cliente, vinculado a outro HTB, após a cliente informar que a filha não conseguia entrar em contato para solicitar o cancelamento. É importante seguir o procedimento correto para atendimentos vinculados a outro contrato, garantindo que a solicitação seja direcionada adequadamente e que os registros sejam realizados conforme as orientações da Base de Conhecimento.\n\naplicar feedback dia 12/10/2026","prazo_feedback":"12/10/2026","htb":"HTB…0828","pontos":[],"tem_relato":false},{"id":"434","data":"02/10/2026","criado_em":"03/10/2026","nota":91.0,"nota_bruta":91.0,"falha_grave":false,"monitor":"Reginaldo Sousa Barbosa","tipo":"Supervisor · Não venda","status":"Finalizada","ciencia":null,"itens":[{"grupo":"Cadastro","item":"Confirmou os meios de contato com o assinante, (telefone, e-mail) garantindo a atualização do cadastro ativamente."},{"grupo":"Gestão de pausas","item":"Posicionou o assinante sobre pausas / ausências necessárias durante o atendimento"}],"falhas_graves":[],"aderencia":0.9444,"itens_avaliados":36,"feedback":"O colaborador realizou uma abertura adequada, apresentando-se e informando corretamente o nome da empresa. Também informou sobre o protocolo da ligação e orientou o cliente quanto ao callback em caso de queda da chamada.\n\nComo ponto de melhoria, não realizou a atualização do telefone e do e-mail do cliente. Essa etapa é importante para manter os dados cadastrais atualizados em nossa base e, por esse motivo, impactou negativamente sua avaliação e ocasionou uma redução na nota.\n\nNo geral, a ligação foi muito bem conduzida, com uma sondagem adequada e um acolhimento eficaz. O colaborador demonstrou atenção durante todo o atendimento, esclarecendo as dúvidas do cliente e conduzindo a interação de forma clara e satisfatória.\n\nParabéns pela condução do atendimento! Como ponto de atenção, reforçamos apenas a importância da atualização dos dados de contato para garantir o cumprimento de todos os critérios de qualidade.","prazo_feedback":null,"htb":"HTB…8823","pontos":[],"tem_relato":false},{"id":"400","data":"30/09/2026","criado_em":"01/10/2026","nota":95.0,"nota_bruta":95.0,"falha_grave":false,"monitor":"Reginaldo Sousa Barbosa","tipo":"Supervisor · Não venda","status":"Finalizada","ciencia":null,"itens":[{"grupo":"Cadastro","item":"Confirmou os meios de contato com o assinante, (telefone, e-mail) garantindo a atualização do cadastro ativamente."}],"falhas_graves":[],"aderencia":0.98,"itens_avaliados":50,"feedback":"O colaborador iniciou o atendimento de forma adequada, realizando a apresentação e o cumprimento ao cliente dentro dos primeiros cinco segundos. Também informou corretamente o número de protocolo e orientou sobre o procedimento de callback em caso de queda da ligação.\n\nDurante o atendimento, demonstrou atenção e cordialidade, utilizando as pausas de maneira eficiente. Realizou uma ótima sondagem e demonstrou acolhimento, compreensão e tolerância, conduzindo a negociação de forma eficaz.\n\nAo ser questionado sobre os procedimentos necessários para obter descontos, o colaborador demonstrou atenção e esclareceu as dúvidas apresentadas pela cliente. Além disso, enviou um e-mail para auxiliá-la na alteração do método de pagamento para cartão de crédito.\n\nO registro no Salesforce e no Retaguarda foi realizado de acordo com as orientações da base de conhecimento. Como ponto de melhoria, o colaborador não realizou a atualização dos dados de contato do cliente, como telefone e e-mail, deixando de efetuar a devida atualização em nossa base. Realizar feedback ate 02/10/2026","prazo_feedback":"02/10/2026","htb":"HTB…6499","pontos":[],"tem_relato":false}],"relatos":null}},"gerado_em":"13/10 às 11:54","pessoa":{"nome":"João Pedro Souza","turno":"Tarde","supervisor":"Reginaldo Sousa Barbosa","negociado":15884.83,"recebido":9620.52,"conversao":0.6056,"clientes_negociados":88,"clientes_recebidos":53,"faturas_negociadas":447,"ticket_medio":181.52,"chamadas":83,"tma_seg":586.301,"pausa_pct":35.7,"daily_negociado":[2802.02,1922.84,348.64,0.0,1779.7,2488.64,2171.57,2827.33,1193.68,0.0,0.0,350.41],"daily_recebido":[1430.11,1588.21,734.91,170.5,2147.33,748.12,319.55,1879.34,193.31,409.14,0,0],"score":42,"partes":{"resultado":44.0,"conversao":60.6,"produtividade":41.5,"evolucao":0.9,"eficiencia":36.3},"tendencia":-0.5892,"cv":0.727,"media_dia":962.05,"melhor_valor":2147.33,"melhor_dia":"05/10","rank":12,"total":19,"observacao":null,"projecao":{"negociado_atual":15884.83,"ritmo_diario":1323.74,"projetado_fim_mes":41035.81,"dias_corridos":12,"dias_do_mes":31,"dias_restantes":19,"premio_atual":0,"premio_projetado":200.0,"proxima_faixa":{"alvo":30000.0,"premio":100.0,"falta":14115.17},"ritmo_necessario_prox_faixa":742.9,"no_topo":false}},"equipe":{"conversao":0.6073,"ticket_medio":181.06,"tma_seg":449.2,"pausa_pct":28.0,"negociado_pessoa":18013.73,"recebido_pessoa":10939.68,"chamadas_pessoa":100,"meta_topo":50000.0,"conversao_minima":0.65},"datas":["01/10","02/10","03/10","04/10","05/10","06/10","07/10","08/10","09/10","10/10","11/10","12/10"],"periodo":"01 a 12/10/2026 (parcial do mês)","mostrar_rank":false}</script>
 <script>
 (function(){
 'use strict';
@@ -428,6 +494,210 @@ function detalheDias(){
   return html;
 }
 
+/* ---------- qualidade: PSAT (aba) + monitorias (aba) ---------- */
+const Q=D.qualidade||null;
+const QS=Q&&Q.psat, QMx=Q&&Q.monit, QM=(QMx&&QMx.lista)||[];
+const pcN=v=>v==null?'—':pc(v,0);
+const n1=v=>v==null?'—':v.toFixed(1).replace('.',',');
+const nMon=v=>v==null?'—':(Math.round(v*10)/10).toString().replace('.',',');
+const MESES=['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
+const nomeMes=c=>c?MESES[+c.slice(5,7)-1]:'';
+function vsPP(meu,ref,maiorMelhor=true){
+  if(meu==null||ref==null) return {cls:'eq',txt:'—'};
+  const d=(meu-ref)*100, bom=maiorMelhor?d>0:d<0;
+  if(Math.abs(d)<2) return {cls:'eq',txt:'na média do time'};
+  return {cls:bom?'up':'dn',txt:(d>0?'▲ ':'▼ ')+Math.abs(d).toFixed(0)+' p.p. vs. média'};
+}
+function vsPts(meu,ref){
+  if(meu==null||ref==null) return {cls:'eq',txt:'—'};
+  const d=meu-ref; if(Math.abs(d)<1.5) return {cls:'eq',txt:'na média do time'};
+  return {cls:d>0?'up':'dn',txt:(d>0?'▲ ':'▼ ')+nMon(Math.abs(d))+' pts vs. média'};
+}
+const corMon=n=>n==null?'#7C8FA6':n>=90?'#34D399':n>=80?'#22D3EE':n>=70?'#FFB020':'#F43F5E';
+const rotMon=n=>n==null?'SEM NOTA':n>=90?'EXCELENTE':n>=80?'BOM':n>=70?'EM EVOLUÇÃO':'PRECISA DE ATENÇÃO';
+const chip=(n,inv)=>inv?'<span class="chip cx">INVÁL.</span>':n==null?'<span class="chip cx">—</span>':`<span class="chip c${n}">${n}</span>`;
+function diasAteBR(br){ if(!br) return null; const p=br.split('/').map(Number); const y=p[2]||new Date().getFullYear();
+  const a=new Date(y,p[1]-1,p[0]), h=new Date(); h.setHours(0,0,0,0); return Math.round((a-h)/86400000); }
+
+/* ===== aba PSAT ===== */
+function pDestaque(){
+  const meu=QS&&QS.meu; if(!meu||!meu.validas_atendente) return '';
+  const f=[], dz=Math.round((meu.csat_atendente||0)*10);
+  f.push(`De cada <b>10 clientes</b> que deram nota para o seu atendimento, <span class="hl">${dz}</span> deram 4 ou 5.`);
+  f.push(meu.detratores?`<b>${meu.detratores} nota${meu.detratores>1?'s':''} baixa${meu.detratores>1?'s':''}</b> (1 ou 2) no período — destacadas em vermelho na lista abaixo.`
+                       :'<b>Nenhuma nota baixa</b> (1 ou 2) no período.');
+  if(meu.validas_atendente<5) f.push(`Amostra ainda pequena (${meu.validas_atendente} nota${meu.validas_atendente>1?'s':''}): o percentual muda bastante a cada pesquisa nova.`);
+  if(meu.rechamada!=null && QS.equipe.rechamada!=null && meu.rechamada>QS.equipe.rechamada+0.05)
+    f.push(`<b>${pc(meu.rechamada,0)}</b> dos seus clientes ligaram de novo em até 3 dias (equipe: ${pc(QS.equipe.rechamada,0)}). Fechar a ligação com tudo resolvido — boleto, data e próximo passo claros — evita a volta.`);
+  return `<div class="hi"><div class="ic">PSAT</div><div style="flex:1">
+    <h4>COMO O CLIENTE AVALIA O SEU ATENDIMENTO</h4><p>${f.join(' ')}</p></div></div>`;
+}
+function pKpis(){
+  if(!QS) return `<div class="pn"><div class="vazio">PSAT: dado não disponível
+    <p>A pesquisa de satisfação ainda não entrou nesta atualização do painel.</p></div></div>`;
+  const meu=QS.meu, E=QS.equipe;
+  if(!meu) return `<div class="pn"><div class="vazio">Nenhuma pesquisa PSAT sua em ${QS.periodo}
+    <p>Assim que clientes atendidos por você responderem a pesquisa, as notas aparecem aqui.</p></div></div>`;
+  return `<div class="kpis qk" style="grid-template-columns:repeat(5,1fr)">
+    ${kpi('Pesquisas recebidas',nf(meu.pesquisas),{cls:'eq',txt:nf(meu.validas_atendente)+' com nota válida'})}
+    ${kpi('Satisfação com você',pcN(meu.csat_atendente),vsPP(meu.csat_atendente,E.csat_atendente))}
+    ${kpi('Nota média',n1(meu.media_atendente),vs(meu.media_atendente,E.media_atendente))}
+    ${kpi('Solução aprovada',pcN(meu.csat_solucao),vsPP(meu.csat_solucao,E.csat_solucao))}
+    ${kpi('Ligou de novo em 3d',pcN(meu.rechamada),vsPP(meu.rechamada,E.rechamada,false))}
+  </div>`;
+}
+function pNotas(){
+  const meu=QS&&QS.meu;
+  if(!meu||!meu.validas_atendente) return '';
+  const tv=meu.validas_atendente, E=QS.equipe, ev=E.validas_atendente||1;
+  const cor={5:'#34D399',4:'#34D399',3:'#FFB020',2:'#F43F5E',1:'#F43F5E'};
+  let rows='';
+  for(let k=5;k>=1;k--){
+    const q=meu.dist_atendente[k-1], p=q/tv, pe=E.dist_atendente[k-1]/ev;
+    rows+=`<div class="nt5-r"><span class="l">NOTA ${k}</span>
+      <span class="t"><i style="width:${(p*100).toFixed(1)}%;background:${cor[k]}"></i>
+        <b style="left:calc(${(pe*100).toFixed(1)}% - 1px)" title="Média da equipe: ${pc(pe,0)}"></b></span>
+      <span class="v n">${q} <span>· ${pc(p,0)}</span></span></div>`;
+  }
+  return `<div class="pn"><div class="pn-h"><h3>Como os clientes avaliam você</h3><span class="nt">nota do atendimento · 1 a 5</span></div>
+    <div class="pn-b"><div class="nt5">${rows}</div>
+    <p class="prose" style="font-size:11.5px;line-height:1.6;color:var(--faint);margin-top:12px">
+    A barra é a sua distribuição de notas. O traço claro mostra a média da equipe na mesma nota.
+    ${meu.invalidas||meu.sem_resposta?`Fora da conta: ${meu.sem_resposta} sem resposta e ${meu.invalidas} inválida${meu.invalidas===1?'':'s'}.`:''}</p></div></div>`;
+}
+function pLista(){
+  if(!QS||!QS.meu||!QS.lista.length) return '';
+  const L=QS.lista.filter(r=>r.atendente!=null||r.solucao!=null||r.inv||r.rechamada!=null);
+  const fora=QS.lista.length-L.length;
+  if(!L.length) return '';
+  const sn=v=>v===true?'<span style="color:var(--amber)">Sim</span>':v===false?'<span style="color:var(--dim)">Não</span>':'<span style="color:var(--faint)">—</span>';
+  return `<div class="pn"><div class="pn-h"><h3>Suas pesquisas de satisfação</h3>
+    <span class="nt">${QS.periodo} · notas 1 e 2 em destaque</span></div>
+    <div class="pn-b" style="overflow-x:auto"><table class="acd"><thead><tr>
+      <th class="l">Data</th><th class="l">Hora</th><th class="l">Fila</th>
+      <th>Atendimento</th><th>Solução</th><th>Ligou de novo</th><th class="l">Cliente</th>
+    </tr></thead><tbody>
+    ${L.map(r=>`<tr class="${r.atendente!=null&&r.atendente<=2?'det':''}">
+      <td class="l">${r.data}</td><td class="l" style="color:var(--dim)">${r.hora}</td>
+      <td class="l" style="color:var(--dim);font-size:10.5px;text-transform:uppercase;letter-spacing:.06em">${esc(r.fila)}</td>
+      <td>${chip(r.atendente,r.inv)}</td><td>${chip(r.solucao,r.inv)}</td><td>${sn(r.rechamada)}</td>
+      <td class="l" style="color:var(--dim);font-size:10.5px">${r.htb||'—'}</td></tr>`).join('')}
+    </tbody></table>
+    ${fora?`<p class="prose" style="font-size:11.5px;color:var(--faint);margin-top:12px">${fora} pesquisa${fora>1?'s':''} em que o cliente não respondeu nada ${fora>1?'ficaram':'ficou'} fora da lista.</p>`:''}
+    </div></div>`;
+}
+const atualizado=()=>D.gerado_em?`<div class="lbl" style="text-align:right;margin-top:14px">Atualizado em ${D.gerado_em}</div>`:'';
+function abaPSAT(){
+  return atualizado()+pDestaque()+pKpis()+pNotas()+pLista()+
+  `<div class="ft" style="margin-top:16px"><b>Como ler:</b> o PSAT é a pesquisa que o cliente responde ao fim da ligação
+    ${QS?`(${QS.periodo})`:''}. <b>Satisfação com você</b> é o percentual de notas 4 e 5 para o atendimento. <b>Solução aprovada</b>
+    é o mesmo cálculo para a nota da solução. <b>Ligou de novo em 3d</b> mostra quantos clientes voltaram a ligar em até
+    3 dias (quanto menor, melhor). Respostas inválidas ou em branco não entram nas contas. A comparação é com a
+    <b>média da equipe de cobrança</b>, sem identificar ninguém. Dúvida? Fale com ${esc(P.supervisor)}.</div>`;
+}
+
+/* ===== aba MONITORIAS ===== */
+function mDestaque(){
+  const M=QMx.mes, E=QMx.equipe, mes=nomeMes(QMx.competencia), f=[];
+  if(!M||!M.qtd){
+    f.push(`Você ainda não teve monitoria em <b>${mes}</b>.`+(QM.length?` A mais recente foi em ${QM[0].data||'—'}, com nota <span class="hl">${nMon(QM[0].nota)}</span>.`:''));
+  }else{
+    f.push(`Em <b>${mes}</b> você teve <b>${M.qtd} monitoria${M.qtd>1?'s':''}</b>${QMx.meta?` de ${QMx.meta} previstas`:''}, com nota média
+      <span class="hl">${nMon(M.media)}</span>${E.media_nota!=null?` (equipe: ${nMon(E.media_nota)})`:''}.`);
+    if(M.falhas_graves){
+      const g=QM.find(m=>m.falha_grave&&m.falhas_graves.length);
+      f.push(`<b style="color:var(--red)">${M.falhas_graves} falha${M.falhas_graves>1?'s':''} grave${M.falhas_graves>1?'s':''}</b> zerou${M.falhas_graves>1?'ram':''} nota${M.falhas_graves>1?'s':''}
+        ${M.perdeu_por_falha?`— foram <b>${nMon(M.perdeu_por_falha)} pontos</b> perdidos que você já tinha conquistado na ligação`:''}${g?`. Motivo: <b>${esc(g.falhas_graves[0].item)}</b>`:''}.`);
+    }
+  }
+  const r=(QMx.recorrentes||[]).find(x=>x.vezes>=2);
+  if(r) f.push(`O ponto que mais se repete nas suas monitorias: <b>${esc(r.item)}</b> (${r.vezes} vezes). Corrigir este item é o caminho mais rápido para subir a nota.`);
+  else if(M&&M.qtd&&!M.falhas_graves&&(M.media||0)>=95) f.push('Nenhum ponto se repete — mantenha o padrão.');
+  return `<div class="hi"><div class="ic">MONITORIA</div><div style="flex:1">
+    <h4>COMO A MONITORIA VÊ O SEU ATENDIMENTO</h4><p>${f.join(' ')}</p></div></div>`;
+}
+function mKpis(){
+  const M=QMx.mes||{qtd:0}, E=QMx.equipe, ult=QM[0];
+  const qtdTxt=QMx.meta?{cls:M.qtd>=QMx.meta?'up':'eq',txt:`${M.qtd} de ${QMx.meta} previstas`}
+                       :(E.por_pessoa?{cls:'eq',txt:'equipe: '+nMon(E.por_pessoa)+' por pessoa'}:null);
+  return `<div class="kpis qk" style="grid-template-columns:repeat(5,1fr)">
+    ${kpi('Monitorias em '+nomeMes(QMx.competencia),nf(M.qtd),qtdTxt)}
+    ${kpi('Nota média do mês',nMon(M.media),vsPts(M.media,E.media_nota))}
+    ${kpi('Última nota',ult?nMon(ult.nota):'—',ult?{cls:'eq',txt:'ligação de '+(ult.data||'—').slice(0,5)}:null)}
+    ${kpi('Itens atendidos',M.aderencia!=null?pc(M.aderencia,0):'—',{cls:'eq',txt:'da ficha, no mês'})}
+    ${kpi('Falhas graves',nf(M.falhas_graves||0),{cls:(M.falhas_graves?'dn':'up'),txt:M.falhas_graves?'zeram a nota':'nenhuma no mês'})}
+  </div>`;
+}
+function mEvolucao(){
+  const cab=`<div class="pn-h"><h3>Evolução das suas notas</h3><span class="nt">últimas monitorias · 0 a 100</span></div>`;
+  if(!QM.length) return `<div class="pn">${cab}<div class="vazio">Nenhuma monitoria ainda
+    <p>Quando seu supervisor monitorar uma ligação sua, a nota aparece aqui.</p></div></div>`;
+  const s=QM.slice(0,10).reverse();
+  const H=110, bars=s.map(m=>{const c=corMon(m.nota), h=Math.max(3,(m.nota||0)/100*H), hb=m.falha_grave&&m.nota_bruta?m.nota_bruta/100*H:0;
+    return `<div title="${m.data||''} · nota ${nMon(m.nota)}${hb?' (seria '+nMon(m.nota_bruta)+')':''}">
+      <em style="color:${c}">${nMon(m.nota)}</em>
+      <span style="position:relative;width:100%;height:${H}px;display:flex;align-items:flex-end">
+        ${hb?`<i style="position:absolute;bottom:0;left:0;right:0;height:${hb}px;border:1px dashed #F43F5E;background:rgba(244,63,94,.06)"></i>`:''}
+        <i style="height:${h}px;background:${c};position:relative;width:100%"></i></span>
+      <span>${(m.data||'—').slice(0,5)}</span></div>`;}).join('');
+  return `<div class="pn">${cab}<div class="pn-b"><div class="evo" style="height:${H+44}px">${bars}</div>
+    ${s.some(m=>m.falha_grave)?`<p class="prose" style="font-size:11.5px;color:var(--faint);margin-top:10px">
+      Contorno tracejado em vermelho = nota que você teria sem a falha grave.</p>`:''}</div></div>`;
+}
+function mRecorrentes(){
+  const R=QMx.recorrentes||[];
+  const cab=`<div class="pn-h"><h3>Onde você mais perde ponto</h3><span class="nt">itens não cumpridos · todas as monitorias</span></div>`;
+  if(!QM.length) return `<div class="pn">${cab}<div class="vazio">Sem monitorias</div></div>`;
+  if(!R.length) return `<div class="pn">${cab}<div class="vazio" style="color:var(--green)">Nenhum item perdido
+    <p>Em todas as suas monitorias você cumpriu os itens da ficha.</p></div></div>`;
+  const mx=Math.max(...R.map(x=>x.vezes));
+  return `<div class="pn">${cab}<div class="pn-b">${R.map(x=>`<div class="rc">
+    <div class="rc-t"><span class="rc-g" style="${x.grupo==='Falha grave'?'color:var(--red)':''}">${esc(x.grupo)}</span>
+      ${x.vezes>=2?'<span class="urg venc">repetiu</span>':''}</div>
+    <div class="rc-i"><span style="color:${x.grupo==='Falha grave'?'var(--red)':'var(--amber)'};font-family:var(--mono);font-weight:700">✗ </span>${esc(x.item)}</div>
+    <div class="rc-b"><i style="width:${x.vezes/mx*100}%;background:${x.grupo==='Falha grave'?'#F43F5E':x.vezes>=2?'#FFB020':'#7C8FA6'}"></i><span>${x.vezes}×</span></div>
+  </div>`).join('')}</div></div>`;
+}
+function mDetalhe(){
+  if(!QM.length) return '';
+  const temRel=QMx.relatos && QM.some(m=>m.tem_relato);
+  const grupos=L=>{const g={}; L.forEach(x=>(g[x.grupo]=g[x.grupo]||[]).push(x.item)); return g;};
+  const cards=QM.map((m,i)=>{const c=corMon(m.nota), G=grupos(m.itens||[]);
+    const dp=diasAteBR(m.prazo_feedback);
+    return `<div class="mon" style="--c:${c}">
+    <div class="mon-h"><div><div class="nota n">${nMon(m.nota)}<small> /100</small></div><div class="q">${rotMon(m.nota)}</div></div>
+      <div class="meta">Ligação de <b>${m.data||'—'}</b>${m.criado_em?`<br>Monitorada em <b>${m.criado_em}</b>`:''}
+        ${m.monitor?`<br>Por <b>${esc(m.monitor)}</b>`:''}${m.htb?`<br>Cliente <b>${m.htb}</b>`:''}</div></div>
+    ${m.falha_grave?`<div class="fg"><b>FALHA GRAVE — nota zerada${m.nota_bruta?` (seria ${nMon(m.nota_bruta)})`:''}</b>
+      ${(m.falhas_graves||[]).map(x=>`<div>▸ ${esc(x.item)}</div>`).join('')}</div>`:''}
+    ${Object.keys(G).length?`<h5>Itens da ficha não atendidos</h5><ul>${Object.entries(G).map(([g,it])=>
+      it.map(t=>`<li><b>${esc(g)}</b> — ${esc(t)}</li>`).join('')).join('')}</ul>`
+      :(!m.falha_grave&&m.itens_avaliados?`<h5 style="color:var(--green)">Todos os ${m.itens_avaliados} itens avaliados foram atendidos</h5>`:'')}
+    ${m.pontos&&m.pontos.length?`<h5>Pontos de melhoria</h5><ul>${m.pontos.map(p=>`<li>${esc(p)}</li>`).join('')}</ul>`:''}
+    ${m.feedback?`<h5>Feedback do supervisor</h5><div class="fb">${esc(m.feedback)}</div>`:''}
+    ${m.prazo_feedback||m.ciencia?`<div class="mon-f">
+      ${m.prazo_feedback?`<span class="urg ${dp!=null&&dp<0?'ok':dp===0?'hoje':'prox'}">${dp!=null&&dp<0?'feedback marcado para':'feedback até'} ${m.prazo_feedback.slice(0,5)}</span>`:''}
+      ${m.ciencia?`<span class="urg ok">ciência: ${esc(m.ciencia)}</span>`:''}</div>`:''}
+    ${m.tem_relato&&QMx.relatos?`<div class="rel" id="rel-${i}"></div>`:''}
+  </div>`;}).join('');
+  return `<div class="pn"><div class="pn-h"><h3>Suas monitorias, uma a uma</h3><span class="nt">da mais recente para a mais antiga</span></div>
+    <div class="pn-b">
+    ${temRel?`<div class="cad mini" id="q-cad"><p class="prose">O <b>relato de algumas ligações</b> cita o cliente pelo nome.
+      Para ler, use a mesma senha da aba de acordos.</p>
+      <input id="q-pw" type="password" placeholder="senha" autocomplete="off"><button id="q-go">Ver relatos</button>
+      <div class="msg" id="q-msg"></div></div>`:''}
+    ${cards}</div></div>`;
+}
+function abaMonit(){
+  return atualizado()+mDestaque()+mKpis()+`<div class="g2">${mEvolucao()}${mRecorrentes()}</div>`+mDetalhe()+
+  `<div class="ft" style="margin-top:16px"><b>Como ler:</b> cada monitoria é a avaliação de uma ligação sua, feita
+    com a ficha de qualidade da cobrança. A nota vai de 0 a 100. Uma <b>falha grave</b> (por exemplo, não registrar
+    o atendimento no Salesforce) <b>zera a nota</b>, mesmo que o resto da ligação tenha sido bom — por isso mostramos
+    também quanto você teria tirado. <b>Itens atendidos</b> é o percentual de itens da ficha que você cumpriu, sem
+    contar os que não se aplicavam à ligação. A média da equipe considera todas as monitorias do mês, sem
+    identificar ninguém. Dúvida sobre uma nota? Fale com ${esc(P.supervisor)}.</div>`;
+}
+
 /* ---------- render ---------- */
 const convCli=P.clientes_recebidos/P.clientes_negociados;
 const dez=Math.round(convCli*10);
@@ -456,6 +726,8 @@ document.getElementById('r').innerHTML=`
 <div class="abas" id="abas">
   <button data-v="perf" class="on">Meu desempenho</button>
   ${D.acordos_qtd ? `<button data-v="acd">Meus acordos<span class="cnt">${D.acordos_qtd}</span></button>` : ''}
+  ${QS ? `<button data-v="psat">Satisfação (PSAT)</button>` : ''}
+  ${QMx ? `<button data-v="mon">Minhas monitorias${QMx.mes&&QMx.mes.qtd?`<span class="cnt">${QMx.mes.qtd}</span>`:''}</button>` : ''}
 </div>
 
 <div class="vista on" id="v-perf">
@@ -476,6 +748,35 @@ document.getElementById('r').innerHTML=`
     e <b>${nf(P.clientes_recebidos)}</b> efetivaram o pagamento — <span class="hl">${pc(convCli)}</span> de conversão por cliente,
     que em valor representa <span class="hl">${pc(P.conversao)}</span>.</p>
 </div></div>
+
+${(()=>{
+  const proj=P.projecao;
+  if(!proj) return '';
+  if(proj.no_topo){
+    return `<div class="hi" style="margin-top:16px">
+      <div class="ic">SUA COMISSÃO</div>
+      <div style="flex:1">
+        <h4>VOCÊ JÁ GARANTIU A MAIOR FAIXA</h4>
+        <p>Com <b>${brl(proj.negociado_atual)}</b> negociados, você já passou de <b>${brl(T.meta_topo)}</b> —
+        comissão de <span class="hl">${brl(proj.premio_atual)}</span> garantida (mantendo conversão de pelo
+        menos ${pc(T.conversao_minima,0)}). Agora é só manter o ritmo até o fim do mês.</p>
+      </div>
+    </div>`;
+  }
+  return `<div class="hi" style="margin-top:16px">
+    <div class="ic">SUA COMISSÃO</div>
+    <div style="flex:1">
+      <h4>SUA PROJEÇÃO DE COMISSÃO ESTE MÊS</h4>
+      <p>No ritmo atual de <b>${brl(proj.ritmo_diario)}/dia</b>, você fecha o mês perto de
+      <span class="hl">${brl(proj.projetado_fim_mes)}</span>${proj.premio_projetado?` — faixa de <b>${brl(proj.premio_projetado)}</b> de comissão`:''}.
+      ${proj.proxima_faixa && proj.dias_restantes>0
+        ? `Faltam <b>${brl(proj.proxima_faixa.falta)}</b> para a próxima faixa (comissão de <b>${brl(proj.proxima_faixa.premio)}</b>)
+           — nos <b>${proj.dias_restantes} dia${proj.dias_restantes===1?'':'s'}</b> que restam, isso dá
+           <b style="color:var(--acc)">${brl(proj.ritmo_necessario_prox_faixa)}/dia</b>.`
+        : (proj.proxima_faixa ? `O mês já fechou — sem tempo pra alcançar a faixa seguinte neste período.` : '')}</p>
+    </div>
+  </div>`;
+})()}
 
 <div class="g21">
   <div class="pn"><div class="pn-h"><h3>Sua evolução diária</h3><span class="nt">R$ por dia</span></div>
@@ -537,6 +838,9 @@ document.getElementById('r').innerHTML=`
     <div class="msg" id="acd-msg"></div>
   </div>
   <div id="acd-lista"></div>` : ''}</div>
+
+${QS?`<div class="vista" id="v-psat">${abaPSAT()}</div>`:''}
+${QMx?`<div class="vista" id="v-mon">${abaMonit()}</div>`:''}
 
 <div class="ft"><b>Sobre estes números:</b> vêm das planilhas de Resultado Parcial e de Chamadas/TMA do período
 ${D.periodo}. Comparações são com a <b>média da operação</b>, não com pessoas específicas.
@@ -649,6 +953,30 @@ if(D.acordos_qtd){
 
   bt.addEventListener('click',abrir);
   inp.addEventListener('keydown',e=>{ if(e.key==='Enter') abrir(); });
+}
+
+/* ---------- relatos das monitorias (bloco criptografado) ---------- */
+if(QMx && QMx.relatos && document.getElementById('q-go')){
+  const bt=document.getElementById('q-go'), inp=document.getElementById('q-pw'), msg=document.getElementById('q-msg');
+  const b64=x=>Uint8Array.from(atob(x),c=>c.charCodeAt(0));
+  async function abrirRel(){
+    const senha=inp.value;
+    if(!senha){msg.textContent='Digite a senha';msg.className='msg err';return;}
+    bt.disabled=true; inp.disabled=true; msg.textContent='Abrindo…'; msg.className='msg';
+    await new Promise(r=>setTimeout(r,40));
+    let R;
+    try{
+      const km=await crypto.subtle.importKey('raw',new TextEncoder().encode(senha),'PBKDF2',false,['deriveKey']);
+      const key=await crypto.subtle.deriveKey({name:'PBKDF2',salt:b64(QMx.relatos.salt),iterations:QMx.relatos.it,hash:'SHA-256'},
+        km,{name:'AES-GCM',length:256},false,['decrypt']);
+      R=JSON.parse(new TextDecoder().decode(await crypto.subtle.decrypt({name:'AES-GCM',iv:b64(QMx.relatos.iv)},key,b64(QMx.relatos.ct))));
+    }catch(e){bt.disabled=false;inp.disabled=false;inp.value='';msg.textContent='Senha incorreta';msg.className='msg err';inp.focus();return;}
+    document.getElementById('q-cad').remove();
+    Object.entries(R).forEach(([i,t])=>{const el=document.getElementById('rel-'+i);
+      if(el) el.innerHTML=`<h5 style="margin-top:0">Relato da ligação</h5><p>${esc(t)}</p>`;});
+  }
+  bt.addEventListener('click',abrirRel);
+  inp.addEventListener('keydown',e=>{if(e.key==='Enter')abrirRel();});
 }
 
 /* simulador */

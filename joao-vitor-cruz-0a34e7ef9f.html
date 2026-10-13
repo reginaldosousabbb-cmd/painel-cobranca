@@ -126,7 +126,9 @@ input[type=range]::-moz-range-thumb{width:19px;height:19px;background:var(--ambe
   font-family:var(--sans);font-size:11px;line-height:1.7;color:var(--faint)}
 
 /* ---- abas ---- */
-.abas{display:flex;gap:0;border-bottom:1px solid var(--line);margin:20px 0 0}
+.abas{display:flex;gap:0;border-bottom:1px solid var(--line);margin:20px 0 0;overflow-x:auto;scrollbar-width:none}
+.abas::-webkit-scrollbar{display:none}
+.abas button{flex:none;white-space:nowrap}
 .abas button{padding:11px 18px;font-family:var(--mono);font-size:10px;font-weight:700;
   letter-spacing:.14em;text-transform:uppercase;color:var(--faint);background:none;border:none;
   border-bottom:2px solid transparent;cursor:pointer;transition:.15s}
@@ -191,6 +193,70 @@ input[type=range]::-moz-range-thumb{width:19px;height:19px;background:var(--ambe
 .dia-d{font-size:10px;font-weight:700;text-align:right}
 .dia-d.up{color:var(--green)}.dia-d.dn{color:var(--red)}.dia-d.eq{color:var(--faint)}
 
+/* ---- qualidade (PSAT + monitoria) ---- */
+.qk .k{min-height:92px}
+.nt5{display:flex;flex-direction:column;gap:2px}
+.nt5-r{display:grid;grid-template-columns:62px 1fr 74px;gap:12px;align-items:center;padding:6px 0}
+.nt5-r .l{font-size:10px;letter-spacing:.1em;color:var(--dim);font-weight:700}
+.nt5-r .t{height:12px;background:var(--panel3);position:relative}
+.nt5-r .t i{display:block;height:100%;animation:gw .7s cubic-bezier(.2,.8,.3,1) both;transform-origin:left}
+.nt5-r .t b{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--txt);opacity:.55}
+.nt5-r .v{font-size:11px;font-weight:700;text-align:right}
+.nt5-r .v span{color:var(--faint);font-weight:500}
+.chip{display:inline-flex;align-items:center;justify-content:center;min-width:24px;height:22px;padding:0 6px;
+  font-size:11px;font-weight:800;border:1px solid}
+.chip.c5,.chip.c4{color:var(--green);border-color:rgba(52,211,153,.4);background:rgba(52,211,153,.1)}
+.chip.c3{color:var(--amber);border-color:rgba(255,176,32,.4);background:rgba(255,176,32,.1)}
+.chip.c2,.chip.c1{color:var(--red);border-color:rgba(244,63,94,.45);background:rgba(244,63,94,.12)}
+.chip.cx{color:var(--faint);border-color:var(--line2);font-weight:600;font-size:9.5px;letter-spacing:.06em}
+.acd tr.det td{background:rgba(244,63,94,.05)}
+.mon{border:1px solid var(--line);background:var(--panel2);border-left:2px solid var(--c);padding:16px 18px;margin-bottom:12px}
+.mon-h{display:flex;align-items:flex-start;gap:16px;flex-wrap:wrap}
+.mon-h .nota{font-size:34px;font-weight:800;line-height:1;color:var(--c);letter-spacing:-.03em}
+.mon-h .nota small{font-size:11px;color:var(--faint);font-weight:600;letter-spacing:0}
+.mon-h .q{font-size:9px;letter-spacing:.14em;color:var(--c);font-weight:700;margin-top:6px}
+.mon-h .meta{margin-left:auto;text-align:right;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);line-height:1.8}
+.mon-h .meta b{color:var(--txt);font-weight:700}
+.mon h5{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--faint);margin:16px 0 8px}
+.mon ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+.mon li{font-family:var(--sans);font-size:12.5px;line-height:1.55;color:var(--dim);padding-left:16px;position:relative}
+.mon li:before{content:'▸';position:absolute;left:0;color:var(--amber);font-family:var(--mono)}
+.mon li.gr:before{color:var(--red)}
+.mon li b{color:var(--txt);font-weight:600}
+.mon .rel{margin-top:14px;border-top:1px dashed var(--line2);padding-top:12px}
+.mon .rel button{background:none;border:1px solid var(--line2);color:var(--dim);font-family:var(--mono);font-size:9.5px;
+  font-weight:700;letter-spacing:.13em;text-transform:uppercase;padding:7px 12px;cursor:pointer}
+.mon .rel button:hover{border-color:var(--amber);color:var(--amber)}
+.mon .rel p{font-family:var(--sans);font-size:12.5px;line-height:1.65;color:var(--dim);margin-top:4px}
+.evo{display:flex;align-items:flex-end;gap:6px;height:74px;margin:6px 0 4px}
+.evo div{flex:1;max-width:38px;display:flex;flex-direction:column;align-items:center;gap:4px;height:100%;justify-content:flex-end}
+.evo i{display:block;width:100%;animation:gw2 .6s ease both;transform-origin:bottom}
+.evo span{font-size:8.5px;color:var(--faint);letter-spacing:.04em}
+.evo em{font-style:normal;font-size:9.5px;font-weight:700}
+@keyframes gw2{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+.vazio{padding:26px 18px;text-align:center;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+.vazio p{font-family:var(--sans);text-transform:none;letter-spacing:0;font-size:12px;color:var(--dim);margin-top:8px;line-height:1.6}
+.cad.mini{max-width:none;margin:0 0 16px;padding:18px 20px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;text-align:left}
+.cad.mini p{margin:0;flex:1;min-width:200px}
+.cad.mini input{width:180px;padding:9px;font-size:12px}
+.cad.mini button{width:auto;margin:0;padding:10px 16px}
+.cad.mini .msg{width:100%;margin-top:0}
+.rc{padding:9px 0;border-bottom:1px solid rgba(26,36,51,.6)}
+.rc:last-child{border-bottom:none}
+.rc-t{display:flex;gap:8px;align-items:center}
+.rc-g{font-size:9px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--faint)}
+.rc-i{font-family:var(--sans);font-size:12.5px;line-height:1.5;color:var(--txt);margin:4px 0 6px}
+.rc-b{display:flex;align-items:center;gap:8px}
+.rc-b i{display:block;height:5px;animation:gw .7s cubic-bezier(.2,.8,.3,1) both;transform-origin:left}
+.rc-b span{font-size:10px;font-weight:700;color:var(--dim)}
+.fg{margin-top:14px;border:1px solid rgba(244,63,94,.45);background:rgba(244,63,94,.08);padding:11px 13px;
+  font-family:var(--sans);font-size:12.5px;line-height:1.6;color:var(--txt)}
+.fg b{font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--red);display:block;margin-bottom:4px}
+.fb{font-family:var(--sans);font-size:12.5px;line-height:1.65;color:var(--dim);white-space:pre-line;
+  border-left:2px solid var(--line2);padding:2px 0 2px 12px}
+.mon-f{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+@media(max-width:900px){.qk{grid-template-columns:repeat(2,1fr)!important}}
+
 svg text{font-family:var(--mono)}
 @media(max-width:900px){.kpis{grid-template-columns:repeat(3,1fr)}.g2,.g21{grid-template-columns:1fr}}
 @media(max-width:560px){.kpis{grid-template-columns:repeat(2,1fr)}.pf-s{margin-left:0}}
@@ -198,7 +264,7 @@ svg text{font-family:var(--mono)}
 </head>
 <body>
 <div class="wrap" id="r"></div>
-<script id="dd" type="application/json">{"acordos":{"salt":"6esEyKRTQNndi32+kO3Iog==","iv":"N3GVBFaDWZVcLG8p","ct":"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","it":310000},"acordos_qtd":24,"pessoa":{"nome":"João Vitor Cruz","turno":"Manhã","supervisor":"Paula Fernanda Alves","negociado":14820.62,"recebido":10465.08,"conversao":0.7061,"clientes_negociados":75,"clientes_recebidos":58,"faturas_negociadas":327,"ticket_medio":180.43,"chamadas":99,"tma_seg":406.747,"pausa_pct":23.7,"daily_negociado":[1932.86,2140.48,1169.43,0.0,2967.79,2328.67,2363.55,1917.84],"daily_recebido":[2330.64,1346.29,577.43,0.0,1698.24,1558.28,1524.17,1430.03],"score":67,"partes":{"resultado":55.5,"conversao":70.6,"produtividade":73.1,"evolucao":88.3,"eficiencia":58.7},"tendencia":0.4598,"cv":0.321,"media_dia":1495.01,"melhor_valor":2330.64,"melhor_dia":"01/10","rank":8,"total":19,"observacao":null},"equipe":{"conversao":0.6441,"ticket_medio":181.09,"tma_seg":470.5,"pausa_pct":30.1,"negociado_pessoa":14649.93,"recebido_pessoa":9435.87,"chamadas_pessoa":68},"datas":["01/10","02/10","03/10","04/10","05/10","06/10","07/10","08/10"],"periodo":"01 a 08/10/2026 (parcial do mês)","mostrar_rank":false}</script>
+<script id="dd" type="application/json">{"acordos":{"salt":"7KAPSeTxV4yiS0SvoCzKNw==","iv":"IyW47umePv3dji3u","ct":"9uB9WR15873UAAOORmen/gCV18yoa6jhzpWXFpnGi3qFmDJuckBmyv2D8GpQWIinGQO6HaDYByaPh++zyGeLkMRHrBILkEn+eyBhWmET2g3iJ+4yYj9OafbGgmD7pV7w/+Z4oVEth5LZ9yWfHzIbtaOl8BLV6/LAbrOH/hjrOZ3GkXutVTU7tJeMN48vOzAOoctcc7YesxqkL0niyWTOO4m3DxsgTKjVSeJwQcJtR9LvfZPK63euhFVuBoBu7uH1Ck76s2KJN1/+bazzj5Tz9Po7QAFtwnFyIzO9J7HSKV/NUUu13Qb/M1zloKoJK96BooGOAfZ9p3QRL9gAY/cxrWvfvV307eqqzIyQ0K3NSq00mHwepivJaqC1xtAPHHae2BpDvtLkzcIhtzAkGWuzQYC888TPohSKfVqfoEzUDBSMfWW7FOfMkJZgWEXBC9D88lGjCl86iudu6udYFSbkxchizbm2FJrx7TtHw7Nh8poX+vV5LuejL/5gMAIEuRIEcJPY8SHNjO4KPlntGNEKF/nX+8YpyAVUFiYOl99xQ6h4+gOPmPiuEgX/JbhX1GWH5v2m/6QlyOdDKz6iPwMxNT2A/fYYSDlItWy0PzIS1eB74O2uw9Mnt/nhmS5H+k/9txTNJo4Z2YV/nm7KGoeLQ0CePJif9uVZjfP8RJLTfUrJFxPJaMh3Qd7Izoa4weg5bE70CNdToGOJ4VeGXnV7qBFE3RmZ0m4Q07QwE7ggRwjW/LPb98bbR6AheVwb3CkMZgslwLeqVP42ZkXuNCcNU/v2","it":310000},"acordos_qtd":2,"qualidade":{"psat":{"periodo":"01/10 a 13/10/2026","equipe":{"pesquisas":560,"validas_atendente":300,"validas_solucao":302,"invalidas":57,"sem_resposta":203,"csat_atendente":0.8333,"media_atendente":4.35,"csat_solucao":0.7781,"media_solucao":4.17,"rechamada":0.3937,"base_rechamada":287,"dist_atendente":[33,12,5,17,233],"detratores":45},"meu":null,"lista":[]},"monit":{"competencia":"2026-10","equipe":{"media_nota":71.4,"monitorias":34,"pessoas":10,"por_pessoa":3.4},"meta":null,"mes":null,"recorrentes":[],"lista":[],"relatos":null}},"gerado_em":"13/10 às 11:54","pessoa":{"nome":"João Vitor Cruz","turno":"Manhã","supervisor":"Paula Fernanda Alves","negociado":16732.7,"recebido":12549.89,"conversao":0.75,"clientes_negociados":86,"clientes_recebidos":67,"faturas_negociadas":391,"ticket_medio":187.31,"chamadas":133,"tma_seg":411.173,"pausa_pct":21.8,"daily_negociado":[1932.86,2140.48,1169.43,0.0,2967.79,2328.67,2363.55,1917.84,1227.82,0.0,0.0,684.26],"daily_recebido":[2330.64,1346.29,577.43,0.0,1698.24,1558.28,1847.37,1634.24,1557.4,0.0,0,0],"score":60,"partes":{"resultado":57.4,"conversao":75.0,"produtividade":66.5,"evolucao":22.6,"eficiencia":59.4},"tendencia":-0.3291,"cv":0.295,"media_dia":1568.74,"melhor_valor":2330.64,"melhor_dia":"01/10","rank":8,"total":19,"observacao":null,"projecao":{"negociado_atual":16732.7,"ritmo_diario":1394.39,"projetado_fim_mes":43226.14,"dias_corridos":12,"dias_do_mes":31,"dias_restantes":19,"premio_atual":0,"premio_projetado":200.0,"proxima_faixa":{"alvo":30000.0,"premio":100.0,"falta":13267.3},"ritmo_necessario_prox_faixa":698.28,"no_topo":false}},"equipe":{"conversao":0.6073,"ticket_medio":181.06,"tma_seg":449.2,"pausa_pct":28.0,"negociado_pessoa":18013.73,"recebido_pessoa":10939.68,"chamadas_pessoa":100,"meta_topo":50000.0,"conversao_minima":0.65},"datas":["01/10","02/10","03/10","04/10","05/10","06/10","07/10","08/10","09/10","10/10","11/10","12/10"],"periodo":"01 a 12/10/2026 (parcial do mês)","mostrar_rank":false}</script>
 <script>
 (function(){
 'use strict';
@@ -428,6 +494,210 @@ function detalheDias(){
   return html;
 }
 
+/* ---------- qualidade: PSAT (aba) + monitorias (aba) ---------- */
+const Q=D.qualidade||null;
+const QS=Q&&Q.psat, QMx=Q&&Q.monit, QM=(QMx&&QMx.lista)||[];
+const pcN=v=>v==null?'—':pc(v,0);
+const n1=v=>v==null?'—':v.toFixed(1).replace('.',',');
+const nMon=v=>v==null?'—':(Math.round(v*10)/10).toString().replace('.',',');
+const MESES=['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
+const nomeMes=c=>c?MESES[+c.slice(5,7)-1]:'';
+function vsPP(meu,ref,maiorMelhor=true){
+  if(meu==null||ref==null) return {cls:'eq',txt:'—'};
+  const d=(meu-ref)*100, bom=maiorMelhor?d>0:d<0;
+  if(Math.abs(d)<2) return {cls:'eq',txt:'na média do time'};
+  return {cls:bom?'up':'dn',txt:(d>0?'▲ ':'▼ ')+Math.abs(d).toFixed(0)+' p.p. vs. média'};
+}
+function vsPts(meu,ref){
+  if(meu==null||ref==null) return {cls:'eq',txt:'—'};
+  const d=meu-ref; if(Math.abs(d)<1.5) return {cls:'eq',txt:'na média do time'};
+  return {cls:d>0?'up':'dn',txt:(d>0?'▲ ':'▼ ')+nMon(Math.abs(d))+' pts vs. média'};
+}
+const corMon=n=>n==null?'#7C8FA6':n>=90?'#34D399':n>=80?'#22D3EE':n>=70?'#FFB020':'#F43F5E';
+const rotMon=n=>n==null?'SEM NOTA':n>=90?'EXCELENTE':n>=80?'BOM':n>=70?'EM EVOLUÇÃO':'PRECISA DE ATENÇÃO';
+const chip=(n,inv)=>inv?'<span class="chip cx">INVÁL.</span>':n==null?'<span class="chip cx">—</span>':`<span class="chip c${n}">${n}</span>`;
+function diasAteBR(br){ if(!br) return null; const p=br.split('/').map(Number); const y=p[2]||new Date().getFullYear();
+  const a=new Date(y,p[1]-1,p[0]), h=new Date(); h.setHours(0,0,0,0); return Math.round((a-h)/86400000); }
+
+/* ===== aba PSAT ===== */
+function pDestaque(){
+  const meu=QS&&QS.meu; if(!meu||!meu.validas_atendente) return '';
+  const f=[], dz=Math.round((meu.csat_atendente||0)*10);
+  f.push(`De cada <b>10 clientes</b> que deram nota para o seu atendimento, <span class="hl">${dz}</span> deram 4 ou 5.`);
+  f.push(meu.detratores?`<b>${meu.detratores} nota${meu.detratores>1?'s':''} baixa${meu.detratores>1?'s':''}</b> (1 ou 2) no período — destacadas em vermelho na lista abaixo.`
+                       :'<b>Nenhuma nota baixa</b> (1 ou 2) no período.');
+  if(meu.validas_atendente<5) f.push(`Amostra ainda pequena (${meu.validas_atendente} nota${meu.validas_atendente>1?'s':''}): o percentual muda bastante a cada pesquisa nova.`);
+  if(meu.rechamada!=null && QS.equipe.rechamada!=null && meu.rechamada>QS.equipe.rechamada+0.05)
+    f.push(`<b>${pc(meu.rechamada,0)}</b> dos seus clientes ligaram de novo em até 3 dias (equipe: ${pc(QS.equipe.rechamada,0)}). Fechar a ligação com tudo resolvido — boleto, data e próximo passo claros — evita a volta.`);
+  return `<div class="hi"><div class="ic">PSAT</div><div style="flex:1">
+    <h4>COMO O CLIENTE AVALIA O SEU ATENDIMENTO</h4><p>${f.join(' ')}</p></div></div>`;
+}
+function pKpis(){
+  if(!QS) return `<div class="pn"><div class="vazio">PSAT: dado não disponível
+    <p>A pesquisa de satisfação ainda não entrou nesta atualização do painel.</p></div></div>`;
+  const meu=QS.meu, E=QS.equipe;
+  if(!meu) return `<div class="pn"><div class="vazio">Nenhuma pesquisa PSAT sua em ${QS.periodo}
+    <p>Assim que clientes atendidos por você responderem a pesquisa, as notas aparecem aqui.</p></div></div>`;
+  return `<div class="kpis qk" style="grid-template-columns:repeat(5,1fr)">
+    ${kpi('Pesquisas recebidas',nf(meu.pesquisas),{cls:'eq',txt:nf(meu.validas_atendente)+' com nota válida'})}
+    ${kpi('Satisfação com você',pcN(meu.csat_atendente),vsPP(meu.csat_atendente,E.csat_atendente))}
+    ${kpi('Nota média',n1(meu.media_atendente),vs(meu.media_atendente,E.media_atendente))}
+    ${kpi('Solução aprovada',pcN(meu.csat_solucao),vsPP(meu.csat_solucao,E.csat_solucao))}
+    ${kpi('Ligou de novo em 3d',pcN(meu.rechamada),vsPP(meu.rechamada,E.rechamada,false))}
+  </div>`;
+}
+function pNotas(){
+  const meu=QS&&QS.meu;
+  if(!meu||!meu.validas_atendente) return '';
+  const tv=meu.validas_atendente, E=QS.equipe, ev=E.validas_atendente||1;
+  const cor={5:'#34D399',4:'#34D399',3:'#FFB020',2:'#F43F5E',1:'#F43F5E'};
+  let rows='';
+  for(let k=5;k>=1;k--){
+    const q=meu.dist_atendente[k-1], p=q/tv, pe=E.dist_atendente[k-1]/ev;
+    rows+=`<div class="nt5-r"><span class="l">NOTA ${k}</span>
+      <span class="t"><i style="width:${(p*100).toFixed(1)}%;background:${cor[k]}"></i>
+        <b style="left:calc(${(pe*100).toFixed(1)}% - 1px)" title="Média da equipe: ${pc(pe,0)}"></b></span>
+      <span class="v n">${q} <span>· ${pc(p,0)}</span></span></div>`;
+  }
+  return `<div class="pn"><div class="pn-h"><h3>Como os clientes avaliam você</h3><span class="nt">nota do atendimento · 1 a 5</span></div>
+    <div class="pn-b"><div class="nt5">${rows}</div>
+    <p class="prose" style="font-size:11.5px;line-height:1.6;color:var(--faint);margin-top:12px">
+    A barra é a sua distribuição de notas. O traço claro mostra a média da equipe na mesma nota.
+    ${meu.invalidas||meu.sem_resposta?`Fora da conta: ${meu.sem_resposta} sem resposta e ${meu.invalidas} inválida${meu.invalidas===1?'':'s'}.`:''}</p></div></div>`;
+}
+function pLista(){
+  if(!QS||!QS.meu||!QS.lista.length) return '';
+  const L=QS.lista.filter(r=>r.atendente!=null||r.solucao!=null||r.inv||r.rechamada!=null);
+  const fora=QS.lista.length-L.length;
+  if(!L.length) return '';
+  const sn=v=>v===true?'<span style="color:var(--amber)">Sim</span>':v===false?'<span style="color:var(--dim)">Não</span>':'<span style="color:var(--faint)">—</span>';
+  return `<div class="pn"><div class="pn-h"><h3>Suas pesquisas de satisfação</h3>
+    <span class="nt">${QS.periodo} · notas 1 e 2 em destaque</span></div>
+    <div class="pn-b" style="overflow-x:auto"><table class="acd"><thead><tr>
+      <th class="l">Data</th><th class="l">Hora</th><th class="l">Fila</th>
+      <th>Atendimento</th><th>Solução</th><th>Ligou de novo</th><th class="l">Cliente</th>
+    </tr></thead><tbody>
+    ${L.map(r=>`<tr class="${r.atendente!=null&&r.atendente<=2?'det':''}">
+      <td class="l">${r.data}</td><td class="l" style="color:var(--dim)">${r.hora}</td>
+      <td class="l" style="color:var(--dim);font-size:10.5px;text-transform:uppercase;letter-spacing:.06em">${esc(r.fila)}</td>
+      <td>${chip(r.atendente,r.inv)}</td><td>${chip(r.solucao,r.inv)}</td><td>${sn(r.rechamada)}</td>
+      <td class="l" style="color:var(--dim);font-size:10.5px">${r.htb||'—'}</td></tr>`).join('')}
+    </tbody></table>
+    ${fora?`<p class="prose" style="font-size:11.5px;color:var(--faint);margin-top:12px">${fora} pesquisa${fora>1?'s':''} em que o cliente não respondeu nada ${fora>1?'ficaram':'ficou'} fora da lista.</p>`:''}
+    </div></div>`;
+}
+const atualizado=()=>D.gerado_em?`<div class="lbl" style="text-align:right;margin-top:14px">Atualizado em ${D.gerado_em}</div>`:'';
+function abaPSAT(){
+  return atualizado()+pDestaque()+pKpis()+pNotas()+pLista()+
+  `<div class="ft" style="margin-top:16px"><b>Como ler:</b> o PSAT é a pesquisa que o cliente responde ao fim da ligação
+    ${QS?`(${QS.periodo})`:''}. <b>Satisfação com você</b> é o percentual de notas 4 e 5 para o atendimento. <b>Solução aprovada</b>
+    é o mesmo cálculo para a nota da solução. <b>Ligou de novo em 3d</b> mostra quantos clientes voltaram a ligar em até
+    3 dias (quanto menor, melhor). Respostas inválidas ou em branco não entram nas contas. A comparação é com a
+    <b>média da equipe de cobrança</b>, sem identificar ninguém. Dúvida? Fale com ${esc(P.supervisor)}.</div>`;
+}
+
+/* ===== aba MONITORIAS ===== */
+function mDestaque(){
+  const M=QMx.mes, E=QMx.equipe, mes=nomeMes(QMx.competencia), f=[];
+  if(!M||!M.qtd){
+    f.push(`Você ainda não teve monitoria em <b>${mes}</b>.`+(QM.length?` A mais recente foi em ${QM[0].data||'—'}, com nota <span class="hl">${nMon(QM[0].nota)}</span>.`:''));
+  }else{
+    f.push(`Em <b>${mes}</b> você teve <b>${M.qtd} monitoria${M.qtd>1?'s':''}</b>${QMx.meta?` de ${QMx.meta} previstas`:''}, com nota média
+      <span class="hl">${nMon(M.media)}</span>${E.media_nota!=null?` (equipe: ${nMon(E.media_nota)})`:''}.`);
+    if(M.falhas_graves){
+      const g=QM.find(m=>m.falha_grave&&m.falhas_graves.length);
+      f.push(`<b style="color:var(--red)">${M.falhas_graves} falha${M.falhas_graves>1?'s':''} grave${M.falhas_graves>1?'s':''}</b> zerou${M.falhas_graves>1?'ram':''} nota${M.falhas_graves>1?'s':''}
+        ${M.perdeu_por_falha?`— foram <b>${nMon(M.perdeu_por_falha)} pontos</b> perdidos que você já tinha conquistado na ligação`:''}${g?`. Motivo: <b>${esc(g.falhas_graves[0].item)}</b>`:''}.`);
+    }
+  }
+  const r=(QMx.recorrentes||[]).find(x=>x.vezes>=2);
+  if(r) f.push(`O ponto que mais se repete nas suas monitorias: <b>${esc(r.item)}</b> (${r.vezes} vezes). Corrigir este item é o caminho mais rápido para subir a nota.`);
+  else if(M&&M.qtd&&!M.falhas_graves&&(M.media||0)>=95) f.push('Nenhum ponto se repete — mantenha o padrão.');
+  return `<div class="hi"><div class="ic">MONITORIA</div><div style="flex:1">
+    <h4>COMO A MONITORIA VÊ O SEU ATENDIMENTO</h4><p>${f.join(' ')}</p></div></div>`;
+}
+function mKpis(){
+  const M=QMx.mes||{qtd:0}, E=QMx.equipe, ult=QM[0];
+  const qtdTxt=QMx.meta?{cls:M.qtd>=QMx.meta?'up':'eq',txt:`${M.qtd} de ${QMx.meta} previstas`}
+                       :(E.por_pessoa?{cls:'eq',txt:'equipe: '+nMon(E.por_pessoa)+' por pessoa'}:null);
+  return `<div class="kpis qk" style="grid-template-columns:repeat(5,1fr)">
+    ${kpi('Monitorias em '+nomeMes(QMx.competencia),nf(M.qtd),qtdTxt)}
+    ${kpi('Nota média do mês',nMon(M.media),vsPts(M.media,E.media_nota))}
+    ${kpi('Última nota',ult?nMon(ult.nota):'—',ult?{cls:'eq',txt:'ligação de '+(ult.data||'—').slice(0,5)}:null)}
+    ${kpi('Itens atendidos',M.aderencia!=null?pc(M.aderencia,0):'—',{cls:'eq',txt:'da ficha, no mês'})}
+    ${kpi('Falhas graves',nf(M.falhas_graves||0),{cls:(M.falhas_graves?'dn':'up'),txt:M.falhas_graves?'zeram a nota':'nenhuma no mês'})}
+  </div>`;
+}
+function mEvolucao(){
+  const cab=`<div class="pn-h"><h3>Evolução das suas notas</h3><span class="nt">últimas monitorias · 0 a 100</span></div>`;
+  if(!QM.length) return `<div class="pn">${cab}<div class="vazio">Nenhuma monitoria ainda
+    <p>Quando seu supervisor monitorar uma ligação sua, a nota aparece aqui.</p></div></div>`;
+  const s=QM.slice(0,10).reverse();
+  const H=110, bars=s.map(m=>{const c=corMon(m.nota), h=Math.max(3,(m.nota||0)/100*H), hb=m.falha_grave&&m.nota_bruta?m.nota_bruta/100*H:0;
+    return `<div title="${m.data||''} · nota ${nMon(m.nota)}${hb?' (seria '+nMon(m.nota_bruta)+')':''}">
+      <em style="color:${c}">${nMon(m.nota)}</em>
+      <span style="position:relative;width:100%;height:${H}px;display:flex;align-items:flex-end">
+        ${hb?`<i style="position:absolute;bottom:0;left:0;right:0;height:${hb}px;border:1px dashed #F43F5E;background:rgba(244,63,94,.06)"></i>`:''}
+        <i style="height:${h}px;background:${c};position:relative;width:100%"></i></span>
+      <span>${(m.data||'—').slice(0,5)}</span></div>`;}).join('');
+  return `<div class="pn">${cab}<div class="pn-b"><div class="evo" style="height:${H+44}px">${bars}</div>
+    ${s.some(m=>m.falha_grave)?`<p class="prose" style="font-size:11.5px;color:var(--faint);margin-top:10px">
+      Contorno tracejado em vermelho = nota que você teria sem a falha grave.</p>`:''}</div></div>`;
+}
+function mRecorrentes(){
+  const R=QMx.recorrentes||[];
+  const cab=`<div class="pn-h"><h3>Onde você mais perde ponto</h3><span class="nt">itens não cumpridos · todas as monitorias</span></div>`;
+  if(!QM.length) return `<div class="pn">${cab}<div class="vazio">Sem monitorias</div></div>`;
+  if(!R.length) return `<div class="pn">${cab}<div class="vazio" style="color:var(--green)">Nenhum item perdido
+    <p>Em todas as suas monitorias você cumpriu os itens da ficha.</p></div></div>`;
+  const mx=Math.max(...R.map(x=>x.vezes));
+  return `<div class="pn">${cab}<div class="pn-b">${R.map(x=>`<div class="rc">
+    <div class="rc-t"><span class="rc-g" style="${x.grupo==='Falha grave'?'color:var(--red)':''}">${esc(x.grupo)}</span>
+      ${x.vezes>=2?'<span class="urg venc">repetiu</span>':''}</div>
+    <div class="rc-i"><span style="color:${x.grupo==='Falha grave'?'var(--red)':'var(--amber)'};font-family:var(--mono);font-weight:700">✗ </span>${esc(x.item)}</div>
+    <div class="rc-b"><i style="width:${x.vezes/mx*100}%;background:${x.grupo==='Falha grave'?'#F43F5E':x.vezes>=2?'#FFB020':'#7C8FA6'}"></i><span>${x.vezes}×</span></div>
+  </div>`).join('')}</div></div>`;
+}
+function mDetalhe(){
+  if(!QM.length) return '';
+  const temRel=QMx.relatos && QM.some(m=>m.tem_relato);
+  const grupos=L=>{const g={}; L.forEach(x=>(g[x.grupo]=g[x.grupo]||[]).push(x.item)); return g;};
+  const cards=QM.map((m,i)=>{const c=corMon(m.nota), G=grupos(m.itens||[]);
+    const dp=diasAteBR(m.prazo_feedback);
+    return `<div class="mon" style="--c:${c}">
+    <div class="mon-h"><div><div class="nota n">${nMon(m.nota)}<small> /100</small></div><div class="q">${rotMon(m.nota)}</div></div>
+      <div class="meta">Ligação de <b>${m.data||'—'}</b>${m.criado_em?`<br>Monitorada em <b>${m.criado_em}</b>`:''}
+        ${m.monitor?`<br>Por <b>${esc(m.monitor)}</b>`:''}${m.htb?`<br>Cliente <b>${m.htb}</b>`:''}</div></div>
+    ${m.falha_grave?`<div class="fg"><b>FALHA GRAVE — nota zerada${m.nota_bruta?` (seria ${nMon(m.nota_bruta)})`:''}</b>
+      ${(m.falhas_graves||[]).map(x=>`<div>▸ ${esc(x.item)}</div>`).join('')}</div>`:''}
+    ${Object.keys(G).length?`<h5>Itens da ficha não atendidos</h5><ul>${Object.entries(G).map(([g,it])=>
+      it.map(t=>`<li><b>${esc(g)}</b> — ${esc(t)}</li>`).join('')).join('')}</ul>`
+      :(!m.falha_grave&&m.itens_avaliados?`<h5 style="color:var(--green)">Todos os ${m.itens_avaliados} itens avaliados foram atendidos</h5>`:'')}
+    ${m.pontos&&m.pontos.length?`<h5>Pontos de melhoria</h5><ul>${m.pontos.map(p=>`<li>${esc(p)}</li>`).join('')}</ul>`:''}
+    ${m.feedback?`<h5>Feedback do supervisor</h5><div class="fb">${esc(m.feedback)}</div>`:''}
+    ${m.prazo_feedback||m.ciencia?`<div class="mon-f">
+      ${m.prazo_feedback?`<span class="urg ${dp!=null&&dp<0?'ok':dp===0?'hoje':'prox'}">${dp!=null&&dp<0?'feedback marcado para':'feedback até'} ${m.prazo_feedback.slice(0,5)}</span>`:''}
+      ${m.ciencia?`<span class="urg ok">ciência: ${esc(m.ciencia)}</span>`:''}</div>`:''}
+    ${m.tem_relato&&QMx.relatos?`<div class="rel" id="rel-${i}"></div>`:''}
+  </div>`;}).join('');
+  return `<div class="pn"><div class="pn-h"><h3>Suas monitorias, uma a uma</h3><span class="nt">da mais recente para a mais antiga</span></div>
+    <div class="pn-b">
+    ${temRel?`<div class="cad mini" id="q-cad"><p class="prose">O <b>relato de algumas ligações</b> cita o cliente pelo nome.
+      Para ler, use a mesma senha da aba de acordos.</p>
+      <input id="q-pw" type="password" placeholder="senha" autocomplete="off"><button id="q-go">Ver relatos</button>
+      <div class="msg" id="q-msg"></div></div>`:''}
+    ${cards}</div></div>`;
+}
+function abaMonit(){
+  return atualizado()+mDestaque()+mKpis()+`<div class="g2">${mEvolucao()}${mRecorrentes()}</div>`+mDetalhe()+
+  `<div class="ft" style="margin-top:16px"><b>Como ler:</b> cada monitoria é a avaliação de uma ligação sua, feita
+    com a ficha de qualidade da cobrança. A nota vai de 0 a 100. Uma <b>falha grave</b> (por exemplo, não registrar
+    o atendimento no Salesforce) <b>zera a nota</b>, mesmo que o resto da ligação tenha sido bom — por isso mostramos
+    também quanto você teria tirado. <b>Itens atendidos</b> é o percentual de itens da ficha que você cumpriu, sem
+    contar os que não se aplicavam à ligação. A média da equipe considera todas as monitorias do mês, sem
+    identificar ninguém. Dúvida sobre uma nota? Fale com ${esc(P.supervisor)}.</div>`;
+}
+
 /* ---------- render ---------- */
 const convCli=P.clientes_recebidos/P.clientes_negociados;
 const dez=Math.round(convCli*10);
@@ -456,6 +726,8 @@ document.getElementById('r').innerHTML=`
 <div class="abas" id="abas">
   <button data-v="perf" class="on">Meu desempenho</button>
   ${D.acordos_qtd ? `<button data-v="acd">Meus acordos<span class="cnt">${D.acordos_qtd}</span></button>` : ''}
+  ${QS ? `<button data-v="psat">Satisfação (PSAT)</button>` : ''}
+  ${QMx ? `<button data-v="mon">Minhas monitorias${QMx.mes&&QMx.mes.qtd?`<span class="cnt">${QMx.mes.qtd}</span>`:''}</button>` : ''}
 </div>
 
 <div class="vista on" id="v-perf">
@@ -476,6 +748,35 @@ document.getElementById('r').innerHTML=`
     e <b>${nf(P.clientes_recebidos)}</b> efetivaram o pagamento — <span class="hl">${pc(convCli)}</span> de conversão por cliente,
     que em valor representa <span class="hl">${pc(P.conversao)}</span>.</p>
 </div></div>
+
+${(()=>{
+  const proj=P.projecao;
+  if(!proj) return '';
+  if(proj.no_topo){
+    return `<div class="hi" style="margin-top:16px">
+      <div class="ic">SUA COMISSÃO</div>
+      <div style="flex:1">
+        <h4>VOCÊ JÁ GARANTIU A MAIOR FAIXA</h4>
+        <p>Com <b>${brl(proj.negociado_atual)}</b> negociados, você já passou de <b>${brl(T.meta_topo)}</b> —
+        comissão de <span class="hl">${brl(proj.premio_atual)}</span> garantida (mantendo conversão de pelo
+        menos ${pc(T.conversao_minima,0)}). Agora é só manter o ritmo até o fim do mês.</p>
+      </div>
+    </div>`;
+  }
+  return `<div class="hi" style="margin-top:16px">
+    <div class="ic">SUA COMISSÃO</div>
+    <div style="flex:1">
+      <h4>SUA PROJEÇÃO DE COMISSÃO ESTE MÊS</h4>
+      <p>No ritmo atual de <b>${brl(proj.ritmo_diario)}/dia</b>, você fecha o mês perto de
+      <span class="hl">${brl(proj.projetado_fim_mes)}</span>${proj.premio_projetado?` — faixa de <b>${brl(proj.premio_projetado)}</b> de comissão`:''}.
+      ${proj.proxima_faixa && proj.dias_restantes>0
+        ? `Faltam <b>${brl(proj.proxima_faixa.falta)}</b> para a próxima faixa (comissão de <b>${brl(proj.proxima_faixa.premio)}</b>)
+           — nos <b>${proj.dias_restantes} dia${proj.dias_restantes===1?'':'s'}</b> que restam, isso dá
+           <b style="color:var(--acc)">${brl(proj.ritmo_necessario_prox_faixa)}/dia</b>.`
+        : (proj.proxima_faixa ? `O mês já fechou — sem tempo pra alcançar a faixa seguinte neste período.` : '')}</p>
+    </div>
+  </div>`;
+})()}
 
 <div class="g21">
   <div class="pn"><div class="pn-h"><h3>Sua evolução diária</h3><span class="nt">R$ por dia</span></div>
@@ -537,6 +838,9 @@ document.getElementById('r').innerHTML=`
     <div class="msg" id="acd-msg"></div>
   </div>
   <div id="acd-lista"></div>` : ''}</div>
+
+${QS?`<div class="vista" id="v-psat">${abaPSAT()}</div>`:''}
+${QMx?`<div class="vista" id="v-mon">${abaMonit()}</div>`:''}
 
 <div class="ft"><b>Sobre estes números:</b> vêm das planilhas de Resultado Parcial e de Chamadas/TMA do período
 ${D.periodo}. Comparações são com a <b>média da operação</b>, não com pessoas específicas.
@@ -649,6 +953,30 @@ if(D.acordos_qtd){
 
   bt.addEventListener('click',abrir);
   inp.addEventListener('keydown',e=>{ if(e.key==='Enter') abrir(); });
+}
+
+/* ---------- relatos das monitorias (bloco criptografado) ---------- */
+if(QMx && QMx.relatos && document.getElementById('q-go')){
+  const bt=document.getElementById('q-go'), inp=document.getElementById('q-pw'), msg=document.getElementById('q-msg');
+  const b64=x=>Uint8Array.from(atob(x),c=>c.charCodeAt(0));
+  async function abrirRel(){
+    const senha=inp.value;
+    if(!senha){msg.textContent='Digite a senha';msg.className='msg err';return;}
+    bt.disabled=true; inp.disabled=true; msg.textContent='Abrindo…'; msg.className='msg';
+    await new Promise(r=>setTimeout(r,40));
+    let R;
+    try{
+      const km=await crypto.subtle.importKey('raw',new TextEncoder().encode(senha),'PBKDF2',false,['deriveKey']);
+      const key=await crypto.subtle.deriveKey({name:'PBKDF2',salt:b64(QMx.relatos.salt),iterations:QMx.relatos.it,hash:'SHA-256'},
+        km,{name:'AES-GCM',length:256},false,['decrypt']);
+      R=JSON.parse(new TextDecoder().decode(await crypto.subtle.decrypt({name:'AES-GCM',iv:b64(QMx.relatos.iv)},key,b64(QMx.relatos.ct))));
+    }catch(e){bt.disabled=false;inp.disabled=false;inp.value='';msg.textContent='Senha incorreta';msg.className='msg err';inp.focus();return;}
+    document.getElementById('q-cad').remove();
+    Object.entries(R).forEach(([i,t])=>{const el=document.getElementById('rel-'+i);
+      if(el) el.innerHTML=`<h5 style="margin-top:0">Relato da ligação</h5><p>${esc(t)}</p>`;});
+  }
+  bt.addEventListener('click',abrirRel);
+  inp.addEventListener('keydown',e=>{if(e.key==='Enter')abrirRel();});
 }
 
 /* simulador */

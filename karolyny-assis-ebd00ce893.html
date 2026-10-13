@@ -126,7 +126,9 @@ input[type=range]::-moz-range-thumb{width:19px;height:19px;background:var(--ambe
   font-family:var(--sans);font-size:11px;line-height:1.7;color:var(--faint)}
 
 /* ---- abas ---- */
-.abas{display:flex;gap:0;border-bottom:1px solid var(--line);margin:20px 0 0}
+.abas{display:flex;gap:0;border-bottom:1px solid var(--line);margin:20px 0 0;overflow-x:auto;scrollbar-width:none}
+.abas::-webkit-scrollbar{display:none}
+.abas button{flex:none;white-space:nowrap}
 .abas button{padding:11px 18px;font-family:var(--mono);font-size:10px;font-weight:700;
   letter-spacing:.14em;text-transform:uppercase;color:var(--faint);background:none;border:none;
   border-bottom:2px solid transparent;cursor:pointer;transition:.15s}
@@ -191,6 +193,70 @@ input[type=range]::-moz-range-thumb{width:19px;height:19px;background:var(--ambe
 .dia-d{font-size:10px;font-weight:700;text-align:right}
 .dia-d.up{color:var(--green)}.dia-d.dn{color:var(--red)}.dia-d.eq{color:var(--faint)}
 
+/* ---- qualidade (PSAT + monitoria) ---- */
+.qk .k{min-height:92px}
+.nt5{display:flex;flex-direction:column;gap:2px}
+.nt5-r{display:grid;grid-template-columns:62px 1fr 74px;gap:12px;align-items:center;padding:6px 0}
+.nt5-r .l{font-size:10px;letter-spacing:.1em;color:var(--dim);font-weight:700}
+.nt5-r .t{height:12px;background:var(--panel3);position:relative}
+.nt5-r .t i{display:block;height:100%;animation:gw .7s cubic-bezier(.2,.8,.3,1) both;transform-origin:left}
+.nt5-r .t b{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--txt);opacity:.55}
+.nt5-r .v{font-size:11px;font-weight:700;text-align:right}
+.nt5-r .v span{color:var(--faint);font-weight:500}
+.chip{display:inline-flex;align-items:center;justify-content:center;min-width:24px;height:22px;padding:0 6px;
+  font-size:11px;font-weight:800;border:1px solid}
+.chip.c5,.chip.c4{color:var(--green);border-color:rgba(52,211,153,.4);background:rgba(52,211,153,.1)}
+.chip.c3{color:var(--amber);border-color:rgba(255,176,32,.4);background:rgba(255,176,32,.1)}
+.chip.c2,.chip.c1{color:var(--red);border-color:rgba(244,63,94,.45);background:rgba(244,63,94,.12)}
+.chip.cx{color:var(--faint);border-color:var(--line2);font-weight:600;font-size:9.5px;letter-spacing:.06em}
+.acd tr.det td{background:rgba(244,63,94,.05)}
+.mon{border:1px solid var(--line);background:var(--panel2);border-left:2px solid var(--c);padding:16px 18px;margin-bottom:12px}
+.mon-h{display:flex;align-items:flex-start;gap:16px;flex-wrap:wrap}
+.mon-h .nota{font-size:34px;font-weight:800;line-height:1;color:var(--c);letter-spacing:-.03em}
+.mon-h .nota small{font-size:11px;color:var(--faint);font-weight:600;letter-spacing:0}
+.mon-h .q{font-size:9px;letter-spacing:.14em;color:var(--c);font-weight:700;margin-top:6px}
+.mon-h .meta{margin-left:auto;text-align:right;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);line-height:1.8}
+.mon-h .meta b{color:var(--txt);font-weight:700}
+.mon h5{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--faint);margin:16px 0 8px}
+.mon ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+.mon li{font-family:var(--sans);font-size:12.5px;line-height:1.55;color:var(--dim);padding-left:16px;position:relative}
+.mon li:before{content:'▸';position:absolute;left:0;color:var(--amber);font-family:var(--mono)}
+.mon li.gr:before{color:var(--red)}
+.mon li b{color:var(--txt);font-weight:600}
+.mon .rel{margin-top:14px;border-top:1px dashed var(--line2);padding-top:12px}
+.mon .rel button{background:none;border:1px solid var(--line2);color:var(--dim);font-family:var(--mono);font-size:9.5px;
+  font-weight:700;letter-spacing:.13em;text-transform:uppercase;padding:7px 12px;cursor:pointer}
+.mon .rel button:hover{border-color:var(--amber);color:var(--amber)}
+.mon .rel p{font-family:var(--sans);font-size:12.5px;line-height:1.65;color:var(--dim);margin-top:4px}
+.evo{display:flex;align-items:flex-end;gap:6px;height:74px;margin:6px 0 4px}
+.evo div{flex:1;max-width:38px;display:flex;flex-direction:column;align-items:center;gap:4px;height:100%;justify-content:flex-end}
+.evo i{display:block;width:100%;animation:gw2 .6s ease both;transform-origin:bottom}
+.evo span{font-size:8.5px;color:var(--faint);letter-spacing:.04em}
+.evo em{font-style:normal;font-size:9.5px;font-weight:700}
+@keyframes gw2{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+.vazio{padding:26px 18px;text-align:center;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+.vazio p{font-family:var(--sans);text-transform:none;letter-spacing:0;font-size:12px;color:var(--dim);margin-top:8px;line-height:1.6}
+.cad.mini{max-width:none;margin:0 0 16px;padding:18px 20px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;text-align:left}
+.cad.mini p{margin:0;flex:1;min-width:200px}
+.cad.mini input{width:180px;padding:9px;font-size:12px}
+.cad.mini button{width:auto;margin:0;padding:10px 16px}
+.cad.mini .msg{width:100%;margin-top:0}
+.rc{padding:9px 0;border-bottom:1px solid rgba(26,36,51,.6)}
+.rc:last-child{border-bottom:none}
+.rc-t{display:flex;gap:8px;align-items:center}
+.rc-g{font-size:9px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--faint)}
+.rc-i{font-family:var(--sans);font-size:12.5px;line-height:1.5;color:var(--txt);margin:4px 0 6px}
+.rc-b{display:flex;align-items:center;gap:8px}
+.rc-b i{display:block;height:5px;animation:gw .7s cubic-bezier(.2,.8,.3,1) both;transform-origin:left}
+.rc-b span{font-size:10px;font-weight:700;color:var(--dim)}
+.fg{margin-top:14px;border:1px solid rgba(244,63,94,.45);background:rgba(244,63,94,.08);padding:11px 13px;
+  font-family:var(--sans);font-size:12.5px;line-height:1.6;color:var(--txt)}
+.fg b{font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--red);display:block;margin-bottom:4px}
+.fb{font-family:var(--sans);font-size:12.5px;line-height:1.65;color:var(--dim);white-space:pre-line;
+  border-left:2px solid var(--line2);padding:2px 0 2px 12px}
+.mon-f{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+@media(max-width:900px){.qk{grid-template-columns:repeat(2,1fr)!important}}
+
 svg text{font-family:var(--mono)}
 @media(max-width:900px){.kpis{grid-template-columns:repeat(3,1fr)}.g2,.g21{grid-template-columns:1fr}}
 @media(max-width:560px){.kpis{grid-template-columns:repeat(2,1fr)}.pf-s{margin-left:0}}
@@ -198,7 +264,7 @@ svg text{font-family:var(--mono)}
 </head>
 <body>
 <div class="wrap" id="r"></div>
-<script id="dd" type="application/json">{"acordos":{"salt":"iAISB7f8Ksv9d/3krhmIRA==","iv":"1FkCOxMxGOW8NWQH","ct":"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","it":310000},"acordos_qtd":9,"pessoa":{"nome":"Karolyny Assis","turno":"Manhã","supervisor":"Paula Fernanda Alves","negociado":11096.52,"recebido":8048.71,"conversao":0.7253,"clientes_negociados":70,"clientes_recebidos":52,"faturas_negociadas":171,"ticket_medio":154.78,"chamadas":74,"tma_seg":708.824,"pausa_pct":29.9,"daily_negociado":[2164.78,1765.42,790.53,0.0,2074.04,1377.7,1633.4,1290.65],"daily_recebido":[1388.12,1831.35,685.88,0.0,1185.41,1334.24,1212.44,411.27],"score":54,"partes":{"resultado":42.6,"conversao":72.5,"produtividade":54.6,"evolucao":55.1,"eficiencia":46.5},"tendencia":0.0609,"cv":0.378,"media_dia":1149.82,"melhor_valor":1831.35,"melhor_dia":"02/10","rank":13,"total":19,"observacao":null},"equipe":{"conversao":0.6441,"ticket_medio":181.09,"tma_seg":470.5,"pausa_pct":30.1,"negociado_pessoa":14649.93,"recebido_pessoa":9435.87,"chamadas_pessoa":68},"datas":["01/10","02/10","03/10","04/10","05/10","06/10","07/10","08/10"],"periodo":"01 a 08/10/2026 (parcial do mês)","mostrar_rank":false}</script>
+<script id="dd" type="application/json">{"acordos":null,"acordos_qtd":0,"qualidade":{"psat":{"periodo":"01/10 a 13/10/2026","equipe":{"pesquisas":560,"validas_atendente":300,"validas_solucao":302,"invalidas":57,"sem_resposta":203,"csat_atendente":0.8333,"media_atendente":4.35,"csat_solucao":0.7781,"media_solucao":4.17,"rechamada":0.3937,"base_rechamada":287,"dist_atendente":[33,12,5,17,233],"detratores":45},"meu":null,"lista":[]},"monit":{"competencia":"2026-10","equipe":{"media_nota":71.4,"monitorias":34,"pessoas":10,"por_pessoa":3.4},"meta":null,"mes":null,"recorrentes":[],"lista":[],"relatos":null}},"gerado_em":"13/10 às 11:54","pessoa":{"nome":"Karolyny Assis","turno":"Manhã","supervisor":"Paula Fernanda Alves","negociado":15844.43,"recebido":9595.42,"conversao":0.6056,"clientes_negociados":95,"clientes_recebidos":62,"faturas_negociadas":235,"ticket_medio":154.76,"chamadas":108,"tma_seg":705.694,"pausa_pct":27.7,"daily_negociado":[2164.78,1765.42,790.53,0.0,2074.04,1377.7,1633.4,1290.65,2473.03,2274.88,0.0,0.0],"daily_recebido":[1388.12,1831.35,685.88,0.0,1185.41,1334.24,1212.44,473.42,382.66,1101.9,0,0],"score":46,"partes":{"resultado":43.9,"conversao":60.6,"produtividade":54.0,"evolucao":7.8,"eficiencia":46.8},"tendencia":-0.5065,"cv":0.415,"media_dia":1066.16,"melhor_valor":1831.35,"melhor_dia":"02/10","rank":13,"total":19,"observacao":null,"projecao":{"negociado_atual":15844.43,"ritmo_diario":1320.37,"projetado_fim_mes":40931.44,"dias_corridos":12,"dias_do_mes":31,"dias_restantes":19,"premio_atual":0,"premio_projetado":200.0,"proxima_faixa":{"alvo":30000.0,"premio":100.0,"falta":14155.57},"ritmo_necessario_prox_faixa":745.03,"no_topo":false}},"equipe":{"conversao":0.6073,"ticket_medio":181.06,"tma_seg":449.2,"pausa_pct":28.0,"negociado_pessoa":18013.73,"recebido_pessoa":10939.68,"chamadas_pessoa":100,"meta_topo":50000.0,"conversao_minima":0.65},"datas":["01/10","02/10","03/10","04/10","05/10","06/10","07/10","08/10","09/10","10/10","11/10","12/10"],"periodo":"01 a 12/10/2026 (parcial do mês)","mostrar_rank":false}</script>
 <script>
 (function(){
 'use strict';
@@ -428,6 +494,210 @@ function detalheDias(){
   return html;
 }
 
+/* ---------- qualidade: PSAT (aba) + monitorias (aba) ---------- */
+const Q=D.qualidade||null;
+const QS=Q&&Q.psat, QMx=Q&&Q.monit, QM=(QMx&&QMx.lista)||[];
+const pcN=v=>v==null?'—':pc(v,0);
+const n1=v=>v==null?'—':v.toFixed(1).replace('.',',');
+const nMon=v=>v==null?'—':(Math.round(v*10)/10).toString().replace('.',',');
+const MESES=['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
+const nomeMes=c=>c?MESES[+c.slice(5,7)-1]:'';
+function vsPP(meu,ref,maiorMelhor=true){
+  if(meu==null||ref==null) return {cls:'eq',txt:'—'};
+  const d=(meu-ref)*100, bom=maiorMelhor?d>0:d<0;
+  if(Math.abs(d)<2) return {cls:'eq',txt:'na média do time'};
+  return {cls:bom?'up':'dn',txt:(d>0?'▲ ':'▼ ')+Math.abs(d).toFixed(0)+' p.p. vs. média'};
+}
+function vsPts(meu,ref){
+  if(meu==null||ref==null) return {cls:'eq',txt:'—'};
+  const d=meu-ref; if(Math.abs(d)<1.5) return {cls:'eq',txt:'na média do time'};
+  return {cls:d>0?'up':'dn',txt:(d>0?'▲ ':'▼ ')+nMon(Math.abs(d))+' pts vs. média'};
+}
+const corMon=n=>n==null?'#7C8FA6':n>=90?'#34D399':n>=80?'#22D3EE':n>=70?'#FFB020':'#F43F5E';
+const rotMon=n=>n==null?'SEM NOTA':n>=90?'EXCELENTE':n>=80?'BOM':n>=70?'EM EVOLUÇÃO':'PRECISA DE ATENÇÃO';
+const chip=(n,inv)=>inv?'<span class="chip cx">INVÁL.</span>':n==null?'<span class="chip cx">—</span>':`<span class="chip c${n}">${n}</span>`;
+function diasAteBR(br){ if(!br) return null; const p=br.split('/').map(Number); const y=p[2]||new Date().getFullYear();
+  const a=new Date(y,p[1]-1,p[0]), h=new Date(); h.setHours(0,0,0,0); return Math.round((a-h)/86400000); }
+
+/* ===== aba PSAT ===== */
+function pDestaque(){
+  const meu=QS&&QS.meu; if(!meu||!meu.validas_atendente) return '';
+  const f=[], dz=Math.round((meu.csat_atendente||0)*10);
+  f.push(`De cada <b>10 clientes</b> que deram nota para o seu atendimento, <span class="hl">${dz}</span> deram 4 ou 5.`);
+  f.push(meu.detratores?`<b>${meu.detratores} nota${meu.detratores>1?'s':''} baixa${meu.detratores>1?'s':''}</b> (1 ou 2) no período — destacadas em vermelho na lista abaixo.`
+                       :'<b>Nenhuma nota baixa</b> (1 ou 2) no período.');
+  if(meu.validas_atendente<5) f.push(`Amostra ainda pequena (${meu.validas_atendente} nota${meu.validas_atendente>1?'s':''}): o percentual muda bastante a cada pesquisa nova.`);
+  if(meu.rechamada!=null && QS.equipe.rechamada!=null && meu.rechamada>QS.equipe.rechamada+0.05)
+    f.push(`<b>${pc(meu.rechamada,0)}</b> dos seus clientes ligaram de novo em até 3 dias (equipe: ${pc(QS.equipe.rechamada,0)}). Fechar a ligação com tudo resolvido — boleto, data e próximo passo claros — evita a volta.`);
+  return `<div class="hi"><div class="ic">PSAT</div><div style="flex:1">
+    <h4>COMO O CLIENTE AVALIA O SEU ATENDIMENTO</h4><p>${f.join(' ')}</p></div></div>`;
+}
+function pKpis(){
+  if(!QS) return `<div class="pn"><div class="vazio">PSAT: dado não disponível
+    <p>A pesquisa de satisfação ainda não entrou nesta atualização do painel.</p></div></div>`;
+  const meu=QS.meu, E=QS.equipe;
+  if(!meu) return `<div class="pn"><div class="vazio">Nenhuma pesquisa PSAT sua em ${QS.periodo}
+    <p>Assim que clientes atendidos por você responderem a pesquisa, as notas aparecem aqui.</p></div></div>`;
+  return `<div class="kpis qk" style="grid-template-columns:repeat(5,1fr)">
+    ${kpi('Pesquisas recebidas',nf(meu.pesquisas),{cls:'eq',txt:nf(meu.validas_atendente)+' com nota válida'})}
+    ${kpi('Satisfação com você',pcN(meu.csat_atendente),vsPP(meu.csat_atendente,E.csat_atendente))}
+    ${kpi('Nota média',n1(meu.media_atendente),vs(meu.media_atendente,E.media_atendente))}
+    ${kpi('Solução aprovada',pcN(meu.csat_solucao),vsPP(meu.csat_solucao,E.csat_solucao))}
+    ${kpi('Ligou de novo em 3d',pcN(meu.rechamada),vsPP(meu.rechamada,E.rechamada,false))}
+  </div>`;
+}
+function pNotas(){
+  const meu=QS&&QS.meu;
+  if(!meu||!meu.validas_atendente) return '';
+  const tv=meu.validas_atendente, E=QS.equipe, ev=E.validas_atendente||1;
+  const cor={5:'#34D399',4:'#34D399',3:'#FFB020',2:'#F43F5E',1:'#F43F5E'};
+  let rows='';
+  for(let k=5;k>=1;k--){
+    const q=meu.dist_atendente[k-1], p=q/tv, pe=E.dist_atendente[k-1]/ev;
+    rows+=`<div class="nt5-r"><span class="l">NOTA ${k}</span>
+      <span class="t"><i style="width:${(p*100).toFixed(1)}%;background:${cor[k]}"></i>
+        <b style="left:calc(${(pe*100).toFixed(1)}% - 1px)" title="Média da equipe: ${pc(pe,0)}"></b></span>
+      <span class="v n">${q} <span>· ${pc(p,0)}</span></span></div>`;
+  }
+  return `<div class="pn"><div class="pn-h"><h3>Como os clientes avaliam você</h3><span class="nt">nota do atendimento · 1 a 5</span></div>
+    <div class="pn-b"><div class="nt5">${rows}</div>
+    <p class="prose" style="font-size:11.5px;line-height:1.6;color:var(--faint);margin-top:12px">
+    A barra é a sua distribuição de notas. O traço claro mostra a média da equipe na mesma nota.
+    ${meu.invalidas||meu.sem_resposta?`Fora da conta: ${meu.sem_resposta} sem resposta e ${meu.invalidas} inválida${meu.invalidas===1?'':'s'}.`:''}</p></div></div>`;
+}
+function pLista(){
+  if(!QS||!QS.meu||!QS.lista.length) return '';
+  const L=QS.lista.filter(r=>r.atendente!=null||r.solucao!=null||r.inv||r.rechamada!=null);
+  const fora=QS.lista.length-L.length;
+  if(!L.length) return '';
+  const sn=v=>v===true?'<span style="color:var(--amber)">Sim</span>':v===false?'<span style="color:var(--dim)">Não</span>':'<span style="color:var(--faint)">—</span>';
+  return `<div class="pn"><div class="pn-h"><h3>Suas pesquisas de satisfação</h3>
+    <span class="nt">${QS.periodo} · notas 1 e 2 em destaque</span></div>
+    <div class="pn-b" style="overflow-x:auto"><table class="acd"><thead><tr>
+      <th class="l">Data</th><th class="l">Hora</th><th class="l">Fila</th>
+      <th>Atendimento</th><th>Solução</th><th>Ligou de novo</th><th class="l">Cliente</th>
+    </tr></thead><tbody>
+    ${L.map(r=>`<tr class="${r.atendente!=null&&r.atendente<=2?'det':''}">
+      <td class="l">${r.data}</td><td class="l" style="color:var(--dim)">${r.hora}</td>
+      <td class="l" style="color:var(--dim);font-size:10.5px;text-transform:uppercase;letter-spacing:.06em">${esc(r.fila)}</td>
+      <td>${chip(r.atendente,r.inv)}</td><td>${chip(r.solucao,r.inv)}</td><td>${sn(r.rechamada)}</td>
+      <td class="l" style="color:var(--dim);font-size:10.5px">${r.htb||'—'}</td></tr>`).join('')}
+    </tbody></table>
+    ${fora?`<p class="prose" style="font-size:11.5px;color:var(--faint);margin-top:12px">${fora} pesquisa${fora>1?'s':''} em que o cliente não respondeu nada ${fora>1?'ficaram':'ficou'} fora da lista.</p>`:''}
+    </div></div>`;
+}
+const atualizado=()=>D.gerado_em?`<div class="lbl" style="text-align:right;margin-top:14px">Atualizado em ${D.gerado_em}</div>`:'';
+function abaPSAT(){
+  return atualizado()+pDestaque()+pKpis()+pNotas()+pLista()+
+  `<div class="ft" style="margin-top:16px"><b>Como ler:</b> o PSAT é a pesquisa que o cliente responde ao fim da ligação
+    ${QS?`(${QS.periodo})`:''}. <b>Satisfação com você</b> é o percentual de notas 4 e 5 para o atendimento. <b>Solução aprovada</b>
+    é o mesmo cálculo para a nota da solução. <b>Ligou de novo em 3d</b> mostra quantos clientes voltaram a ligar em até
+    3 dias (quanto menor, melhor). Respostas inválidas ou em branco não entram nas contas. A comparação é com a
+    <b>média da equipe de cobrança</b>, sem identificar ninguém. Dúvida? Fale com ${esc(P.supervisor)}.</div>`;
+}
+
+/* ===== aba MONITORIAS ===== */
+function mDestaque(){
+  const M=QMx.mes, E=QMx.equipe, mes=nomeMes(QMx.competencia), f=[];
+  if(!M||!M.qtd){
+    f.push(`Você ainda não teve monitoria em <b>${mes}</b>.`+(QM.length?` A mais recente foi em ${QM[0].data||'—'}, com nota <span class="hl">${nMon(QM[0].nota)}</span>.`:''));
+  }else{
+    f.push(`Em <b>${mes}</b> você teve <b>${M.qtd} monitoria${M.qtd>1?'s':''}</b>${QMx.meta?` de ${QMx.meta} previstas`:''}, com nota média
+      <span class="hl">${nMon(M.media)}</span>${E.media_nota!=null?` (equipe: ${nMon(E.media_nota)})`:''}.`);
+    if(M.falhas_graves){
+      const g=QM.find(m=>m.falha_grave&&m.falhas_graves.length);
+      f.push(`<b style="color:var(--red)">${M.falhas_graves} falha${M.falhas_graves>1?'s':''} grave${M.falhas_graves>1?'s':''}</b> zerou${M.falhas_graves>1?'ram':''} nota${M.falhas_graves>1?'s':''}
+        ${M.perdeu_por_falha?`— foram <b>${nMon(M.perdeu_por_falha)} pontos</b> perdidos que você já tinha conquistado na ligação`:''}${g?`. Motivo: <b>${esc(g.falhas_graves[0].item)}</b>`:''}.`);
+    }
+  }
+  const r=(QMx.recorrentes||[]).find(x=>x.vezes>=2);
+  if(r) f.push(`O ponto que mais se repete nas suas monitorias: <b>${esc(r.item)}</b> (${r.vezes} vezes). Corrigir este item é o caminho mais rápido para subir a nota.`);
+  else if(M&&M.qtd&&!M.falhas_graves&&(M.media||0)>=95) f.push('Nenhum ponto se repete — mantenha o padrão.');
+  return `<div class="hi"><div class="ic">MONITORIA</div><div style="flex:1">
+    <h4>COMO A MONITORIA VÊ O SEU ATENDIMENTO</h4><p>${f.join(' ')}</p></div></div>`;
+}
+function mKpis(){
+  const M=QMx.mes||{qtd:0}, E=QMx.equipe, ult=QM[0];
+  const qtdTxt=QMx.meta?{cls:M.qtd>=QMx.meta?'up':'eq',txt:`${M.qtd} de ${QMx.meta} previstas`}
+                       :(E.por_pessoa?{cls:'eq',txt:'equipe: '+nMon(E.por_pessoa)+' por pessoa'}:null);
+  return `<div class="kpis qk" style="grid-template-columns:repeat(5,1fr)">
+    ${kpi('Monitorias em '+nomeMes(QMx.competencia),nf(M.qtd),qtdTxt)}
+    ${kpi('Nota média do mês',nMon(M.media),vsPts(M.media,E.media_nota))}
+    ${kpi('Última nota',ult?nMon(ult.nota):'—',ult?{cls:'eq',txt:'ligação de '+(ult.data||'—').slice(0,5)}:null)}
+    ${kpi('Itens atendidos',M.aderencia!=null?pc(M.aderencia,0):'—',{cls:'eq',txt:'da ficha, no mês'})}
+    ${kpi('Falhas graves',nf(M.falhas_graves||0),{cls:(M.falhas_graves?'dn':'up'),txt:M.falhas_graves?'zeram a nota':'nenhuma no mês'})}
+  </div>`;
+}
+function mEvolucao(){
+  const cab=`<div class="pn-h"><h3>Evolução das suas notas</h3><span class="nt">últimas monitorias · 0 a 100</span></div>`;
+  if(!QM.length) return `<div class="pn">${cab}<div class="vazio">Nenhuma monitoria ainda
+    <p>Quando seu supervisor monitorar uma ligação sua, a nota aparece aqui.</p></div></div>`;
+  const s=QM.slice(0,10).reverse();
+  const H=110, bars=s.map(m=>{const c=corMon(m.nota), h=Math.max(3,(m.nota||0)/100*H), hb=m.falha_grave&&m.nota_bruta?m.nota_bruta/100*H:0;
+    return `<div title="${m.data||''} · nota ${nMon(m.nota)}${hb?' (seria '+nMon(m.nota_bruta)+')':''}">
+      <em style="color:${c}">${nMon(m.nota)}</em>
+      <span style="position:relative;width:100%;height:${H}px;display:flex;align-items:flex-end">
+        ${hb?`<i style="position:absolute;bottom:0;left:0;right:0;height:${hb}px;border:1px dashed #F43F5E;background:rgba(244,63,94,.06)"></i>`:''}
+        <i style="height:${h}px;background:${c};position:relative;width:100%"></i></span>
+      <span>${(m.data||'—').slice(0,5)}</span></div>`;}).join('');
+  return `<div class="pn">${cab}<div class="pn-b"><div class="evo" style="height:${H+44}px">${bars}</div>
+    ${s.some(m=>m.falha_grave)?`<p class="prose" style="font-size:11.5px;color:var(--faint);margin-top:10px">
+      Contorno tracejado em vermelho = nota que você teria sem a falha grave.</p>`:''}</div></div>`;
+}
+function mRecorrentes(){
+  const R=QMx.recorrentes||[];
+  const cab=`<div class="pn-h"><h3>Onde você mais perde ponto</h3><span class="nt">itens não cumpridos · todas as monitorias</span></div>`;
+  if(!QM.length) return `<div class="pn">${cab}<div class="vazio">Sem monitorias</div></div>`;
+  if(!R.length) return `<div class="pn">${cab}<div class="vazio" style="color:var(--green)">Nenhum item perdido
+    <p>Em todas as suas monitorias você cumpriu os itens da ficha.</p></div></div>`;
+  const mx=Math.max(...R.map(x=>x.vezes));
+  return `<div class="pn">${cab}<div class="pn-b">${R.map(x=>`<div class="rc">
+    <div class="rc-t"><span class="rc-g" style="${x.grupo==='Falha grave'?'color:var(--red)':''}">${esc(x.grupo)}</span>
+      ${x.vezes>=2?'<span class="urg venc">repetiu</span>':''}</div>
+    <div class="rc-i"><span style="color:${x.grupo==='Falha grave'?'var(--red)':'var(--amber)'};font-family:var(--mono);font-weight:700">✗ </span>${esc(x.item)}</div>
+    <div class="rc-b"><i style="width:${x.vezes/mx*100}%;background:${x.grupo==='Falha grave'?'#F43F5E':x.vezes>=2?'#FFB020':'#7C8FA6'}"></i><span>${x.vezes}×</span></div>
+  </div>`).join('')}</div></div>`;
+}
+function mDetalhe(){
+  if(!QM.length) return '';
+  const temRel=QMx.relatos && QM.some(m=>m.tem_relato);
+  const grupos=L=>{const g={}; L.forEach(x=>(g[x.grupo]=g[x.grupo]||[]).push(x.item)); return g;};
+  const cards=QM.map((m,i)=>{const c=corMon(m.nota), G=grupos(m.itens||[]);
+    const dp=diasAteBR(m.prazo_feedback);
+    return `<div class="mon" style="--c:${c}">
+    <div class="mon-h"><div><div class="nota n">${nMon(m.nota)}<small> /100</small></div><div class="q">${rotMon(m.nota)}</div></div>
+      <div class="meta">Ligação de <b>${m.data||'—'}</b>${m.criado_em?`<br>Monitorada em <b>${m.criado_em}</b>`:''}
+        ${m.monitor?`<br>Por <b>${esc(m.monitor)}</b>`:''}${m.htb?`<br>Cliente <b>${m.htb}</b>`:''}</div></div>
+    ${m.falha_grave?`<div class="fg"><b>FALHA GRAVE — nota zerada${m.nota_bruta?` (seria ${nMon(m.nota_bruta)})`:''}</b>
+      ${(m.falhas_graves||[]).map(x=>`<div>▸ ${esc(x.item)}</div>`).join('')}</div>`:''}
+    ${Object.keys(G).length?`<h5>Itens da ficha não atendidos</h5><ul>${Object.entries(G).map(([g,it])=>
+      it.map(t=>`<li><b>${esc(g)}</b> — ${esc(t)}</li>`).join('')).join('')}</ul>`
+      :(!m.falha_grave&&m.itens_avaliados?`<h5 style="color:var(--green)">Todos os ${m.itens_avaliados} itens avaliados foram atendidos</h5>`:'')}
+    ${m.pontos&&m.pontos.length?`<h5>Pontos de melhoria</h5><ul>${m.pontos.map(p=>`<li>${esc(p)}</li>`).join('')}</ul>`:''}
+    ${m.feedback?`<h5>Feedback do supervisor</h5><div class="fb">${esc(m.feedback)}</div>`:''}
+    ${m.prazo_feedback||m.ciencia?`<div class="mon-f">
+      ${m.prazo_feedback?`<span class="urg ${dp!=null&&dp<0?'ok':dp===0?'hoje':'prox'}">${dp!=null&&dp<0?'feedback marcado para':'feedback até'} ${m.prazo_feedback.slice(0,5)}</span>`:''}
+      ${m.ciencia?`<span class="urg ok">ciência: ${esc(m.ciencia)}</span>`:''}</div>`:''}
+    ${m.tem_relato&&QMx.relatos?`<div class="rel" id="rel-${i}"></div>`:''}
+  </div>`;}).join('');
+  return `<div class="pn"><div class="pn-h"><h3>Suas monitorias, uma a uma</h3><span class="nt">da mais recente para a mais antiga</span></div>
+    <div class="pn-b">
+    ${temRel?`<div class="cad mini" id="q-cad"><p class="prose">O <b>relato de algumas ligações</b> cita o cliente pelo nome.
+      Para ler, use a mesma senha da aba de acordos.</p>
+      <input id="q-pw" type="password" placeholder="senha" autocomplete="off"><button id="q-go">Ver relatos</button>
+      <div class="msg" id="q-msg"></div></div>`:''}
+    ${cards}</div></div>`;
+}
+function abaMonit(){
+  return atualizado()+mDestaque()+mKpis()+`<div class="g2">${mEvolucao()}${mRecorrentes()}</div>`+mDetalhe()+
+  `<div class="ft" style="margin-top:16px"><b>Como ler:</b> cada monitoria é a avaliação de uma ligação sua, feita
+    com a ficha de qualidade da cobrança. A nota vai de 0 a 100. Uma <b>falha grave</b> (por exemplo, não registrar
+    o atendimento no Salesforce) <b>zera a nota</b>, mesmo que o resto da ligação tenha sido bom — por isso mostramos
+    também quanto você teria tirado. <b>Itens atendidos</b> é o percentual de itens da ficha que você cumpriu, sem
+    contar os que não se aplicavam à ligação. A média da equipe considera todas as monitorias do mês, sem
+    identificar ninguém. Dúvida sobre uma nota? Fale com ${esc(P.supervisor)}.</div>`;
+}
+
 /* ---------- render ---------- */
 const convCli=P.clientes_recebidos/P.clientes_negociados;
 const dez=Math.round(convCli*10);
@@ -456,6 +726,8 @@ document.getElementById('r').innerHTML=`
 <div class="abas" id="abas">
   <button data-v="perf" class="on">Meu desempenho</button>
   ${D.acordos_qtd ? `<button data-v="acd">Meus acordos<span class="cnt">${D.acordos_qtd}</span></button>` : ''}
+  ${QS ? `<button data-v="psat">Satisfação (PSAT)</button>` : ''}
+  ${QMx ? `<button data-v="mon">Minhas monitorias${QMx.mes&&QMx.mes.qtd?`<span class="cnt">${QMx.mes.qtd}</span>`:''}</button>` : ''}
 </div>
 
 <div class="vista on" id="v-perf">
@@ -476,6 +748,35 @@ document.getElementById('r').innerHTML=`
     e <b>${nf(P.clientes_recebidos)}</b> efetivaram o pagamento — <span class="hl">${pc(convCli)}</span> de conversão por cliente,
     que em valor representa <span class="hl">${pc(P.conversao)}</span>.</p>
 </div></div>
+
+${(()=>{
+  const proj=P.projecao;
+  if(!proj) return '';
+  if(proj.no_topo){
+    return `<div class="hi" style="margin-top:16px">
+      <div class="ic">SUA COMISSÃO</div>
+      <div style="flex:1">
+        <h4>VOCÊ JÁ GARANTIU A MAIOR FAIXA</h4>
+        <p>Com <b>${brl(proj.negociado_atual)}</b> negociados, você já passou de <b>${brl(T.meta_topo)}</b> —
+        comissão de <span class="hl">${brl(proj.premio_atual)}</span> garantida (mantendo conversão de pelo
+        menos ${pc(T.conversao_minima,0)}). Agora é só manter o ritmo até o fim do mês.</p>
+      </div>
+    </div>`;
+  }
+  return `<div class="hi" style="margin-top:16px">
+    <div class="ic">SUA COMISSÃO</div>
+    <div style="flex:1">
+      <h4>SUA PROJEÇÃO DE COMISSÃO ESTE MÊS</h4>
+      <p>No ritmo atual de <b>${brl(proj.ritmo_diario)}/dia</b>, você fecha o mês perto de
+      <span class="hl">${brl(proj.projetado_fim_mes)}</span>${proj.premio_projetado?` — faixa de <b>${brl(proj.premio_projetado)}</b> de comissão`:''}.
+      ${proj.proxima_faixa && proj.dias_restantes>0
+        ? `Faltam <b>${brl(proj.proxima_faixa.falta)}</b> para a próxima faixa (comissão de <b>${brl(proj.proxima_faixa.premio)}</b>)
+           — nos <b>${proj.dias_restantes} dia${proj.dias_restantes===1?'':'s'}</b> que restam, isso dá
+           <b style="color:var(--acc)">${brl(proj.ritmo_necessario_prox_faixa)}/dia</b>.`
+        : (proj.proxima_faixa ? `O mês já fechou — sem tempo pra alcançar a faixa seguinte neste período.` : '')}</p>
+    </div>
+  </div>`;
+})()}
 
 <div class="g21">
   <div class="pn"><div class="pn-h"><h3>Sua evolução diária</h3><span class="nt">R$ por dia</span></div>
@@ -537,6 +838,9 @@ document.getElementById('r').innerHTML=`
     <div class="msg" id="acd-msg"></div>
   </div>
   <div id="acd-lista"></div>` : ''}</div>
+
+${QS?`<div class="vista" id="v-psat">${abaPSAT()}</div>`:''}
+${QMx?`<div class="vista" id="v-mon">${abaMonit()}</div>`:''}
 
 <div class="ft"><b>Sobre estes números:</b> vêm das planilhas de Resultado Parcial e de Chamadas/TMA do período
 ${D.periodo}. Comparações são com a <b>média da operação</b>, não com pessoas específicas.
@@ -649,6 +953,30 @@ if(D.acordos_qtd){
 
   bt.addEventListener('click',abrir);
   inp.addEventListener('keydown',e=>{ if(e.key==='Enter') abrir(); });
+}
+
+/* ---------- relatos das monitorias (bloco criptografado) ---------- */
+if(QMx && QMx.relatos && document.getElementById('q-go')){
+  const bt=document.getElementById('q-go'), inp=document.getElementById('q-pw'), msg=document.getElementById('q-msg');
+  const b64=x=>Uint8Array.from(atob(x),c=>c.charCodeAt(0));
+  async function abrirRel(){
+    const senha=inp.value;
+    if(!senha){msg.textContent='Digite a senha';msg.className='msg err';return;}
+    bt.disabled=true; inp.disabled=true; msg.textContent='Abrindo…'; msg.className='msg';
+    await new Promise(r=>setTimeout(r,40));
+    let R;
+    try{
+      const km=await crypto.subtle.importKey('raw',new TextEncoder().encode(senha),'PBKDF2',false,['deriveKey']);
+      const key=await crypto.subtle.deriveKey({name:'PBKDF2',salt:b64(QMx.relatos.salt),iterations:QMx.relatos.it,hash:'SHA-256'},
+        km,{name:'AES-GCM',length:256},false,['decrypt']);
+      R=JSON.parse(new TextDecoder().decode(await crypto.subtle.decrypt({name:'AES-GCM',iv:b64(QMx.relatos.iv)},key,b64(QMx.relatos.ct))));
+    }catch(e){bt.disabled=false;inp.disabled=false;inp.value='';msg.textContent='Senha incorreta';msg.className='msg err';inp.focus();return;}
+    document.getElementById('q-cad').remove();
+    Object.entries(R).forEach(([i,t])=>{const el=document.getElementById('rel-'+i);
+      if(el) el.innerHTML=`<h5 style="margin-top:0">Relato da ligação</h5><p>${esc(t)}</p>`;});
+  }
+  bt.addEventListener('click',abrirRel);
+  inp.addEventListener('keydown',e=>{if(e.key==='Enter')abrirRel();});
 }
 
 /* simulador */
