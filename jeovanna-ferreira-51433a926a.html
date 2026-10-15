@@ -257,28 +257,6 @@ input[type=range]::-moz-range-thumb{width:19px;height:19px;background:var(--ambe
 .mon-f{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
 @media(max-width:900px){.qk{grid-template-columns:repeat(2,1fr)!important}}
 
-/* ---- exceções ---- */
-.exf{display:grid;grid-template-columns:150px 190px 1fr 1fr 170px;gap:10px;align-items:end}
-.exf label{display:block;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:6px}
-.exf input,.exf select,.exo input{width:100%;background:#070B12;border:1px solid var(--line2);color:var(--txt);
-  font-family:var(--sans);font-size:12.5px;padding:9px 10px}
-.exf input:focus,.exf select:focus,.exo input:focus{outline:none;border-color:var(--amber)}
-.exf input.err,.exf select.err{border-color:var(--red)}
-.exo{display:flex;gap:10px;align-items:end;margin-top:10px}
-.exo>div{flex:1}
-.exo label{display:block;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:6px}
-.bt{background:var(--amber);color:#0A0703;border:none;font-family:var(--mono);font-size:10px;font-weight:800;
-  letter-spacing:.14em;text-transform:uppercase;padding:11px 16px;cursor:pointer;white-space:nowrap}
-.bt.sec{background:none;border:1px solid var(--line2);color:var(--dim)}
-.bt:disabled{opacity:.45;cursor:default}
-.exmsg{font-size:10px;letter-spacing:.1em;text-transform:uppercase;margin-top:10px;min-height:14px;color:var(--faint)}
-.exmsg.ok{color:var(--green)}.exmsg.err{color:var(--red)}
-.acd td .rm{background:none;border:none;color:var(--faint);cursor:pointer;font-size:14px}
-.acd td .rm:hover{color:var(--red)}
-.dv{font-size:8.5px;font-weight:700;letter-spacing:.08em;padding:2px 7px;text-transform:uppercase}
-.dv.a{background:rgba(52,211,153,.13);color:var(--green)}.dv.n{background:rgba(244,63,94,.14);color:var(--red)}.dv.g{background:rgba(255,176,32,.13);color:var(--amber)}
-@media(max-width:900px){.exf{grid-template-columns:1fr 1fr}.exo{flex-wrap:wrap}}
-
 svg text{font-family:var(--mono)}
 @media(max-width:900px){.kpis{grid-template-columns:repeat(3,1fr)}.g2,.g21{grid-template-columns:1fr}}
 @media(max-width:560px){.kpis{grid-template-columns:repeat(2,1fr)}.pf-s{margin-left:0}}
@@ -286,7 +264,7 @@ svg text{font-family:var(--mono)}
 </head>
 <body>
 <div class="wrap" id="r"></div>
-<script id="dd" type="application/json">{"acordos":{"salt":"8w49XORaWIIVTSzx523mzg==","iv":"CgFNko7FB0bJC7VS","ct":"B8ZWIJo0Y4mJv++QVIVXgAQY2SPcQQdFEToCuqShGAS8aJprzca9uPtRz2/sH85A9C1CVwwYr/OIU8PpCYt3BIn3eZPStud3v2ch5rerE0PdSe6U39aEvKocjGFk9dJU/wgbEw9iNf/i2VBv8XqGZXvOHyhzICurhMiHqzR0hQi3LF/lgDcPANiWu9v8r5lArRP+ri3ARq5Zs5q4K4sM+XRys6BJS0ZdXT1GE5f9i5RCUaDP61KCoSguQbm1V/bw8qw81EuDU76MQ96+V8m6IinZMyMpBW3kcsmrTwqe3zr1n6R+f6V4SRHgsWQOCwpGy0LVF51BKF2SjsauejpJwdwbPHBg5sQNZRMOcVpkKebV0Q3GWP3nvRopcNP2ePEXN5QLot/6VEy54jGoQNAuJwDgiDlrG44unZZ0RjmWZ341Q+7CJcWhez+dS6AUzAjNZg6YLCAQ1e34zWy1jSHth5oFkctJFQH0QOg6M+St2c8xGR5s5OuQF41SHSJ595yxKicpuDHL+0bdtp+KycT5RfkFlknytzmzyonYJCMIebieV7RZR2MOtrLqq8E6txb5uh4umjDaxdtJEDzKyYTPur8XHxs5DUr2HhlhI+qEWRkZe+GYj5K+0OfgkK3qskB0+IhOTh5woipT8zls6Z0XM9ycV3lmKG7+4PcthZWZuBxUH/zeGLgsQhIGV4nvi1CLYnpJqjj5Ez2lzpsFiCCv7Oj1AhWO2IA2sM2mwxyp2OY9/wP2ptcaD8Q6wA59tyfkGNIe/1MWpoeWIVjjDzD5kpW76CGzinxC6nC7gQOp9a24vwPxrGVbYqwUSOTqF521Pcz4QOH6LqqJVLPBdAxdIpIILE/V1HBI4FwOOHyyX575pTHcW3WM3ROo9CZwB2vYunnc3tZLjwqfPn8afHjU+l/XEfPfTlOkABbpkvtuE+4zE6jtoPfSGglQquoaPRg8h+RkqSOjLoEnK0VF4Jtv3jpq6laFOdnDj4oqGRVrkl2oZB4LPetL7DOtmdzT1ls7CAW/xcndEvCzbV97FNyK/7/wxmsf1ZzsnXK8ikQkpcmkRvq5+M2SXxnQLOvHrBmY9MCVT379KOLVqAa9jA5ydp72XQGXKk6+/rclwGE/Tk0K5Rp6CdfevFzH/htqUjwX9GQjSQDmXMcBPHGtm8ER+Px4Trjnf6ISpGHEnK+p4WB4cpJadjHXerh19LEJAhSN7juvSZFgDHWTcV8T3GAOhtdatIsxKfEt31ANjOFTImkyxjRdt9MpHMW1btOA0SQoZ75H4sXsh15uDMiDJq1+7iDURxsvYZAz0apCYhNisQ0H8c3sKMv9o1uFK25UEkeWc0Fj+9RppLjaKS3C3bJaqkZOJN/VkI/lgBrXBIrb0mqEWec=","it":310000},"acordos_qtd":3,"qualidade":{"psat":{"periodo":"01/10 a 13/10/2026","equipe":{"pesquisas":610,"validas_atendente":327,"validas_solucao":328,"invalidas":61,"sem_resposta":222,"csat_atendente":0.8287,"media_atendente":4.33,"csat_solucao":0.7652,"media_solucao":4.13,"rechamada":0.3948,"base_rechamada":309,"dist_atendente":[39,12,5,17,254],"detratores":51},"meu":null,"lista":[]},"monit":{"competencia":"2026-10","equipe":{"media_nota":72.5,"monitorias":32,"pessoas":10,"por_pessoa":3.2},"meta":null,"mes":null,"recorrentes":[],"lista":[],"relatos":null}},"gerado_em":"13/10 às 19:25","excecoes":null,"pessoa":{"nome":"Jeovanna Ferreira","turno":"Manhã","supervisor":"Paula Fernanda Alves","negociado":28757.34,"recebido":16022.74,"conversao":0.5572,"clientes_negociados":133,"clientes_recebidos":80,"faturas_negociadas":286,"ticket_medio":200.28,"chamadas":148,"tma_seg":378.716,"pausa_pct":21.2,"daily_negociado":[4672.0,1497.05,2576.39,0.0,3602.46,3591.76,3184.25,4574.84,3086.28,0.0,0.0,1972.31],"daily_recebido":[2114.75,1559.77,292.9,0.0,2549.74,2780.25,1560.73,2103.29,3061.31,0.0,0,0],"score":63,"partes":{"resultado":73.2,"conversao":55.7,"produtividade":74.0,"evolucao":26.9,"eficiencia":61.1},"tendencia":-0.2766,"cv":0.409,"media_dia":2002.84,"melhor_valor":3061.31,"melhor_dia":"09/10","rank":3,"total":19,"observacao":null,"projecao":{"negociado_atual":28757.34,"ritmo_diario":2396.45,"projetado_fim_mes":74289.79,"dias_corridos":12,"dias_do_mes":31,"dias_restantes":19,"premio_atual":0,"premio_projetado":300.0,"proxima_faixa":{"alvo":30000.0,"premio":100.0,"falta":1242.66},"ritmo_necessario_prox_faixa":65.4,"no_topo":false}},"equipe":{"conversao":0.6073,"ticket_medio":181.06,"tma_seg":449.2,"pausa_pct":28.0,"negociado_pessoa":18013.73,"recebido_pessoa":10939.68,"chamadas_pessoa":100,"meta_topo":50000.0,"conversao_minima":0.65},"datas":["01/10","02/10","03/10","04/10","05/10","06/10","07/10","08/10","09/10","10/10","11/10","12/10"],"periodo":"01 a 12/10/2026 (parcial do mês)","mostrar_rank":false}</script>
+<script id="dd" type="application/json">{"acordos":{"salt":"O9RUzJI4hsxsbZsT83yqWA==","iv":"Bnfdwlhr4NFl6wEl","ct":"rL4HZwZHnTPFJbz8QismopejSs7AHGzKxQRK+30e8GOSNuqDD14tAkCv8bceTf4h4g+xrYnfo71FHltPk+Sa9vgj4PxIVgrlgwiqpxEo4ADjYM1xcow8rknt1rlJTrMbCtoOrMU9dr/kxfvDX6geSvt7yYDQjghj1W54U1AnCzu2Tp4bs6ysUX4HkyyVRosHsIqlr8gU88qOX9qQAi4upBLwNAoBdb9L5bcHWn5WRJPdr86nkUgwDE790rp5V9eRe6eJ5QELoyJ/Q5luCAMawxGQbW3iTd68K4j543hffKf3i08D3zFFA9Ts5ZhZ95VJzYl0yRmSrI4o2/jQtpjdygZd2RAJsjsBeV4qJB0gc2D8ozwBhpIdX3O+TSWg6b92Jpvi0gLuLOv0CtP5uFBKuV6JdxBolo5kYA9IDMsWWqIW+S0DeLMneXlGSufbeaxpMvn5xQGkFXHLRhnbxW5pkhpEQyYlntmKK+7bEA2qQb0klyCzI34MtoDFg3p0Pj1lPEvGqjTo1eyptMob21ONmpo3R7pWfHDx8+wosiHEOmms1q5w9z6VoCHfbEYvEttBcWuyFpjI/OmK7p7htKCT3z+jccimjMF+Uv7PoFCDG/fwSd4FkagXiYc/+QqXzMzvpRr+E2b+ROc8xusSOvO7sD5PbVd3Y2mphkxtS6UJZJ2pvuRB3jGEawD4kEgwGAv6UznaqOq3A/GixeJO/EhOWYmvLHYxeC5hn36NhBSZ03AubRK5hLcj8xtD/MmO7jH4tUzf7eLI1MSVRbCvaZPfePGofxsXy8o6D0zmuXHB35lM/MAcSmISLtJlDfIDwhMz7CpfKudinuKOtLWPobYmPJ8n7ukhnAPmDu8vFVSEUTUUUaZ907b7J1uOIE/r3W6WbQA1VbXc3sVUpGPI9043kEpKyJAbzLRmPclbtUe+hTcAolTeLx3J66t+3it54zkl3jFpOHWYtuPPewfpXi8P70vHrXmcYnHEpWeKYHItp0fYX7ii8ZhIGcmQZMCfI1n6vq7sBrUMbBFhEML6tbZ+ULBP9rQk4wtSl9wtMjlhIVfio0SjyX4rvyTldEt59n9mETsW9RBhEecLefCf3IGCJ1z++gLarr/Sf0/HMwq61+nK1ecBLtK2t82IGUZnYMpgVpk3cRwlqmR/KM3zXTVAfGCQo9829nZ9isk0oRIy/2fV1gDZmzB4duVYVJBjXVzD40chR3QyfWOSlvV0QgZX20dzTIchZvFm+Imkf/wrdBX7vCG3+C9CWMcfE3Grdfo7buJ1fIwwo/r8w9Gr70HqHLojJXuHTgaLJYXkv/oNvLQl2aGHEyfkoSCJ/Hrk/l9ARDSPgiurcSOShpvd7eprfL5q1rSGKpB0U68cbOQNVv08oho=","it":310000},"acordos_qtd":3,"qualidade":{"psat":{"periodo":"01/10 a 14/10/2026","equipe":{"pesquisas":668,"validas_atendente":363,"validas_solucao":361,"invalidas":63,"sem_resposta":242,"csat_atendente":0.832,"media_atendente":4.33,"csat_solucao":0.7645,"media_solucao":4.13,"rechamada":0.3895,"base_rechamada":344,"dist_atendente":[44,12,5,20,282],"detratores":56},"meu":null,"lista":[]},"monit":{"competencia":"2026-10","equipe":{"media_nota":69.1,"monitorias":38,"pessoas":10,"por_pessoa":3.8},"meta":null,"mes":null,"recorrentes":[],"lista":[],"relatos":null}},"gerado_em":"15/10 às 12:29","pessoa":{"nome":"Jeovanna Ferreira","turno":"Manhã","supervisor":"Paula Fernanda Alves","negociado":32899.6,"recebido":21110.52,"conversao":0.6417,"clientes_negociados":154,"clientes_recebidos":103,"faturas_negociadas":348,"ticket_medio":204.96,"chamadas":180,"tma_seg":338.639,"pausa_pct":21.5,"daily_negociado":[4672.0,1497.05,2576.39,0.0,3602.46,3591.76,3184.25,4574.84,3086.28,0.0,0.0,1972.31,1605.94,2536.32],"daily_recebido":[2114.75,1559.77,292.9,0.0,2549.74,2780.25,1560.73,2320.16,3308.32,0.0,0.0,1382.49,1207.81,2033.6],"score":70,"partes":{"resultado":80.7,"conversao":64.2,"produtividade":74.4,"evolucao":45.4,"eficiencia":62.8},"tendencia":-0.0558,"cv":0.415,"media_dia":1919.14,"melhor_valor":3308.32,"melhor_dia":"09/10","rank":2,"total":21,"observacao":null,"projecao":{"negociado_atual":32899.6,"ritmo_diario":2349.97,"projetado_fim_mes":72849.11,"dias_corridos":14,"dias_do_mes":31,"dias_restantes":17,"premio_atual":100.0,"premio_projetado":300.0,"proxima_faixa":{"alvo":37500.0,"premio":200.0,"falta":4600.4},"ritmo_necessario_prox_faixa":270.61,"no_topo":false}},"equipe":{"conversao":0.6323,"ticket_medio":178.35,"tma_seg":442.4,"pausa_pct":28.6,"negociado_pessoa":20697.5,"recebido_pessoa":13087.28,"chamadas_pessoa":121,"meta_topo":50000.0,"conversao_minima":0.65},"datas":["01/10","02/10","03/10","04/10","05/10","06/10","07/10","08/10","09/10","10/10","11/10","12/10","13/10","14/10"],"periodo":"01 a 14/10/2026 (parcial do mês)","mostrar_rank":false}</script>
 <script>
 (function(){
 'use strict';
@@ -720,99 +698,6 @@ function abaMonit(){
     identificar ninguém. Dúvida sobre uma nota? Fale com ${esc(P.supervisor)}.</div>`;
 }
 
-/* ---------- exceções: formulário + envio para a planilha do supervisor ---------- */
-const EX=D.excecoes||null;
-const EXK='exc_'+(EX?EX.login:''), CANAIS=['Receptivo','Ativo','Chat','WhatsApp','E-mail'], DEVS=['Autorizado','Não autorizado','Aguardando'];
-const exGet=(k,d)=>{try{const v=localStorage.getItem(EXK+k);return v?JSON.parse(v):d;}catch(e){return d;}};
-const exSet=(k,v)=>{try{localStorage.setItem(EXK+k,JSON.stringify(v));}catch(e){}};
-const hojeBR=()=>{const d=new Date();return String(d.getDate()).padStart(2,'0')+'/'+String(d.getMonth()+1).padStart(2,'0')+'/'+d.getFullYear();};
-const dvCls=v=>v==='Autorizado'?'a':v==='Não autorizado'?'n':'g';
-function abaExc(){
-  return `<div class="hi"><div class="ic">EXCEÇÕES</div><div style="flex:1">
-    <h4>REGISTRE AQUI TODA NEGOCIAÇÃO FORA DA RÉGUA</h4>
-    <p>Preencha uma linha para cada exceção, junte quantas quiser na lista e clique em <b>Enviar</b>.
-    Tudo vai para uma planilha única do seu supervisor, que recebe o resumo do dia às <b>20h</b>.
-    Se a internet cair, a lista fica guardada neste navegador até você enviar.</p></div></div>
-  <div class="pn"><div class="pn-h"><h3>Nova exceção</h3><span class="nt">${esc(EX.nome)} · ${hojeBR()}</span></div>
-    <div class="pn-b">
-      <div class="exf">
-        <div><label>Canal de contato</label><select id="ex-canal"><option value="">escolha</option>${CANAIS.map(c=>`<option>${c}</option>`).join('')}</select></div>
-        <div><label>SAN</label><input id="ex-san" placeholder="HTB000000000000" autocomplete="off"></div>
-        <div><label>Proposta ofertada</label><input id="ex-prop" placeholder="ex.: 10% de desconto à vista" autocomplete="off"></div>
-        <div><label>Contra proposta</label><input id="ex-contra" placeholder="ex.: 15% no PIX" autocomplete="off"></div>
-        <div><label>Devolutiva</label><select id="ex-dev"><option value="">escolha</option>${DEVS.map(c=>`<option>${c}</option>`).join('')}</select></div>
-      </div>
-      <div class="exo"><div><label>Observação (opcional)</label><input id="ex-obs" placeholder="quem autorizou, motivo, prazo…" autocomplete="off"></div>
-        <button class="bt sec" id="ex-add">+ Adicionar à lista</button></div>
-      <div class="exmsg" id="ex-msg1"></div>
-    </div></div>
-  <div class="pn"><div class="pn-h"><h3>Lista para enviar</h3><span class="nt" id="ex-cont"></span></div>
-    <div class="pn-b" id="ex-pend"></div></div>
-  <div class="pn"><div class="pn-h"><h3>Enviadas hoje</h3><span class="nt">ficam registradas na planilha do supervisor</span></div>
-    <div class="pn-b" id="ex-env"></div></div>`;
-}
-function exTabela(L,rem){
-  if(!L.length) return '';
-  return `<div style="overflow-x:auto"><table class="acd"><thead><tr><th class="l">${rem?'Incluída':'Enviada'}</th><th class="l">Canal</th>
-    <th class="l">SAN</th><th class="l">Proposta ofertada</th><th class="l">Contra proposta</th><th class="l">Devolutiva</th>${rem?'<th></th>':''}</tr></thead><tbody>
-    ${L.map((x,i)=>`<tr><td class="l" style="color:var(--dim)">${esc(x.hora||'')}</td><td class="l">${esc(x.canal)}</td><td class="l">${esc(x.san)}</td>
-      <td class="l" style="white-space:normal;font-family:var(--sans)">${esc(x.proposta)}</td><td class="l" style="white-space:normal;font-family:var(--sans)">${esc(x.contra)}</td>
-      <td class="l"><span class="dv ${dvCls(x.devolutiva)}">${esc(x.devolutiva)}</span></td>
-      ${rem?`<td><button class="rm" data-rm="${i}" title="tirar da lista">✕</button></td>`:''}</tr>`).join('')}</tbody></table></div>`;
-}
-function exRender(){
-  const P_=exGet('pend',[]), E_=exGet('env',{});
-  const hj=E_[hojeBR()]||[];
-  document.getElementById('ex-cont').textContent=P_.length?P_.length+' a enviar':'';
-  document.getElementById('ex-pend').innerHTML=P_.length?exTabela(P_,true)+
-    `<div style="display:flex;gap:12px;align-items:center;margin-top:14px;flex-wrap:wrap">
-      <button class="bt" id="ex-send">Enviar ${P_.length} exceç${P_.length>1?'ões':'ão'}</button>
-      <span class="exmsg" id="ex-msg2" style="margin:0"></span></div>`
-    :`<p class="prose" style="font-size:12.5px;color:var(--dim)">Nada pendente. Adicione uma exceção acima.</p><div class="exmsg" id="ex-msg2"></div>`;
-  document.getElementById('ex-env').innerHTML=hj.length?exTabela(hj,false)
-    :'<p class="prose" style="font-size:12.5px;color:var(--dim)">Nenhuma exceção enviada hoje.</p>';
-  document.querySelectorAll('[data-rm]').forEach(b=>b.onclick=()=>{const L=exGet('pend',[]);L.splice(+b.dataset.rm,1);exSet('pend',L);exRender();});
-  const sb=document.getElementById('ex-send'); if(sb) sb.onclick=exEnviar;
-  const btn=document.querySelector('[data-v="exc"]');
-  if(btn){const c=btn.querySelector('.cnt'); if(P_.length){if(c)c.textContent=P_.length;else btn.insertAdjacentHTML('beforeend',`<span class="cnt">${P_.length}</span>`);} else if(c) c.remove();}
-}
-function exAdd(){
-  const f={canal:'ex-canal',san:'ex-san',proposta:'ex-prop',contra:'ex-contra',devolutiva:'ex-dev'}, v={}, m=document.getElementById('ex-msg1');
-  let falta=[];
-  Object.entries(f).forEach(([k,id])=>{const el=document.getElementById(id);v[k]=el.value.trim();el.classList.toggle('err',!v[k]);if(!v[k])falta.push(k);});
-  if(falta.length){m.textContent='Preencha os campos em vermelho';m.className='exmsg err';return;}
-  v.san=v.san.toUpperCase().replace(/\s+/g,'');
-  v.obs=document.getElementById('ex-obs').value.trim();
-  v.id=EX.login+'-'+Date.now()+'-'+Math.random().toString(36).slice(2,7);
-  v.hora=new Date().toTimeString().slice(0,5);
-  const L=exGet('pend',[]); L.push(v); exSet('pend',L);
-  ['ex-san','ex-prop','ex-contra','ex-obs'].forEach(id=>document.getElementById(id).value='');
-  ['ex-canal','ex-dev'].forEach(id=>document.getElementById(id).value='');
-  m.textContent=v.san.startsWith('HTB')?'Adicionada à lista — falta enviar':'Adicionada. Confira o SAN: normalmente começa com HTB';
-  m.className=v.san.startsWith('HTB')?'exmsg ok':'exmsg err';
-  exRender();
-}
-async function exEnviar(){
-  const L=exGet('pend',[]); if(!L.length) return;
-  const b=document.getElementById('ex-send'), m=document.getElementById('ex-msg2');
-  b.disabled=true; m.textContent='Enviando…'; m.className='exmsg';
-  const corpo=JSON.stringify({chave:EX.chave,login:EX.login,nome:EX.nome,turno:EX.turno,itens:L});
-  let r=null;
-  try{
-    const resp=await fetch(EX.url,{method:'POST',body:corpo});   // text/plain: sem pré-verificação de CORS
-    r=await resp.json();
-  }catch(e){ r={ok:false,erro:'sem conexão com a planilha'}; }
-  if(r&&r.ok){
-    const E_=exGet('env',{}), hj=E_[hojeBR()]=E_[hojeBR()]||[];
-    L.forEach(x=>hj.push(Object.assign({},x,{hora:r.hora||x.hora})));
-    Object.keys(E_).sort().slice(0,-7).forEach(k=>delete E_[k]);   // guarda só os últimos dias
-    exSet('env',E_); exSet('pend',[]); exRender();
-    const m2=document.getElementById('ex-msg2'); m2.textContent='Enviado ✓ '+(r.gravados||0)+' registrada'+((r.gravados||0)===1?'':'s')+(r.repetidos?' ('+r.repetidos+' já estava'+(r.repetidos>1?'m':'')+' na planilha)':'');
-    m2.className='exmsg ok';
-  }else{
-    b.disabled=false; m.textContent='Não enviado ('+((r&&r.erro)||'erro')+'). A lista continua guardada — tente de novo.'; m.className='exmsg err';
-  }
-}
 /* ---------- render ---------- */
 const convCli=P.clientes_recebidos/P.clientes_negociados;
 const dez=Math.round(convCli*10);
@@ -843,7 +728,6 @@ document.getElementById('r').innerHTML=`
   ${D.acordos_qtd ? `<button data-v="acd">Meus acordos<span class="cnt">${D.acordos_qtd}</span></button>` : ''}
   ${QS ? `<button data-v="psat">Satisfação (PSAT)</button>` : ''}
   ${QMx ? `<button data-v="mon">Minhas monitorias${QMx.mes&&QMx.mes.qtd?`<span class="cnt">${QMx.mes.qtd}</span>`:''}</button>` : ''}
-  ${D.excecoes ? `<button data-v="exc">Exceções</button>` : ''}
 </div>
 
 <div class="vista on" id="v-perf">
@@ -957,7 +841,6 @@ ${(()=>{
 
 ${QS?`<div class="vista" id="v-psat">${abaPSAT()}</div>`:''}
 ${QMx?`<div class="vista" id="v-mon">${abaMonit()}</div>`:''}
-${D.excecoes?`<div class="vista" id="v-exc">${abaExc()}</div>`:''}
 
 <div class="ft"><b>Sobre estes números:</b> vêm das planilhas de Resultado Parcial e de Chamadas/TMA do período
 ${D.periodo}. Comparações são com a <b>média da operação</b>, não com pessoas específicas.
@@ -1094,12 +977,6 @@ if(QMx && QMx.relatos && document.getElementById('q-go')){
   }
   bt.addEventListener('click',abrirRel);
   inp.addEventListener('keydown',e=>{if(e.key==='Enter')abrirRel();});
-}
-
-if(EX && document.getElementById('ex-add')){
-  document.getElementById('ex-add').onclick=exAdd;
-  document.getElementById('ex-san').addEventListener('input',e=>{e.target.value=e.target.value.toUpperCase();});
-  exRender();
 }
 
 /* simulador */
