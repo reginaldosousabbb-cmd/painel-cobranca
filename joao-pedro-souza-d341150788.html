@@ -126,9 +126,7 @@ input[type=range]::-moz-range-thumb{width:19px;height:19px;background:var(--ambe
   font-family:var(--sans);font-size:11px;line-height:1.7;color:var(--faint)}
 
 /* ---- abas ---- */
-.abas{display:flex;gap:0;border-bottom:1px solid var(--line);margin:20px 0 0;overflow-x:auto;scrollbar-width:none}
-.abas::-webkit-scrollbar{display:none}
-.abas button{flex:none;white-space:nowrap}
+.abas{display:flex;gap:0;border-bottom:1px solid var(--line);margin:20px 0 0}
 .abas button{padding:11px 18px;font-family:var(--mono);font-size:10px;font-weight:700;
   letter-spacing:.14em;text-transform:uppercase;color:var(--faint);background:none;border:none;
   border-bottom:2px solid transparent;cursor:pointer;transition:.15s}
@@ -193,92 +191,6 @@ input[type=range]::-moz-range-thumb{width:19px;height:19px;background:var(--ambe
 .dia-d{font-size:10px;font-weight:700;text-align:right}
 .dia-d.up{color:var(--green)}.dia-d.dn{color:var(--red)}.dia-d.eq{color:var(--faint)}
 
-/* ---- qualidade (PSAT + monitoria) ---- */
-.qk .k{min-height:92px}
-.nt5{display:flex;flex-direction:column;gap:2px}
-.nt5-r{display:grid;grid-template-columns:62px 1fr 74px;gap:12px;align-items:center;padding:6px 0}
-.nt5-r .l{font-size:10px;letter-spacing:.1em;color:var(--dim);font-weight:700}
-.nt5-r .t{height:12px;background:var(--panel3);position:relative}
-.nt5-r .t i{display:block;height:100%;animation:gw .7s cubic-bezier(.2,.8,.3,1) both;transform-origin:left}
-.nt5-r .t b{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--txt);opacity:.55}
-.nt5-r .v{font-size:11px;font-weight:700;text-align:right}
-.nt5-r .v span{color:var(--faint);font-weight:500}
-.chip{display:inline-flex;align-items:center;justify-content:center;min-width:24px;height:22px;padding:0 6px;
-  font-size:11px;font-weight:800;border:1px solid}
-.chip.c5,.chip.c4{color:var(--green);border-color:rgba(52,211,153,.4);background:rgba(52,211,153,.1)}
-.chip.c3{color:var(--amber);border-color:rgba(255,176,32,.4);background:rgba(255,176,32,.1)}
-.chip.c2,.chip.c1{color:var(--red);border-color:rgba(244,63,94,.45);background:rgba(244,63,94,.12)}
-.chip.cx{color:var(--faint);border-color:var(--line2);font-weight:600;font-size:9.5px;letter-spacing:.06em}
-.acd tr.det td{background:rgba(244,63,94,.05)}
-.mon{border:1px solid var(--line);background:var(--panel2);border-left:2px solid var(--c);padding:16px 18px;margin-bottom:12px}
-.mon-h{display:flex;align-items:flex-start;gap:16px;flex-wrap:wrap}
-.mon-h .nota{font-size:34px;font-weight:800;line-height:1;color:var(--c);letter-spacing:-.03em}
-.mon-h .nota small{font-size:11px;color:var(--faint);font-weight:600;letter-spacing:0}
-.mon-h .q{font-size:9px;letter-spacing:.14em;color:var(--c);font-weight:700;margin-top:6px}
-.mon-h .meta{margin-left:auto;text-align:right;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);line-height:1.8}
-.mon-h .meta b{color:var(--txt);font-weight:700}
-.mon h5{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--faint);margin:16px 0 8px}
-.mon ul{list-style:none;display:flex;flex-direction:column;gap:6px}
-.mon li{font-family:var(--sans);font-size:12.5px;line-height:1.55;color:var(--dim);padding-left:16px;position:relative}
-.mon li:before{content:'▸';position:absolute;left:0;color:var(--amber);font-family:var(--mono)}
-.mon li.gr:before{color:var(--red)}
-.mon li b{color:var(--txt);font-weight:600}
-.mon .rel{margin-top:14px;border-top:1px dashed var(--line2);padding-top:12px}
-.mon .rel button{background:none;border:1px solid var(--line2);color:var(--dim);font-family:var(--mono);font-size:9.5px;
-  font-weight:700;letter-spacing:.13em;text-transform:uppercase;padding:7px 12px;cursor:pointer}
-.mon .rel button:hover{border-color:var(--amber);color:var(--amber)}
-.mon .rel p{font-family:var(--sans);font-size:12.5px;line-height:1.65;color:var(--dim);margin-top:4px}
-.evo{display:flex;align-items:flex-end;gap:6px;height:74px;margin:6px 0 4px}
-.evo div{flex:1;max-width:38px;display:flex;flex-direction:column;align-items:center;gap:4px;height:100%;justify-content:flex-end}
-.evo i{display:block;width:100%;animation:gw2 .6s ease both;transform-origin:bottom}
-.evo span{font-size:8.5px;color:var(--faint);letter-spacing:.04em}
-.evo em{font-style:normal;font-size:9.5px;font-weight:700}
-@keyframes gw2{from{transform:scaleY(0)}to{transform:scaleY(1)}}
-.vazio{padding:26px 18px;text-align:center;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
-.vazio p{font-family:var(--sans);text-transform:none;letter-spacing:0;font-size:12px;color:var(--dim);margin-top:8px;line-height:1.6}
-.cad.mini{max-width:none;margin:0 0 16px;padding:18px 20px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;text-align:left}
-.cad.mini p{margin:0;flex:1;min-width:200px}
-.cad.mini input{width:180px;padding:9px;font-size:12px}
-.cad.mini button{width:auto;margin:0;padding:10px 16px}
-.cad.mini .msg{width:100%;margin-top:0}
-.rc{padding:9px 0;border-bottom:1px solid rgba(26,36,51,.6)}
-.rc:last-child{border-bottom:none}
-.rc-t{display:flex;gap:8px;align-items:center}
-.rc-g{font-size:9px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--faint)}
-.rc-i{font-family:var(--sans);font-size:12.5px;line-height:1.5;color:var(--txt);margin:4px 0 6px}
-.rc-b{display:flex;align-items:center;gap:8px}
-.rc-b i{display:block;height:5px;animation:gw .7s cubic-bezier(.2,.8,.3,1) both;transform-origin:left}
-.rc-b span{font-size:10px;font-weight:700;color:var(--dim)}
-.fg{margin-top:14px;border:1px solid rgba(244,63,94,.45);background:rgba(244,63,94,.08);padding:11px 13px;
-  font-family:var(--sans);font-size:12.5px;line-height:1.6;color:var(--txt)}
-.fg b{font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--red);display:block;margin-bottom:4px}
-.fb{font-family:var(--sans);font-size:12.5px;line-height:1.65;color:var(--dim);white-space:pre-line;
-  border-left:2px solid var(--line2);padding:2px 0 2px 12px}
-.mon-f{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
-@media(max-width:900px){.qk{grid-template-columns:repeat(2,1fr)!important}}
-
-/* ---- exceções ---- */
-.exf{display:grid;grid-template-columns:150px 190px 1fr 1fr 170px;gap:10px;align-items:end}
-.exf label{display:block;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:6px}
-.exf input,.exf select,.exo input{width:100%;background:#070B12;border:1px solid var(--line2);color:var(--txt);
-  font-family:var(--sans);font-size:12.5px;padding:9px 10px}
-.exf input:focus,.exf select:focus,.exo input:focus{outline:none;border-color:var(--amber)}
-.exf input.err,.exf select.err{border-color:var(--red)}
-.exo{display:flex;gap:10px;align-items:end;margin-top:10px}
-.exo>div{flex:1}
-.exo label{display:block;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:6px}
-.bt{background:var(--amber);color:#0A0703;border:none;font-family:var(--mono);font-size:10px;font-weight:800;
-  letter-spacing:.14em;text-transform:uppercase;padding:11px 16px;cursor:pointer;white-space:nowrap}
-.bt.sec{background:none;border:1px solid var(--line2);color:var(--dim)}
-.bt:disabled{opacity:.45;cursor:default}
-.exmsg{font-size:10px;letter-spacing:.1em;text-transform:uppercase;margin-top:10px;min-height:14px;color:var(--faint)}
-.exmsg.ok{color:var(--green)}.exmsg.err{color:var(--red)}
-.acd td .rm{background:none;border:none;color:var(--faint);cursor:pointer;font-size:14px}
-.acd td .rm:hover{color:var(--red)}
-.dv{font-size:8.5px;font-weight:700;letter-spacing:.08em;padding:2px 7px;text-transform:uppercase}
-.dv.a{background:rgba(52,211,153,.13);color:var(--green)}.dv.n{background:rgba(244,63,94,.14);color:var(--red)}.dv.g{background:rgba(255,176,32,.13);color:var(--amber)}
-@media(max-width:900px){.exf{grid-template-columns:1fr 1fr}.exo{flex-wrap:wrap}}
-
 svg text{font-family:var(--mono)}
 @media(max-width:900px){.kpis{grid-template-columns:repeat(3,1fr)}.g2,.g21{grid-template-columns:1fr}}
 @media(max-width:560px){.kpis{grid-template-columns:repeat(2,1fr)}.pf-s{margin-left:0}}
@@ -286,7 +198,7 @@ svg text{font-family:var(--mono)}
 </head>
 <body>
 <div class="wrap" id="r"></div>
-<script id="dd" type="application/json">{"acordos":null,"acordos_qtd":0,"qualidade":{"psat":{"periodo":"01/10 a 22/10/2026","equipe":{"pesquisas":12934,"validas_atendente":7614,"validas_solucao":7503,"invalidas":1006,"sem_resposta":4314,"csat_atendente":0.8385,"media_atendente":4.35,"csat_solucao":0.7329,"media_solucao":3.99,"rechamada":0.489,"base_rechamada":7237,"dist_atendente":[993,101,136,381,6003],"detratores":1094},"meu":{"pesquisas":97,"validas_atendente":50,"validas_solucao":49,"invalidas":8,"sem_resposta":39,"csat_atendente":0.78,"media_atendente":4.08,"csat_solucao":0.6122,"media_solucao":3.61,"rechamada":0.4898,"base_rechamada":49,"dist_atendente":[10,1,0,3,36],"detratores":11},"lista":[{"data":"21/10","hora":"19:34","fila":"negociacao","atendente":1,"solucao":1,"rechamada":null,"htb":"HTB…6770","inv":false},{"data":"21/10","hora":"19:17","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…7033","inv":false},{"data":"21/10","hora":"18:31","fila":"negociacao","atendente":5,"solucao":2,"rechamada":true,"htb":"HTB…1169","inv":false},{"data":"21/10","hora":"17:13","fila":"faturas","atendente":5,"solucao":5,"rechamada":false,"htb":null,"inv":false},{"data":"21/10","hora":"14:28","fila":"negociacao","atendente":4,"solucao":3,"rechamada":false,"htb":"HTB…9369","inv":false},{"data":"19/10","hora":"19:36","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…4562","inv":false},{"data":"19/10","hora":"19:14","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"19/10","hora":"18:31","fila":"negociacao","atendente":4,"solucao":3,"rechamada":true,"htb":"HTB…9368","inv":false},{"data":"19/10","hora":"17:29","fila":"negociacao","atendente":5,"solucao":5,"rechamada":true,"htb":"HTB…6837","inv":false},{"data":"19/10","hora":"17:21","fila":"faturas","atendente":5,"solucao":5,"rechamada":true,"htb":null,"inv":false},{"data":"19/10","hora":"16:36","fila":"negociacao","atendente":5,"solucao":5,"rechamada":false,"htb":"HTB…6277","inv":false},{"data":"19/10","hora":"15:30","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…6350","inv":false},{"data":"19/10","hora":"15:27","fila":"negociacao","atendente":1,"solucao":1,"rechamada":true,"htb":"HTB…6350","inv":false},{"data":"19/10","hora":"15:06","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…3039","inv":false},{"data":"19/10","hora":"14:56","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…8473","inv":false},{"data":"16/10","hora":"18:25","fila":"negociacao","atendente":5,"solucao":4,"rechamada":true,"htb":"HTB…7056","inv":false},{"data":"16/10","hora":"17:33","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"16/10","hora":"17:28","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…2014","inv":false},{"data":"16/10","hora":"16:36","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…9341","inv":false},{"data":"16/10","hora":"16:18","fila":"negociacao","atendente":5,"solucao":null,"rechamada":null,"htb":"HTB…5575","inv":false},{"data":"16/10","hora":"15:24","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…4130","inv":false},{"data":"16/10","hora":"14:45","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…6836","inv":true},{"data":"16/10","hora":"14:22","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"15/10","hora":"16:56","fila":"negociacao","atendente":5,"solucao":5,"rechamada":false,"htb":"HTB…1870","inv":false},{"data":"14/10","hora":"18:56","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"14/10","hora":"17:53","fila":"cobrança D80","atendente":5,"solucao":1,"rechamada":true,"htb":"HTB…5289","inv":false},{"data":"14/10","hora":"17:42","fila":"negociacao","atendente":5,"solucao":null,"rechamada":null,"htb":"HTB…9351","inv":false},{"data":"14/10","hora":"17:18","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…0993","inv":false},{"data":"14/10","hora":"15:28","fila":"negociacao","atendente":null,"solucao":null,"rechamada":true,"htb":"HTB…0144","inv":true},{"data":"14/10","hora":"15:10","fila":"faturas","atendente":1,"solucao":1,"rechamada":false,"htb":null,"inv":false},{"data":"14/10","hora":"15:01","fila":"cobrança D80","atendente":5,"solucao":5,"rechamada":false,"htb":null,"inv":false},{"data":"14/10","hora":"14:55","fila":"negociacao","atendente":1,"solucao":1,"rechamada":true,"htb":"HTB…0207","inv":false},{"data":"14/10","hora":"14:15","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…0555","inv":false},{"data":"13/10","hora":"19:24","fila":"faturas","atendente":5,"solucao":5,"rechamada":false,"htb":null,"inv":false},{"data":"13/10","hora":"19:00","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"13/10","hora":"18:24","fila":"faturas","atendente":5,"solucao":3,"rechamada":false,"htb":null,"inv":false},{"data":"13/10","hora":"18:02","fila":"faturas","atendente":1,"solucao":1,"rechamada":true,"htb":null,"inv":false},{"data":"13/10","hora":"17:18","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":true},{"data":"13/10","hora":"17:06","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"13/10","hora":"16:38","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…1375","inv":false},{"data":"13/10","hora":"16:28","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"13/10","hora":"16:25","fila":"negociacao","atendente":5,"solucao":4,"rechamada":true,"htb":"HTB…9366","inv":false},{"data":"13/10","hora":"15:51","fila":"faturas","atendente":5,"solucao":5,"rechamada":false,"htb":"HTB…4059","inv":false},{"data":"13/10","hora":"14:51","fila":"negociacao","atendente":1,"solucao":1,"rechamada":false,"htb":"HTB…9649","inv":false},{"data":"13/10","hora":"14:41","fila":"negociacao","atendente":5,"solucao":3,"rechamada":false,"htb":"HTB…1045","inv":false},{"data":"12/10","hora":"19:01","fila":"faturas","atendente":5,"solucao":5,"rechamada":true,"htb":null,"inv":false},{"data":"12/10","hora":"14:17","fila":"negociacao","atendente":5,"solucao":4,"rechamada":false,"htb":"HTB…7837","inv":false},{"data":"08/10","hora":"18:52","fila":"faturas","atendente":1,"solucao":1,"rechamada":true,"htb":null,"inv":false},{"data":"08/10","hora":"17:55","fila":"negociacao","atendente":4,"solucao":2,"rechamada":false,"htb":"HTB…7740","inv":false},{"data":"08/10","hora":"17:41","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…0666","inv":false},{"data":"08/10","hora":"17:18","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…2764","inv":false},{"data":"08/10","hora":"16:45","fila":"negociacao","atendente":2,"solucao":2,"rechamada":false,"htb":"HTB…7082","inv":false},{"data":"08/10","hora":"16:12","fila":"faturas","atendente":5,"solucao":5,"rechamada":false,"htb":null,"inv":false},{"data":"08/10","hora":"15:53","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…6192","inv":false},{"data":"08/10","hora":"15:42","fila":"negociacao","atendente":5,"solucao":5,"rechamada":false,"htb":"HTB…0828","inv":false},{"data":"08/10","hora":"15:25","fila":"negociacao","atendente":1,"solucao":1,"rechamada":true,"htb":"HTB…0828","inv":false},{"data":"08/10","hora":"14:23","fila":"faturas","atendente":5,"solucao":5,"rechamada":false,"htb":null,"inv":false},{"data":"07/10","hora":"19:37","fila":"negociacao","atendente":1,"solucao":1,"rechamada":true,"htb":"HTB…4834","inv":false},{"data":"07/10","hora":"18:07","fila":"negociacao","atendente":5,"solucao":5,"rechamada":false,"htb":"HTB…1822","inv":false},{"data":"07/10","hora":"17:15","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…4168","inv":true},{"data":"07/10","hora":"16:19","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"07/10","hora":"14:46","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…7972","inv":true},{"data":"07/10","hora":"14:24","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…7972","inv":false},{"data":"07/10","hora":"14:10","fila":"negociacao","atendente":5,"solucao":5,"rechamada":true,"htb":"HTB…8015","inv":false},{"data":"05/10","hora":"18:57","fila":"negociacao","atendente":5,"solucao":5,"rechamada":true,"htb":"HTB…8732","inv":false},{"data":"05/10","hora":"18:03","fila":"negociacao","atendente":5,"solucao":5,"rechamada":false,"htb":"HTB…6059","inv":false},{"data":"05/10","hora":"17:50","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…4548","inv":false},{"data":"05/10","hora":"17:49","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…0293","inv":false},{"data":"05/10","hora":"17:37","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…6401","inv":false},{"data":"05/10","hora":"17:18","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"05/10","hora":"16:51","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"05/10","hora":"16:06","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…3862","inv":false},{"data":"05/10","hora":"14:30","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…0802","inv":false},{"data":"02/10","hora":"19:12","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"02/10","hora":"18:53","fila":"faturas","atendente":5,"solucao":5,"rechamada":true,"htb":null,"inv":false},{"data":"02/10","hora":"17:11","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…5936","inv":true},{"data":"02/10","hora":"16:46","fila":"negociacao","atendente":5,"solucao":5,"rechamada":false,"htb":"HTB…9084","inv":false},{"data":"02/10","hora":"14:58","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"02/10","hora":"14:36","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…6004","inv":false},{"data":"02/10","hora":"14:23","fila":"negociacao","atendente":null,"solucao":5,"rechamada":false,"htb":"HTB…5238","inv":true},{"data":"02/10","hora":"14:09","fila":"faturas","atendente":5,"solucao":1,"rechamada":true,"htb":null,"inv":false},{"data":"01/10","hora":"19:35","fila":"negociacao","atendente":5,"solucao":5,"rechamada":true,"htb":"HTB…0337","inv":false},{"data":"01/10","hora":"19:21","fila":"negociacao","atendente":5,"solucao":5,"rechamada":true,"htb":"HTB…5179","inv":false},{"data":"01/10","hora":"18:46","fila":"negociacao","atendente":1,"solucao":1,"rechamada":true,"htb":"HTB…7363","inv":false},{"data":"01/10","hora":"18:28","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…8644","inv":false},{"data":"01/10","hora":"17:43","fila":"faturas","atendente":5,"solucao":5,"rechamada":true,"htb":"HTB…0539","inv":false},{"data":"01/10","hora":"17:09","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"01/10","hora":"17:06","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"01/10","hora":"16:53","fila":"cobrança D80","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…9173","inv":true},{"data":"01/10","hora":"16:37","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…3135","inv":false},{"data":"01/10","hora":"16:14","fila":"faturas","atendente":5,"solucao":5,"rechamada":false,"htb":null,"inv":false},{"data":"01/10","hora":"15:59","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…6257","inv":false},{"data":"01/10","hora":"15:39","fila":"faturas","atendente":5,"solucao":5,"rechamada":false,"htb":null,"inv":false},{"data":"01/10","hora":"15:24","fila":"cobrança D80","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…5769","inv":false},{"data":"01/10","hora":"15:17","fila":"negociacao","atendente":5,"solucao":5,"rechamada":false,"htb":"HTB…7793","inv":false},{"data":"01/10","hora":"15:12","fila":"negociacao","atendente":5,"solucao":5,"rechamada":true,"htb":"HTB…0289","inv":false},{"data":"01/10","hora":"14:13","fila":"negociacao","atendente":5,"solucao":5,"rechamada":false,"htb":"HTB…8997","inv":false}]},"monit":{"competencia":"2026-11","equipe":{"media_nota":74.9,"monitorias":65,"pessoas":19,"por_pessoa":3.4},"meta":null,"mes":{"qtd":2,"media":80.0,"falhas_graves":0,"aderencia":0.8735,"perdeu_por_falha":0},"recorrentes":[{"grupo":"Encerramento","item":"Se colocou a disposição para esclarecimentos de dúvidas","vezes":4},{"grupo":"Cadastro","item":"Orientou sobre o processo de callback conforme Base de Conhecimento","vezes":3},{"grupo":"Cadastro","item":"Confirmou os meios de contato com o assinante, (telefone, e-mail) garantindo a atualização do cadastro ativamente.","vezes":3},{"grupo":"Comunicação","item":"Adequou todas as explicações para garantir o entendimento do cliente, facilitando sua compreensão","vezes":2},{"grupo":"Comunicação","item":"Demonstrou confiança e segurança durante o atendimento","vezes":2},{"grupo":"Comunicação","item":"Utilizou comunicação assertiva.","vezes":2},{"grupo":"Comunicação","item":"Conduziu o atendimento de forma clara e objetiva","vezes":1},{"grupo":"PSAT","item":"Esclareceu sobre os itens da pesquisa antes de transferir","vezes":1}],"lista":[{"id":"1198","data":"10/11/2026","criado_em":"10/11/2026","nota":80.0,"nota_bruta":80.0,"falha_grave":false,"monitor":"Reginaldo Sousa Barbosa","tipo":"Supervisor · Não venda","status":"Finalizada","ciencia":null,"itens":[{"grupo":"Cadastro","item":"Orientou sobre o processo de callback conforme Base de Conhecimento"},{"grupo":"Comunicação","item":"Conduziu o atendimento de forma clara e objetiva"},{"grupo":"Comunicação","item":"Adequou todas as explicações para garantir o entendimento do cliente, facilitando sua compreensão"},{"grupo":"PSAT","item":"Esclareceu sobre os itens da pesquisa antes de transferir"},{"grupo":"PSAT","item":"Finalizou o contato mencionando a Pesquisa de satisfação"},{"grupo":"Encerramento","item":"Se colocou a disposição para esclarecimentos de dúvidas"}],"falhas_graves":[],"aderencia":0.8421,"itens_avaliados":38,"feedback":null,"prazo_feedback":null,"htb":"HTB…1439","pontos":[],"tem_relato":false},{"id":"1197","data":"04/11/2026","criado_em":"10/11/2026","nota":80.0,"nota_bruta":80.0,"falha_grave":false,"monitor":"Diovania Rocha Alves Santos","tipo":"Qualidade · Não venda","status":"Finalizada","ciencia":null,"itens":[{"grupo":"Cadastro","item":"Confirmou os meios de contato com o assinante, (telefone, e-mail) garantindo a atualização do cadastro ativamente."},{"grupo":"Comunicação","item":"Demonstrou confiança e segurança durante o atendimento"},{"grupo":"Comunicação","item":"Utilizou comunicação assertiva."},{"grupo":"Registro","item":"Descreveu o contato de forma correta/completa"}],"falhas_graves":[],"aderencia":0.9048,"itens_avaliados":42,"feedback":"Resumo da monitoria:\n\nO cliente LEONARDO entrou em contato informando que havia realizado o pagamento, mas a conexão ainda não havia sido restabelecida.\n\nDurante o atendimento, você realizou a identificação positiva, informou o protocolo e confirmou o telefone para o procedimento de call back. Em seguida, identificou que o cliente possuía duas contas em sistema e consultou os valores que ainda constavam em aberto. Naquele momento, a baixa do pagamento ainda não havia sido identificada.\n\nO cliente explicou que o valor pago havia sido enviado pelo WhatsApp da empresa e que aquela tinha sido a única fatura encaminhada para ele. Você esclareceu que o pagamento realizado correspondia a uma fatura, e não a uma negociação. Na sequência, apresentou a possibilidade de realizar uma nova negociação e perguntou se ele tinha interesse.\n\nApós consultar o sistema, você informou o valor disponível para negociação, e o cliente aceitou a proposta. Você pediu um momento para encaminhar a fatura e explicou os prazos para a baixa do pagamento e para o restabelecimento da conexão.\n\nDurante a confirmação dos dados, identificou que o e-mail estava incorreto e realizou a atualização. Em seguida, encaminhou a fatura por e-mail e reforçou os prazos e as condições caso o pagamento da negociação não fosse realizado dentro do período informado.\n\n\nPontos de melhoria:\n\n* Precisamos trabalhar uma comunicação mais assertiva e clara, principalmente ao explicar a diferença entre o pagamento de uma fatura e uma negociação. É importante garantir que o cliente compreenda exatamente o que foi pago e quais valores ainda precisam ser regularizados.\n\n* É necessário ter muita atenção ao registro dos atendimentos em sistema. Neste caso, o atendimento chegou como dummy location e não foi vinculado corretamente ao HTB do cliente. Por isso, houve dificuldade para localizar o registro durante a monitoria.\n\n* Reforce a utilização da máscara padrão de registro para negociações e confira se o atendimento está vinculado ao caso correto. Quando não conseguimos localizar o registro correspondente, a monitoria pode receber nota zero, gerando uma falha grave.\n\n\nQuestões para o feedback\n\nGostaria de reforçar um ponto importante sobre o registro deste atendimento. Tive dificuldade para localizar o caso durante a monitoria, pois ele estava vinculado incorretamente ao dummy location, e não ao HTB do cliente. Por esse motivo, a nota quase acabou sendo zerada. Precisamos ter um cuidado maior ao realizar os registros, utilizando o caso recebido pela URA ou criando um novo quando necessário, sempre conferindo se o vínculo está correto e utilizando a máscara padrão de negociação. Caso tenha alguma dúvida sobre como realizar esse procedimento, não hesite em procurar seu supervisor ou algum colega com mais experiência para pedir orientação. É melhor esclarecer qualquer dúvida antes de finalizar o atendimento e garantir que tudo esteja registrado corretamente.\n\n\n** \n•••\n45449350","prazo_feedback":null,"htb":null,"pontos":[],"tem_relato":false},{"id":"837","data":"16/10/2026","criado_em":"21/10/2026","nota":100.0,"nota_bruta":100.0,"falha_grave":false,"monitor":"Reginaldo Sousa Barbosa","tipo":"Supervisor · Não venda","status":"Finalizada","ciencia":null,"itens":[],"falhas_graves":[],"aderencia":1.0,"itens_avaliados":43,"feedback":"O colaborador realizou a abertura do atendimento dentro dos 5 segundos, conforme orientado na Base de Conhecimento, informando seu nome e apresentando a empresa. Também informou corretamente o protocolo de atendimento e orientou sobre o processo de callback em caso de queda da ligação.\n\nRealizou uma sondagem eficaz, demonstrando prontidão e interesse em solucionar a demanda apresentada pela cliente. Manteve uma postura atenciosa, prestativa e cordial durante todo o atendimento.\n\nRealizou a identificação positiva conforme os procedimentos da Base de Conhecimento e efetuou a atualização do telefone e e-mail, contribuindo para manter os dados cadastrais atualizados em nossa base.\n\nTambém realizou corretamente o preenchimento da Retaguarda e do Salesforce, seguindo as orientações estabelecidas na Base de Conhecimento.\n\nAo final do atendimento, colocou-se à disposição para esclarecer novas dúvidas e realizou a orientação sobre a pesquisa de satisfação (PSAT).\n\n🏆 DESTAQUE: O colaborador apresentou excelente desempenho nesta monitoria, cumprindo os principais procedimentos e demonstrando uma condução segura e focada na resolução da demanda. Obteve nota máxima na avaliação.\n\nPontos de melhoria:\n\nApesar do excelente desempenho, é importante reforçar a necessidade de realizar a orientação sobre a PSAT com mais calma e clareza, lembrando que a pesquisa está diretamente relacionada à experiência do cliente com o atendimento prestado pelo próprio colaborador.\n\nTambém é necessário reforçar a orientação sobre o procedimento de callback, explicando de forma mais tranquila e completa que, em caso de queda da ligação, serão realizadas até 3 tentativas de retorno, utilizando o DDD 62.\n\nSão ajustes pontuais de comunicação que contribuirão para tornar o atendimento ainda mais claro e completo, mantendo o excelente padrão apresentado.\n\nRealizar feedback ate dia 22/10/2026","prazo_feedback":"22/10/2026","htb":"HTB…6836","pontos":[],"tem_relato":false},{"id":"802","data":"19/10/2026","criado_em":"20/10/2026","nota":95.0,"nota_bruta":95.0,"falha_grave":false,"monitor":"Reginaldo Sousa Barbosa","tipo":"Supervisor · Não venda","status":"Finalizada","ciencia":null,"itens":[{"grupo":"Cadastro","item":"Orientou sobre o processo de callback conforme Base de Conhecimento"}],"falhas_graves":[],"aderencia":0.9767,"itens_avaliados":43,"feedback":"**Pontos positivos:**\n\n- Iniciou o atendimento dentro do prazo esperado de 5 segundos, informando seu nome e apresentando a empresa.\n- Orientou a cliente sobre o protocolo de atendimento.\n- Confirmou o e-mail da cliente, contribuindo para a atualização e manutenção dos dados cadastrais.\n- Realizou corretamente o preenchimento da Retaguarda e do Salesforce, conforme as orientações da Base de Conhecimento.\n\n**Pontos a desenvolver:**\n\n- Orientar o cliente sobre o processo de **callback em caso de queda da ligação**, garantindo que ele saiba como será realizado o contato posteriormente.\n- Demonstrou certa insegurança ao transmitir algumas informações para a cliente. É importante reforçar o conhecimento dos procedimentos e conduzir a comunicação com mais segurança e firmeza, pois demonstrar domínio do assunto transmite **credibilidade, confiança e controle sobre o atendimento**.\n\n\nRealizar feedback ate 21/10/2026","prazo_feedback":"21/10/2026","htb":"HTB…4562","pontos":[],"tem_relato":false},{"id":"764","data":"16/10/2026","criado_em":"19/10/2026","nota":97.0,"nota_bruta":97.0,"falha_grave":false,"monitor":"Reginaldo Sousa Barbosa","tipo":"Supervisor · Não venda","status":"Finalizada","ciencia":null,"itens":[{"grupo":"Encerramento","item":"Se colocou a disposição para esclarecimentos de dúvidas"}],"falhas_graves":[],"aderencia":0.9796,"itens_avaliados":49,"feedback":"### 📋 Feedback de Monitoria\n\n**Parabéns pela evolução e pela excelente condução do atendimento!** 👏\n\nO cliente entrou em contato buscando um desconto em sua fatura e, como o débito ainda não possuía 10 dias de vencimento, o colaborador explicou corretamente que não se enquadrava na condição. Demonstrou **proatividade**, orientando o cliente a buscar, por meio do aplicativo, um plano mais adequado à sua situação atual.\n\nTambém explicou de forma clara que não seria possível realizar a transferência para o SAC para alteração do plano enquanto a fatura estivesse vencida. Durante todo o atendimento, foi **atencioso, prestativo e criou uma boa conexão com o cliente**, demonstrando interesse em ajudá-lo a encontrar uma solução.\n\nRealizou corretamente os registros no **Salesforce e retaguarda**, conforme a base de conhecimento.\n\n⭐ **Destaque:** sua evolução e proatividade merecem reconhecimento. Demonstrou uma postura muito mais segura e focada na resolução da situação do cliente.\n\n⚠️ **Ponto de melhoria:** ao finalizar o atendimento, sempre se colocar à disposição para esclarecer novas dúvidas. Essa orientação é importante para garantir um encerramento completo e uma experiência de excelência.\n\n**No geral, foi um atendimento muito bom. Continue com essa postura proativa e atenciosa!** 👏🚀\n\nAplicar feedback dia 19/10/2026","prazo_feedback":"19/10/2026","htb":"HTB…4130","pontos":[],"tem_relato":false},{"id":"723","data":"15/10/2026","criado_em":"16/10/2026","nota":65.0,"nota_bruta":65.0,"falha_grave":false,"monitor":"Reginaldo Sousa Barbosa","tipo":"Supervisor · Não venda","status":"Finalizada","ciencia":null,"itens":[{"grupo":"Cadastro","item":"Orientou sobre o processo de callback conforme Base de Conhecimento"},{"grupo":"Comunicação","item":"Demonstrou confiança e segurança durante o atendimento"},{"grupo":"Comunicação","item":"Adequou todas as explicações para garantir o entendimento do cliente, facilitando sua compreensão"},{"grupo":"Comunicação","item":"Utilizou uma linguagem de fácil entendimento, evitando termos técnicos que pudessem dificultar a compreensão do tema tratado"},{"grupo":"Comunicação","item":"Utilizou comunicação assertiva."},{"grupo":"Comunicação","item":"Utilizou linguagem positiva e focando as soluções, ao invés de linguagem negativa e duvidosa ressaltando os erros e problemas"},{"grupo":"Sondagem","item":"Fez perguntas suficientes e por isso conseguiu detectar a melhor forma de condução da ligação"},{"grupo":"Sondagem","item":"Utilizou perguntas assertivas para detectar a necessidade do cliente e oferecer a proposta de negociação mais adequada"},{"grupo":"Argumentação","item":"Esgotou as possibilidades para convencer o cliente durante sua argumentação"},{"grupo":"Argumentação","item":"Utilizou argumentação adequada"},{"grupo":"Encerramento","item":"Se colocou a disposição para esclarecimentos de dúvidas"}],"falhas_graves":[],"aderencia":0.7708,"itens_avaliados":48,"feedback":"O atendente orientou o cliente sobre o protocolo e explicou o processo de callback. Durante a ligação, entrou em pausa com 1 minuto de atendimento, retornando aos 1 minuto e 23 segundos.\n\nRealizou a atualização dos dados cadastrais do cliente, incluindo telefone e e-mail. Entretanto, ao informar o débito, apresentou o valor de R$ 3.579,00, divergente do valor correto. É necessário ter atenção ao consultar e repassar os valores ao cliente, garantindo que as informações financeiras sejam precisas e estejam de acordo com o débito registrado no sistema.\n\nAlém disso, informou que o prazo para a retirada da restrição no Serasa seria de 5 a 10 dias, porém a orientação correta para a retirada da restrição no SPC é de até 72 horas após a baixa do pagamento.","prazo_feedback":null,"htb":"HTB…1870","pontos":[],"tem_relato":false},{"id":"635","data":"12/10/2026","criado_em":"14/10/2026","nota":0.0,"nota_bruta":97.0,"falha_grave":true,"monitor":"Reginaldo Sousa Barbosa","tipo":"Supervisor · Não venda","status":"Finalizada","ciencia":null,"itens":[{"grupo":"Encerramento","item":"Se colocou a disposição para esclarecimentos de dúvidas"}],"falhas_graves":[{"grupo":"Falha grave","item":"Não realizou o registro no Salesforce"}],"aderencia":0.0,"itens_avaliados":1,"feedback":"Foi identificada uma falha gravíssima durante o atendimento, pois a chamada permaneceu por 6 minutos e 29 segundos sem qualquer atendimento por parte do colaborador, até que o próprio cliente encerrasse a ligação. Além disso, não foi realizada a tentativa de callback, procedimento básico e obrigatório previsto na base de conhecimento para situações como essa.\n\nA ausência de atendimento durante todo esse período, somada à não realização do callback, representa um descumprimento grave dos procedimentos operacionais da empresa, comprometendo diretamente a experiência do cliente, a qualidade do atendimento e a confiabilidade do processo. O cliente ficou sem o suporte esperado, sem qualquer iniciativa de retorno por parte do colaborador e sem a oportunidade de ter sua necessidade identificada e tratada.\n\nEssa falha ocasionou a zeragem da nota da monitoria e exige correção imediata. É fundamental que o colaborador compreenda a gravidade da ocorrência e a responsabilidade envolvida na condução das chamadas recebidas. Não atender uma ligação e permitir que o cliente permaneça por mais de seis minutos aguardando, sem posteriormente realizar o callback, é uma situação que não pode se repetir.\n\n\nPlano de ação e alinhamento para as próximas monitorias\nO colaborador deverá revisar imediatamente os procedimentos estabelecidos na base de conhecimento, com atenção especial ao atendimento das chamadas recebidas e à obrigatoriedade da realização do callback quando aplicável. É indispensável manter a atenção durante toda a jornada, acompanhar as chamadas recebidas e agir prontamente diante de qualquer situação que impeça a continuidade normal do atendimento.\n\nReforço que o atendimento da chamada e a realização do callback, conforme o procedimento estabelecido, são responsabilidades que devem ser cumpridas rigorosamente. Caso ocorra qualquer impedimento técnico ou operacional, a situação deverá ser tratada conforme o fluxo interno previsto, sem que o cliente fique desassistido.\n\nNa próxima monitoria, esse ponto será tratado como prioridade, com verificação criteriosa do cumprimento dos procedimentos. Espera-se uma mudança imediata de conduta, comprometimento com as responsabilidades da função e atenção redobrada para evitar a reincidência dessa falha.\n\nO objetivo deste feedback é garantir que o ocorrido não se repita, reforçando a seriedade da falha e a necessidade de adequação imediata. A qualidade do atendimento começa pela disponibilidade em atender o cliente e pela responsabilidade de assegurar a continuidade do contato quando necessário.\n\nAplicar feedback urgente dia 14/10/2026","prazo_feedback":"14/10/2026","htb":null,"pontos":[],"tem_relato":false},{"id":"578","data":"08/10/2026","criado_em":"12/10/2026","nota":0.0,"nota_bruta":92.0,"falha_grave":true,"monitor":"Reginaldo Sousa Barbosa","tipo":"Supervisor · Não venda","status":"Finalizada","ciencia":null,"itens":[{"grupo":"Registro","item":"Classificou o contato de forma correta - Salesforce"}],"falhas_graves":[{"grupo":"Falha grave","item":"Fez inclusão de desconto indevidamente (fora das regras do negócio)"}],"aderencia":0.9792,"itens_avaliados":48,"feedback":"O atendimento foi iniciado dentro do prazo de 5 segundos, com a apresentação da operadora e o nome da empresa. Realizou uma sondagem eficaz, estabelecendo conexão (rapport) com a cliente e fornecendo as informações necessárias para a solução do caso.\nPontos de melhoria:\n- Informação incorreta sobre o cancelamento: informou à cliente que o plano havia sido cancelado em março, porém consta no sistema que o cancelamento ocorreu em 17/12/2025. É importante consultar os registros antes de transmitir informações, garantindo a precisão das orientações.\n- Orientação sobre a retirada do SPC: deveria informar que, após a confirmação do pagamento, o processo de retirada do registro no SPC ocorrerá em até 72 horas, conforme o procedimento estabelecido.\n- Divergência no registro do desconto: concedeu 70% de desconto à cliente, porém, na descrição do caso no Salesforce, registrou a concessão de apenas 20%. É necessário garantir que as informações registradas estejam de acordo com a negociação realizada.\n- Abertura de novo atendimento para outro HTB: iniciou um atendimento utilizando o CPF da filha da cliente, vinculado a outro HTB, após a cliente informar que a filha não conseguia entrar em contato para solicitar o cancelamento. É importante seguir o procedimento correto para atendimentos vinculados a outro contrato, garantindo que a solicitação seja direcionada adequadamente e que os registros sejam realizados conforme as orientações da Base de Conhecimento.\n\naplicar feedback dia 12/10/2026","prazo_feedback":"12/10/2026","htb":"HTB…0828","pontos":[],"tem_relato":false},{"id":"434","data":"02/10/2026","criado_em":"03/10/2026","nota":91.0,"nota_bruta":91.0,"falha_grave":false,"monitor":"Reginaldo Sousa Barbosa","tipo":"Supervisor · Não venda","status":"Finalizada","ciencia":null,"itens":[{"grupo":"Cadastro","item":"Confirmou os meios de contato com o assinante, (telefone, e-mail) garantindo a atualização do cadastro ativamente."},{"grupo":"Gestão de pausas","item":"Posicionou o assinante sobre pausas / ausências necessárias durante o atendimento"}],"falhas_graves":[],"aderencia":0.9444,"itens_avaliados":36,"feedback":"O colaborador realizou uma abertura adequada, apresentando-se e informando corretamente o nome da empresa. Também informou sobre o protocolo da ligação e orientou o cliente quanto ao callback em caso de queda da chamada.\n\nComo ponto de melhoria, não realizou a atualização do telefone e do e-mail do cliente. Essa etapa é importante para manter os dados cadastrais atualizados em nossa base e, por esse motivo, impactou negativamente sua avaliação e ocasionou uma redução na nota.\n\nNo geral, a ligação foi muito bem conduzida, com uma sondagem adequada e um acolhimento eficaz. O colaborador demonstrou atenção durante todo o atendimento, esclarecendo as dúvidas do cliente e conduzindo a interação de forma clara e satisfatória.\n\nParabéns pela condução do atendimento! Como ponto de atenção, reforçamos apenas a importância da atualização dos dados de contato para garantir o cumprimento de todos os critérios de qualidade.","prazo_feedback":null,"htb":"HTB…8823","pontos":[],"tem_relato":false},{"id":"400","data":"30/09/2026","criado_em":"01/10/2026","nota":95.0,"nota_bruta":95.0,"falha_grave":false,"monitor":"Reginaldo Sousa Barbosa","tipo":"Supervisor · Não venda","status":"Finalizada","ciencia":null,"itens":[{"grupo":"Cadastro","item":"Confirmou os meios de contato com o assinante, (telefone, e-mail) garantindo a atualização do cadastro ativamente."}],"falhas_graves":[],"aderencia":0.98,"itens_avaliados":50,"feedback":"O colaborador iniciou o atendimento de forma adequada, realizando a apresentação e o cumprimento ao cliente dentro dos primeiros cinco segundos. Também informou corretamente o número de protocolo e orientou sobre o procedimento de callback em caso de queda da ligação.\n\nDurante o atendimento, demonstrou atenção e cordialidade, utilizando as pausas de maneira eficiente. Realizou uma ótima sondagem e demonstrou acolhimento, compreensão e tolerância, conduzindo a negociação de forma eficaz.\n\nAo ser questionado sobre os procedimentos necessários para obter descontos, o colaborador demonstrou atenção e esclareceu as dúvidas apresentadas pela cliente. Além disso, enviou um e-mail para auxiliá-la na alteração do método de pagamento para cartão de crédito.\n\nO registro no Salesforce e no Retaguarda foi realizado de acordo com as orientações da base de conhecimento. Como ponto de melhoria, o colaborador não realizou a atualização dos dados de contato do cliente, como telefone e e-mail, deixando de efetuar a devida atualização em nossa base. Realizar feedback ate 02/10/2026","prazo_feedback":"02/10/2026","htb":"HTB…6499","pontos":[],"tem_relato":false}],"relatos":null}},"gerado_em":"12/11 às 11:21","excecoes":null,"pessoa":{"nome":"João Pedro Souza","turno":"Tarde","supervisor":"Reginaldo Sousa Barbosa","negociado":10615.69,"recebido":8561.5,"conversao":0.8065,"clientes_negociados":50,"clientes_recebidos":49,"faturas_negociadas":261,"ticket_medio":174.72,"chamadas":149,"tma_seg":598.235,"pausa_pct":40.0,"daily_negociado":[0.0,0.0,2255.01,1115.86,1923.24,2887.54,326.97,0,0.0,2107.07,0.0],"daily_recebido":[0.0,337.4,1710.02,1139.99,1814.84,1464.95,121.81,195.08,896.61,565.59,315.21],"score":62,"partes":{"resultado":49.6,"conversao":80.7,"produtividade":94.1,"evolucao":16.1,"eficiencia":20.6},"tendencia":-0.4071,"cv":0.713,"media_dia":856.15,"melhor_valor":1814.84,"melhor_dia":"05/11","rank":11,"total":21,"observacao":null,"projecao":{"negociado_atual":10615.69,"ritmo_diario":965.06,"projetado_fim_mes":28951.88,"dias_corridos":11,"dias_do_mes":30,"dias_restantes":19,"premio_atual":0,"premio_projetado":0,"proxima_faixa":{"alvo":30000.0,"premio":100.0,"falta":19384.31},"ritmo_necessario_prox_faixa":1020.23,"no_topo":false}},"equipe":{"conversao":0.8187,"ticket_medio":187.63,"tma_seg":476.7,"pausa_pct":37.7,"negociado_pessoa":10543.14,"recebido_pessoa":8631.15,"chamadas_pessoa":79,"meta_topo":50000.0,"conversao_minima":0.65},"datas":["01/11","02/11","03/11","04/11","05/11","06/11","07/11","08/11","09/11","10/11","11/11"],"periodo":"01 a 11/11/2026 (parcial do mês)","mostrar_rank":false}</script>
+<script id="dd" type="application/json">{"acordos":null,"acordos_qtd":0,"pessoa":{"nome":"João Pedro Souza","turno":"Tarde","supervisor":"Reginaldo Sousa Barbosa","negociado":14184.35,"recebido":8178.14,"conversao":0.5766,"clientes_negociados":62,"clientes_recebidos":47,"faturas_negociadas":171,"ticket_medio":174.0,"chamadas":160,"tma_seg":249.056,"pausa_pct":18.4,"daily_negociado":[2509.54,2423.71,1417.34,2463.37,853.67,0.0,0.0,889.97,1252.98,1565.87,807.9,0.0,0],"daily_recebido":[733.57,835.99,683.92,2056.59,410.16,150.28,0.0,669.88,1203.96,728.94,376.92,327.93,0.0],"score":44,"partes":{"resultado":31.5,"conversao":57.7,"produtividade":60.2,"evolucao":15.2,"eficiencia":51.1},"tendencia":-0.4179,"cv":0.669,"media_dia":743.47,"melhor_valor":2056.59,"melhor_dia":"04/09","rank":16,"total":19,"observacao":null,"projecao":{"negociado_atual":14184.35,"ritmo_diario":1091.1,"projetado_fim_mes":32733.12,"dias_corridos":13,"dias_do_mes":30,"dias_restantes":17,"premio_atual":0,"premio_projetado":100.0,"proxima_faixa":{"alvo":30000.0,"premio":100.0,"falta":15815.65},"ritmo_necessario_prox_faixa":930.33,"no_topo":false}},"equipe":{"conversao":0.6817,"ticket_medio":191.33,"tma_seg":336.7,"pausa_pct":17.9,"negociado_pessoa":19071.25,"recebido_pessoa":13000.55,"chamadas_pessoa":133,"meta_topo":50000.0,"conversao_minima":0.65},"datas":["01/09","02/09","03/09","04/09","05/09","06/09","07/09","08/09","09/09","10/09","11/09","12/09","13/09"],"periodo":"01 a 13/09/2026 (parcial do mês)","mostrar_rank":false}</script>
 <script>
 (function(){
 'use strict';
@@ -516,303 +428,6 @@ function detalheDias(){
   return html;
 }
 
-/* ---------- qualidade: PSAT (aba) + monitorias (aba) ---------- */
-const Q=D.qualidade||null;
-const QS=Q&&Q.psat, QMx=Q&&Q.monit, QM=(QMx&&QMx.lista)||[];
-const pcN=v=>v==null?'—':pc(v,0);
-const n1=v=>v==null?'—':v.toFixed(1).replace('.',',');
-const nMon=v=>v==null?'—':(Math.round(v*10)/10).toString().replace('.',',');
-const MESES=['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
-const nomeMes=c=>c?MESES[+c.slice(5,7)-1]:'';
-function vsPP(meu,ref,maiorMelhor=true){
-  if(meu==null||ref==null) return {cls:'eq',txt:'—'};
-  const d=(meu-ref)*100, bom=maiorMelhor?d>0:d<0;
-  if(Math.abs(d)<2) return {cls:'eq',txt:'na média do time'};
-  return {cls:bom?'up':'dn',txt:(d>0?'▲ ':'▼ ')+Math.abs(d).toFixed(0)+' p.p. vs. média'};
-}
-function vsPts(meu,ref){
-  if(meu==null||ref==null) return {cls:'eq',txt:'—'};
-  const d=meu-ref; if(Math.abs(d)<1.5) return {cls:'eq',txt:'na média do time'};
-  return {cls:d>0?'up':'dn',txt:(d>0?'▲ ':'▼ ')+nMon(Math.abs(d))+' pts vs. média'};
-}
-const corMon=n=>n==null?'#7C8FA6':n>=90?'#34D399':n>=80?'#22D3EE':n>=70?'#FFB020':'#F43F5E';
-const rotMon=n=>n==null?'SEM NOTA':n>=90?'EXCELENTE':n>=80?'BOM':n>=70?'EM EVOLUÇÃO':'PRECISA DE ATENÇÃO';
-const chip=(n,inv)=>inv?'<span class="chip cx">INVÁL.</span>':n==null?'<span class="chip cx">—</span>':`<span class="chip c${n}">${n}</span>`;
-function diasAteBR(br){ if(!br) return null; const p=br.split('/').map(Number); const y=p[2]||new Date().getFullYear();
-  const a=new Date(y,p[1]-1,p[0]), h=new Date(); h.setHours(0,0,0,0); return Math.round((a-h)/86400000); }
-
-/* ===== aba PSAT ===== */
-function pDestaque(){
-  const meu=QS&&QS.meu; if(!meu||!meu.validas_atendente) return '';
-  const f=[], dz=Math.round((meu.csat_atendente||0)*10);
-  f.push(`De cada <b>10 clientes</b> que deram nota para o seu atendimento, <span class="hl">${dz}</span> deram 4 ou 5.`);
-  f.push(meu.detratores?`<b>${meu.detratores} nota${meu.detratores>1?'s':''} baixa${meu.detratores>1?'s':''}</b> (1 ou 2) no período — destacadas em vermelho na lista abaixo.`
-                       :'<b>Nenhuma nota baixa</b> (1 ou 2) no período.');
-  if(meu.validas_atendente<5) f.push(`Amostra ainda pequena (${meu.validas_atendente} nota${meu.validas_atendente>1?'s':''}): o percentual muda bastante a cada pesquisa nova.`);
-  if(meu.rechamada!=null && QS.equipe.rechamada!=null && meu.rechamada>QS.equipe.rechamada+0.05)
-    f.push(`<b>${pc(meu.rechamada,0)}</b> dos seus clientes ligaram de novo em até 3 dias (equipe: ${pc(QS.equipe.rechamada,0)}). Fechar a ligação com tudo resolvido — boleto, data e próximo passo claros — evita a volta.`);
-  return `<div class="hi"><div class="ic">PSAT</div><div style="flex:1">
-    <h4>COMO O CLIENTE AVALIA O SEU ATENDIMENTO</h4><p>${f.join(' ')}</p></div></div>`;
-}
-function pKpis(){
-  if(!QS) return `<div class="pn"><div class="vazio">PSAT: dado não disponível
-    <p>A pesquisa de satisfação ainda não entrou nesta atualização do painel.</p></div></div>`;
-  const meu=QS.meu, E=QS.equipe;
-  if(!meu) return `<div class="pn"><div class="vazio">Nenhuma pesquisa PSAT sua em ${QS.periodo}
-    <p>Assim que clientes atendidos por você responderem a pesquisa, as notas aparecem aqui.</p></div></div>`;
-  return `<div class="kpis qk" style="grid-template-columns:repeat(5,1fr)">
-    ${kpi('Pesquisas recebidas',nf(meu.pesquisas),{cls:'eq',txt:nf(meu.validas_atendente)+' com nota válida'})}
-    ${kpi('Satisfação com você',pcN(meu.csat_atendente),vsPP(meu.csat_atendente,E.csat_atendente))}
-    ${kpi('Nota média',n1(meu.media_atendente),vs(meu.media_atendente,E.media_atendente))}
-    ${kpi('Solução aprovada',pcN(meu.csat_solucao),vsPP(meu.csat_solucao,E.csat_solucao))}
-    ${kpi('Ligou de novo em 3d',pcN(meu.rechamada),vsPP(meu.rechamada,E.rechamada,false))}
-  </div>`;
-}
-function pNotas(){
-  const meu=QS&&QS.meu;
-  if(!meu||!meu.validas_atendente) return '';
-  const tv=meu.validas_atendente, E=QS.equipe, ev=E.validas_atendente||1;
-  const cor={5:'#34D399',4:'#34D399',3:'#FFB020',2:'#F43F5E',1:'#F43F5E'};
-  let rows='';
-  for(let k=5;k>=1;k--){
-    const q=meu.dist_atendente[k-1], p=q/tv, pe=E.dist_atendente[k-1]/ev;
-    rows+=`<div class="nt5-r"><span class="l">NOTA ${k}</span>
-      <span class="t"><i style="width:${(p*100).toFixed(1)}%;background:${cor[k]}"></i>
-        <b style="left:calc(${(pe*100).toFixed(1)}% - 1px)" title="Média da equipe: ${pc(pe,0)}"></b></span>
-      <span class="v n">${q} <span>· ${pc(p,0)}</span></span></div>`;
-  }
-  return `<div class="pn"><div class="pn-h"><h3>Como os clientes avaliam você</h3><span class="nt">nota do atendimento · 1 a 5</span></div>
-    <div class="pn-b"><div class="nt5">${rows}</div>
-    <p class="prose" style="font-size:11.5px;line-height:1.6;color:var(--faint);margin-top:12px">
-    A barra é a sua distribuição de notas. O traço claro mostra a média da equipe na mesma nota.
-    ${meu.invalidas||meu.sem_resposta?`Fora da conta: ${meu.sem_resposta} sem resposta e ${meu.invalidas} inválida${meu.invalidas===1?'':'s'}.`:''}</p></div></div>`;
-}
-function pLista(){
-  if(!QS||!QS.meu||!QS.lista.length) return '';
-  const L=QS.lista.filter(r=>r.atendente!=null||r.solucao!=null||r.inv||r.rechamada!=null);
-  const fora=QS.lista.length-L.length;
-  if(!L.length) return '';
-  const sn=v=>v===true?'<span style="color:var(--amber)">Sim</span>':v===false?'<span style="color:var(--dim)">Não</span>':'<span style="color:var(--faint)">—</span>';
-  return `<div class="pn"><div class="pn-h"><h3>Suas pesquisas de satisfação</h3>
-    <span class="nt">${QS.periodo} · notas 1 e 2 em destaque</span></div>
-    <div class="pn-b" style="overflow-x:auto"><table class="acd"><thead><tr>
-      <th class="l">Data</th><th class="l">Hora</th><th class="l">Fila</th>
-      <th>Atendimento</th><th>Solução</th><th>Ligou de novo</th><th class="l">Cliente</th>
-    </tr></thead><tbody>
-    ${L.map(r=>`<tr class="${r.atendente!=null&&r.atendente<=2?'det':''}">
-      <td class="l">${r.data}</td><td class="l" style="color:var(--dim)">${r.hora}</td>
-      <td class="l" style="color:var(--dim);font-size:10.5px;text-transform:uppercase;letter-spacing:.06em">${esc(r.fila)}</td>
-      <td>${chip(r.atendente,r.inv)}</td><td>${chip(r.solucao,r.inv)}</td><td>${sn(r.rechamada)}</td>
-      <td class="l" style="color:var(--dim);font-size:10.5px">${r.htb||'—'}</td></tr>`).join('')}
-    </tbody></table>
-    ${fora?`<p class="prose" style="font-size:11.5px;color:var(--faint);margin-top:12px">${fora} pesquisa${fora>1?'s':''} em que o cliente não respondeu nada ${fora>1?'ficaram':'ficou'} fora da lista.</p>`:''}
-    </div></div>`;
-}
-const atualizado=()=>D.gerado_em?`<div class="lbl" style="text-align:right;margin-top:14px">Atualizado em ${D.gerado_em}</div>`:'';
-function abaPSAT(){
-  return atualizado()+pDestaque()+pKpis()+pNotas()+pLista()+
-  `<div class="ft" style="margin-top:16px"><b>Como ler:</b> o PSAT é a pesquisa que o cliente responde ao fim da ligação
-    ${QS?`(${QS.periodo})`:''}. <b>Satisfação com você</b> é o percentual de notas 4 e 5 para o atendimento. <b>Solução aprovada</b>
-    é o mesmo cálculo para a nota da solução. <b>Ligou de novo em 3d</b> mostra quantos clientes voltaram a ligar em até
-    3 dias (quanto menor, melhor). Respostas inválidas ou em branco não entram nas contas. A comparação é com a
-    <b>média da equipe de cobrança</b>, sem identificar ninguém. Dúvida? Fale com ${esc(P.supervisor)}.</div>`;
-}
-
-/* ===== aba MONITORIAS ===== */
-function mDestaque(){
-  const M=QMx.mes, E=QMx.equipe, mes=nomeMes(QMx.competencia), f=[];
-  if(!M||!M.qtd){
-    f.push(`Você ainda não teve monitoria em <b>${mes}</b>.`+(QM.length?` A mais recente foi em ${QM[0].data||'—'}, com nota <span class="hl">${nMon(QM[0].nota)}</span>.`:''));
-  }else{
-    f.push(`Em <b>${mes}</b> você teve <b>${M.qtd} monitoria${M.qtd>1?'s':''}</b>${QMx.meta?` de ${QMx.meta} previstas`:''}, com nota média
-      <span class="hl">${nMon(M.media)}</span>${E.media_nota!=null?` (equipe: ${nMon(E.media_nota)})`:''}.`);
-    if(M.falhas_graves){
-      const g=QM.find(m=>m.falha_grave&&m.falhas_graves.length);
-      f.push(`<b style="color:var(--red)">${M.falhas_graves} falha${M.falhas_graves>1?'s':''} grave${M.falhas_graves>1?'s':''}</b> zerou${M.falhas_graves>1?'ram':''} nota${M.falhas_graves>1?'s':''}
-        ${M.perdeu_por_falha?`— foram <b>${nMon(M.perdeu_por_falha)} pontos</b> perdidos que você já tinha conquistado na ligação`:''}${g?`. Motivo: <b>${esc(g.falhas_graves[0].item)}</b>`:''}.`);
-    }
-  }
-  const r=(QMx.recorrentes||[]).find(x=>x.vezes>=2);
-  if(r) f.push(`O ponto que mais se repete nas suas monitorias: <b>${esc(r.item)}</b> (${r.vezes} vezes). Corrigir este item é o caminho mais rápido para subir a nota.`);
-  else if(M&&M.qtd&&!M.falhas_graves&&(M.media||0)>=95) f.push('Nenhum ponto se repete — mantenha o padrão.');
-  return `<div class="hi"><div class="ic">MONITORIA</div><div style="flex:1">
-    <h4>COMO A MONITORIA VÊ O SEU ATENDIMENTO</h4><p>${f.join(' ')}</p></div></div>`;
-}
-function mKpis(){
-  const M=QMx.mes||{qtd:0}, E=QMx.equipe, ult=QM[0];
-  const qtdTxt=QMx.meta?{cls:M.qtd>=QMx.meta?'up':'eq',txt:`${M.qtd} de ${QMx.meta} previstas`}
-                       :(E.por_pessoa?{cls:'eq',txt:'equipe: '+nMon(E.por_pessoa)+' por pessoa'}:null);
-  return `<div class="kpis qk" style="grid-template-columns:repeat(5,1fr)">
-    ${kpi('Monitorias em '+nomeMes(QMx.competencia),nf(M.qtd),qtdTxt)}
-    ${kpi('Nota média do mês',nMon(M.media),vsPts(M.media,E.media_nota))}
-    ${kpi('Última nota',ult?nMon(ult.nota):'—',ult?{cls:'eq',txt:'ligação de '+(ult.data||'—').slice(0,5)}:null)}
-    ${kpi('Itens atendidos',M.aderencia!=null?pc(M.aderencia,0):'—',{cls:'eq',txt:'da ficha, no mês'})}
-    ${kpi('Falhas graves',nf(M.falhas_graves||0),{cls:(M.falhas_graves?'dn':'up'),txt:M.falhas_graves?'zeram a nota':'nenhuma no mês'})}
-  </div>`;
-}
-function mEvolucao(){
-  const cab=`<div class="pn-h"><h3>Evolução das suas notas</h3><span class="nt">últimas monitorias · 0 a 100</span></div>`;
-  if(!QM.length) return `<div class="pn">${cab}<div class="vazio">Nenhuma monitoria ainda
-    <p>Quando seu supervisor monitorar uma ligação sua, a nota aparece aqui.</p></div></div>`;
-  const s=QM.slice(0,10).reverse();
-  const H=110, bars=s.map(m=>{const c=corMon(m.nota), h=Math.max(3,(m.nota||0)/100*H), hb=m.falha_grave&&m.nota_bruta?m.nota_bruta/100*H:0;
-    return `<div title="${m.data||''} · nota ${nMon(m.nota)}${hb?' (seria '+nMon(m.nota_bruta)+')':''}">
-      <em style="color:${c}">${nMon(m.nota)}</em>
-      <span style="position:relative;width:100%;height:${H}px;display:flex;align-items:flex-end">
-        ${hb?`<i style="position:absolute;bottom:0;left:0;right:0;height:${hb}px;border:1px dashed #F43F5E;background:rgba(244,63,94,.06)"></i>`:''}
-        <i style="height:${h}px;background:${c};position:relative;width:100%"></i></span>
-      <span>${(m.data||'—').slice(0,5)}</span></div>`;}).join('');
-  return `<div class="pn">${cab}<div class="pn-b"><div class="evo" style="height:${H+44}px">${bars}</div>
-    ${s.some(m=>m.falha_grave)?`<p class="prose" style="font-size:11.5px;color:var(--faint);margin-top:10px">
-      Contorno tracejado em vermelho = nota que você teria sem a falha grave.</p>`:''}</div></div>`;
-}
-function mRecorrentes(){
-  const R=QMx.recorrentes||[];
-  const cab=`<div class="pn-h"><h3>Onde você mais perde ponto</h3><span class="nt">itens não cumpridos · todas as monitorias</span></div>`;
-  if(!QM.length) return `<div class="pn">${cab}<div class="vazio">Sem monitorias</div></div>`;
-  if(!R.length) return `<div class="pn">${cab}<div class="vazio" style="color:var(--green)">Nenhum item perdido
-    <p>Em todas as suas monitorias você cumpriu os itens da ficha.</p></div></div>`;
-  const mx=Math.max(...R.map(x=>x.vezes));
-  return `<div class="pn">${cab}<div class="pn-b">${R.map(x=>`<div class="rc">
-    <div class="rc-t"><span class="rc-g" style="${x.grupo==='Falha grave'?'color:var(--red)':''}">${esc(x.grupo)}</span>
-      ${x.vezes>=2?'<span class="urg venc">repetiu</span>':''}</div>
-    <div class="rc-i"><span style="color:${x.grupo==='Falha grave'?'var(--red)':'var(--amber)'};font-family:var(--mono);font-weight:700">✗ </span>${esc(x.item)}</div>
-    <div class="rc-b"><i style="width:${x.vezes/mx*100}%;background:${x.grupo==='Falha grave'?'#F43F5E':x.vezes>=2?'#FFB020':'#7C8FA6'}"></i><span>${x.vezes}×</span></div>
-  </div>`).join('')}</div></div>`;
-}
-function mDetalhe(){
-  if(!QM.length) return '';
-  const temRel=QMx.relatos && QM.some(m=>m.tem_relato);
-  const grupos=L=>{const g={}; L.forEach(x=>(g[x.grupo]=g[x.grupo]||[]).push(x.item)); return g;};
-  const cards=QM.map((m,i)=>{const c=corMon(m.nota), G=grupos(m.itens||[]);
-    const dp=diasAteBR(m.prazo_feedback);
-    return `<div class="mon" style="--c:${c}">
-    <div class="mon-h"><div><div class="nota n">${nMon(m.nota)}<small> /100</small></div><div class="q">${rotMon(m.nota)}</div></div>
-      <div class="meta">Ligação de <b>${m.data||'—'}</b>${m.criado_em?`<br>Monitorada em <b>${m.criado_em}</b>`:''}
-        ${m.monitor?`<br>Por <b>${esc(m.monitor)}</b>`:''}${m.htb?`<br>Cliente <b>${m.htb}</b>`:''}</div></div>
-    ${m.falha_grave?`<div class="fg"><b>FALHA GRAVE — nota zerada${m.nota_bruta?` (seria ${nMon(m.nota_bruta)})`:''}</b>
-      ${(m.falhas_graves||[]).map(x=>`<div>▸ ${esc(x.item)}</div>`).join('')}</div>`:''}
-    ${Object.keys(G).length?`<h5>Itens da ficha não atendidos</h5><ul>${Object.entries(G).map(([g,it])=>
-      it.map(t=>`<li><b>${esc(g)}</b> — ${esc(t)}</li>`).join('')).join('')}</ul>`
-      :(!m.falha_grave&&m.itens_avaliados?`<h5 style="color:var(--green)">Todos os ${m.itens_avaliados} itens avaliados foram atendidos</h5>`:'')}
-    ${m.pontos&&m.pontos.length?`<h5>Pontos de melhoria</h5><ul>${m.pontos.map(p=>`<li>${esc(p)}</li>`).join('')}</ul>`:''}
-    ${m.feedback?`<h5>Feedback do supervisor</h5><div class="fb">${esc(m.feedback)}</div>`:''}
-    ${m.prazo_feedback||m.ciencia?`<div class="mon-f">
-      ${m.prazo_feedback?`<span class="urg ${dp!=null&&dp<0?'ok':dp===0?'hoje':'prox'}">${dp!=null&&dp<0?'feedback marcado para':'feedback até'} ${m.prazo_feedback.slice(0,5)}</span>`:''}
-      ${m.ciencia?`<span class="urg ok">ciência: ${esc(m.ciencia)}</span>`:''}</div>`:''}
-    ${m.tem_relato&&QMx.relatos?`<div class="rel" id="rel-${i}"></div>`:''}
-  </div>`;}).join('');
-  return `<div class="pn"><div class="pn-h"><h3>Suas monitorias, uma a uma</h3><span class="nt">da mais recente para a mais antiga</span></div>
-    <div class="pn-b">
-    ${temRel?`<div class="cad mini" id="q-cad"><p class="prose">O <b>relato de algumas ligações</b> cita o cliente pelo nome.
-      Para ler, use a mesma senha da aba de acordos.</p>
-      <input id="q-pw" type="password" placeholder="senha" autocomplete="off"><button id="q-go">Ver relatos</button>
-      <div class="msg" id="q-msg"></div></div>`:''}
-    ${cards}</div></div>`;
-}
-function abaMonit(){
-  return atualizado()+mDestaque()+mKpis()+`<div class="g2">${mEvolucao()}${mRecorrentes()}</div>`+mDetalhe()+
-  `<div class="ft" style="margin-top:16px"><b>Como ler:</b> cada monitoria é a avaliação de uma ligação sua, feita
-    com a ficha de qualidade da cobrança. A nota vai de 0 a 100. Uma <b>falha grave</b> (por exemplo, não registrar
-    o atendimento no Salesforce) <b>zera a nota</b>, mesmo que o resto da ligação tenha sido bom — por isso mostramos
-    também quanto você teria tirado. <b>Itens atendidos</b> é o percentual de itens da ficha que você cumpriu, sem
-    contar os que não se aplicavam à ligação. A média da equipe considera todas as monitorias do mês, sem
-    identificar ninguém. Dúvida sobre uma nota? Fale com ${esc(P.supervisor)}.</div>`;
-}
-
-/* ---------- exceções: formulário + envio para a planilha do supervisor ---------- */
-const EX=D.excecoes||null;
-const EXK='exc_'+(EX?EX.login:''), CANAIS=['Receptivo','Ativo','Chat','WhatsApp','E-mail'], DEVS=['Autorizado','Não autorizado','Aguardando'];
-const exGet=(k,d)=>{try{const v=localStorage.getItem(EXK+k);return v?JSON.parse(v):d;}catch(e){return d;}};
-const exSet=(k,v)=>{try{localStorage.setItem(EXK+k,JSON.stringify(v));}catch(e){}};
-const hojeBR=()=>{const d=new Date();return String(d.getDate()).padStart(2,'0')+'/'+String(d.getMonth()+1).padStart(2,'0')+'/'+d.getFullYear();};
-const dvCls=v=>v==='Autorizado'?'a':v==='Não autorizado'?'n':'g';
-function abaExc(){
-  return `<div class="hi"><div class="ic">EXCEÇÕES</div><div style="flex:1">
-    <h4>REGISTRE AQUI TODA NEGOCIAÇÃO FORA DA RÉGUA</h4>
-    <p>Preencha uma linha para cada exceção, junte quantas quiser na lista e clique em <b>Enviar</b>.
-    Tudo vai para uma planilha única do seu supervisor, que recebe o resumo do dia às <b>20h</b>.
-    Se a internet cair, a lista fica guardada neste navegador até você enviar.</p></div></div>
-  <div class="pn"><div class="pn-h"><h3>Nova exceção</h3><span class="nt">${esc(EX.nome)} · ${hojeBR()}</span></div>
-    <div class="pn-b">
-      <div class="exf">
-        <div><label>Canal de contato</label><select id="ex-canal"><option value="">escolha</option>${CANAIS.map(c=>`<option>${c}</option>`).join('')}</select></div>
-        <div><label>SAN</label><input id="ex-san" placeholder="HTB000000000000" autocomplete="off"></div>
-        <div><label>Proposta ofertada</label><input id="ex-prop" placeholder="ex.: 10% de desconto à vista" autocomplete="off"></div>
-        <div><label>Contra proposta</label><input id="ex-contra" placeholder="ex.: 15% no PIX" autocomplete="off"></div>
-        <div><label>Devolutiva</label><select id="ex-dev"><option value="">escolha</option>${DEVS.map(c=>`<option>${c}</option>`).join('')}</select></div>
-      </div>
-      <div class="exo"><div><label>Observação (opcional)</label><input id="ex-obs" placeholder="quem autorizou, motivo, prazo…" autocomplete="off"></div>
-        <button class="bt sec" id="ex-add">+ Adicionar à lista</button></div>
-      <div class="exmsg" id="ex-msg1"></div>
-    </div></div>
-  <div class="pn"><div class="pn-h"><h3>Lista para enviar</h3><span class="nt" id="ex-cont"></span></div>
-    <div class="pn-b" id="ex-pend"></div></div>
-  <div class="pn"><div class="pn-h"><h3>Enviadas hoje</h3><span class="nt">ficam registradas na planilha do supervisor</span></div>
-    <div class="pn-b" id="ex-env"></div></div>`;
-}
-function exTabela(L,rem){
-  if(!L.length) return '';
-  return `<div style="overflow-x:auto"><table class="acd"><thead><tr><th class="l">${rem?'Incluída':'Enviada'}</th><th class="l">Canal</th>
-    <th class="l">SAN</th><th class="l">Proposta ofertada</th><th class="l">Contra proposta</th><th class="l">Devolutiva</th>${rem?'<th></th>':''}</tr></thead><tbody>
-    ${L.map((x,i)=>`<tr><td class="l" style="color:var(--dim)">${esc(x.hora||'')}</td><td class="l">${esc(x.canal)}</td><td class="l">${esc(x.san)}</td>
-      <td class="l" style="white-space:normal;font-family:var(--sans)">${esc(x.proposta)}</td><td class="l" style="white-space:normal;font-family:var(--sans)">${esc(x.contra)}</td>
-      <td class="l"><span class="dv ${dvCls(x.devolutiva)}">${esc(x.devolutiva)}</span></td>
-      ${rem?`<td><button class="rm" data-rm="${i}" title="tirar da lista">✕</button></td>`:''}</tr>`).join('')}</tbody></table></div>`;
-}
-function exRender(){
-  const P_=exGet('pend',[]), E_=exGet('env',{});
-  const hj=E_[hojeBR()]||[];
-  document.getElementById('ex-cont').textContent=P_.length?P_.length+' a enviar':'';
-  document.getElementById('ex-pend').innerHTML=P_.length?exTabela(P_,true)+
-    `<div style="display:flex;gap:12px;align-items:center;margin-top:14px;flex-wrap:wrap">
-      <button class="bt" id="ex-send">Enviar ${P_.length} exceç${P_.length>1?'ões':'ão'}</button>
-      <span class="exmsg" id="ex-msg2" style="margin:0"></span></div>`
-    :`<p class="prose" style="font-size:12.5px;color:var(--dim)">Nada pendente. Adicione uma exceção acima.</p><div class="exmsg" id="ex-msg2"></div>`;
-  document.getElementById('ex-env').innerHTML=hj.length?exTabela(hj,false)
-    :'<p class="prose" style="font-size:12.5px;color:var(--dim)">Nenhuma exceção enviada hoje.</p>';
-  document.querySelectorAll('[data-rm]').forEach(b=>b.onclick=()=>{const L=exGet('pend',[]);L.splice(+b.dataset.rm,1);exSet('pend',L);exRender();});
-  const sb=document.getElementById('ex-send'); if(sb) sb.onclick=exEnviar;
-  const btn=document.querySelector('[data-v="exc"]');
-  if(btn){const c=btn.querySelector('.cnt'); if(P_.length){if(c)c.textContent=P_.length;else btn.insertAdjacentHTML('beforeend',`<span class="cnt">${P_.length}</span>`);} else if(c) c.remove();}
-}
-function exAdd(){
-  const f={canal:'ex-canal',san:'ex-san',proposta:'ex-prop',contra:'ex-contra',devolutiva:'ex-dev'}, v={}, m=document.getElementById('ex-msg1');
-  let falta=[];
-  Object.entries(f).forEach(([k,id])=>{const el=document.getElementById(id);v[k]=el.value.trim();el.classList.toggle('err',!v[k]);if(!v[k])falta.push(k);});
-  if(falta.length){m.textContent='Preencha os campos em vermelho';m.className='exmsg err';return;}
-  v.san=v.san.toUpperCase().replace(/\s+/g,'');
-  v.obs=document.getElementById('ex-obs').value.trim();
-  v.id=EX.login+'-'+Date.now()+'-'+Math.random().toString(36).slice(2,7);
-  v.hora=new Date().toTimeString().slice(0,5);
-  const L=exGet('pend',[]); L.push(v); exSet('pend',L);
-  ['ex-san','ex-prop','ex-contra','ex-obs'].forEach(id=>document.getElementById(id).value='');
-  ['ex-canal','ex-dev'].forEach(id=>document.getElementById(id).value='');
-  m.textContent=v.san.startsWith('HTB')?'Adicionada à lista — falta enviar':'Adicionada. Confira o SAN: normalmente começa com HTB';
-  m.className=v.san.startsWith('HTB')?'exmsg ok':'exmsg err';
-  exRender();
-}
-async function exEnviar(){
-  const L=exGet('pend',[]); if(!L.length) return;
-  const b=document.getElementById('ex-send'), m=document.getElementById('ex-msg2');
-  b.disabled=true; m.textContent='Enviando…'; m.className='exmsg';
-  const corpo=JSON.stringify({chave:EX.chave,login:EX.login,nome:EX.nome,turno:EX.turno,itens:L});
-  let r=null;
-  try{
-    const resp=await fetch(EX.url,{method:'POST',body:corpo});   // text/plain: sem pré-verificação de CORS
-    r=await resp.json();
-  }catch(e){ r={ok:false,erro:'sem conexão com a planilha'}; }
-  if(r&&r.ok){
-    const E_=exGet('env',{}), hj=E_[hojeBR()]=E_[hojeBR()]||[];
-    L.forEach(x=>hj.push(Object.assign({},x,{hora:r.hora||x.hora})));
-    Object.keys(E_).sort().slice(0,-7).forEach(k=>delete E_[k]);   // guarda só os últimos dias
-    exSet('env',E_); exSet('pend',[]); exRender();
-    const m2=document.getElementById('ex-msg2'); m2.textContent='Enviado ✓ '+(r.gravados||0)+' registrada'+((r.gravados||0)===1?'':'s')+(r.repetidos?' ('+r.repetidos+' já estava'+(r.repetidos>1?'m':'')+' na planilha)':'');
-    m2.className='exmsg ok';
-  }else{
-    b.disabled=false; m.textContent='Não enviado ('+((r&&r.erro)||'erro')+'). A lista continua guardada — tente de novo.'; m.className='exmsg err';
-  }
-}
 /* ---------- render ---------- */
 const convCli=P.clientes_recebidos/P.clientes_negociados;
 const dez=Math.round(convCli*10);
@@ -841,9 +456,6 @@ document.getElementById('r').innerHTML=`
 <div class="abas" id="abas">
   <button data-v="perf" class="on">Meu desempenho</button>
   ${D.acordos_qtd ? `<button data-v="acd">Meus acordos<span class="cnt">${D.acordos_qtd}</span></button>` : ''}
-  ${QS ? `<button data-v="psat">Satisfação (PSAT)</button>` : ''}
-  ${QMx ? `<button data-v="mon">Minhas monitorias${QMx.mes&&QMx.mes.qtd?`<span class="cnt">${QMx.mes.qtd}</span>`:''}</button>` : ''}
-  ${D.excecoes ? `<button data-v="exc">Exceções</button>` : ''}
 </div>
 
 <div class="vista on" id="v-perf">
@@ -954,10 +566,6 @@ ${(()=>{
     <div class="msg" id="acd-msg"></div>
   </div>
   <div id="acd-lista"></div>` : ''}</div>
-
-${QS?`<div class="vista" id="v-psat">${abaPSAT()}</div>`:''}
-${QMx?`<div class="vista" id="v-mon">${abaMonit()}</div>`:''}
-${D.excecoes?`<div class="vista" id="v-exc">${abaExc()}</div>`:''}
 
 <div class="ft"><b>Sobre estes números:</b> vêm das planilhas de Resultado Parcial e de Chamadas/TMA do período
 ${D.periodo}. Comparações são com a <b>média da operação</b>, não com pessoas específicas.
@@ -1070,36 +678,6 @@ if(D.acordos_qtd){
 
   bt.addEventListener('click',abrir);
   inp.addEventListener('keydown',e=>{ if(e.key==='Enter') abrir(); });
-}
-
-/* ---------- relatos das monitorias (bloco criptografado) ---------- */
-if(QMx && QMx.relatos && document.getElementById('q-go')){
-  const bt=document.getElementById('q-go'), inp=document.getElementById('q-pw'), msg=document.getElementById('q-msg');
-  const b64=x=>Uint8Array.from(atob(x),c=>c.charCodeAt(0));
-  async function abrirRel(){
-    const senha=inp.value;
-    if(!senha){msg.textContent='Digite a senha';msg.className='msg err';return;}
-    bt.disabled=true; inp.disabled=true; msg.textContent='Abrindo…'; msg.className='msg';
-    await new Promise(r=>setTimeout(r,40));
-    let R;
-    try{
-      const km=await crypto.subtle.importKey('raw',new TextEncoder().encode(senha),'PBKDF2',false,['deriveKey']);
-      const key=await crypto.subtle.deriveKey({name:'PBKDF2',salt:b64(QMx.relatos.salt),iterations:QMx.relatos.it,hash:'SHA-256'},
-        km,{name:'AES-GCM',length:256},false,['decrypt']);
-      R=JSON.parse(new TextDecoder().decode(await crypto.subtle.decrypt({name:'AES-GCM',iv:b64(QMx.relatos.iv)},key,b64(QMx.relatos.ct))));
-    }catch(e){bt.disabled=false;inp.disabled=false;inp.value='';msg.textContent='Senha incorreta';msg.className='msg err';inp.focus();return;}
-    document.getElementById('q-cad').remove();
-    Object.entries(R).forEach(([i,t])=>{const el=document.getElementById('rel-'+i);
-      if(el) el.innerHTML=`<h5 style="margin-top:0">Relato da ligação</h5><p>${esc(t)}</p>`;});
-  }
-  bt.addEventListener('click',abrirRel);
-  inp.addEventListener('keydown',e=>{if(e.key==='Enter')abrirRel();});
-}
-
-if(EX && document.getElementById('ex-add')){
-  document.getElementById('ex-add').onclick=exAdd;
-  document.getElementById('ex-san').addEventListener('input',e=>{e.target.value=e.target.value.toUpperCase();});
-  exRender();
 }
 
 /* simulador */

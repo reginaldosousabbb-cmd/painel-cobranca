@@ -126,9 +126,7 @@ input[type=range]::-moz-range-thumb{width:19px;height:19px;background:var(--ambe
   font-family:var(--sans);font-size:11px;line-height:1.7;color:var(--faint)}
 
 /* ---- abas ---- */
-.abas{display:flex;gap:0;border-bottom:1px solid var(--line);margin:20px 0 0;overflow-x:auto;scrollbar-width:none}
-.abas::-webkit-scrollbar{display:none}
-.abas button{flex:none;white-space:nowrap}
+.abas{display:flex;gap:0;border-bottom:1px solid var(--line);margin:20px 0 0}
 .abas button{padding:11px 18px;font-family:var(--mono);font-size:10px;font-weight:700;
   letter-spacing:.14em;text-transform:uppercase;color:var(--faint);background:none;border:none;
   border-bottom:2px solid transparent;cursor:pointer;transition:.15s}
@@ -193,92 +191,6 @@ input[type=range]::-moz-range-thumb{width:19px;height:19px;background:var(--ambe
 .dia-d{font-size:10px;font-weight:700;text-align:right}
 .dia-d.up{color:var(--green)}.dia-d.dn{color:var(--red)}.dia-d.eq{color:var(--faint)}
 
-/* ---- qualidade (PSAT + monitoria) ---- */
-.qk .k{min-height:92px}
-.nt5{display:flex;flex-direction:column;gap:2px}
-.nt5-r{display:grid;grid-template-columns:62px 1fr 74px;gap:12px;align-items:center;padding:6px 0}
-.nt5-r .l{font-size:10px;letter-spacing:.1em;color:var(--dim);font-weight:700}
-.nt5-r .t{height:12px;background:var(--panel3);position:relative}
-.nt5-r .t i{display:block;height:100%;animation:gw .7s cubic-bezier(.2,.8,.3,1) both;transform-origin:left}
-.nt5-r .t b{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--txt);opacity:.55}
-.nt5-r .v{font-size:11px;font-weight:700;text-align:right}
-.nt5-r .v span{color:var(--faint);font-weight:500}
-.chip{display:inline-flex;align-items:center;justify-content:center;min-width:24px;height:22px;padding:0 6px;
-  font-size:11px;font-weight:800;border:1px solid}
-.chip.c5,.chip.c4{color:var(--green);border-color:rgba(52,211,153,.4);background:rgba(52,211,153,.1)}
-.chip.c3{color:var(--amber);border-color:rgba(255,176,32,.4);background:rgba(255,176,32,.1)}
-.chip.c2,.chip.c1{color:var(--red);border-color:rgba(244,63,94,.45);background:rgba(244,63,94,.12)}
-.chip.cx{color:var(--faint);border-color:var(--line2);font-weight:600;font-size:9.5px;letter-spacing:.06em}
-.acd tr.det td{background:rgba(244,63,94,.05)}
-.mon{border:1px solid var(--line);background:var(--panel2);border-left:2px solid var(--c);padding:16px 18px;margin-bottom:12px}
-.mon-h{display:flex;align-items:flex-start;gap:16px;flex-wrap:wrap}
-.mon-h .nota{font-size:34px;font-weight:800;line-height:1;color:var(--c);letter-spacing:-.03em}
-.mon-h .nota small{font-size:11px;color:var(--faint);font-weight:600;letter-spacing:0}
-.mon-h .q{font-size:9px;letter-spacing:.14em;color:var(--c);font-weight:700;margin-top:6px}
-.mon-h .meta{margin-left:auto;text-align:right;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);line-height:1.8}
-.mon-h .meta b{color:var(--txt);font-weight:700}
-.mon h5{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--faint);margin:16px 0 8px}
-.mon ul{list-style:none;display:flex;flex-direction:column;gap:6px}
-.mon li{font-family:var(--sans);font-size:12.5px;line-height:1.55;color:var(--dim);padding-left:16px;position:relative}
-.mon li:before{content:'▸';position:absolute;left:0;color:var(--amber);font-family:var(--mono)}
-.mon li.gr:before{color:var(--red)}
-.mon li b{color:var(--txt);font-weight:600}
-.mon .rel{margin-top:14px;border-top:1px dashed var(--line2);padding-top:12px}
-.mon .rel button{background:none;border:1px solid var(--line2);color:var(--dim);font-family:var(--mono);font-size:9.5px;
-  font-weight:700;letter-spacing:.13em;text-transform:uppercase;padding:7px 12px;cursor:pointer}
-.mon .rel button:hover{border-color:var(--amber);color:var(--amber)}
-.mon .rel p{font-family:var(--sans);font-size:12.5px;line-height:1.65;color:var(--dim);margin-top:4px}
-.evo{display:flex;align-items:flex-end;gap:6px;height:74px;margin:6px 0 4px}
-.evo div{flex:1;max-width:38px;display:flex;flex-direction:column;align-items:center;gap:4px;height:100%;justify-content:flex-end}
-.evo i{display:block;width:100%;animation:gw2 .6s ease both;transform-origin:bottom}
-.evo span{font-size:8.5px;color:var(--faint);letter-spacing:.04em}
-.evo em{font-style:normal;font-size:9.5px;font-weight:700}
-@keyframes gw2{from{transform:scaleY(0)}to{transform:scaleY(1)}}
-.vazio{padding:26px 18px;text-align:center;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
-.vazio p{font-family:var(--sans);text-transform:none;letter-spacing:0;font-size:12px;color:var(--dim);margin-top:8px;line-height:1.6}
-.cad.mini{max-width:none;margin:0 0 16px;padding:18px 20px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;text-align:left}
-.cad.mini p{margin:0;flex:1;min-width:200px}
-.cad.mini input{width:180px;padding:9px;font-size:12px}
-.cad.mini button{width:auto;margin:0;padding:10px 16px}
-.cad.mini .msg{width:100%;margin-top:0}
-.rc{padding:9px 0;border-bottom:1px solid rgba(26,36,51,.6)}
-.rc:last-child{border-bottom:none}
-.rc-t{display:flex;gap:8px;align-items:center}
-.rc-g{font-size:9px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--faint)}
-.rc-i{font-family:var(--sans);font-size:12.5px;line-height:1.5;color:var(--txt);margin:4px 0 6px}
-.rc-b{display:flex;align-items:center;gap:8px}
-.rc-b i{display:block;height:5px;animation:gw .7s cubic-bezier(.2,.8,.3,1) both;transform-origin:left}
-.rc-b span{font-size:10px;font-weight:700;color:var(--dim)}
-.fg{margin-top:14px;border:1px solid rgba(244,63,94,.45);background:rgba(244,63,94,.08);padding:11px 13px;
-  font-family:var(--sans);font-size:12.5px;line-height:1.6;color:var(--txt)}
-.fg b{font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--red);display:block;margin-bottom:4px}
-.fb{font-family:var(--sans);font-size:12.5px;line-height:1.65;color:var(--dim);white-space:pre-line;
-  border-left:2px solid var(--line2);padding:2px 0 2px 12px}
-.mon-f{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
-@media(max-width:900px){.qk{grid-template-columns:repeat(2,1fr)!important}}
-
-/* ---- exceções ---- */
-.exf{display:grid;grid-template-columns:150px 190px 1fr 1fr 170px;gap:10px;align-items:end}
-.exf label{display:block;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:6px}
-.exf input,.exf select,.exo input{width:100%;background:#070B12;border:1px solid var(--line2);color:var(--txt);
-  font-family:var(--sans);font-size:12.5px;padding:9px 10px}
-.exf input:focus,.exf select:focus,.exo input:focus{outline:none;border-color:var(--amber)}
-.exf input.err,.exf select.err{border-color:var(--red)}
-.exo{display:flex;gap:10px;align-items:end;margin-top:10px}
-.exo>div{flex:1}
-.exo label{display:block;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:6px}
-.bt{background:var(--amber);color:#0A0703;border:none;font-family:var(--mono);font-size:10px;font-weight:800;
-  letter-spacing:.14em;text-transform:uppercase;padding:11px 16px;cursor:pointer;white-space:nowrap}
-.bt.sec{background:none;border:1px solid var(--line2);color:var(--dim)}
-.bt:disabled{opacity:.45;cursor:default}
-.exmsg{font-size:10px;letter-spacing:.1em;text-transform:uppercase;margin-top:10px;min-height:14px;color:var(--faint)}
-.exmsg.ok{color:var(--green)}.exmsg.err{color:var(--red)}
-.acd td .rm{background:none;border:none;color:var(--faint);cursor:pointer;font-size:14px}
-.acd td .rm:hover{color:var(--red)}
-.dv{font-size:8.5px;font-weight:700;letter-spacing:.08em;padding:2px 7px;text-transform:uppercase}
-.dv.a{background:rgba(52,211,153,.13);color:var(--green)}.dv.n{background:rgba(244,63,94,.14);color:var(--red)}.dv.g{background:rgba(255,176,32,.13);color:var(--amber)}
-@media(max-width:900px){.exf{grid-template-columns:1fr 1fr}.exo{flex-wrap:wrap}}
-
 svg text{font-family:var(--mono)}
 @media(max-width:900px){.kpis{grid-template-columns:repeat(3,1fr)}.g2,.g21{grid-template-columns:1fr}}
 @media(max-width:560px){.kpis{grid-template-columns:repeat(2,1fr)}.pf-s{margin-left:0}}
@@ -286,7 +198,7 @@ svg text{font-family:var(--mono)}
 </head>
 <body>
 <div class="wrap" id="r"></div>
-<script id="dd" type="application/json">{"acordos":{"salt":"lrzrde3Out69j64tQGyo6w==","iv":"Y9Sp6sTzJ31nXHd0","ct":"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","it":310000},"acordos_qtd":9,"qualidade":{"psat":{"periodo":"01/10 a 22/10/2026","equipe":{"pesquisas":12934,"validas_atendente":7614,"validas_solucao":7503,"invalidas":1006,"sem_resposta":4314,"csat_atendente":0.8385,"media_atendente":4.35,"csat_solucao":0.7329,"media_solucao":3.99,"rechamada":0.489,"base_rechamada":7237,"dist_atendente":[993,101,136,381,6003],"detratores":1094},"meu":{"pesquisas":219,"validas_atendente":78,"validas_solucao":71,"invalidas":18,"sem_resposta":123,"csat_atendente":0.6667,"media_atendente":3.71,"csat_solucao":0.662,"media_solucao":3.73,"rechamada":0.3662,"base_rechamada":71,"dist_atendente":[23,2,1,1,51],"detratores":25},"lista":[{"data":"22/10","hora":"13:38","fila":"negociacao","atendente":1,"solucao":2,"rechamada":false,"htb":"HTB…8814","inv":false},{"data":"22/10","hora":"13:10","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"22/10","hora":"12:56","fila":"negociacao","atendente":2,"solucao":5,"rechamada":null,"htb":"HTB…0794","inv":false},{"data":"22/10","hora":"11:56","fila":"cobrança D80","atendente":5,"solucao":5,"rechamada":false,"htb":null,"inv":false},{"data":"22/10","hora":"11:48","fila":"negociacao","atendente":5,"solucao":5,"rechamada":true,"htb":"HTB…6034","inv":false},{"data":"22/10","hora":"09:05","fila":"cobrança D80","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…4042","inv":false},{"data":"22/10","hora":"08:27","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…8474","inv":false},{"data":"22/10","hora":"08:19","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…8794","inv":false},{"data":"22/10","hora":"08:09","fila":"negociacao","atendente":1,"solucao":1,"rechamada":false,"htb":"HTB…9782","inv":false},{"data":"21/10","hora":"12:25","fila":"negociacao","atendente":5,"solucao":5,"rechamada":false,"htb":"HTB…6855","inv":false},{"data":"21/10","hora":"12:09","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":true},{"data":"21/10","hora":"10:51","fila":"faturas","atendente":5,"solucao":5,"rechamada":false,"htb":null,"inv":false},{"data":"21/10","hora":"10:13","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…1632","inv":false},{"data":"20/10","hora":"13:50","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"20/10","hora":"13:25","fila":"negociacao","atendente":3,"solucao":null,"rechamada":null,"htb":"HTB…7111","inv":false},{"data":"20/10","hora":"13:16","fila":"faturas","atendente":4,"solucao":3,"rechamada":false,"htb":null,"inv":false},{"data":"20/10","hora":"12:58","fila":"inadimplente_inativo","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…4618","inv":false},{"data":"20/10","hora":"12:36","fila":"faturas","atendente":5,"solucao":5,"rechamada":true,"htb":null,"inv":false},{"data":"20/10","hora":"12:14","fila":"negociacao","atendente":1,"solucao":null,"rechamada":null,"htb":"HTB…8121","inv":false},{"data":"20/10","hora":"11:53","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":true},{"data":"20/10","hora":"11:45","fila":"negociacao","atendente":5,"solucao":5,"rechamada":false,"htb":"HTB…6208","inv":false},{"data":"20/10","hora":"10:59","fila":"faturas","atendente":1,"solucao":2,"rechamada":true,"htb":null,"inv":false},{"data":"20/10","hora":"10:15","fila":"negociacao","atendente":1,"solucao":1,"rechamada":true,"htb":"HTB…8343","inv":false},{"data":"20/10","hora":"10:06","fila":"faturas","atendente":5,"solucao":5,"rechamada":false,"htb":null,"inv":false},{"data":"20/10","hora":"09:31","fila":"faturas","atendente":1,"solucao":1,"rechamada":true,"htb":null,"inv":false},{"data":"20/10","hora":"09:21","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…3062","inv":false},{"data":"20/10","hora":"08:58","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"19/10","hora":"13:41","fila":"negociacao","atendente":2,"solucao":null,"rechamada":null,"htb":"HTB…7285","inv":false},{"data":"19/10","hora":"13:13","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…3628","inv":false},{"data":"19/10","hora":"12:52","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…8570","inv":false},{"data":"19/10","hora":"12:41","fila":"faturas","atendente":5,"solucao":5,"rechamada":false,"htb":null,"inv":false},{"data":"19/10","hora":"12:20","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…8849","inv":false},{"data":"19/10","hora":"12:18","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…1628","inv":false},{"data":"19/10","hora":"12:07","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…7199","inv":false},{"data":"19/10","hora":"10:35","fila":"negociacao","atendente":5,"solucao":5,"rechamada":false,"htb":"HTB…3636","inv":false},{"data":"19/10","hora":"10:21","fila":"faturas","atendente":5,"solucao":2,"rechamada":true,"htb":null,"inv":false},{"data":"19/10","hora":"10:00","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…1785","inv":false},{"data":"19/10","hora":"09:33","fila":"negociacao","atendente":5,"solucao":5,"rechamada":true,"htb":"HTB…7713","inv":false},{"data":"19/10","hora":"09:13","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…6090","inv":false},{"data":"19/10","hora":"08:36","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…8647","inv":false},{"data":"19/10","hora":"08:12","fila":"faturas","atendente":null,"solucao":null,"rechamada":true,"htb":null,"inv":true},{"data":"19/10","hora":"07:50","fila":"negociacao","atendente":null,"solucao":1,"rechamada":false,"htb":"HTB…3559","inv":true},{"data":"17/10","hora":"13:34","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…3101","inv":false},{"data":"17/10","hora":"13:20","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"17/10","hora":"12:50","fila":"negociacao","atendente":1,"solucao":1,"rechamada":true,"htb":"HTB…2956","inv":false},{"data":"17/10","hora":"10:41","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…0663","inv":false},{"data":"17/10","hora":"10:20","fila":"negociacao","atendente":5,"solucao":5,"rechamada":true,"htb":"HTB…8215","inv":false},{"data":"17/10","hora":"09:40","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…4940","inv":false},{"data":"17/10","hora":"09:25","fila":"faturas","atendente":5,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"17/10","hora":"09:13","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"17/10","hora":"09:08","fila":"faturas","atendente":1,"solucao":1,"rechamada":false,"htb":null,"inv":false},{"data":"17/10","hora":"08:37","fila":"negociacao","atendente":5,"solucao":null,"rechamada":null,"htb":"HTB…8974","inv":false},{"data":"16/10","hora":"11:22","fila":"faturas","atendente":1,"solucao":1,"rechamada":false,"htb":"HTB…0810","inv":false},{"data":"15/10","hora":"13:53","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…0239","inv":false},{"data":"15/10","hora":"13:23","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…1284","inv":false},{"data":"15/10","hora":"12:49","fila":"faturas","atendente":1,"solucao":1,"rechamada":false,"htb":null,"inv":false},{"data":"15/10","hora":"12:42","fila":"faturas","atendente":5,"solucao":5,"rechamada":false,"htb":null,"inv":false},{"data":"15/10","hora":"12:25","fila":"negociacao","atendente":5,"solucao":5,"rechamada":false,"htb":"HTB…6668","inv":false},{"data":"15/10","hora":"12:03","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…9983","inv":false},{"data":"15/10","hora":"11:57","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…3537","inv":false},{"data":"15/10","hora":"11:40","fila":"faturas","atendente":5,"solucao":5,"rechamada":false,"htb":null,"inv":false},{"data":"15/10","hora":"11:30","fila":"faturas","atendente":5,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"15/10","hora":"11:23","fila":"faturas","atendente":5,"solucao":5,"rechamada":false,"htb":null,"inv":false},{"data":"15/10","hora":"10:52","fila":"faturas","atendente":5,"solucao":5,"rechamada":false,"htb":null,"inv":false},{"data":"15/10","hora":"10:41","fila":"negociacao","atendente":1,"solucao":1,"rechamada":false,"htb":"HTB…1879","inv":false},{"data":"15/10","hora":"10:23","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…4896","inv":true},{"data":"15/10","hora":"10:11","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…6736","inv":false},{"data":"15/10","hora":"10:04","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"15/10","hora":"09:46","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…8071","inv":false},{"data":"15/10","hora":"09:24","fila":"negociacao","atendente":5,"solucao":5,"rechamada":false,"htb":"HTB…9498","inv":false},{"data":"15/10","hora":"09:05","fila":"negociacao","atendente":5,"solucao":5,"rechamada":false,"htb":"HTB…4833","inv":false},{"data":"15/10","hora":"08:40","fila":"negociacao","atendente":5,"solucao":5,"rechamada":false,"htb":"HTB…7264","inv":false},{"data":"15/10","hora":"08:21","fila":"negociacao","atendente":5,"solucao":5,"rechamada":false,"htb":"HTB…7559","inv":false},{"data":"15/10","hora":"08:15","fila":"cobrança D80","atendente":5,"solucao":5,"rechamada":false,"htb":null,"inv":false},{"data":"14/10","hora":"13:11","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…2247","inv":false},{"data":"14/10","hora":"12:22","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"14/10","hora":"12:14","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…3771","inv":false},{"data":"14/10","hora":"11:51","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"14/10","hora":"11:33","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…0024","inv":true},{"data":"14/10","hora":"10:52","fila":"negociacao","atendente":5,"solucao":2,"rechamada":true,"htb":"HTB…0403","inv":false},{"data":"14/10","hora":"10:38","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…7781","inv":false},{"data":"14/10","hora":"10:13","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…6323","inv":false},{"data":"14/10","hora":"09:47","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…8579","inv":false},{"data":"14/10","hora":"09:20","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"14/10","hora":"08:45","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"13/10","hora":"13:55","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…5364","inv":false},{"data":"13/10","hora":"13:09","fila":"negociacao","atendente":5,"solucao":5,"rechamada":false,"htb":"HTB…9557","inv":false},{"data":"13/10","hora":"12:39","fila":"faturas","atendente":1,"solucao":1,"rechamada":false,"htb":null,"inv":false},{"data":"13/10","hora":"12:36","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…2431","inv":false},{"data":"13/10","hora":"12:13","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…9467","inv":false},{"data":"13/10","hora":"11:44","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"13/10","hora":"11:39","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…1170","inv":false},{"data":"13/10","hora":"11:28","fila":"faturas","atendente":1,"solucao":1,"rechamada":true,"htb":null,"inv":false},{"data":"13/10","hora":"10:30","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"13/10","hora":"09:45","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…5430","inv":false},{"data":"13/10","hora":"09:23","fila":"cobrança D80","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":true},{"data":"13/10","hora":"09:06","fila":"faturas","atendente":5,"solucao":5,"rechamada":true,"htb":null,"inv":false},{"data":"13/10","hora":"08:39","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…6587","inv":false},{"data":"13/10","hora":"08:36","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…5313","inv":false},{"data":"13/10","hora":"08:31","fila":"negociacao","atendente":5,"solucao":5,"rechamada":false,"htb":"HTB…1261","inv":false},{"data":"13/10","hora":"08:13","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…0782","inv":false},{"data":"12/10","hora":"13:42","fila":"negociacao","atendente":5,"solucao":5,"rechamada":false,"htb":"HTB…5458","inv":false},{"data":"12/10","hora":"13:27","fila":"negociacao","atendente":5,"solucao":5,"rechamada":false,"htb":"HTB…1721","inv":false},{"data":"12/10","hora":"12:49","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…2629","inv":false},{"data":"12/10","hora":"12:44","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"12/10","hora":"12:18","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…2640","inv":false},{"data":"12/10","hora":"12:05","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…5266","inv":false},{"data":"12/10","hora":"11:30","fila":"faturas","atendente":5,"solucao":5,"rechamada":true,"htb":null,"inv":false},{"data":"12/10","hora":"10:38","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…7516","inv":true},{"data":"12/10","hora":"10:21","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"12/10","hora":"10:10","fila":"faturas","atendente":5,"solucao":5,"rechamada":true,"htb":null,"inv":false},{"data":"12/10","hora":"10:03","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"12/10","hora":"10:00","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"12/10","hora":"09:58","fila":"faturas","atendente":5,"solucao":5,"rechamada":false,"htb":null,"inv":false},{"data":"12/10","hora":"09:55","fila":"faturas","atendente":5,"solucao":5,"rechamada":false,"htb":null,"inv":false},{"data":"12/10","hora":"09:51","fila":"faturas","atendente":1,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"12/10","hora":"09:48","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"12/10","hora":"09:45","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"12/10","hora":"09:36","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"12/10","hora":"09:29","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"12/10","hora":"09:19","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"12/10","hora":"09:08","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"12/10","hora":"09:02","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":true},{"data":"12/10","hora":"08:56","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"12/10","hora":"08:38","fila":"faturas","atendente":5,"solucao":5,"rechamada":false,"htb":null,"inv":false},{"data":"12/10","hora":"08:30","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"12/10","hora":"08:24","fila":"faturas","atendente":null,"solucao":5,"rechamada":false,"htb":null,"inv":true},{"data":"12/10","hora":"08:17","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"12/10","hora":"08:06","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"12/10","hora":"07:54","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"09/10","hora":"13:02","fila":"faturas","atendente":1,"solucao":1,"rechamada":true,"htb":null,"inv":false},{"data":"09/10","hora":"12:27","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…1530","inv":false},{"data":"09/10","hora":"12:05","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…3140","inv":false},{"data":"09/10","hora":"11:43","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…1105","inv":false},{"data":"09/10","hora":"11:35","fila":"faturas","atendente":5,"solucao":5,"rechamada":false,"htb":null,"inv":false},{"data":"09/10","hora":"10:58","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…8945","inv":false},{"data":"09/10","hora":"10:44","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…3698","inv":false},{"data":"09/10","hora":"10:25","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…7166","inv":false},{"data":"09/10","hora":"10:19","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"09/10","hora":"09:55","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…8899","inv":false},{"data":"09/10","hora":"09:42","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…9931","inv":false},{"data":"09/10","hora":"09:22","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…5103","inv":false},{"data":"09/10","hora":"08:07","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…3399","inv":false},{"data":"08/10","hora":"12:13","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"08/10","hora":"12:10","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"08/10","hora":"11:35","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"08/10","hora":"11:34","fila":"faturas","atendente":5,"solucao":5,"rechamada":false,"htb":null,"inv":false},{"data":"08/10","hora":"10:49","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…5573","inv":false},{"data":"08/10","hora":"10:00","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…9317","inv":false},{"data":"08/10","hora":"09:37","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…6987","inv":false},{"data":"08/10","hora":"08:35","fila":"negociacao","atendente":5,"solucao":5,"rechamada":false,"htb":"HTB…2532","inv":false},{"data":"08/10","hora":"08:10","fila":"negociacao","atendente":5,"solucao":5,"rechamada":true,"htb":"HTB…9818","inv":false},{"data":"07/10","hora":"12:09","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…5982","inv":false},{"data":"07/10","hora":"11:49","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…1814","inv":false},{"data":"07/10","hora":"11:31","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"07/10","hora":"10:59","fila":"negociacao","atendente":5,"solucao":5,"rechamada":false,"htb":"HTB…7526","inv":false},{"data":"07/10","hora":"09:47","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…6463","inv":false},{"data":"07/10","hora":"09:31","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…5117","inv":false},{"data":"07/10","hora":"09:13","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"07/10","hora":"08:54","fila":"negociacao","atendente":5,"solucao":5,"rechamada":null,"htb":"HTB…8532","inv":false},{"data":"07/10","hora":"08:21","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…2619","inv":false},{"data":"07/10","hora":"08:09","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…5154","inv":false},{"data":"06/10","hora":"13:32","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…9756","inv":false},{"data":"06/10","hora":"12:55","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"06/10","hora":"12:38","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"06/10","hora":"12:35","fila":"negociacao","atendente":1,"solucao":1,"rechamada":true,"htb":"HTB…4977","inv":false},{"data":"06/10","hora":"11:17","fila":"negociacao","atendente":5,"solucao":5,"rechamada":false,"htb":"HTB…1261","inv":false},{"data":"06/10","hora":"10:40","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…2404","inv":false},{"data":"06/10","hora":"10:31","fila":"negociacao","atendente":5,"solucao":null,"rechamada":null,"htb":"HTB…7036","inv":false},{"data":"06/10","hora":"10:26","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…1834","inv":false},{"data":"06/10","hora":"09:43","fila":"negociacao","atendente":1,"solucao":1,"rechamada":false,"htb":"HTB…4321","inv":false},{"data":"06/10","hora":"09:05","fila":"faturas","atendente":5,"solucao":5,"rechamada":true,"htb":null,"inv":false},{"data":"06/10","hora":"08:58","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"06/10","hora":"08:53","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…1228","inv":false},{"data":"06/10","hora":"08:12","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…2073","inv":false},{"data":"05/10","hora":"13:49","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…1352","inv":false},{"data":"05/10","hora":"13:11","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…0411","inv":false},{"data":"05/10","hora":"12:57","fila":"negociacao","atendente":5,"solucao":5,"rechamada":true,"htb":"HTB…0567","inv":false},{"data":"05/10","hora":"12:45","fila":"faturas","atendente":1,"solucao":1,"rechamada":null,"htb":null,"inv":false},{"data":"05/10","hora":"12:00","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…1979","inv":false},{"data":"05/10","hora":"11:59","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"05/10","hora":"11:51","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…8721","inv":true},{"data":"05/10","hora":"11:45","fila":"negociacao","atendente":5,"solucao":5,"rechamada":true,"htb":"HTB…8089","inv":false},{"data":"05/10","hora":"11:42","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…5558","inv":false},{"data":"05/10","hora":"11:35","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"05/10","hora":"10:49","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…8819","inv":false},{"data":"05/10","hora":"10:23","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…2276","inv":false},{"data":"05/10","hora":"10:15","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…5740","inv":false},{"data":"05/10","hora":"09:26","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"05/10","hora":"08:42","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"05/10","hora":"08:08","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…5313","inv":false},{"data":"03/10","hora":"12:47","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…8238","inv":false},{"data":"03/10","hora":"12:40","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"03/10","hora":"12:31","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…3429","inv":false},{"data":"03/10","hora":"11:32","fila":"faturas","atendente":1,"solucao":null,"rechamada":false,"htb":null,"inv":false},{"data":"03/10","hora":"10:31","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"03/10","hora":"10:04","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…4291","inv":true},{"data":"03/10","hora":"08:01","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…0111","inv":true},{"data":"02/10","hora":"13:37","fila":"cobrança D80","atendente":null,"solucao":null,"rechamada":true,"htb":"HTB…7657","inv":true},{"data":"02/10","hora":"12:16","fila":"faturas","atendente":1,"solucao":1,"rechamada":false,"htb":null,"inv":false},{"data":"02/10","hora":"12:02","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…8635","inv":true},{"data":"02/10","hora":"11:47","fila":"negociacao","atendente":5,"solucao":5,"rechamada":true,"htb":"HTB…8089","inv":false},{"data":"02/10","hora":"10:09","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…8945","inv":false},{"data":"02/10","hora":"09:53","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":true},{"data":"02/10","hora":"09:22","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…8597","inv":false},{"data":"02/10","hora":"09:03","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…5538","inv":false},{"data":"02/10","hora":"08:30","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…4132","inv":true},{"data":"01/10","hora":"12:33","fila":"negociacao","atendente":5,"solucao":5,"rechamada":false,"htb":"HTB…5784","inv":false},{"data":"01/10","hora":"12:22","fila":"negociacao","atendente":1,"solucao":1,"rechamada":true,"htb":"HTB…4583","inv":false},{"data":"01/10","hora":"12:22","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…7018","inv":false},{"data":"01/10","hora":"12:14","fila":"negociacao","atendente":1,"solucao":1,"rechamada":true,"htb":"HTB…4583","inv":false},{"data":"01/10","hora":"12:04","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"01/10","hora":"11:25","fila":"negociacao","atendente":1,"solucao":1,"rechamada":true,"htb":"HTB…4615","inv":false},{"data":"01/10","hora":"11:07","fila":"faturas","atendente":5,"solucao":5,"rechamada":false,"htb":null,"inv":false},{"data":"01/10","hora":"10:04","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":true},{"data":"01/10","hora":"09:44","fila":"negociacao","atendente":null,"solucao":null,"rechamada":null,"htb":"HTB…1574","inv":false},{"data":"01/10","hora":"09:35","fila":"negociacao","atendente":5,"solucao":5,"rechamada":false,"htb":"HTB…9106","inv":false},{"data":"01/10","hora":"09:07","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false},{"data":"01/10","hora":"08:19","fila":"faturas","atendente":null,"solucao":null,"rechamada":null,"htb":null,"inv":false}]},"monit":{"competencia":"2026-11","equipe":{"media_nota":74.9,"monitorias":65,"pessoas":19,"por_pessoa":3.4},"meta":null,"mes":{"qtd":3,"media":58.7,"falhas_graves":1,"aderencia":0.8672,"perdeu_por_falha":80.0},"recorrentes":[{"grupo":"PSAT","item":"Esclareceu sobre os itens da pesquisa antes de transferir","vezes":3},{"grupo":"PSAT","item":"Finalizou o contato mencionando a Pesquisa de satisfação","vezes":2},{"grupo":"Encerramento","item":"Se colocou a disposição para esclarecimentos de dúvidas","vezes":2},{"grupo":"Apresentação","item":"Atendeu em até 5 segundos (ativo e receptivo)","vezes":2},{"grupo":"Oportunidade de negócio","item":"Orientou cliente de forma consultiva a realizar a atualização de MOP","vezes":1},{"grupo":"Registro","item":"Descreveu o contato de forma correta/completa","vezes":1},{"grupo":"Registro","item":"Reclassificou o registro conforme Base de Conhecimento","vezes":1},{"grupo":"Registro","item":"Classificou o contato de forma correta - Salesforce","vezes":1}],"lista":[{"id":"1086","data":"03/11/2026","criado_em":"04/11/2026","nota":85.0,"nota_bruta":85.0,"falha_grave":false,"monitor":"Paula Fernanda Alves","tipo":"Supervisor · Não venda","status":"Finalizada","ciencia":null,"itens":[{"grupo":"Oportunidade de negócio","item":"Orientou cliente de forma consultiva a realizar a atualização de MOP"},{"grupo":"PSAT","item":"Esclareceu sobre os itens da pesquisa antes de transferir"},{"grupo":"PSAT","item":"Finalizou o contato mencionando a Pesquisa de satisfação"},{"grupo":"Encerramento","item":"Se colocou a disposição para esclarecimentos de dúvidas"}],"falhas_graves":[],"aderencia":0.8947,"itens_avaliados":38,"feedback":"A cliente relatou que, após realizar o pagamento da fatura anterior, permaneceu aproximadamente 15 a 16 dias praticamente sem utilizar o serviço, informando que já havia entrado em contato anteriormente, mas não obteve solução. Diante da insatisfação, solicitou o cancelamento do serviço.\n\nO atendente realizou corretamente a validação de identidade por meio dos três primeiros dígitos do CPF e data de nascimento, confirmou o e-mail cadastrado, informou o protocolo e esclareceu a política de até três tentativas de retorno pelo DDD 062. Também ofereceu a possibilidade de contestação dos dias sem serviço, considerando a data de abertura do chamado, e se prontificou a verificar o sistema.\n\nPontos fortes:\n- Realizou corretamente a validação dos dados cadastrais.\n- Confirmou o e-mail cadastrado com a cliente.\n- Informou o número do protocolo e explicou o procedimento de callback, com até três tentativas pelo DDD 062.\n- Apresentou a possibilidade de contestação dos dias sem serviço, demonstrando iniciativa para buscar uma solução.\nPontos de melhoria:\n- Retenção: Diante da solicitação de cancelamento, deveria explorar alternativas para reverter a insatisfação, buscando compreender melhor o histórico das falhas e apresentar soluções que pudessem recuperar a confiança da cliente.\n- Sondagem: Investigar detalhadamente os problemas enfrentados, identificar se a instabilidade ainda persiste e compreender o impacto da falta de serviço na decisão de cancelar.\n- Oferta de benefícios: Informar sobre a possibilidade de adesão ao débito automático, destacando o benefício de R$ 30,00 de desconto, conforme as condições de elegibilidade.\n- Canais digitais: Apresentar as facilidades disponíveis, como Área do Assinante, aplicativo e WhatsApp, orientando a cliente sobre como utilizar esses canais para consultar faturas e solicitar suporte.\n- Finalização da chamada: Verificar a ocorrência de possível queda de ligação, considerando que a chamada foi interrompida antes de uma conclusão clara. É fundamental garantir que o atendimento seja finalizado adequadamente e, em caso de queda, realizar o procedimento de callback.\nObjetivo do feedback: Desenvolver uma abordagem mais estratégica de retenção, principalmente em situações nas quais o cliente demonstra insatisfação com a qualidade do serviço. É fundamental investigar a causa do problema, apresentar alternativas concretas, reforçar os benefícios disponíveis e buscar uma solução antes de prosseguir com o cancelamento. Também é necessário garantir a continuidade do atendimento, evitando que o cliente fique sem retorno após uma interrupção da ligação.","prazo_feedback":null,"htb":"HTB…9332","pontos":[],"tem_relato":false},{"id":"1032","data":"26/09/2026","criado_em":"02/11/2026","nota":0.0,"nota_bruta":80.0,"falha_grave":true,"monitor":"Diovania Rocha Alves Santos","tipo":"Qualidade · Não venda","status":"Finalizada","ciencia":null,"itens":[{"grupo":"Apresentação","item":"Atendeu em até 5 segundos (ativo e receptivo)"},{"grupo":"Registro","item":"Descreveu o contato de forma correta/completa"},{"grupo":"Registro","item":"Reclassificou o registro conforme Base de Conhecimento"},{"grupo":"Registro","item":"Classificou o contato de forma correta - Salesforce"},{"grupo":"Registro","item":"Classificou o contato de forma correta - Retaguarda -> Cobrança"},{"grupo":"Registro","item":"Realizou o registro durante o contato com o cliente (realizou em outro momento ou em outro contato)"},{"grupo":"PSAT","item":"Esclareceu sobre os itens da pesquisa antes de transferir"},{"grupo":"PSAT","item":"Finalizou o contato mencionando a Pesquisa de satisfação"},{"grupo":"Encerramento","item":"Se colocou a disposição para esclarecimentos de dúvidas"}],"falhas_graves":[{"grupo":"Falha grave","item":"Realizou a confirmação positiva ou realizou de forma incompleta"},{"grupo":"Falha grave","item":"Não realizou o registro no Salesforce"}],"aderencia":0.7568,"itens_avaliados":37,"feedback":"O cliente Jaci entrou em contato informando que estava sem internet. A agente realizou a confirmação positiva, porém, não confirmou o nome completo do cliente. Também informou o protocolo, o call back e confirmou o e-mail cadastrado.\n\nApós verificar o sistema, a agente explicou que a conexão estava bloqueada devido a uma fatura vencida. O cliente informou que não havia identificado nenhuma fatura disponível no aplicativo. Diante disso, a agente esclareceu o motivo do bloqueio e explicou por que o cliente não havia conseguido acessar a fatura.\n\nA pedido do cliente, a agente encaminhou a fatura pelo WhatsApp e explicou os valores referentes ao plano contratado anteriormente, esclarecendo também o desconto aplicado à fatura. Informou que o valor mais acessível do plano atualizado já constava no sistema para novembro. Em seguida, confirmou o recebimento da fatura e o valor apresentado. Quando o cliente perguntou se a conexão seria restabelecida após o pagamento, a agente explicou que o prazo seria de até duas horas após a baixa do pagamento no sistema. O atendimento foi encerrado sem a aplicação da pesquisa PSAT.\n\n\n\nPontos de melhoria:\nRealizar a apresentação no início da ligação, evitando ultrapassar cinco segundos sem se apresentar.\nCompletar a confirmação positiva, validando também o nome completo do cliente. (falha grave) \nRegistrar corretamente o atendimento no sistema, pois não consta registro da interação. (falha grave) \nOrientar o cliente sobre a possibilidade de desbloqueio em confiança, verificando se o procedimento está disponível para o caso.\nFinalizar o atendimento aplicando a pesquisa PSAT e explicando as perguntas ao cliente.\n\n\n\n* Questão para o feedback *\n\nNesse caso, não seria possível realizar o desbloqueio em confiança? Em quais situações esse procedimento pode ser realizado e quais critérios precisam ser atendidos?","prazo_feedback":null,"htb":"HTB…7110","pontos":[],"tem_relato":false},{"id":"1031","data":"31/10/2026","criado_em":"02/11/2026","nota":91.0,"nota_bruta":91.0,"falha_grave":false,"monitor":"Diovania Rocha Alves Santos","tipo":"Qualidade · Não venda","status":"Finalizada","ciencia":null,"itens":[{"grupo":"Apresentação","item":"Atendeu em até 5 segundos (ativo e receptivo)"},{"grupo":"PSAT","item":"Esclareceu sobre os itens da pesquisa antes de transferir"}],"falhas_graves":[],"aderencia":0.95,"itens_avaliados":40,"feedback":"A cliente Josiane entrou em contato informando que a conexão ainda não havia sido restabelecida após o pagamento. O agente realizou a confirmação positiva, informou o protocolo e o call back. Durante a validação dos dados, confirmou o e-mail, porém, informou o endereço em vez de permitir que a própria cliente o confirmasse.\n\nO agente confirmou com a cliente os valores pagos e explicou que havia um pagamento em duplicidade. Informou que o valor poderia ser ressarcido ou utilizado como crédito para uma próxima fatura. Como havia outra fatura vencida, esclareceu que não seria possível abater o valor diretamente nela.\n\nApós a cliente questionar como o procedimento funcionaria, o agente verificou as possibilidades de negociação e perguntou qual valor ela conseguiria pagar, para consultar a opção de desconto ou parcelamento. Explicou as condições do parcelamento e, a pedido da cliente, enviou a fatura com o Pix pelo WhatsApp. Em seguida, esclareceu que ela deveria pagar a primeira parcela negociada e que, na fatura seguinte, o valor pago em duplicidade seria abatido automaticamente. Também confirmou se a fatura havia chegado pelo WhatsApp.\n\nAo final, o agente mencionou a pesquisa PSAT, mas não explicou quais perguntas seriam feitas.\n\n\nPontos de melhoria:\nPermitir que a própria cliente confirme o e-mail e o telefone cadastrados, evitando apenas informar os dados.\nExplicar as perguntas da pesquisa PSAT ao final do atendimento, para que a cliente saiba o que será avaliado.\n\n\n\n* Questões para o feedback *\n\nNesse caso, seria possível realizar o religue de confiança para restabelecer a conexão enquanto o pagamento é processado? Se não, qual é o procedimento correto?","prazo_feedback":null,"htb":"HTB…8454","pontos":[],"tem_relato":false}],"relatos":null}},"gerado_em":"12/11 às 11:21","excecoes":null,"pessoa":{"nome":"Carla Costa","turno":"Manhã","supervisor":"Paula Fernanda Alves","negociado":17008.11,"recebido":16300.97,"conversao":0.9584,"clientes_negociados":76,"clientes_recebidos":76,"faturas_negociadas":184,"ticket_medio":214.49,"chamadas":0,"tma_seg":0.0,"pausa_pct":0.0,"daily_negociado":[0.0,0.0,2217.27,2794.61,2570.84,2462.95,1229.82,0,1904.02,2281.19,1547.41],"daily_recebido":[778.64,362.4,1539.36,1426.92,1747.86,1895.23,524.27,0.0,2144.98,4261.88,1619.43],"score":72,"partes":{"resultado":94.4,"conversao":95.8,"produtividade":0.0,"evolucao":90.6,"eficiencia":100.0},"tendencia":0.4867,"cv":0.64,"media_dia":1630.1,"melhor_valor":4261.88,"melhor_dia":"10/11","rank":1,"total":21,"observacao":null,"projecao":{"negociado_atual":17008.11,"ritmo_diario":1546.19,"projetado_fim_mes":46385.75,"dias_corridos":11,"dias_do_mes":30,"dias_restantes":19,"premio_atual":0,"premio_projetado":200.0,"proxima_faixa":{"alvo":30000.0,"premio":100.0,"falta":12991.89},"ritmo_necessario_prox_faixa":683.78,"no_topo":false}},"equipe":{"conversao":0.8187,"ticket_medio":187.63,"tma_seg":476.7,"pausa_pct":37.7,"negociado_pessoa":10543.14,"recebido_pessoa":8631.15,"chamadas_pessoa":79,"meta_topo":50000.0,"conversao_minima":0.65},"datas":["01/11","02/11","03/11","04/11","05/11","06/11","07/11","08/11","09/11","10/11","11/11"],"periodo":"01 a 11/11/2026 (parcial do mês)","mostrar_rank":false}</script>
+<script id="dd" type="application/json">{"acordos":{"salt":"+Q18n0Ofxiq4EegM+rVCTw==","iv":"yrvWMoQsOuQlswiu","ct":"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","it":310000},"acordos_qtd":9,"pessoa":{"nome":"Carla Costa","turno":"Manhã","supervisor":"Paula Fernanda Alves","negociado":34181.97,"recebido":21025.2,"conversao":0.6151,"clientes_negociados":148,"clientes_recebidos":119,"faturas_negociadas":452,"ticket_medio":176.68,"chamadas":169,"tma_seg":183.272,"pausa_pct":16.5,"daily_negociado":[6500.3,5479.57,3832.11,3530.61,2051.11,0.0,0.0,3285.75,3386.81,2134.04,3981.67,0.0,0],"daily_recebido":[3105.91,3309.12,1735.2,3011.72,1581.94,295.73,208.59,2956.65,2410.83,1642.28,767.23,0.0,0.0],"score":62,"partes":{"resultado":80.9,"conversao":61.5,"produtividade":63.6,"evolucao":10.4,"eficiencia":56.9},"tendencia":-0.4751,"cv":0.568,"media_dia":1911.38,"melhor_valor":3309.12,"melhor_dia":"02/09","rank":2,"total":19,"observacao":null,"projecao":{"negociado_atual":34181.97,"ritmo_diario":2629.38,"projetado_fim_mes":78881.47,"dias_corridos":13,"dias_do_mes":30,"dias_restantes":17,"premio_atual":100.0,"premio_projetado":300.0,"proxima_faixa":{"alvo":37500.0,"premio":200.0,"falta":3318.03},"ritmo_necessario_prox_faixa":195.18,"no_topo":false}},"equipe":{"conversao":0.6817,"ticket_medio":191.33,"tma_seg":336.7,"pausa_pct":17.9,"negociado_pessoa":19071.25,"recebido_pessoa":13000.55,"chamadas_pessoa":133,"meta_topo":50000.0,"conversao_minima":0.65},"datas":["01/09","02/09","03/09","04/09","05/09","06/09","07/09","08/09","09/09","10/09","11/09","12/09","13/09"],"periodo":"01 a 13/09/2026 (parcial do mês)","mostrar_rank":false}</script>
 <script>
 (function(){
 'use strict';
@@ -516,303 +428,6 @@ function detalheDias(){
   return html;
 }
 
-/* ---------- qualidade: PSAT (aba) + monitorias (aba) ---------- */
-const Q=D.qualidade||null;
-const QS=Q&&Q.psat, QMx=Q&&Q.monit, QM=(QMx&&QMx.lista)||[];
-const pcN=v=>v==null?'—':pc(v,0);
-const n1=v=>v==null?'—':v.toFixed(1).replace('.',',');
-const nMon=v=>v==null?'—':(Math.round(v*10)/10).toString().replace('.',',');
-const MESES=['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
-const nomeMes=c=>c?MESES[+c.slice(5,7)-1]:'';
-function vsPP(meu,ref,maiorMelhor=true){
-  if(meu==null||ref==null) return {cls:'eq',txt:'—'};
-  const d=(meu-ref)*100, bom=maiorMelhor?d>0:d<0;
-  if(Math.abs(d)<2) return {cls:'eq',txt:'na média do time'};
-  return {cls:bom?'up':'dn',txt:(d>0?'▲ ':'▼ ')+Math.abs(d).toFixed(0)+' p.p. vs. média'};
-}
-function vsPts(meu,ref){
-  if(meu==null||ref==null) return {cls:'eq',txt:'—'};
-  const d=meu-ref; if(Math.abs(d)<1.5) return {cls:'eq',txt:'na média do time'};
-  return {cls:d>0?'up':'dn',txt:(d>0?'▲ ':'▼ ')+nMon(Math.abs(d))+' pts vs. média'};
-}
-const corMon=n=>n==null?'#7C8FA6':n>=90?'#34D399':n>=80?'#22D3EE':n>=70?'#FFB020':'#F43F5E';
-const rotMon=n=>n==null?'SEM NOTA':n>=90?'EXCELENTE':n>=80?'BOM':n>=70?'EM EVOLUÇÃO':'PRECISA DE ATENÇÃO';
-const chip=(n,inv)=>inv?'<span class="chip cx">INVÁL.</span>':n==null?'<span class="chip cx">—</span>':`<span class="chip c${n}">${n}</span>`;
-function diasAteBR(br){ if(!br) return null; const p=br.split('/').map(Number); const y=p[2]||new Date().getFullYear();
-  const a=new Date(y,p[1]-1,p[0]), h=new Date(); h.setHours(0,0,0,0); return Math.round((a-h)/86400000); }
-
-/* ===== aba PSAT ===== */
-function pDestaque(){
-  const meu=QS&&QS.meu; if(!meu||!meu.validas_atendente) return '';
-  const f=[], dz=Math.round((meu.csat_atendente||0)*10);
-  f.push(`De cada <b>10 clientes</b> que deram nota para o seu atendimento, <span class="hl">${dz}</span> deram 4 ou 5.`);
-  f.push(meu.detratores?`<b>${meu.detratores} nota${meu.detratores>1?'s':''} baixa${meu.detratores>1?'s':''}</b> (1 ou 2) no período — destacadas em vermelho na lista abaixo.`
-                       :'<b>Nenhuma nota baixa</b> (1 ou 2) no período.');
-  if(meu.validas_atendente<5) f.push(`Amostra ainda pequena (${meu.validas_atendente} nota${meu.validas_atendente>1?'s':''}): o percentual muda bastante a cada pesquisa nova.`);
-  if(meu.rechamada!=null && QS.equipe.rechamada!=null && meu.rechamada>QS.equipe.rechamada+0.05)
-    f.push(`<b>${pc(meu.rechamada,0)}</b> dos seus clientes ligaram de novo em até 3 dias (equipe: ${pc(QS.equipe.rechamada,0)}). Fechar a ligação com tudo resolvido — boleto, data e próximo passo claros — evita a volta.`);
-  return `<div class="hi"><div class="ic">PSAT</div><div style="flex:1">
-    <h4>COMO O CLIENTE AVALIA O SEU ATENDIMENTO</h4><p>${f.join(' ')}</p></div></div>`;
-}
-function pKpis(){
-  if(!QS) return `<div class="pn"><div class="vazio">PSAT: dado não disponível
-    <p>A pesquisa de satisfação ainda não entrou nesta atualização do painel.</p></div></div>`;
-  const meu=QS.meu, E=QS.equipe;
-  if(!meu) return `<div class="pn"><div class="vazio">Nenhuma pesquisa PSAT sua em ${QS.periodo}
-    <p>Assim que clientes atendidos por você responderem a pesquisa, as notas aparecem aqui.</p></div></div>`;
-  return `<div class="kpis qk" style="grid-template-columns:repeat(5,1fr)">
-    ${kpi('Pesquisas recebidas',nf(meu.pesquisas),{cls:'eq',txt:nf(meu.validas_atendente)+' com nota válida'})}
-    ${kpi('Satisfação com você',pcN(meu.csat_atendente),vsPP(meu.csat_atendente,E.csat_atendente))}
-    ${kpi('Nota média',n1(meu.media_atendente),vs(meu.media_atendente,E.media_atendente))}
-    ${kpi('Solução aprovada',pcN(meu.csat_solucao),vsPP(meu.csat_solucao,E.csat_solucao))}
-    ${kpi('Ligou de novo em 3d',pcN(meu.rechamada),vsPP(meu.rechamada,E.rechamada,false))}
-  </div>`;
-}
-function pNotas(){
-  const meu=QS&&QS.meu;
-  if(!meu||!meu.validas_atendente) return '';
-  const tv=meu.validas_atendente, E=QS.equipe, ev=E.validas_atendente||1;
-  const cor={5:'#34D399',4:'#34D399',3:'#FFB020',2:'#F43F5E',1:'#F43F5E'};
-  let rows='';
-  for(let k=5;k>=1;k--){
-    const q=meu.dist_atendente[k-1], p=q/tv, pe=E.dist_atendente[k-1]/ev;
-    rows+=`<div class="nt5-r"><span class="l">NOTA ${k}</span>
-      <span class="t"><i style="width:${(p*100).toFixed(1)}%;background:${cor[k]}"></i>
-        <b style="left:calc(${(pe*100).toFixed(1)}% - 1px)" title="Média da equipe: ${pc(pe,0)}"></b></span>
-      <span class="v n">${q} <span>· ${pc(p,0)}</span></span></div>`;
-  }
-  return `<div class="pn"><div class="pn-h"><h3>Como os clientes avaliam você</h3><span class="nt">nota do atendimento · 1 a 5</span></div>
-    <div class="pn-b"><div class="nt5">${rows}</div>
-    <p class="prose" style="font-size:11.5px;line-height:1.6;color:var(--faint);margin-top:12px">
-    A barra é a sua distribuição de notas. O traço claro mostra a média da equipe na mesma nota.
-    ${meu.invalidas||meu.sem_resposta?`Fora da conta: ${meu.sem_resposta} sem resposta e ${meu.invalidas} inválida${meu.invalidas===1?'':'s'}.`:''}</p></div></div>`;
-}
-function pLista(){
-  if(!QS||!QS.meu||!QS.lista.length) return '';
-  const L=QS.lista.filter(r=>r.atendente!=null||r.solucao!=null||r.inv||r.rechamada!=null);
-  const fora=QS.lista.length-L.length;
-  if(!L.length) return '';
-  const sn=v=>v===true?'<span style="color:var(--amber)">Sim</span>':v===false?'<span style="color:var(--dim)">Não</span>':'<span style="color:var(--faint)">—</span>';
-  return `<div class="pn"><div class="pn-h"><h3>Suas pesquisas de satisfação</h3>
-    <span class="nt">${QS.periodo} · notas 1 e 2 em destaque</span></div>
-    <div class="pn-b" style="overflow-x:auto"><table class="acd"><thead><tr>
-      <th class="l">Data</th><th class="l">Hora</th><th class="l">Fila</th>
-      <th>Atendimento</th><th>Solução</th><th>Ligou de novo</th><th class="l">Cliente</th>
-    </tr></thead><tbody>
-    ${L.map(r=>`<tr class="${r.atendente!=null&&r.atendente<=2?'det':''}">
-      <td class="l">${r.data}</td><td class="l" style="color:var(--dim)">${r.hora}</td>
-      <td class="l" style="color:var(--dim);font-size:10.5px;text-transform:uppercase;letter-spacing:.06em">${esc(r.fila)}</td>
-      <td>${chip(r.atendente,r.inv)}</td><td>${chip(r.solucao,r.inv)}</td><td>${sn(r.rechamada)}</td>
-      <td class="l" style="color:var(--dim);font-size:10.5px">${r.htb||'—'}</td></tr>`).join('')}
-    </tbody></table>
-    ${fora?`<p class="prose" style="font-size:11.5px;color:var(--faint);margin-top:12px">${fora} pesquisa${fora>1?'s':''} em que o cliente não respondeu nada ${fora>1?'ficaram':'ficou'} fora da lista.</p>`:''}
-    </div></div>`;
-}
-const atualizado=()=>D.gerado_em?`<div class="lbl" style="text-align:right;margin-top:14px">Atualizado em ${D.gerado_em}</div>`:'';
-function abaPSAT(){
-  return atualizado()+pDestaque()+pKpis()+pNotas()+pLista()+
-  `<div class="ft" style="margin-top:16px"><b>Como ler:</b> o PSAT é a pesquisa que o cliente responde ao fim da ligação
-    ${QS?`(${QS.periodo})`:''}. <b>Satisfação com você</b> é o percentual de notas 4 e 5 para o atendimento. <b>Solução aprovada</b>
-    é o mesmo cálculo para a nota da solução. <b>Ligou de novo em 3d</b> mostra quantos clientes voltaram a ligar em até
-    3 dias (quanto menor, melhor). Respostas inválidas ou em branco não entram nas contas. A comparação é com a
-    <b>média da equipe de cobrança</b>, sem identificar ninguém. Dúvida? Fale com ${esc(P.supervisor)}.</div>`;
-}
-
-/* ===== aba MONITORIAS ===== */
-function mDestaque(){
-  const M=QMx.mes, E=QMx.equipe, mes=nomeMes(QMx.competencia), f=[];
-  if(!M||!M.qtd){
-    f.push(`Você ainda não teve monitoria em <b>${mes}</b>.`+(QM.length?` A mais recente foi em ${QM[0].data||'—'}, com nota <span class="hl">${nMon(QM[0].nota)}</span>.`:''));
-  }else{
-    f.push(`Em <b>${mes}</b> você teve <b>${M.qtd} monitoria${M.qtd>1?'s':''}</b>${QMx.meta?` de ${QMx.meta} previstas`:''}, com nota média
-      <span class="hl">${nMon(M.media)}</span>${E.media_nota!=null?` (equipe: ${nMon(E.media_nota)})`:''}.`);
-    if(M.falhas_graves){
-      const g=QM.find(m=>m.falha_grave&&m.falhas_graves.length);
-      f.push(`<b style="color:var(--red)">${M.falhas_graves} falha${M.falhas_graves>1?'s':''} grave${M.falhas_graves>1?'s':''}</b> zerou${M.falhas_graves>1?'ram':''} nota${M.falhas_graves>1?'s':''}
-        ${M.perdeu_por_falha?`— foram <b>${nMon(M.perdeu_por_falha)} pontos</b> perdidos que você já tinha conquistado na ligação`:''}${g?`. Motivo: <b>${esc(g.falhas_graves[0].item)}</b>`:''}.`);
-    }
-  }
-  const r=(QMx.recorrentes||[]).find(x=>x.vezes>=2);
-  if(r) f.push(`O ponto que mais se repete nas suas monitorias: <b>${esc(r.item)}</b> (${r.vezes} vezes). Corrigir este item é o caminho mais rápido para subir a nota.`);
-  else if(M&&M.qtd&&!M.falhas_graves&&(M.media||0)>=95) f.push('Nenhum ponto se repete — mantenha o padrão.');
-  return `<div class="hi"><div class="ic">MONITORIA</div><div style="flex:1">
-    <h4>COMO A MONITORIA VÊ O SEU ATENDIMENTO</h4><p>${f.join(' ')}</p></div></div>`;
-}
-function mKpis(){
-  const M=QMx.mes||{qtd:0}, E=QMx.equipe, ult=QM[0];
-  const qtdTxt=QMx.meta?{cls:M.qtd>=QMx.meta?'up':'eq',txt:`${M.qtd} de ${QMx.meta} previstas`}
-                       :(E.por_pessoa?{cls:'eq',txt:'equipe: '+nMon(E.por_pessoa)+' por pessoa'}:null);
-  return `<div class="kpis qk" style="grid-template-columns:repeat(5,1fr)">
-    ${kpi('Monitorias em '+nomeMes(QMx.competencia),nf(M.qtd),qtdTxt)}
-    ${kpi('Nota média do mês',nMon(M.media),vsPts(M.media,E.media_nota))}
-    ${kpi('Última nota',ult?nMon(ult.nota):'—',ult?{cls:'eq',txt:'ligação de '+(ult.data||'—').slice(0,5)}:null)}
-    ${kpi('Itens atendidos',M.aderencia!=null?pc(M.aderencia,0):'—',{cls:'eq',txt:'da ficha, no mês'})}
-    ${kpi('Falhas graves',nf(M.falhas_graves||0),{cls:(M.falhas_graves?'dn':'up'),txt:M.falhas_graves?'zeram a nota':'nenhuma no mês'})}
-  </div>`;
-}
-function mEvolucao(){
-  const cab=`<div class="pn-h"><h3>Evolução das suas notas</h3><span class="nt">últimas monitorias · 0 a 100</span></div>`;
-  if(!QM.length) return `<div class="pn">${cab}<div class="vazio">Nenhuma monitoria ainda
-    <p>Quando seu supervisor monitorar uma ligação sua, a nota aparece aqui.</p></div></div>`;
-  const s=QM.slice(0,10).reverse();
-  const H=110, bars=s.map(m=>{const c=corMon(m.nota), h=Math.max(3,(m.nota||0)/100*H), hb=m.falha_grave&&m.nota_bruta?m.nota_bruta/100*H:0;
-    return `<div title="${m.data||''} · nota ${nMon(m.nota)}${hb?' (seria '+nMon(m.nota_bruta)+')':''}">
-      <em style="color:${c}">${nMon(m.nota)}</em>
-      <span style="position:relative;width:100%;height:${H}px;display:flex;align-items:flex-end">
-        ${hb?`<i style="position:absolute;bottom:0;left:0;right:0;height:${hb}px;border:1px dashed #F43F5E;background:rgba(244,63,94,.06)"></i>`:''}
-        <i style="height:${h}px;background:${c};position:relative;width:100%"></i></span>
-      <span>${(m.data||'—').slice(0,5)}</span></div>`;}).join('');
-  return `<div class="pn">${cab}<div class="pn-b"><div class="evo" style="height:${H+44}px">${bars}</div>
-    ${s.some(m=>m.falha_grave)?`<p class="prose" style="font-size:11.5px;color:var(--faint);margin-top:10px">
-      Contorno tracejado em vermelho = nota que você teria sem a falha grave.</p>`:''}</div></div>`;
-}
-function mRecorrentes(){
-  const R=QMx.recorrentes||[];
-  const cab=`<div class="pn-h"><h3>Onde você mais perde ponto</h3><span class="nt">itens não cumpridos · todas as monitorias</span></div>`;
-  if(!QM.length) return `<div class="pn">${cab}<div class="vazio">Sem monitorias</div></div>`;
-  if(!R.length) return `<div class="pn">${cab}<div class="vazio" style="color:var(--green)">Nenhum item perdido
-    <p>Em todas as suas monitorias você cumpriu os itens da ficha.</p></div></div>`;
-  const mx=Math.max(...R.map(x=>x.vezes));
-  return `<div class="pn">${cab}<div class="pn-b">${R.map(x=>`<div class="rc">
-    <div class="rc-t"><span class="rc-g" style="${x.grupo==='Falha grave'?'color:var(--red)':''}">${esc(x.grupo)}</span>
-      ${x.vezes>=2?'<span class="urg venc">repetiu</span>':''}</div>
-    <div class="rc-i"><span style="color:${x.grupo==='Falha grave'?'var(--red)':'var(--amber)'};font-family:var(--mono);font-weight:700">✗ </span>${esc(x.item)}</div>
-    <div class="rc-b"><i style="width:${x.vezes/mx*100}%;background:${x.grupo==='Falha grave'?'#F43F5E':x.vezes>=2?'#FFB020':'#7C8FA6'}"></i><span>${x.vezes}×</span></div>
-  </div>`).join('')}</div></div>`;
-}
-function mDetalhe(){
-  if(!QM.length) return '';
-  const temRel=QMx.relatos && QM.some(m=>m.tem_relato);
-  const grupos=L=>{const g={}; L.forEach(x=>(g[x.grupo]=g[x.grupo]||[]).push(x.item)); return g;};
-  const cards=QM.map((m,i)=>{const c=corMon(m.nota), G=grupos(m.itens||[]);
-    const dp=diasAteBR(m.prazo_feedback);
-    return `<div class="mon" style="--c:${c}">
-    <div class="mon-h"><div><div class="nota n">${nMon(m.nota)}<small> /100</small></div><div class="q">${rotMon(m.nota)}</div></div>
-      <div class="meta">Ligação de <b>${m.data||'—'}</b>${m.criado_em?`<br>Monitorada em <b>${m.criado_em}</b>`:''}
-        ${m.monitor?`<br>Por <b>${esc(m.monitor)}</b>`:''}${m.htb?`<br>Cliente <b>${m.htb}</b>`:''}</div></div>
-    ${m.falha_grave?`<div class="fg"><b>FALHA GRAVE — nota zerada${m.nota_bruta?` (seria ${nMon(m.nota_bruta)})`:''}</b>
-      ${(m.falhas_graves||[]).map(x=>`<div>▸ ${esc(x.item)}</div>`).join('')}</div>`:''}
-    ${Object.keys(G).length?`<h5>Itens da ficha não atendidos</h5><ul>${Object.entries(G).map(([g,it])=>
-      it.map(t=>`<li><b>${esc(g)}</b> — ${esc(t)}</li>`).join('')).join('')}</ul>`
-      :(!m.falha_grave&&m.itens_avaliados?`<h5 style="color:var(--green)">Todos os ${m.itens_avaliados} itens avaliados foram atendidos</h5>`:'')}
-    ${m.pontos&&m.pontos.length?`<h5>Pontos de melhoria</h5><ul>${m.pontos.map(p=>`<li>${esc(p)}</li>`).join('')}</ul>`:''}
-    ${m.feedback?`<h5>Feedback do supervisor</h5><div class="fb">${esc(m.feedback)}</div>`:''}
-    ${m.prazo_feedback||m.ciencia?`<div class="mon-f">
-      ${m.prazo_feedback?`<span class="urg ${dp!=null&&dp<0?'ok':dp===0?'hoje':'prox'}">${dp!=null&&dp<0?'feedback marcado para':'feedback até'} ${m.prazo_feedback.slice(0,5)}</span>`:''}
-      ${m.ciencia?`<span class="urg ok">ciência: ${esc(m.ciencia)}</span>`:''}</div>`:''}
-    ${m.tem_relato&&QMx.relatos?`<div class="rel" id="rel-${i}"></div>`:''}
-  </div>`;}).join('');
-  return `<div class="pn"><div class="pn-h"><h3>Suas monitorias, uma a uma</h3><span class="nt">da mais recente para a mais antiga</span></div>
-    <div class="pn-b">
-    ${temRel?`<div class="cad mini" id="q-cad"><p class="prose">O <b>relato de algumas ligações</b> cita o cliente pelo nome.
-      Para ler, use a mesma senha da aba de acordos.</p>
-      <input id="q-pw" type="password" placeholder="senha" autocomplete="off"><button id="q-go">Ver relatos</button>
-      <div class="msg" id="q-msg"></div></div>`:''}
-    ${cards}</div></div>`;
-}
-function abaMonit(){
-  return atualizado()+mDestaque()+mKpis()+`<div class="g2">${mEvolucao()}${mRecorrentes()}</div>`+mDetalhe()+
-  `<div class="ft" style="margin-top:16px"><b>Como ler:</b> cada monitoria é a avaliação de uma ligação sua, feita
-    com a ficha de qualidade da cobrança. A nota vai de 0 a 100. Uma <b>falha grave</b> (por exemplo, não registrar
-    o atendimento no Salesforce) <b>zera a nota</b>, mesmo que o resto da ligação tenha sido bom — por isso mostramos
-    também quanto você teria tirado. <b>Itens atendidos</b> é o percentual de itens da ficha que você cumpriu, sem
-    contar os que não se aplicavam à ligação. A média da equipe considera todas as monitorias do mês, sem
-    identificar ninguém. Dúvida sobre uma nota? Fale com ${esc(P.supervisor)}.</div>`;
-}
-
-/* ---------- exceções: formulário + envio para a planilha do supervisor ---------- */
-const EX=D.excecoes||null;
-const EXK='exc_'+(EX?EX.login:''), CANAIS=['Receptivo','Ativo','Chat','WhatsApp','E-mail'], DEVS=['Autorizado','Não autorizado','Aguardando'];
-const exGet=(k,d)=>{try{const v=localStorage.getItem(EXK+k);return v?JSON.parse(v):d;}catch(e){return d;}};
-const exSet=(k,v)=>{try{localStorage.setItem(EXK+k,JSON.stringify(v));}catch(e){}};
-const hojeBR=()=>{const d=new Date();return String(d.getDate()).padStart(2,'0')+'/'+String(d.getMonth()+1).padStart(2,'0')+'/'+d.getFullYear();};
-const dvCls=v=>v==='Autorizado'?'a':v==='Não autorizado'?'n':'g';
-function abaExc(){
-  return `<div class="hi"><div class="ic">EXCEÇÕES</div><div style="flex:1">
-    <h4>REGISTRE AQUI TODA NEGOCIAÇÃO FORA DA RÉGUA</h4>
-    <p>Preencha uma linha para cada exceção, junte quantas quiser na lista e clique em <b>Enviar</b>.
-    Tudo vai para uma planilha única do seu supervisor, que recebe o resumo do dia às <b>20h</b>.
-    Se a internet cair, a lista fica guardada neste navegador até você enviar.</p></div></div>
-  <div class="pn"><div class="pn-h"><h3>Nova exceção</h3><span class="nt">${esc(EX.nome)} · ${hojeBR()}</span></div>
-    <div class="pn-b">
-      <div class="exf">
-        <div><label>Canal de contato</label><select id="ex-canal"><option value="">escolha</option>${CANAIS.map(c=>`<option>${c}</option>`).join('')}</select></div>
-        <div><label>SAN</label><input id="ex-san" placeholder="HTB000000000000" autocomplete="off"></div>
-        <div><label>Proposta ofertada</label><input id="ex-prop" placeholder="ex.: 10% de desconto à vista" autocomplete="off"></div>
-        <div><label>Contra proposta</label><input id="ex-contra" placeholder="ex.: 15% no PIX" autocomplete="off"></div>
-        <div><label>Devolutiva</label><select id="ex-dev"><option value="">escolha</option>${DEVS.map(c=>`<option>${c}</option>`).join('')}</select></div>
-      </div>
-      <div class="exo"><div><label>Observação (opcional)</label><input id="ex-obs" placeholder="quem autorizou, motivo, prazo…" autocomplete="off"></div>
-        <button class="bt sec" id="ex-add">+ Adicionar à lista</button></div>
-      <div class="exmsg" id="ex-msg1"></div>
-    </div></div>
-  <div class="pn"><div class="pn-h"><h3>Lista para enviar</h3><span class="nt" id="ex-cont"></span></div>
-    <div class="pn-b" id="ex-pend"></div></div>
-  <div class="pn"><div class="pn-h"><h3>Enviadas hoje</h3><span class="nt">ficam registradas na planilha do supervisor</span></div>
-    <div class="pn-b" id="ex-env"></div></div>`;
-}
-function exTabela(L,rem){
-  if(!L.length) return '';
-  return `<div style="overflow-x:auto"><table class="acd"><thead><tr><th class="l">${rem?'Incluída':'Enviada'}</th><th class="l">Canal</th>
-    <th class="l">SAN</th><th class="l">Proposta ofertada</th><th class="l">Contra proposta</th><th class="l">Devolutiva</th>${rem?'<th></th>':''}</tr></thead><tbody>
-    ${L.map((x,i)=>`<tr><td class="l" style="color:var(--dim)">${esc(x.hora||'')}</td><td class="l">${esc(x.canal)}</td><td class="l">${esc(x.san)}</td>
-      <td class="l" style="white-space:normal;font-family:var(--sans)">${esc(x.proposta)}</td><td class="l" style="white-space:normal;font-family:var(--sans)">${esc(x.contra)}</td>
-      <td class="l"><span class="dv ${dvCls(x.devolutiva)}">${esc(x.devolutiva)}</span></td>
-      ${rem?`<td><button class="rm" data-rm="${i}" title="tirar da lista">✕</button></td>`:''}</tr>`).join('')}</tbody></table></div>`;
-}
-function exRender(){
-  const P_=exGet('pend',[]), E_=exGet('env',{});
-  const hj=E_[hojeBR()]||[];
-  document.getElementById('ex-cont').textContent=P_.length?P_.length+' a enviar':'';
-  document.getElementById('ex-pend').innerHTML=P_.length?exTabela(P_,true)+
-    `<div style="display:flex;gap:12px;align-items:center;margin-top:14px;flex-wrap:wrap">
-      <button class="bt" id="ex-send">Enviar ${P_.length} exceç${P_.length>1?'ões':'ão'}</button>
-      <span class="exmsg" id="ex-msg2" style="margin:0"></span></div>`
-    :`<p class="prose" style="font-size:12.5px;color:var(--dim)">Nada pendente. Adicione uma exceção acima.</p><div class="exmsg" id="ex-msg2"></div>`;
-  document.getElementById('ex-env').innerHTML=hj.length?exTabela(hj,false)
-    :'<p class="prose" style="font-size:12.5px;color:var(--dim)">Nenhuma exceção enviada hoje.</p>';
-  document.querySelectorAll('[data-rm]').forEach(b=>b.onclick=()=>{const L=exGet('pend',[]);L.splice(+b.dataset.rm,1);exSet('pend',L);exRender();});
-  const sb=document.getElementById('ex-send'); if(sb) sb.onclick=exEnviar;
-  const btn=document.querySelector('[data-v="exc"]');
-  if(btn){const c=btn.querySelector('.cnt'); if(P_.length){if(c)c.textContent=P_.length;else btn.insertAdjacentHTML('beforeend',`<span class="cnt">${P_.length}</span>`);} else if(c) c.remove();}
-}
-function exAdd(){
-  const f={canal:'ex-canal',san:'ex-san',proposta:'ex-prop',contra:'ex-contra',devolutiva:'ex-dev'}, v={}, m=document.getElementById('ex-msg1');
-  let falta=[];
-  Object.entries(f).forEach(([k,id])=>{const el=document.getElementById(id);v[k]=el.value.trim();el.classList.toggle('err',!v[k]);if(!v[k])falta.push(k);});
-  if(falta.length){m.textContent='Preencha os campos em vermelho';m.className='exmsg err';return;}
-  v.san=v.san.toUpperCase().replace(/\s+/g,'');
-  v.obs=document.getElementById('ex-obs').value.trim();
-  v.id=EX.login+'-'+Date.now()+'-'+Math.random().toString(36).slice(2,7);
-  v.hora=new Date().toTimeString().slice(0,5);
-  const L=exGet('pend',[]); L.push(v); exSet('pend',L);
-  ['ex-san','ex-prop','ex-contra','ex-obs'].forEach(id=>document.getElementById(id).value='');
-  ['ex-canal','ex-dev'].forEach(id=>document.getElementById(id).value='');
-  m.textContent=v.san.startsWith('HTB')?'Adicionada à lista — falta enviar':'Adicionada. Confira o SAN: normalmente começa com HTB';
-  m.className=v.san.startsWith('HTB')?'exmsg ok':'exmsg err';
-  exRender();
-}
-async function exEnviar(){
-  const L=exGet('pend',[]); if(!L.length) return;
-  const b=document.getElementById('ex-send'), m=document.getElementById('ex-msg2');
-  b.disabled=true; m.textContent='Enviando…'; m.className='exmsg';
-  const corpo=JSON.stringify({chave:EX.chave,login:EX.login,nome:EX.nome,turno:EX.turno,itens:L});
-  let r=null;
-  try{
-    const resp=await fetch(EX.url,{method:'POST',body:corpo});   // text/plain: sem pré-verificação de CORS
-    r=await resp.json();
-  }catch(e){ r={ok:false,erro:'sem conexão com a planilha'}; }
-  if(r&&r.ok){
-    const E_=exGet('env',{}), hj=E_[hojeBR()]=E_[hojeBR()]||[];
-    L.forEach(x=>hj.push(Object.assign({},x,{hora:r.hora||x.hora})));
-    Object.keys(E_).sort().slice(0,-7).forEach(k=>delete E_[k]);   // guarda só os últimos dias
-    exSet('env',E_); exSet('pend',[]); exRender();
-    const m2=document.getElementById('ex-msg2'); m2.textContent='Enviado ✓ '+(r.gravados||0)+' registrada'+((r.gravados||0)===1?'':'s')+(r.repetidos?' ('+r.repetidos+' já estava'+(r.repetidos>1?'m':'')+' na planilha)':'');
-    m2.className='exmsg ok';
-  }else{
-    b.disabled=false; m.textContent='Não enviado ('+((r&&r.erro)||'erro')+'). A lista continua guardada — tente de novo.'; m.className='exmsg err';
-  }
-}
 /* ---------- render ---------- */
 const convCli=P.clientes_recebidos/P.clientes_negociados;
 const dez=Math.round(convCli*10);
@@ -841,9 +456,6 @@ document.getElementById('r').innerHTML=`
 <div class="abas" id="abas">
   <button data-v="perf" class="on">Meu desempenho</button>
   ${D.acordos_qtd ? `<button data-v="acd">Meus acordos<span class="cnt">${D.acordos_qtd}</span></button>` : ''}
-  ${QS ? `<button data-v="psat">Satisfação (PSAT)</button>` : ''}
-  ${QMx ? `<button data-v="mon">Minhas monitorias${QMx.mes&&QMx.mes.qtd?`<span class="cnt">${QMx.mes.qtd}</span>`:''}</button>` : ''}
-  ${D.excecoes ? `<button data-v="exc">Exceções</button>` : ''}
 </div>
 
 <div class="vista on" id="v-perf">
@@ -954,10 +566,6 @@ ${(()=>{
     <div class="msg" id="acd-msg"></div>
   </div>
   <div id="acd-lista"></div>` : ''}</div>
-
-${QS?`<div class="vista" id="v-psat">${abaPSAT()}</div>`:''}
-${QMx?`<div class="vista" id="v-mon">${abaMonit()}</div>`:''}
-${D.excecoes?`<div class="vista" id="v-exc">${abaExc()}</div>`:''}
 
 <div class="ft"><b>Sobre estes números:</b> vêm das planilhas de Resultado Parcial e de Chamadas/TMA do período
 ${D.periodo}. Comparações são com a <b>média da operação</b>, não com pessoas específicas.
@@ -1070,36 +678,6 @@ if(D.acordos_qtd){
 
   bt.addEventListener('click',abrir);
   inp.addEventListener('keydown',e=>{ if(e.key==='Enter') abrir(); });
-}
-
-/* ---------- relatos das monitorias (bloco criptografado) ---------- */
-if(QMx && QMx.relatos && document.getElementById('q-go')){
-  const bt=document.getElementById('q-go'), inp=document.getElementById('q-pw'), msg=document.getElementById('q-msg');
-  const b64=x=>Uint8Array.from(atob(x),c=>c.charCodeAt(0));
-  async function abrirRel(){
-    const senha=inp.value;
-    if(!senha){msg.textContent='Digite a senha';msg.className='msg err';return;}
-    bt.disabled=true; inp.disabled=true; msg.textContent='Abrindo…'; msg.className='msg';
-    await new Promise(r=>setTimeout(r,40));
-    let R;
-    try{
-      const km=await crypto.subtle.importKey('raw',new TextEncoder().encode(senha),'PBKDF2',false,['deriveKey']);
-      const key=await crypto.subtle.deriveKey({name:'PBKDF2',salt:b64(QMx.relatos.salt),iterations:QMx.relatos.it,hash:'SHA-256'},
-        km,{name:'AES-GCM',length:256},false,['decrypt']);
-      R=JSON.parse(new TextDecoder().decode(await crypto.subtle.decrypt({name:'AES-GCM',iv:b64(QMx.relatos.iv)},key,b64(QMx.relatos.ct))));
-    }catch(e){bt.disabled=false;inp.disabled=false;inp.value='';msg.textContent='Senha incorreta';msg.className='msg err';inp.focus();return;}
-    document.getElementById('q-cad').remove();
-    Object.entries(R).forEach(([i,t])=>{const el=document.getElementById('rel-'+i);
-      if(el) el.innerHTML=`<h5 style="margin-top:0">Relato da ligação</h5><p>${esc(t)}</p>`;});
-  }
-  bt.addEventListener('click',abrirRel);
-  inp.addEventListener('keydown',e=>{if(e.key==='Enter')abrirRel();});
-}
-
-if(EX && document.getElementById('ex-add')){
-  document.getElementById('ex-add').onclick=exAdd;
-  document.getElementById('ex-san').addEventListener('input',e=>{e.target.value=e.target.value.toUpperCase();});
-  exRender();
 }
 
 /* simulador */
